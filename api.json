@@ -1,0 +1,9 @@
+{
+    "files": [
+    	"appliance", 
+        "cis", 
+        "content",
+        "vapi", 
+        "vcenter" 
+    ]
+}
