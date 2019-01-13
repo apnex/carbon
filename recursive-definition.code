@@ -1,0 +1,22 @@
+if (properties) {
+	properties.each(item) {
+		if(readyOnly = true) {
+			do nothing
+		} else {
+			switch: {
+				type.array {
+					
+				}
+				type.integer {
+					console.log(<integer>)
+				}
+				type.string {
+					if(enum) {
+						enum.forEach {
+						}
+					}
+				}
+			}
+		}
+	}
+}

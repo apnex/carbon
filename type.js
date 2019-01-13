@@ -1,83 +1,89 @@
 #!/usr/bin/env node
 let args = process.argv;
-let nsxapi = require('./nsx-api.json');
+const apiSpec = require('./nsx-api.json');
+//const apiSpec = require('./vcenter.json');
+const paths = apiSpec.paths;
 
-// base definition
-var route = "logical-routers";
-var route = args[2];
+// cli switch
+var item = args[2];
 var method = args[3];
-var paths = nsxapi.paths;
-
-function spec(def) {
-	let fullspec = nsxapi.definitions[def].allOf[1].properties;
-	let minspec = nsxapi.definitions[def].allOf[1].required;
-	console.log(fullspec);
+if(route = paths['/' + item]) {
+	switch(method) {
+		case "get":
+			search(route, 'get');
+		break;
+		case "put":
+			search(route, 'put');
+		break;
+		case "post":
+			search(route, 'post');
+		break;
+		case "delete":
+			search(route, 'delete');
+		break;
+		default:
+			console.log(JSON.stringify(route, null, "\t"));
+			console.log("No method specified");
+		break;
+	}
+} else {
+	filter(item);
 }
 
-function search() {
-	let path = nsxapi.paths['/' + route]
-	if(path) {
-		//console.log(JSON.stringify($path, null, "\t"));
-		var schema = "";;
-		if(method) { // output specific spec as switch
-			if(method == "get") {
-				let call = path["get"];
-				let params = call.responses["200"];
-				console.log("GET");
-				if(call.parameters) {
-					console.log(JSON.stringify(call.parameters, null, "\t"));
-				}
-			}
-			if(method == "put") {
-				let call = path["get"];
-				let params = call.responses["200"];
-				console.log("PUT");
-				if(call.parameters) {
-					console.log(JSON.stringify(call.parameters, null, "\t"));
-				}
-			}
-			if(method == "post") {
-				let call = path["post"];
-				let params = call.responses["201"];
-				console.log("POST");
-				if(call.parameters) {
-					console.log(JSON.stringify(call.parameters, null, "\t"));
-				}
-			}
-			if(method == "delete") {
-				let call = path["delete"];
-				let params = call.responses["201"];
-				console.log("DELETE");
-				if(call.parameters) {
-					console.log(JSON.stringify(call.parameters, null, "\t"));
-				}
-			}
-		} else {
-			console.log(JSON.stringify(path, null, "\t"));
-			console.log("No method specified");
+function search(path, method) {
+	if(method == "get") {
+		let call = path["get"];
+		let params = call.responses["200"];
+		console.log("GET");
+		if(call.parameters) {
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
-		if(path.parameters) {
-			console.log(JSON.stringify(path.parameters, null, "\t"));
+	}
+	if(method == "put") {
+		let call = path["get"];
+		let params = call.responses["200"];
+		console.log("PUT");
+		if(call.parameters) {
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
-		/*
-		if(schema) {
-			console.log("Schema [" + schema + "]");
-			let regex = /#\/definitions\/([a-z0-9A-Z]+)$/g;
-			let match = regex.exec(schema);
-			let defKey = match[1];
-			console.log("Definition [" + defKey + "]");
-			spec(defKey);
+	}
+	if(method == "post") {
+		let call = path["post"];
+		let params = call.responses["201"];
+		console.log("POST");
+		if(call.parameters) {
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
-		*/
+	}
+	if(method == "delete") {
+		let call = path["delete"];
+		let params = call.responses["201"];
+		console.log("DELETE");
+		if(call.parameters) {
+			console.log(JSON.stringify(call.parameters, null, "\t"));
+		}
 	}
 }
 
-if(route) {
-	search();
-} else {
-	Object.keys(paths).sort().forEach((item) => {
-		console.log('key [' + item + ']');
+function filter(value) {
+	// construct input
+	let data = [];
+	Object.keys(paths).sort().forEach((value) => {
+		data.push({
+			key: value
+		});
+	});
+
+	// filter and print
+	const xcell = require('./xcell.js');
+	cell = new xcell({
+		data: data
+	});
+	cell.addFilter({
+		'field': 'key',
+		'value': value
+	});
+	cell.run().forEach((item) => {
+		console.log('key [' + item.key + ']');
 	});
 }
-
-//console.log(JSON.stringify($paths, null, "\t"));
