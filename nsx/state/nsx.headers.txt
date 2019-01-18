@@ -1,0 +1,15 @@
+HTTP/1.1 200 
+Set-Cookie: JSESSIONID=4A17910FF7D36147D210076B83C80D3B; Path=/; Secure; HttpOnly
+X-XSRF-TOKEN: d211469b-3fef-4d36-9fd6-675329bfdd78
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+Content-Type: application/json
+Content-Length: 107
+Date: Thu, 06 Dec 2018 01:30:38 GMT
+Server: NSX
+

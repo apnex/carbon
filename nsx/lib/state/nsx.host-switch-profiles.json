@@ -1,0 +1,65 @@
+{
+	"sort_ascending": true,
+	"sort_by": "displayName",
+	"result_count": 2,
+	"results": [
+		{
+			"resource_type": "UplinkHostSwitchProfile",
+			"description": "",
+			"id": "4eff5285-08eb-4839-88ef-098ac30da6b9",
+			"display_name": "pf-edge",
+			"tags": [],
+			"transport_vlan": 0,
+			"teaming": {
+				"active_list": [
+					{
+						"uplink_type": "PNIC",
+						"uplink_name": "uplink-1"
+					}
+				],
+				"policy": "FAILOVER_ORDER"
+			},
+			"named_teamings": [],
+			"mtu": 1700,
+			"_create_user": "admin",
+			"_create_time": 1538530276785,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1539069453605,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 7
+		},
+		{
+			"resource_type": "UplinkHostSwitchProfile",
+			"description": "What pNics use for N-VDS",
+			"id": "9fb458f4-6f98-4193-97f5-55c86fcf70e5",
+			"display_name": "pf-uplink",
+			"tags": [],
+			"transport_vlan": 3000,
+			"teaming": {
+				"active_list": [
+					{
+						"uplink_type": "PNIC",
+						"uplink_name": "vm-data-a"
+					}
+				],
+				"standby_list": [
+					{
+						"uplink_type": "PNIC",
+						"uplink_name": "vm-data-b"
+					}
+				],
+				"policy": "FAILOVER_ORDER"
+			},
+			"named_teamings": [],
+			"mtu": 9000,
+			"_create_user": "admin",
+			"_create_time": 1536718170623,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538374216157,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 4
+		}
+	]
+}

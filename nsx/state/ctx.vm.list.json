@@ -1,0 +1,7 @@
+{
+	"id": "vm-13",
+	"name": "IORCSQ-VCS03",
+	"cpu_count": 4,
+	"memory_size_MiB": 16384,
+	"power_state": "POWERED_ON"
+}

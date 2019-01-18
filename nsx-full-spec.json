@@ -1,0 +1,753 @@
+{
+	"aaa": {
+		"registration-token": {
+			"{token}": {}
+		},
+		"role-bindings": {
+			"{binding-id}": {}
+		},
+		"roles": {
+			"{role}": {}
+		},
+		"user-info": {},
+		"vidm": {
+			"groups": {},
+			"search": {},
+			"users": {}
+		}
+	},
+	"administration": {},
+	"app-discovery": {
+		"app-profiles": {
+			"{app-profile-id}": {}
+		},
+		"sessions": {
+			"{session-id}": {
+				"app-profiles": {},
+				"installed-apps": {},
+				"ns-groups": {
+					"{ns-group-id}": {
+						"members": {}
+					}
+				},
+				"re-classify": {},
+				"report": {},
+				"summary": {}
+			}
+		}
+	},
+	"associations": {},
+	"batch": {},
+	"bridge-clusters": {
+		"{bridgecluster-id}": {},
+		"{cluster-id}": {
+			"status": {}
+		}
+	},
+	"bridge-endpoints": {
+		"{bridgeendpoint-id}": {},
+		"{endpoint-id}": {
+			"statistics": {},
+			"status": {}
+		}
+	},
+	"cluster": {
+		"backups": {
+			"config": {},
+			"history": {},
+			"status": {}
+		},
+		"nodes": {
+			"status": {},
+			"{node-id}": {
+				"network": {
+					"interfaces": {
+						"{interface-id}": {
+							"stats": {}
+						}
+					}
+				},
+				"status": {}
+			}
+		},
+		"restore": {
+			"backuptimestamps": {},
+			"config": {},
+			"instruction-resources": {},
+			"status": {}
+		},
+		"status": {}
+	},
+	"cluster-profiles": {
+		"{cluster-profile-id}": {}
+	},
+	"compute-collection-transport-node-templates": {
+		"{template-id}": {
+			"state": {}
+		}
+	},
+	"configs": {
+		"management": {}
+	},
+	"csm": {
+		"aws": {
+			"accounts": {
+				"{account-id}": {
+					"status": {}
+				}
+			},
+			"gateway-amis": {
+				"{region-id}": {}
+			},
+			"gateways": {
+				"{vpc-id}": {
+					"status": {}
+				}
+			},
+			"key-pairs": {},
+			"regions": {
+				"{region-id}": {}
+			},
+			"subnets": {},
+			"vpcs": {
+				"{vpc-id}": {}
+			}
+		},
+		"csmstatus": {},
+		"nsx-manager-accounts": {
+			"{account-id}": {}
+		},
+		"virtual-machines": {
+			"{virtual-machine-id}": {}
+		}
+	},
+	"dhcp": {
+		"relay-profiles": {
+			"{relay-profile-id}": {}
+		},
+		"relays": {
+			"{relay-id}": {}
+		},
+		"server-profiles": {
+			"{profile-id}": {}
+		},
+		"servers": {
+			"{server-id}": {
+				"ip-pools": {
+					"{pool-id}": {}
+				},
+				"leases": {},
+				"static-bindings": {
+					"{binding-id}": {}
+				},
+				"statistics": {},
+				"status": {}
+			}
+		}
+	},
+	"edge-clusters": {
+		"{edge-cluster-id}": {}
+	},
+	"error-resolver": {
+		"{error_id}": {}
+	},
+	"eula": {
+		"accept": {},
+		"acceptance": {},
+		"content": {}
+	},
+	"fabric": {
+		"compute-collection-fabric-templates": {
+			"{fabric-template-id}": {}
+		},
+		"compute-collections": {
+			"{cc-ext-id}": {}
+		},
+		"compute-managers": {
+			"{compute-manager-id}": {
+				"state": {},
+				"status": {}
+			}
+		},
+		"discovered-nodes": {
+			"{node-ext-id}": {}
+		},
+		"nodes": {
+			"status": {},
+			"{node-id}": {
+				"capabilities": {},
+				"modules": {},
+				"network": {
+					"interfaces": {
+						"{interface-id}": {
+							"stats": {}
+						}
+					}
+				},
+				"state": {},
+				"status": {}
+			}
+		},
+		"vifs": {},
+		"virtual-machines": {}
+	},
+	"firewall": {
+		"excludelist": {},
+		"rules": {
+			"{rule-id}": {
+				"state": {}
+			}
+		},
+		"sections": {
+			"{section-id}": {
+				"rules": {
+					"stats": {},
+					"{rule-id}": {
+						"stats": {}
+					}
+				},
+				"state": {}
+			}
+		},
+		"status": {
+			"{context-type}": {}
+		}
+	},
+	"host-switch-profiles": {
+		"{host-switch-profile-id}": {}
+	},
+	"hpm": {
+		"features": {
+			"{feature-stack-name}": {}
+		},
+		"global-config": {}
+	},
+	"infra": {
+		"communication-profiles": {
+			"{communication-profile-id}": {
+				"communication-profile-entries": {
+					"{communication-profile-entry-id}": {}
+				}
+			}
+		},
+		"deployment-zones": {
+			"{deployment-zone-id}": {
+				"enforcement-points": {
+					"{enforcementpoint-id}": {}
+				}
+			}
+		},
+		"domains": {
+			"{domain-id}": {
+				"communication-map": {
+					"communication-entries": {
+						"{communication-entry-id}": {}
+					}
+				},
+				"domain-deployment-maps": {
+					"{domain-deployment-map-id}": {}
+				},
+				"groups": {
+					"{group-id}": {}
+				}
+			}
+		},
+		"realized-state": {
+			"enforcement-points": {
+				"{enforcement-point-name}": {
+					"firewalls": {
+						"firewall-sections": {
+							"{firewall-section-id}": {}
+						}
+					},
+					"groups": {
+						"nsgroups": {
+							"{nsgroup-name}": {}
+						},
+						"securitygroups": {
+							"{securitygroup-name}": {}
+						}
+					},
+					"ip-sets": {
+						"ip-sets-nsxt": {
+							"{ip-set-name}": {}
+						}
+					},
+					"mac-sets": {
+						"mac-sets-nsxt": {
+							"{mac-set-name}": {}
+						}
+					},
+					"services": {
+						"nsservices": {
+							"{nsservice-name}": {}
+						}
+					}
+				}
+			}
+		},
+		"services": {
+			"{service-id}": {
+				"service-entries": {
+					"{service-entry-id}": {}
+				}
+			}
+		}
+	},
+	"ip-sets": {
+		"{ip-set-id}": {}
+	},
+	"ipfix-obs-points": {
+		"switch-global": {}
+	},
+	"ipfix": {
+		"collectorconfigs": {
+			"{collector-config-id}": {}
+		},
+		"configs": {
+			"{config-id}": {}
+		}
+	},
+	"license": {},
+	"licenses": {
+		"licenses-usage": {},
+		"{license-key}": {}
+	},
+	"lldp": {
+		"transport-nodes": {
+			"{node-id}": {
+				"interfaces": {
+					"{interface-name}": {}
+				}
+			}
+		}
+	},
+	"loadbalancer": {
+		"application-profiles": {
+			"{application-profile-id}": {}
+		},
+		"client-ssl-profiles": {
+			"{client-ssl-profile-id}": {}
+		},
+		"monitors": {
+			"{monitor-id}": {}
+		},
+		"persistence-profiles": {
+			"{persistence-profile-id}": {}
+		},
+		"pools": {
+			"{pool-id}": {}
+		},
+		"rules": {
+			"{rule-id}": {}
+		},
+		"server-ssl-profiles": {
+			"{server-ssl-profile-id}": {}
+		},
+		"services": {
+			"{service-id}": {
+				"pools": {
+					"statistics": {},
+					"status": {},
+					"{pool-id}": {
+						"statistics": {},
+						"status": {}
+					}
+				},
+				"statistics": {},
+				"status": {},
+				"virtual-servers": {
+					"statistics": {},
+					"status": {},
+					"{virtual-server-id}": {
+						"statistics": {},
+						"status": {}
+					}
+				}
+			}
+		},
+		"ssl": {
+			"ciphers-and-protocols": {}
+		},
+		"virtual-servers": {
+			"{virtual-server-id}": {}
+		}
+	},
+	"logical-ports": {
+		"status": {},
+		"{lport-id}": {
+			"forwarding-path": {},
+			"mac-table": {},
+			"state": {},
+			"statistics": {},
+			"status": {}
+		}
+	},
+	"logical-router-ports": {
+		"{logical-router-port-id}": {
+			"arp-table": {},
+			"statistics": {
+				"summary": {}
+			}
+		}
+	},
+	"logical-routers": {
+		"{logical-router-id}": {
+			"nat": {
+				"rules": {
+					"statistics": {},
+					"{rule-id}": {
+						"statistics": {}
+					}
+				}
+			},
+			"routing": {
+				"advertisement": {
+					"rules": {}
+				},
+				"bfd-config": {},
+				"bgp": {
+					"neighbors": {
+						"status": {},
+						"{id}": {}
+					}
+				},
+				"forwarding-table": {},
+				"ip-prefix-lists": {
+					"{id}": {}
+				},
+				"redistribution": {
+					"rules": {}
+				},
+				"route-maps": {
+					"{id}": {}
+				},
+				"route-table": {},
+				"routing-table": {},
+				"static-routes": {
+					"bfd-peers": {
+						"{bfd-peer-id}": {}
+					},
+					"{id}": {}
+				}
+			},
+			"status": {}
+		}
+	},
+	"logical-switches": {
+		"state": {},
+		"status": {},
+		"{lswitch-id}": {
+			"mac-table": {},
+			"state": {},
+			"statistics": {},
+			"summary": {},
+			"vtep-table": {}
+		}
+	},
+	"mac-sets": {
+		"{mac-set-id}": {
+			"members": {
+				"{mac-address}": {}
+			}
+		}
+	},
+	"md-proxies": {
+		"{proxy-id}": {
+			"statistics": {},
+			"{logical-switch-id}": {
+				"status": {}
+			}
+		}
+	},
+	"mirror-sessions": {
+		"{mirror-session-id}": {}
+	},
+	"network-encryption": {
+		"config": {},
+		"key-managers": {
+			"{key-manager-id}": {}
+		},
+		"key-policies": {
+			"reset": {
+				"{encrypt-type}": {}
+			},
+			"{key-policy-id}": {
+				"stats": {}
+			},
+			"{keypolicy-id}": {
+				"rules": {}
+			}
+		},
+		"sections": {
+			"{section-id}": {
+				"rules": {
+					"{rule-id}": {
+						"state": {},
+						"stats": {}
+					}
+				},
+				"state": {}
+			}
+		},
+		"status": {}
+	},
+	"node": {
+		"aaa": {
+			"auth-policy": {},
+			"providers": {
+				"vidm": {
+					"status": {}
+				}
+			}
+		},
+		"file-store": {
+			"{file-name}": {
+				"data": {},
+				"thumbprint": {}
+			}
+		},
+		"hardening-policy": {
+			"mandatory-access-control": {
+				"report": {}
+			}
+		},
+		"logs": {
+			"{log-name}": {
+				"data": {}
+			}
+		},
+		"network": {
+			"interfaces": {
+				"{interface-id}": {
+					"stats": {}
+				}
+			},
+			"name-servers": {},
+			"routes": {
+				"{route-id}": {}
+			},
+			"search-domains": {}
+		},
+		"processes": {
+			"{process-id}": {}
+		},
+		"rabbitmq-management-port": {},
+		"services": {
+			"cm-inventory": {
+				"status": {}
+			},
+			"http": {
+				"status": {}
+			},
+			"install-upgrade": {
+				"status": {}
+			},
+			"liagent": {
+				"status": {}
+			},
+			"manager": {
+				"status": {}
+			},
+			"mgmt-plane-bus": {
+				"status": {}
+			},
+			"node-mgmt": {
+				"status": {}
+			},
+			"nsx-message-bus": {
+				"status": {}
+			},
+			"nsx-upgrade-agent": {
+				"status": {}
+			},
+			"ntp": {
+				"status": {}
+			},
+			"search": {
+				"status": {}
+			},
+			"snmp": {
+				"status": {}
+			},
+			"ssh": {
+				"status": {}
+			},
+			"syslog": {
+				"exporters": {
+					"{exporter-name}": {}
+				},
+				"status": {}
+			}
+		},
+		"support-bundle": {},
+		"tasks": {
+			"{task-id}": {
+				"response": {}
+			}
+		},
+		"users": {
+			"{userid}": {
+				"ssh-keys": {}
+			}
+		}
+	},
+	"normalizations": {},
+	"ns-groups": {
+		"unassociated-virtual-machines": {},
+		"{ns-group-id}": {
+			"effective-ip-address-members": {},
+			"effective-logical-port-members": {},
+			"effective-logical-switch-members": {},
+			"effective-virtual-machine-members": {},
+			"member-types": {}
+		},
+		"{nsgroup-id}": {
+			"service-associations": {}
+		}
+	},
+	"ns-service-groups": {
+		"{ns-service-group-id}": {}
+	},
+	"ns-services": {
+		"{ns-service-id}": {}
+	},
+	"pools": {
+		"ip-blocks": {
+			"{block-id}": {}
+		},
+		"ip-pools": {
+			"{pool-id}": {
+				"allocations": {}
+			}
+		},
+		"ip-subnets": {
+			"{subnet-id}": {}
+		},
+		"mac-pools": {
+			"{pool-id}": {}
+		},
+		"vni-pools": {
+			"{pool-id}": {}
+		},
+		"vtep-label-pools": {
+			"{pool-id}": {}
+		}
+	},
+	"realization-state-barrier": {
+		"config": {},
+		"current": {}
+	},
+	"service-profiles": {
+		"{service-profile-id}": {}
+	},
+	"services": {
+		"{service-id}": {}
+	},
+	"switching-profiles": {
+		"{switching-profile-id}": {
+			"summary": {}
+		}
+	},
+	"tasks": {
+		"{task-id}": {
+			"response": {}
+		}
+	},
+	"templates": {
+		"{template-id}": {}
+	},
+	"traceflows": {
+		"{traceflow-id}": {
+			"observations": {}
+		}
+	},
+	"transport-nodes": {
+		"state": {},
+		"status": {},
+		"{node-id}": {
+			"pnic-bond-status": {},
+			"remote-transport-node-status": {},
+			"statistics": {
+				"nat-rules": {}
+			},
+			"status": {},
+			"tunnels": {
+				"{tunnel-name}": {}
+			}
+		},
+		"{transportnode-id}": {
+			"state": {}
+		}
+	},
+	"transport-zones": {
+		"status": {},
+		"transport-node-status": {},
+		"transport-node-status-report": {},
+		"{zone-id}": {
+			"status": {},
+			"summary": {},
+			"transport-node-status": {},
+			"transport-node-status-report": {}
+		}
+	},
+	"transportzone-profiles": {
+		"{transportzone-profile-id}": {}
+	},
+	"trust-management": {
+		"certificates": {
+			"{cert-id}": {}
+		},
+		"crls": {
+			"{crl-id}": {}
+		},
+		"csrs": {
+			"{csr-id}": {
+				"pem-file": {}
+			}
+		},
+		"principal-identities": {
+			"{principal-identity-id}": {}
+		}
+	},
+	"ui-views": {
+		"dashboard": {
+			"widgetconfigurations": {
+				"{widgetconfiguration-id}": {}
+			}
+		}
+	},
+	"upgrade": {
+		"eula": {
+			"accept": {},
+			"acceptance": {},
+			"content": {}
+		},
+		"history": {},
+		"nodes": {},
+		"nodes-summary": {},
+		"plan": {
+			"{component_type}": {
+				"settings": {}
+			}
+		},
+		"status-summary": {},
+		"summary": {},
+		"upgrade-unit-groups": {
+			"aggregate-info": {},
+			"{group-id}": {
+				"status": {},
+				"upgrade-unit": {}
+			}
+		},
+		"upgrade-unit-groups-status": {},
+		"upgrade-units": {
+			"aggregate-info": {},
+			"{upgrade-unit-id}": {}
+		},
+		"upgrade-units-stats": {},
+		"version-whitelist": {
+			"{component_type}": {}
+		}
+	}
+}

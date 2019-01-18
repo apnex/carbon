@@ -1,0 +1,456 @@
+{
+	"result_count": 16,
+	"results": [
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER0",
+			"description": "Port created on Tier-0 router for '3-app-t1-router-01'",
+			"id": "bebf4b63-0432-48c6-802a-c5ec20629c53",
+			"display_name": "LinkedPort_3-app-t1-router-01",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"mac_address": "02:50:56:56:44:52",
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.2"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1540280156577,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1540280156577,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER1",
+			"description": "Port created on Tier-1 router for 't0-router-01'",
+			"id": "35054f5f-30e5-41d2-b2e6-678a1aac8f55",
+			"display_name": "LinkedPort_t0-router-01",
+			"logical_router_id": "d156ab0e-ae57-447d-8968-dc3747065aaf",
+			"linked_logical_router_port_id": {
+				"target_display_name": "LinkedPort_t1-router-3-tier-app",
+				"is_valid": true,
+				"target_type": "LogicalRouterLinkPortOnTIER0",
+				"target_id": "4f2fba69-a8b2-4fd4-a90b-a9e85681e050"
+			},
+			"mac_address": "02:50:56:56:44:55",
+			"edge_cluster_member_index": [
+				0
+			],
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.9"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542862148116,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862148116,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER1",
+			"description": "Port created on Tier-1 router for 't0-router-01'",
+			"id": "5f5769db-f3e7-4a24-a2b8-78f6e5925af2",
+			"display_name": "LinkedPort_t0-router-01",
+			"logical_router_id": "505a2dcd-8918-4dcb-a5ed-d43ac447bad7",
+			"linked_logical_router_port_id": {
+				"target_display_name": "LinkedPort_t1-router-01",
+				"is_valid": true,
+				"target_type": "LogicalRouterLinkPortOnTIER0",
+				"target_id": "8a298180-cd9c-4237-8238-ab26f7bcfb9d"
+			},
+			"mac_address": "02:50:56:56:44:55",
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.1"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1538531989532,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538531989532,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER1",
+			"description": "Port created on Tier-1 router for 't0-router-01'",
+			"id": "e449bc27-2400-49c8-8551-fca6c8cbd7ba",
+			"display_name": "LinkedPort_t0-router-01",
+			"logical_router_id": "b3389fb9-43ea-477d-8d54-1b19ae73f18f",
+			"linked_logical_router_port_id": {
+				"target_display_name": "LinkedPort_t1-router-02-lb",
+				"is_valid": true,
+				"target_type": "LogicalRouterLinkPortOnTIER0",
+				"target_id": "dbc3be12-b287-443c-b20c-193c404e0931"
+			},
+			"mac_address": "02:50:56:56:44:55",
+			"edge_cluster_member_index": [
+				0
+			],
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.5"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1541037725329,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1541037725329,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER0",
+			"description": "Port created on Tier-0 router for 't1-new-vrf'",
+			"id": "6f64efce-79f0-46e8-a064-ef96e51c0e25",
+			"display_name": "LinkedPort_t1-new-vrf",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"mac_address": "02:50:56:56:44:52",
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.6"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542862077524,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862077524,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER0",
+			"description": "Port created on Tier-0 router for 't1-router-01'",
+			"id": "8a298180-cd9c-4237-8238-ab26f7bcfb9d",
+			"display_name": "LinkedPort_t1-router-01",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"linked_logical_router_port_id": "5f5769db-f3e7-4a24-a2b8-78f6e5925af2",
+			"mac_address": "02:50:56:56:44:52",
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.0"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1538531989486,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538531989486,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER0",
+			"description": "Port created on Tier-0 router for 't1-router-02-lb'",
+			"id": "dbc3be12-b287-443c-b20c-193c404e0931",
+			"display_name": "LinkedPort_t1-router-02-lb",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"linked_logical_router_port_id": "e449bc27-2400-49c8-8551-fca6c8cbd7ba",
+			"mac_address": "02:50:56:56:44:52",
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.4"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1541037725273,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1541037725273,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterLinkPortOnTIER0",
+			"description": "Port created on Tier-0 router for 't1-router-3-tier-app'",
+			"id": "4f2fba69-a8b2-4fd4-a90b-a9e85681e050",
+			"display_name": "LinkedPort_t1-router-3-tier-app",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"linked_logical_router_port_id": "35054f5f-30e5-41d2-b2e6-678a1aac8f55",
+			"mac_address": "02:50:56:56:44:52",
+			"subnets": [
+				{
+					"ip_addresses": [
+						"100.64.160.8"
+					],
+					"prefix_length": 31
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542862148074,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862148074,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterDownLinkPort",
+			"id": "e43b04cd-c19a-4f78-9380-c87800ec1eb8",
+			"display_name": "rp-downlink-app-172.16.20.1/24",
+			"logical_router_id": "d156ab0e-ae57-447d-8968-dc3747065aaf",
+			"mac_address": "02:50:56:56:44:52",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "ae3091d2-304d-4ff7-9b4c-cd0609464772",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "ae3091d2-304d-4ff7-9b4c-cd0609464772"
+			},
+			"subnets": [
+				{
+					"ip_addresses": [
+						"172.16.20.1"
+					],
+					"prefix_length": 24
+				}
+			],
+			"urpf_mode": "STRICT",
+			"_create_user": "admin",
+			"_create_time": 1542862628014,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862628014,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterDownLinkPort",
+			"id": "3f3996f7-8bb1-4403-8663-8b5a34c613ef",
+			"display_name": "rp-downlink-db-172.16.30.1/24",
+			"logical_router_id": "d156ab0e-ae57-447d-8968-dc3747065aaf",
+			"mac_address": "02:50:56:56:44:52",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "2cb0ae06-3d17-48d9-b78d-33b577dc8733",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "2cb0ae06-3d17-48d9-b78d-33b577dc8733"
+			},
+			"subnets": [
+				{
+					"ip_addresses": [
+						"172.16.30.1"
+					],
+					"prefix_length": 24
+				}
+			],
+			"urpf_mode": "STRICT",
+			"_create_user": "admin",
+			"_create_time": 1542862666620,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862666620,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterDownLinkPort",
+			"id": "2c4802c6-dea6-445c-8688-35d126bfd2aa",
+			"display_name": "rp-downlink-ls-10.243.7.0_24",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"mac_address": "02:50:56:56:44:52",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "ebdde7c5-ca09-4041-bdca-c8d2c9f87b9e",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "ebdde7c5-ca09-4041-bdca-c8d2c9f87b9e"
+			},
+			"subnets": [
+				{
+					"ip_addresses": [
+						"10.243.7.1"
+					],
+					"prefix_length": 24
+				}
+			],
+			"urpf_mode": "STRICT",
+			"_create_user": "admin",
+			"_create_time": 1542366669420,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542366739661,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalRouterDownLinkPort",
+			"id": "c7bee18c-b326-4f65-b1cc-9376f45271a9",
+			"display_name": "rp-downlink-ls-test",
+			"logical_router_id": "505a2dcd-8918-4dcb-a5ed-d43ac447bad7",
+			"mac_address": "02:50:56:56:44:52",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "db128af6-cf0d-461f-9c69-9fabf25a2226",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "db128af6-cf0d-461f-9c69-9fabf25a2226"
+			},
+			"subnets": [
+				{
+					"ip_addresses": [
+						"192.168.2.1"
+					],
+					"prefix_length": 24
+				}
+			],
+			"urpf_mode": "STRICT",
+			"_create_user": "admin",
+			"_create_time": 1538532033258,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538532033258,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterDownLinkPort",
+			"id": "320948d3-53eb-4993-b7d0-c4a53caa488f",
+			"display_name": "rp-downlink-ls-test-02-192.168.3.1",
+			"logical_router_id": "505a2dcd-8918-4dcb-a5ed-d43ac447bad7",
+			"mac_address": "02:50:56:56:44:52",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "b8c8f14c-ff7c-444b-9987-4cc1f3ff156c",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "b8c8f14c-ff7c-444b-9987-4cc1f3ff156c"
+			},
+			"subnets": [
+				{
+					"ip_addresses": [
+						"192.168.3.1"
+					],
+					"prefix_length": 24
+				}
+			],
+			"urpf_mode": "STRICT",
+			"_create_user": "admin",
+			"_create_time": 1538532920490,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538532920490,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouterDownLinkPort",
+			"id": "bbd40107-5d49-402b-b74f-8cb985a1cde4",
+			"display_name": "rp-downlink-web-172.16.10.1/24",
+			"logical_router_id": "d156ab0e-ae57-447d-8968-dc3747065aaf",
+			"mac_address": "02:50:56:56:44:52",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "da8918af-7fb8-4e5c-83b0-9e40cb7f2768",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "da8918af-7fb8-4e5c-83b0-9e40cb7f2768"
+			},
+			"subnets": [
+				{
+					"ip_addresses": [
+						"172.16.10.1"
+					],
+					"prefix_length": 24
+				}
+			],
+			"urpf_mode": "STRICT",
+			"_create_user": "admin",
+			"_create_time": 1542862548228,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862637984,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalRouterUpLinkPort",
+			"id": "267d528b-86fc-432a-9d9f-809739982cca",
+			"display_name": "rp-transit-3081",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"mac_address": "00:50:56:83:cd:e9",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "1a102b3b-c73d-49a9-8351-6a1546787c43",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "1a102b3b-c73d-49a9-8351-6a1546787c43"
+			},
+			"edge_cluster_member_index": [
+				0
+			],
+			"subnets": [
+				{
+					"ip_addresses": [
+						"10.243.6.132"
+					],
+					"prefix_length": 29
+				}
+			],
+			"urpf_mode": "STRICT",
+			"mtu": 1500,
+			"_create_user": "admin",
+			"_create_time": 1538531542733,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1543977916559,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 3
+		},
+		{
+			"resource_type": "LogicalRouterUpLinkPort",
+			"id": "4e5d0c89-b91a-436f-a34e-fc73119322ba",
+			"display_name": "rp-transit-3082",
+			"logical_router_id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"mac_address": "00:50:56:83:92:eb",
+			"linked_logical_switch_port_id": {
+				"target_display_name": "9bc32ca0-aba6-4b36-b9db-e7255a3a16b6",
+				"is_valid": true,
+				"target_type": "LogicalPort",
+				"target_id": "9bc32ca0-aba6-4b36-b9db-e7255a3a16b6"
+			},
+			"edge_cluster_member_index": [
+				0
+			],
+			"subnets": [
+				{
+					"ip_addresses": [
+						"10.243.6.140"
+					],
+					"prefix_length": 29
+				}
+			],
+			"urpf_mode": "STRICT",
+			"mtu": 1500,
+			"_create_user": "admin",
+			"_create_time": 1539069651199,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1543977916678,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 2
+		}
+	]
+}

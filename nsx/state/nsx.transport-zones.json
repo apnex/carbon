@@ -1,0 +1,79 @@
+{
+	"sort_ascending": true,
+	"sort_by": "displayName",
+	"result_count": 3,
+	"results": [
+		{
+			"resource_type": "TransportZone",
+			"id": "b7c3c2d8-b0b0-4cdd-a469-a5faa7f22cb0",
+			"display_name": "tz-overlay",
+			"nested_nsx": false,
+			"host_switch_name": "hs-fabric",
+			"transport_type": "OVERLAY",
+			"host_switch_id": "8d8455fe-4477-4b4b-ab7b-753b0a205905",
+			"transport_zone_profile_ids": [
+				{
+					"profile_id": "52035bb3-ab02-4a08-9884-18631312e50a",
+					"resource_type": "BfdHealthMonitoringProfile"
+				}
+			],
+			"host_switch_mode": "STANDARD",
+			"_create_user": "admin",
+			"_create_time": 1536717610926,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1536717610926,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0,
+			"_schema": "/v1/schema/TransportZone"
+		},
+		{
+			"resource_type": "TransportZone",
+			"id": "25663b4e-f783-404a-bdfe-aaaad43d3ac7",
+			"display_name": "tz-vlan-3081",
+			"nested_nsx": false,
+			"host_switch_name": "hs-vlan",
+			"transport_type": "VLAN",
+			"host_switch_id": "8e815105-a15e-41d4-95a5-7970868b2d4c",
+			"transport_zone_profile_ids": [
+				{
+					"profile_id": "52035bb3-ab02-4a08-9884-18631312e50a",
+					"resource_type": "BfdHealthMonitoringProfile"
+				}
+			],
+			"host_switch_mode": "STANDARD",
+			"_create_user": "admin",
+			"_create_time": 1538464831933,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1539069775873,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1,
+			"_schema": "/v1/schema/TransportZone"
+		},
+		{
+			"resource_type": "TransportZone",
+			"id": "f64dc6f4-b4ce-402c-9a49-fa0f1004a54a",
+			"display_name": "tz-vlan-3082",
+			"nested_nsx": false,
+			"host_switch_name": "nvds-vlan-3082",
+			"transport_type": "VLAN",
+			"host_switch_id": "1f65c58a-4842-4c68-9939-ed48ef2aca9a",
+			"transport_zone_profile_ids": [
+				{
+					"profile_id": "52035bb3-ab02-4a08-9884-18631312e50a",
+					"resource_type": "BfdHealthMonitoringProfile"
+				}
+			],
+			"host_switch_mode": "STANDARD",
+			"_create_user": "admin",
+			"_create_time": 1539068704777,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1539068704777,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0,
+			"_schema": "/v1/schema/TransportZone"
+		}
+	]
+}

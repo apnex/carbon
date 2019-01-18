@@ -1,0 +1,218 @@
+{
+	"result_count": 3,
+	"results": [
+		{
+			"resource_type": "DiscoveredNode",
+			"description": "",
+			"display_name": "iorcsq-esx-lab-nsx01.ior-mgmt.bhpbilliton.net",
+			"cm_local_id": "host-10",
+			"ip_addresses": [
+				"10.243.4.23",
+				"10.243.14.23",
+				"10.243.12.33"
+			],
+			"os_version": "6.5.0",
+			"certificate": "-----BEGIN CERTIFICATE-----\nLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVTakNDQXpLZ0F3SUJBZ0lK\nQU9vZGFwQVBDeDVpTUEwR0NTcUdTSWIzRFFFQkN3VUFNSUdzTVFzd0NRWUQKVlFR\nRERBSkRRVEVYTUJVR0NnbVNKb21UOGl4a0FSa1dCM1p6Y0dobGNtVXhGVEFUQmdv\nSmtpYUprL0lzWkFFWgpGZ1ZzYjJOaGJERUxNQWtHQTFVRUJoTUNWVk14RXpBUkJn\nTlZCQWdNQ2tOaGJHbG1iM0p1YVdFeExqQXNCZ05WCkJBb01KV2x2Y21OemNTMTJZ\nM013TXk1cGIzSXRiV2R0ZEM1aWFIQmlhV3hzYVhSdmJpNXVaWFF4R3pBWkJnTlYK\nQkFzTUVsWk5kMkZ5WlNCRmJtZHBibVZsY21sdVp6QWVGdzB4T0RBNU1EWXdORE14\nTVROYUZ3MHlNekE1TURZdwpORE14TVROYU1JRzhNUXN3Q1FZRFZRUUdFd0pWVXpF\nVE1CRUdBMVVFQ0F3S1EyRnNhV1p2Y201cFlURVNNQkFHCkExVUVCd3dKVUdGc2J5\nQkJiSFJ2TVE4d0RRWURWUVFLREFaV1RYZGhjbVV4R3pBWkJnTlZCQXNNRWxaTmQy\nRnkKWlNCRmJtZHBibVZsY21sdVp6RTJNRFFHQTFVRUF3d3RhVzl5WTNOeExXVnpl\nQzFzWVdJdGJuTjRNREV1YVc5eQpMVzFuYlhRdVltaHdZbWxzYkdsMGIyNHVibVYw\nTVI0d0hBWUpLb1pJaHZjTkFRa0JGZzkyYldOaFFIWnRkMkZ5ClpTNWpiMjB3Z2dF\naU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQ3d3VzNHeG5y\ndGZQSmMKZ2twbFRMWXp3MVo4c213VG9rMWVBTjEwQXFUWGtqZjNjNjRhdGc2Z2Z5\nenpGcHZFYVl5blBpcDdDU205anZFMApQSEt6QVl0UldHQ3NBZmlsQnZCSlNrRkZQ\nWlEvNzJrMFVIWnpEN2tWOVdIY2NBQUpoSHVqRGhjQ0J4NzBwM0ZSCnFTZXU5V2tC\nWmdsem53Y3BObE5ISm5aOXk1RVBlU2g4UUNIelJrblZuU3NYMFI3bElLMm5kSFg5\nUlh1T2pXYmgKRVJONGJiNE8zT01ZSUtJWnZTQVREb3d5REFPb3RGRWs3SC9ydkNT\ncVM5WGg5b0RrQU8wREp6WFNxc2VEYzhPYwpxeVJOOGo3aVlrcGEwYTViRElCMTZU\nSW1MbVQ0SFc1ekJrZmJ0MEJXeVQ3UXN0WFBpRzQ3c2ZwR3BJQzZyT2c3CjBsZlp5\nU0FqQWdNQkFBR2pYVEJiTURnR0ExVWRFUVF4TUMrQ0xXbHZjbU56Y1MxbGMzZ3Ri\nR0ZpTFc1emVEQXgKTG1sdmNpMXRaMjEwTG1Kb2NHSnBiR3hwZEc5dUxtNWxkREFm\nQmdOVkhTTUVHREFXZ0JSa3BhSlBTM3JrZ2g5eQoweGRObkwyNjNRaEl1akFOQmdr\ncWhraUc5dzBCQVFzRkFBT0NBUUVBekJ0MWlRVlh2YTVHTjhmTlRwUjQ5ZWlBCjVq\nOXUwRG9TUS8vdDBPQzlVUnVLeHlQMWg4OWI4QjdSdzRGMlVTcnNxbWVab3JWci9a\ncVFXcHFoaEhkVXQxU3IKRE16cks0L2l5RFNUaU02OEM4SktYOVAxMUUwQmtIRmFh\nOTJtMVRJZlZEV3ZYVVBtVkQwbHlUV1U0RjNYWTMrWQpWeThvSmh2YkoyaTFHeTNC\nV1pqZWdHWlRlZFVBYjcvWi9yWEM5VUVCVkNnVS9Ga3RxK1ZIQkV1Sks2V01GZDBt\nCnFzMEp1SHJZTkZXdStDcGkxNXM3TXNNOVE1T1haSVZHYi81aDJaeWtmd0RwWkY5\nZ25WcFhob3cvcTI0SG5aaFAKNnVWZUhhNFViMlQyK1VXTXQvWVFmNzJ5NXc0S21p\nYktJMTFiUytsVlZWbVdHbWFKK3JYMEhEMXJuMjlSZVE9PQotLS0tLUVORCBDRVJU\nSUZJQ0FURS0tLS0tCg==\n-----END CERTIFICATE-----",
+			"external_id": "cb891404-f0de-44e8-a09e-cf3b8bf3c819:host-10",
+			"origin_id": "cb891404-f0de-44e8-a09e-cf3b8bf3c819",
+			"node_type": "HostNode",
+			"parent_compute_collection": "cb891404-f0de-44e8-a09e-cf3b8bf3c819:domain-c7",
+			"os_type": "ESXI",
+			"origin_properties": [
+				{
+					"value": "iorcsq-esx-lab-nsx01",
+					"key": "hostName"
+				},
+				{
+					"value": "10.243.4.23",
+					"key": "managementIp"
+				},
+				{
+					"value": "poweredOn",
+					"key": "powerState"
+				},
+				{
+					"value": "8294253",
+					"key": "build"
+				},
+				{
+					"value": "connected",
+					"key": "connectionState"
+				},
+				{
+					"value": "VMware ESX Server",
+					"key": "licenseProductName"
+				},
+				{
+					"value": "ior-mgmt.bhpbilliton.net",
+					"key": "domainName"
+				},
+				{
+					"value": "false",
+					"key": "inMaintenanceMode"
+				},
+				{
+					"value": "10.243.10.33",
+					"key": "managementServerIp"
+				},
+				{
+					"value": "VMware ESXi 6.5.0 build-8294253",
+					"key": "fullName"
+				},
+				{
+					"value": "6.0",
+					"key": "licenseProductVersion"
+				},
+				{
+					"value": "10.240.132.40;10.241.132.40",
+					"key": "dnsConfigAddress"
+				}
+			],
+			"stateless": false,
+			"hardware_id": "",
+			"_last_sync_time": 1543978148904
+		},
+		{
+			"resource_type": "DiscoveredNode",
+			"description": "",
+			"display_name": "iorcsq-esx-lab-nsx02.ior-mgmt.bhpbilliton.net",
+			"cm_local_id": "host-14",
+			"ip_addresses": [
+				"10.243.4.24",
+				"10.243.14.24",
+				"10.243.12.34"
+			],
+			"os_version": "6.5.0",
+			"certificate": "-----BEGIN CERTIFICATE-----\nLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVTakNDQXpLZ0F3SUJBZ0lK\nQVBwaUU4alViUHVPTUEwR0NTcUdTSWIzRFFFQkN3VUFNSUdzTVFzd0NRWUQKVlFR\nRERBSkRRVEVYTUJVR0NnbVNKb21UOGl4a0FSa1dCM1p6Y0dobGNtVXhGVEFUQmdv\nSmtpYUprL0lzWkFFWgpGZ1ZzYjJOaGJERUxNQWtHQTFVRUJoTUNWVk14RXpBUkJn\nTlZCQWdNQ2tOaGJHbG1iM0p1YVdFeExqQXNCZ05WCkJBb01KV2x2Y21OemNTMTJZ\nM013TXk1cGIzSXRiV2R0ZEM1aWFIQmlhV3hzYVhSdmJpNXVaWFF4R3pBWkJnTlYK\nQkFzTUVsWk5kMkZ5WlNCRmJtZHBibVZsY21sdVp6QWVGdzB4T0RBNU1EWXdORE14\nTXpCYUZ3MHlNekE1TURZdwpORE14TXpCYU1JRzhNUXN3Q1FZRFZRUUdFd0pWVXpF\nVE1CRUdBMVVFQ0F3S1EyRnNhV1p2Y201cFlURVNNQkFHCkExVUVCd3dKVUdGc2J5\nQkJiSFJ2TVE4d0RRWURWUVFLREFaV1RYZGhjbVV4R3pBWkJnTlZCQXNNRWxaTmQy\nRnkKWlNCRmJtZHBibVZsY21sdVp6RTJNRFFHQTFVRUF3d3RhVzl5WTNOeExXVnpl\nQzFzWVdJdGJuTjRNREl1YVc5eQpMVzFuYlhRdVltaHdZbWxzYkdsMGIyNHVibVYw\nTVI0d0hBWUpLb1pJaHZjTkFRa0JGZzkyYldOaFFIWnRkMkZ5ClpTNWpiMjB3Z2dF\naU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRREdGekxkZ1dG\nbnVKcGkKQmswWllNSERPV05BOVlRdWJydW9ZRzFIUVc3R3l4b3ErUnVQeVFUbUxu\nSFZpU1lKUHRLZG04dXZ1ZzIvSzBjaQpMdVUxODBnUXN0N3lyS2lsMXVwNmVVbUdj\nNDlrY1hmWTJMMHg3Ti9OY0RhT3pnRDJaWmxQazBIa2hmdlZkajBECndIRWtMQU40\nN0JEQ3VncGk3SDk2dVplVFQxM21XbDArdEFuek1tc01LbG9MbDZZQmRTVnNSenFy\nSkwydlIvb0oKTHRCcW93UFdPY3pyZmppaTY1dXhlRnRLdU1DY08zOWtnSGVPTzJX\nMFBodjN4MTdHSDR4b0hIanlXZHlGWjVWbgoySndrYkFPQUZMbERkaHlLRmZ0SFZP\nS0o1WVlFejQwVzA2WEJrZ0duM3I3MGxkdG5DdkRwRUNUVXpTQWRiY3lrCnhyV01Y\nTzRMQWdNQkFBR2pYVEJiTURnR0ExVWRFUVF4TUMrQ0xXbHZjbU56Y1MxbGMzZ3Ri\nR0ZpTFc1emVEQXkKTG1sdmNpMXRaMjEwTG1Kb2NHSnBiR3hwZEc5dUxtNWxkREFm\nQmdOVkhTTUVHREFXZ0JSa3BhSlBTM3JrZ2g5eQoweGRObkwyNjNRaEl1akFOQmdr\ncWhraUc5dzBCQVFzRkFBT0NBUUVBUjhsOXYybjVnYUhydFQ5UTdaQk1uU3NJCm1Y\nU3E4VVZtZDYxVXVQWVM4TTd1ZDZDRWJpTnZXTGsrMnVOSXNBdzY5c3JrOHZMRkdT\nbFdaVENrMjR3UGVjK24KTmQ1WHdFNExacmwrdnA4aUpQYW1Qc1VVOGVKNGVUNW4w\nR0swTlhwYm1ISWUvREE1ZkxLVmVwRHJPQU9wMVdyRwp5RVJwVzZEdzNNOCsxV2cy\nZXVIdXp3a0NvRDdaNjErRVpzQXZpVXhPbWRPYTlPMmNBMEZVMFpONFE4K1grV1JZ\nCnF0NERxNzlyTW9uMzRHNnN6V0hUbWJHSUxqc3UyTFcxSFozOWhsazZXZzhYZ0N2\nVTg5SWVMOE91dGk3WmlSWTEKRytielJXYzlvU2lNNCtoL1dNNFhnWHVxdzJSOURD\nUjZnVjh0MjVGdUYzYXFWUnZqU05GaURyMWFpbmxFRGc9PQotLS0tLUVORCBDRVJU\nSUZJQ0FURS0tLS0tCg==\n-----END CERTIFICATE-----",
+			"external_id": "cb891404-f0de-44e8-a09e-cf3b8bf3c819:host-14",
+			"origin_id": "cb891404-f0de-44e8-a09e-cf3b8bf3c819",
+			"node_type": "HostNode",
+			"parent_compute_collection": "cb891404-f0de-44e8-a09e-cf3b8bf3c819:domain-c7",
+			"os_type": "ESXI",
+			"origin_properties": [
+				{
+					"value": "iorcsq-esx-lab-nsx02",
+					"key": "hostName"
+				},
+				{
+					"value": "10.243.4.24",
+					"key": "managementIp"
+				},
+				{
+					"value": "poweredOn",
+					"key": "powerState"
+				},
+				{
+					"value": "8294253",
+					"key": "build"
+				},
+				{
+					"value": "connected",
+					"key": "connectionState"
+				},
+				{
+					"value": "VMware ESX Server",
+					"key": "licenseProductName"
+				},
+				{
+					"value": "ior-mgmt.bhpbilliton.net",
+					"key": "domainName"
+				},
+				{
+					"value": "false",
+					"key": "inMaintenanceMode"
+				},
+				{
+					"value": "10.243.10.33",
+					"key": "managementServerIp"
+				},
+				{
+					"value": "VMware ESXi 6.5.0 build-8294253",
+					"key": "fullName"
+				},
+				{
+					"value": "6.0",
+					"key": "licenseProductVersion"
+				},
+				{
+					"value": "10.240.132.40;10.241.132.40",
+					"key": "dnsConfigAddress"
+				}
+			],
+			"stateless": false,
+			"hardware_id": "",
+			"_last_sync_time": 1543978148902
+		},
+		{
+			"resource_type": "DiscoveredNode",
+			"description": "",
+			"display_name": "iorcsq-esx-lab-nsx03.ior-mgmt.bhpbilliton.net",
+			"cm_local_id": "host-15",
+			"ip_addresses": [
+				"10.243.4.25",
+				"10.243.14.25",
+				"10.243.12.35"
+			],
+			"os_version": "6.5.0",
+			"certificate": "-----BEGIN CERTIFICATE-----\nLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUVTakNDQXpLZ0F3SUJBZ0lK\nQU9TKzRRSVVraGJqTUEwR0NTcUdTSWIzRFFFQkN3VUFNSUdzTVFzd0NRWUQKVlFR\nRERBSkRRVEVYTUJVR0NnbVNKb21UOGl4a0FSa1dCM1p6Y0dobGNtVXhGVEFUQmdv\nSmtpYUprL0lzWkFFWgpGZ1ZzYjJOaGJERUxNQWtHQTFVRUJoTUNWVk14RXpBUkJn\nTlZCQWdNQ2tOaGJHbG1iM0p1YVdFeExqQXNCZ05WCkJBb01KV2x2Y21OemNTMTJZ\nM013TXk1cGIzSXRiV2R0ZEM1aWFIQmlhV3hzYVhSdmJpNXVaWFF4R3pBWkJnTlYK\nQkFzTUVsWk5kMkZ5WlNCRmJtZHBibVZsY21sdVp6QWVGdzB4T0RBNU1EWXdORE14\nTkRsYUZ3MHlNekE1TURZdwpORE14TkRsYU1JRzhNUXN3Q1FZRFZRUUdFd0pWVXpF\nVE1CRUdBMVVFQ0F3S1EyRnNhV1p2Y201cFlURVNNQkFHCkExVUVCd3dKVUdGc2J5\nQkJiSFJ2TVE4d0RRWURWUVFLREFaV1RYZGhjbVV4R3pBWkJnTlZCQXNNRWxaTmQy\nRnkKWlNCRmJtZHBibVZsY21sdVp6RTJNRFFHQTFVRUF3d3RhVzl5WTNOeExXVnpl\nQzFzWVdJdGJuTjRNRE11YVc5eQpMVzFuYlhRdVltaHdZbWxzYkdsMGIyNHVibVYw\nTVI0d0hBWUpLb1pJaHZjTkFRa0JGZzkyYldOaFFIWnRkMkZ5ClpTNWpiMjB3Z2dF\naU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRFExbEF4TVlO\nSGdzOVEKYmxNVUQ1amY3dytSTDNlUWk1TExKak1MTmhGQjYyemtmU0hJZWNtK3VS\nY3U4SW1uN3dlQ0lHQnExK1RXOEZkNQo3VHFVemtPd2d1U0ovUWRCVVB6VnNNWEpL\nZy9UeHoxZlhIUGRIenJiNTFYVFp2STlXQjRZdG1oUGZRNW05UnBjCjhidUJOUENs\naE9qTUhzRGQ5QjhIOFBhMXVUVGM0TXUyZEs4dFZlaHN2eGk0Sjkva3hSaUE1MzBB\nSG5XcXVTVFoKSEg4NER1TXN1Mk5SSEFlVGhEL1QzdXllZnBGYzkrN0hXaDZGTVN5\nMFYyU001SEhpR002dS9hS2UrNmZaTUh1dApDZkVYRDM3UkRDbUI3dEU2S2o4eDN5\nSkZha1NBZzRXZTdHa01YT2hBR0RyMzB4RUJvTU1yWENYRVAyRDBmMHhaCmttdDhM\nYmViQWdNQkFBR2pYVEJiTURnR0ExVWRFUVF4TUMrQ0xXbHZjbU56Y1MxbGMzZ3Ri\nR0ZpTFc1emVEQXoKTG1sdmNpMXRaMjEwTG1Kb2NHSnBiR3hwZEc5dUxtNWxkREFm\nQmdOVkhTTUVHREFXZ0JSa3BhSlBTM3JrZ2g5eQoweGRObkwyNjNRaEl1akFOQmdr\ncWhraUc5dzBCQVFzRkFBT0NBUUVBcjBaK3ZFeVl1Q1VrNzVxdGE1WElWazNTCk9y\nNHF5VE9OT3VBMGhmOFNUVnAxSjNXdFM1L284bHZoQjl5OUhJTFZSbjhTblVpVjNs\nZTJJbWV6WlJhYmtFTlAKNkE1TVZ4cUZqSWswYk1VR2NpVzJHVEN1MnVUQnl6Rkwx\naUg4SjFGcWhuYUsyWFRwM3lhZHYzVk11SkxESXd1KwpXUGcrTm5HUDFQVUVhVHhH\ncVFNVXAvYnRIYlpCa1BGdGdDQ0NjMDI2Y3ZGUHhTaytQN2NkSkg0cFFBc3pWMzJL\nCmR0SEwwNXZLVU9zWkdDV3MrMlkvQ2pFZXlwVkQzcXBJN3JTbkEranZJQzVjY3p4\nSnVhSkdpdFVpN3BRUjc3Rm0KS2hCcm1xdHVYWFNwbGJ5M3VwRzBrd0lrY1kraS9q\nc20xanVJTjFEQzR5cmxUV0g4aUhMSjVraVMvR1VSd3c9PQotLS0tLUVORCBDRVJU\nSUZJQ0FURS0tLS0tCg==\n-----END CERTIFICATE-----",
+			"external_id": "cb891404-f0de-44e8-a09e-cf3b8bf3c819:host-15",
+			"origin_id": "cb891404-f0de-44e8-a09e-cf3b8bf3c819",
+			"node_type": "HostNode",
+			"parent_compute_collection": "cb891404-f0de-44e8-a09e-cf3b8bf3c819:domain-c7",
+			"os_type": "ESXI",
+			"origin_properties": [
+				{
+					"value": "iorcsq-esx-lab-nsx03",
+					"key": "hostName"
+				},
+				{
+					"value": "10.243.4.25",
+					"key": "managementIp"
+				},
+				{
+					"value": "poweredOn",
+					"key": "powerState"
+				},
+				{
+					"value": "8294253",
+					"key": "build"
+				},
+				{
+					"value": "connected",
+					"key": "connectionState"
+				},
+				{
+					"value": "VMware ESX Server",
+					"key": "licenseProductName"
+				},
+				{
+					"value": "ior-mgmt.bhpbilliton.net",
+					"key": "domainName"
+				},
+				{
+					"value": "false",
+					"key": "inMaintenanceMode"
+				},
+				{
+					"value": "10.243.10.33",
+					"key": "managementServerIp"
+				},
+				{
+					"value": "VMware ESXi 6.5.0 build-8294253",
+					"key": "fullName"
+				},
+				{
+					"value": "6.0",
+					"key": "licenseProductVersion"
+				},
+				{
+					"value": "10.240.132.40;10.241.132.40",
+					"key": "dnsConfigAddress"
+				}
+			],
+			"stateless": false,
+			"hardware_id": "",
+			"_last_sync_time": 1543978148897
+		}
+	]
+}

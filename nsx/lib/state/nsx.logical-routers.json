@@ -1,0 +1,122 @@
+{
+	"result_count": 4,
+	"results": [
+		{
+			"resource_type": "LogicalRouter",
+			"id": "251a9cf8-0feb-40a2-9ada-8421d1312f5e",
+			"display_name": "t0-router-01",
+			"edge_cluster_id": "12a2b58f-fc99-4c1a-be8c-527b7b27128d",
+			"firewall_sections": [
+				{
+					"is_valid": true,
+					"target_type": "FirewallSection",
+					"target_id": "5704561a-eaed-42c4-b71d-ae2daead5c8d"
+				}
+			],
+			"preferred_edge_cluster_member_index": 0,
+			"advanced_config": {
+				"external_transit_networks": [
+					"100.64.0.0/16"
+				],
+				"internal_transit_network": "169.254.0.0/28"
+			},
+			"router_type": "TIER0",
+			"high_availability_mode": "ACTIVE_STANDBY",
+			"failover_mode": "PREEMPTIVE",
+			"_create_user": "admin",
+			"_create_time": 1538531503966,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538531503966,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouter",
+			"id": "505a2dcd-8918-4dcb-a5ed-d43ac447bad7",
+			"display_name": "t1-router-01",
+			"firewall_sections": [
+				{
+					"is_valid": true,
+					"target_type": "FirewallSection",
+					"target_id": "ca8d3d80-58aa-4b31-b0f3-3a89847ea73f"
+				}
+			],
+			"advanced_config": {
+				"internal_transit_network": "169.254.0.0/28"
+			},
+			"router_type": "TIER1",
+			"_create_user": "admin",
+			"_create_time": 1538531989377,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538531989377,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouter",
+			"id": "b3389fb9-43ea-477d-8d54-1b19ae73f18f",
+			"display_name": "t1-router-02-lb",
+			"edge_cluster_id": "12a2b58f-fc99-4c1a-be8c-527b7b27128d",
+			"firewall_sections": [
+				{
+					"is_valid": true,
+					"target_type": "FirewallSection",
+					"target_id": "6493b20c-29a0-4f02-a74f-2c06805e3817"
+				}
+			],
+			"advanced_config": {
+				"internal_transit_network": "169.254.0.0/28"
+			},
+			"edge_cluster_member_indices": [
+				0
+			],
+			"router_type": "TIER1",
+			"high_availability_mode": "ACTIVE_STANDBY",
+			"failover_mode": "PREEMPTIVE",
+			"_create_user": "admin",
+			"_create_time": 1541037725144,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1541037725144,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalRouter",
+			"id": "d156ab0e-ae57-447d-8968-dc3747065aaf",
+			"display_name": "t1-router-3-tier-app",
+			"edge_cluster_id": "12a2b58f-fc99-4c1a-be8c-527b7b27128d",
+			"firewall_sections": [
+				{
+					"is_valid": true,
+					"target_type": "FirewallSection",
+					"target_id": "9246d0ca-39f2-4668-aee0-3e756aa766e1"
+				}
+			],
+			"advanced_config": {
+				"internal_transit_network": "169.254.0.0/28"
+			},
+			"edge_cluster_member_indices": [
+				0
+			],
+			"allocation_profile": {
+				"allocation_pool": {
+					"allocation_pool_type": "LoadBalancerAllocationPool",
+					"allocation_size": "SMALL"
+				}
+			},
+			"router_type": "TIER1",
+			"high_availability_mode": "ACTIVE_STANDBY",
+			"failover_mode": "PREEMPTIVE",
+			"_create_user": "admin",
+			"_create_time": 1542862147952,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1542862147952,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		}
+	]
+}

@@ -1,0 +1,692 @@
+{
+	"sort_ascending": true,
+	"sort_by": "displayName",
+	"result_count": 15,
+	"results": [
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "1a102b3b-c73d-49a9-8351-6a1546787c43",
+			"display_name": "1a102b3b-c73d-49a9-8351-6a1546787c43",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "267d528b-86fc-432a-9d9f-809739982cca"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "e967eac2-1ac2-49d9-bf7d-c53f025118f9",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "0c403bc9-7773-4680-a5cc-847ed0f9f52e",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1538531542718,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1538531542795,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "2cb0ae06-3d17-48d9-b78d-33b577dc8733",
+			"display_name": "2cb0ae06-3d17-48d9-b78d-33b577dc8733",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "3f3996f7-8bb1-4403-8663-8b5a34c613ef"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "5f0dbdc6-5500-45bc-a5ce-ae4e227ab822",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542862666609,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1542862666703,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "9bc32ca0-aba6-4b36-b9db-e7255a3a16b6",
+			"display_name": "9bc32ca0-aba6-4b36-b9db-e7255a3a16b6",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "4e5d0c89-b91a-436f-a34e-fc73119322ba"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "97a3ec1c-9db2-4820-aa38-c9a7f6424b6c",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "0c403bc9-7773-4680-a5cc-847ed0f9f52e",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1539069651184,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1539069651246,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"id": "513d36ed-d44d-43b9-8602-36ee274ff8e7",
+			"display_name": "DB01/DB01.vmx@c28fd778-03a5-409e-b732-785217ee9a9a",
+			"attachment": {
+				"attachment_type": "VIF",
+				"id": "d8dd07b2-e65b-4942-a660-2435672197f2"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "5f0dbdc6-5500-45bc-a5ce-ae4e227ab822",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "fbc4fb17-83d9-4b53-a286-ccdf04301888",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "system",
+			"_create_time": 1541657094084,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1541657094084,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalPort",
+			"id": "e27f883b-7227-498d-8cfc-5be83579c906",
+			"display_name": "IORCSQ-VM2/IORCSQ-VM2.vmx@c28fd778-03a5-409e-b732-785217ee9a9a",
+			"attachment": {
+				"attachment_type": "VIF",
+				"id": "0a49ea96-a295-4e17-8d49-a5766af04696"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "116d654d-b44b-4c29-91bb-5b906dc0ddc0",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "fbc4fb17-83d9-4b53-a286-ccdf04301888",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "system",
+			"_create_time": 1542331067771,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1542331067771,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalPort",
+			"id": "a9710102-9247-4bf6-8858-df69d8333c15",
+			"display_name": "IORCSQ-VM3/IORCSQ-VM3.vmx@88d8a82d-05b4-499a-afae-554bd3234aac",
+			"attachment": {
+				"attachment_type": "VIF",
+				"id": "1f9dbbe4-c8b8-4501-bf0d-58e9284bf941"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "ee4610cc-72fd-412d-ac34-ce14c11ed526",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "fbc4fb17-83d9-4b53-a286-ccdf04301888",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "system",
+			"_create_time": 1541658198510,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1541658198510,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalPort",
+			"id": "75827179-c1ea-4d8e-b76a-46510acef88d",
+			"display_name": "Web01/Web01.vmx@88d8a82d-05b4-499a-afae-554bd3234aac",
+			"attachment": {
+				"attachment_type": "VIF",
+				"id": "8f3b72e1-2ccf-404c-acdd-cf6c5ed19fe1"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "ee4610cc-72fd-412d-ac34-ce14c11ed526",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "fbc4fb17-83d9-4b53-a286-ccdf04301888",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "system",
+			"_create_time": 1541657129163,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1541657129163,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalPort",
+			"id": "92878ddc-b648-4d1a-96f1-02f759218adf",
+			"display_name": "Web02/Web02.vmx@88d8a82d-05b4-499a-afae-554bd3234aac",
+			"attachment": {
+				"attachment_type": "VIF",
+				"id": "38f257ea-2d97-46c4-8e1a-3f53d2c4e3ad"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "ee4610cc-72fd-412d-ac34-ce14c11ed526",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "fbc4fb17-83d9-4b53-a286-ccdf04301888",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "system",
+			"_create_time": 1541657322294,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1541657322294,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "ae3091d2-304d-4ff7-9b4c-cd0609464772",
+			"display_name": "ae3091d2-304d-4ff7-9b4c-cd0609464772",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "e43b04cd-c19a-4f78-9380-c87800ec1eb8"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "d5ab6251-a8f9-4828-b812-f9d57b2f8f56",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542862628003,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1542862628099,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"id": "477fc217-5a18-4ca0-9a01-08a7b9be7872",
+			"display_name": "app-01a_corp.local/app-01a_corp.local.vmx@e54ccd9f-44f7-499f-8218-e495ab85b1c3",
+			"attachment": {
+				"attachment_type": "VIF",
+				"id": "3cd39a5e-19c4-49c6-b440-9895e8a87401"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "d5ab6251-a8f9-4828-b812-f9d57b2f8f56",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "fbc4fb17-83d9-4b53-a286-ccdf04301888",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "system",
+			"_create_time": 1541657070059,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1541657070059,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "b8c8f14c-ff7c-444b-9987-4cc1f3ff156c",
+			"display_name": "b8c8f14c-ff7c-444b-9987-4cc1f3ff156c",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "320948d3-53eb-4993-b7d0-c4a53caa488f"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "e51a27ee-6f71-4a74-9446-809e4f4ac79d",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1538532920476,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1538532920547,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "da8918af-7fb8-4e5c-83b0-9e40cb7f2768",
+			"display_name": "da8918af-7fb8-4e5c-83b0-9e40cb7f2768",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "bbd40107-5d49-402b-b74f-8cb985a1cde4"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "ee4610cc-72fd-412d-ac34-ce14c11ed526",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542862548206,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1542862548488,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "db128af6-cf0d-461f-9c69-9fabf25a2226",
+			"display_name": "db128af6-cf0d-461f-9c69-9fabf25a2226",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "c7bee18c-b326-4f65-b1cc-9376f45271a9"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "b2a4186b-654c-424d-b900-9e15d9072589",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1538532033246,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1538532033383,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "Switch port created for logical router port.",
+			"id": "ebdde7c5-ca09-4041-bdca-c8d2c9f87b9e",
+			"display_name": "ebdde7c5-ca09-4041-bdca-c8d2c9f87b9e",
+			"attachment": {
+				"attachment_type": "LOGICALROUTER",
+				"id": "2c4802c6-dea6-445c-8688-35d126bfd2aa"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "116d654d-b44b-4c29-91bb-5b906dc0ddc0",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1542366669405,
+			"_last_modified_user": "system",
+			"_last_modified_time": 1542366669509,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 1
+		},
+		{
+			"resource_type": "LogicalPort",
+			"description": "",
+			"id": "99fdcd6a-ed74-4204-ac7a-8f23c0d07fe3",
+			"display_name": "ls-test02 - DHCP Server Port",
+			"tags": [],
+			"attachment": {
+				"attachment_type": "DHCP_SERVICE",
+				"id": "6ad0b7b9-3917-4e16-aeee-33c97fee0a58"
+			},
+			"admin_state": "UP",
+			"logical_switch_id": "e51a27ee-6f71-4a74-9446-809e4f4ac79d",
+			"address_bindings": [],
+			"switching_profile_ids": [
+				{
+					"value": "47ffda0e-035f-4900-83e4-0a2086813ede",
+					"key": "SwitchSecuritySwitchingProfile"
+				},
+				{
+					"value": "fad98876-d7ff-11e4-b9d6-1681e6b88ec1",
+					"key": "SpoofGuardSwitchingProfile"
+				},
+				{
+					"value": "64814784-7896-3901-9741-badeff705639",
+					"key": "IpDiscoverySwitchingProfile"
+				},
+				{
+					"value": "1e7101c8-cfef-415a-9c8c-ce3d8dd078fb",
+					"key": "MacManagementSwitchingProfile"
+				},
+				{
+					"value": "93b4b7e8-f116-415d-a50c-3364611b5d09",
+					"key": "PortMirroringSwitchingProfile"
+				},
+				{
+					"value": "f313290b-eba8-4262-bd93-fab5026e9495",
+					"key": "QosSwitchingProfile"
+				}
+			],
+			"_create_user": "admin",
+			"_create_time": 1538532865871,
+			"_last_modified_user": "admin",
+			"_last_modified_time": 1538532865871,
+			"_system_owned": false,
+			"_protection": "NOT_PROTECTED",
+			"_revision": 0
+		}
+	]
+}

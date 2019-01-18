@@ -1,0 +1,8 @@
+## product names (code.vmware.com)
+https://apigw.vmware.com/v1/m4/api/dcr/rest/apix/apis/uids
+
+## product ids (code.vmware.com)
+https://apigw.vmware.com/v1/m4/api/dcr/rest/apix/products
+
+## apis listing
+https://apigw.vmware.com/v1/m4/api/dcr/rest/apix/apis

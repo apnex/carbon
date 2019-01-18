@@ -1,0 +1,17 @@
+[
+	{
+		"id": "1a102b3b-c73d-49a9-8351-6a1546787c43",
+		"name": "1a102b3b-c73d-49a9-8351-6a1546787c43",
+		"type": "logical-ports.list"
+	},
+	{
+		"id": null,
+		"name": "10.243.10.35",
+		"type": "sddc.status"
+	},
+	{
+		"id": "vm-13",
+		"name": "IORCSQ-VCS03",
+		"type": "vm.list"
+	}
+]

@@ -7,13 +7,16 @@ var paths = apiSpec.definitions;
 // cli switch
 var item = args[2];
 var method = args[3];
+var result;
 if(route = paths[item]) {
 	switch(method) {
 		case "read":
-			resolve(route, 0, 0);
+			result = defTree(route, 0, 0);
+			console.log(JSON.stringify(result, null, "\t"));
 		break;
 		case "write":
-			resolve(route, 1, 1);
+			result = defTree(route, 1, 1);
+			console.log(JSON.stringify(result, null, "\t"));
 		break;
 		case "writefull":
 			resolve(route, 1, 0);
@@ -26,58 +29,101 @@ if(route = paths[item]) {
 	filter(item);
 }
 
-function resolve(spec, writeOnly, minSpec) {
+function defTree(spec, writeOnly) {
+	//console.log(JSON.stringify(spec, null, "\t"));
 	let data = {};
-	let curSpec;
-	if(typeof spec.allOf !== 'undefined') { // decouple recursion logic from handling
-		curSpec = spec.allOf[1];
+	if(typeof spec.allOf !== 'undefined') {
+		spec.allOf.forEach((body) => { // merge all
+			data = Object.assign(data, selectType(body, writeOnly));
+		});
 	} else {
-		curSpec = spec;
+		data = Object.assign(data, selectType(spec, writeOnly));
 	}
-
-	// build property list
-	let propList = [];
-	let properties = {};
-	if(typeof curSpec.required === 'undefined') {
-		if(curSpec.properties) {
-			propList = Object.keys(curSpec.properties);
-		}
-	} else {
-		if(minSpec && writeOnly) {
-			propList = curSpec.required;
-		} else {
-			propList = Object.keys(curSpec.properties);
-		}
-	}
-	if(curSpec.properties) {
-		properties = curSpec.properties;
-	}
-
-	// iterate and filter properties
-	propList.sort().forEach((item) => {
-		if(writeOnly) {
-			if(!properties[item].readOnly) {
-				data[item] = buildNode(properties[item]);
-			}
-		} else {
-			data[item] = buildNode(properties[item]);
-		}
-	});
-	console.log(JSON.stringify(data, null, "\t"));
+	return data;
 }
 
-function buildNode(item) {
-	let type;
-	if(typeof item.type !== 'undefined') {
-		type = item.type;
-	} else {
-		if(typeof item['$ref'] !== 'undefined') {
-			type = item['$ref'];
+function selectType(body, writeOnly) {
+	let node = {};
+	if(typeof body.type !== 'undefined') {
+		//console.log(JSON.stringify(body, null, "\t"));
+		switch(body.type) {
+			case "object":
+				node = isObject(body, writeOnly);
+			break;
+			case "array":
+				node = isArray(body, writeOnly);
+			break;
+			case "integer":
+				node = 'integer';
+			break;
+			case "string":
+				node = 'string';
+			break;
+			case "boolean":
+				node = 'boolean';
+			break;
+		}
+	} else { // isRef
+		if(typeof body['$ref'] !== 'undefined') {
+			node = isRef(body, writeOnly);
 		}
 	}
-	//let node = {};
-	//return node;
-	return type;
+	return node;
+}
+
+function isIncluded(key, body, writeOnly) {
+	let include = 1;
+	if(key.match(/^_/)) { // hidden fields
+		include = 0;
+	}
+	if(body['readOnly'] && writeOnly == 1) { // isReadOnly
+		include = 0;
+	}
+	if(body['x-deprecated']) { // deprecated
+		include = 0;
+	}
+	return include;
+}
+
+function isObject(body, writeOnly) {
+	let node = {};
+	Object.entries(body.properties).forEach((keys) => {
+		if(isIncluded(keys[0], keys[1], writeOnly)) {
+			node[keys[0]] = selectType(keys[1], writeOnly);
+		}
+	});
+	return node;
+}
+
+function isRef(body, writeOnly) {
+	let node = {};
+	let matches;
+	let string = body['$ref'];
+	if(matches = string.match(/#[\/]definitions[\/](.+)/)) {
+		if(route = paths[matches[1]]) {
+			node = defTree(route, writeOnly); // recurse
+		}
+	}
+	return node;
+}
+
+function isArray(body, writeOnly) {
+	let node = [];
+	let include = 1;
+	if(body['readOnly'] && writeOnly) { // isReadOnly
+		include = 0;
+	}
+	if(body['x-deprecated']) { // deprecated
+		include = 0;
+	}
+	if(include) {
+		let payload = {};
+		if(typeof body['items'] !== 'undefined') {
+			payload = selectType(body['items'], writeOnly);
+		}
+		node = [payload];
+	}
+	return node;
 }
 
 function filter(value) {

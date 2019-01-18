@@ -2,6 +2,7 @@
 let args = process.argv;
 const apiSpec = require('./nsx-api.json');
 //const apiSpec = require('./vcenter.json');
+//const apiSpec = require('./oms-api-5.1.json');
 const paths = apiSpec.paths;
 
 // cli switch
@@ -28,6 +29,7 @@ if(route = paths['/' + item]) {
 	}
 } else {
 	filter(item);
+	//nested(item);
 }
 
 function search(path, method) {
@@ -86,4 +88,29 @@ function filter(value) {
 	cell.run().forEach((item) => {
 		console.log('key [' + item.key + ']');
 	});
+
+	// tree merge
+	//nested(cell.view)
+}
+
+function nested(paths) {
+	let cache = {};
+	paths.forEach((path) => {
+		//console.log('TESTING: ' + path.key);
+		let matches = path.key.match(/([^/]+)/g)
+		tree(cache, matches);
+	});
+	console.log(JSON.stringify(cache, null, "\t"));
+}
+
+function tree(cache, array) {
+	let item = array.shift();
+	if(!item.match(/\?/g)) {
+		if(typeof cache[item] === 'undefined') {
+			cache[item] = {};
+		}
+		if(array.length) {
+			tree(cache[item], array);
+		}
+	}
 }
