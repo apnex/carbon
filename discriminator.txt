@@ -1,0 +1,8 @@
+## need to handle discriminator flag
+## allow user to specify nested discriminators until unique spec can be resolved
+
+## ie for HostSwitchSpec
+HostSwitchSpec PreconfiguredHostSwitch
+HostSwitchSpec StandardHostSwitch StaticIpPoolSpec
+HostSwitchSpec StandardHostSwitch StaticIpListSpec
+HostSwitchSpec StandardHostSwitch AssignedByDhcp

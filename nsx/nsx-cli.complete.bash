@@ -30,7 +30,7 @@ _nsx-cli_complete() {
 	GREEN='\033[0;32m' # green
 
 	local ARRAY=()
-	if [[ ${PRV} != "list" ]]; then
+	if [[ ${PRV} != "get" ]]; then
 		local IFS=$'\n'
 		if [[ ${#COMP_WORDS[@]} -ge 2 ]]; then
 			ARRAY=($(nsx-cli "[]" "${COMP_WORDS[@]:1:${#COMP_WORDS[@]}-2}" 2>/dev/null | tr -d '\r')) # handle CRLF in tty

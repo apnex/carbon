@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const args = process.argv;
-//const apiSpec = require('./nsx-api.json');
-const apiSpec = require('./vcenter.json');
+const apiSpec = require('./nsx-api.json');
+//const apiSpec = require('./vcenter.json');
 var paths = apiSpec.definitions;
 
 // cli switch
@@ -29,18 +29,16 @@ if(route = paths[item]) {
 	filter(item);
 }
 
-function defTree(spec, writeOnly) {
-	//console.log(JSON.stringify(spec, null, "\t"));
-	let data = {};
-	if(typeof spec.allOf !== 'undefined') {
-		spec.allOf.forEach((body) => { // merge all
-			data = Object.assign(data, selectType(body, writeOnly));
+function defTree(body, writeOnly) {
+	let node = {};
+	if(typeof body.allOf !== 'undefined') {
+		body.allOf.forEach((item) => { // merge all
+			node = Object.assign(node, selectType(item, writeOnly));
 		});
 	} else {
-		//data = Object.assign(data, selectType(spec, writeOnly));
-		data = selectType(spec, writeOnly);
+		node = selectType(body, writeOnly);
 	}
-	return data;
+	return node;
 }
 
 function selectType(body, writeOnly) {
@@ -85,9 +83,28 @@ function isObject(body, writeOnly) {
 	return node;
 }
 
+function isArray(body, writeOnly) {
+	let node = [];
+	if(typeof body['items'] !== 'undefined') {
+		node.push(selectType(body['items'], writeOnly));
+	}
+	return node;
+}
+
+function isRef(body, writeOnly) {
+	let node = {};
+	let matches;
+	if(matches = body['$ref'].match(/#[\/]definitions[\/](.+)/)) {
+		if(route = paths[matches[1]]) {
+			node = defTree(route, writeOnly); // recurse
+		}
+	}
+	return node;
+}
+
 function isIncluded(key, body, writeOnly) {
 	let include = 1;
-	if(key.match(/^_/)) { // hidden fields
+	if(key.match(/^_/)) { // leading underscore hidden field
 		include = 0;
 	}
 	if(body['readOnly'] && writeOnly == 1) { // isReadOnly
@@ -97,37 +114,6 @@ function isIncluded(key, body, writeOnly) {
 		include = 0;
 	}
 	return include;
-}
-
-function isRef(body, writeOnly) {
-	let node = {};
-	let matches;
-	let string = body['$ref'];
-	if(matches = string.match(/#[\/]definitions[\/](.+)/)) {
-		if(route = paths[matches[1]]) {
-			node = defTree(route, writeOnly); // recurse
-		}
-	}
-	return node;
-}
-
-function isArray(body, writeOnly) {
-	let node = [];
-	let include = 1;
-	if(body['readOnly'] && writeOnly) { // isReadOnly
-		include = 0;
-	}
-	if(body['x-deprecated']) { // deprecated
-		include = 0;
-	}
-	if(include) {
-		let payload = {};
-		if(typeof body['items'] !== 'undefined') {
-			payload = selectType(body['items'], writeOnly);
-		}
-		node = [payload];
-	}
-	return node;
 }
 
 function filter(value) {

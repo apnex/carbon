@@ -1,9 +1,0 @@
-{
-	"display_name": "{name}",
-	"description": "{name}",
-	"transport_zone_id": "{transport-zone}",
-	"replication_mode": ["MTEP", "SOURCE"],
-	"admin_state": ["UP", "DOWN"],
-	"vlan": "{vlan}"
-}
-

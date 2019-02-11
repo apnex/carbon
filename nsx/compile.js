@@ -2,7 +2,8 @@
 let args = process.argv;
 const hd = require('heredoc');
 const fs = require('fs');
-const cmdSpec = require('./nsx-full-spec.json');
+//const cmdSpec = require('./nsx-full-spec.json');
+const cmdSpec = require('./nsx-small.json');
 
 // cli switch
 var item = args[2];
@@ -20,27 +21,72 @@ function compile(spec) {
 function myTree(keys, cmds) {
 	Object.keys(cmds).forEach((key) => {
 		let body = cmds[key];
+		let newKeys = keys.slice(0);
 		if(matches = key.match(/\{(.+)\}/)) {
 			key = matches[1] + '[]';
+			let drvFile = 'cmd.' + newKeys.join('.') + '.get';
+			console.log('summary driver: ' + drvFile);
+			//if(!fs.existsSync(drvFile)) {
+				writeList(drvFile);
+			//}
 		}
-		let newKeys = keys.slice(0);
 		newKeys.push(key);
-		let thisFile = 'cmd.' + newKeys.join('.');
-		if(!fs.existsSync(thisFile)) {
-			writeFile(thisFile);
-		}
 		if(key == 'get') {
 			let drvFile = 'drv.' + newKeys.join('.');
-			if(!fs.existsSync(drvFile)) {
+			//if(!fs.existsSync(drvFile)) {
 				writeDriver(drvFile);
-			}
+			//}
 		}
+		let thisFile = 'cmd.' + newKeys.join('.');
 		if(Object.keys(body).length) {
+			//if(!fs.existsSync(thisFile)) {
+				writeFile(thisFile);
+			//}
 			myTree(newKeys, body);
 		} else {
+			//if(!fs.existsSync(thisFile)) {
+				writeLeaf(thisFile);
+			//}
 			console.log('LEAF: ' + newKeys.join('.'));
 		}
 	});
+}
+
+function writeLeaf(fileName) {
+	let body = hd.strip(function() {/*
+		#!/bin/bash
+		FILEPATH=$0
+		if [[ -L ${FILEPATH} ]]; then
+			FILEPATH=$(readlink $0)
+		fi
+		if [[ $FILEPATH =~ ^(.*)/([^/]+)$ ]]; then
+			WORKDIR="${BASH_REMATCH[1]}"
+			CALLED="${BASH_REMATCH[2]}"
+		fi
+		source ${WORKDIR}/drv.core
+		source ${WORKDIR}/cmd
+		run() {
+			## input driver
+			local INPUT=("${@}")
+			local ITEM
+			if [[ $CALLED =~ cmd[.](.+)$ ]]; then
+				ITEM=$(printf "${BASH_REMATCH[1]}")
+			fi
+			local INPUT=$(${WORKDIR}/drv.${ITEM} "${INPUT[@]}")
+			printf "${INPUT}" | jq --tab .
+		}
+		IFS=$'\n'
+		INPUTS=($(chain "${@}"))
+		case "${INPUTS[0]}" in
+			run) # run
+				run "${INPUTS[@]:1}"
+			;;
+			*) # tab
+				printf "%s\n" "${INPUTS[@]}" | uniq
+			;;
+		esac
+	*/})
+	fs.writeFileSync('./lib/' + fileName, body);
 }
 
 function writeFile(fileName) {
@@ -54,22 +100,24 @@ function writeFile(fileName) {
 			WORKDIR="${BASH_REMATCH[1]}"
 			CALLED="${BASH_REMATCH[2]}"
 		fi
+		source ${WORKDIR}/drv.core
 		source ${WORKDIR}/cmd
 		run() {
 			## input driver
+			local INPUT=("${@}")
 			local ITEM
 			if [[ $CALLED =~ cmd[.](.+)$ ]]; then
 				ITEM=$(printf "${BASH_REMATCH[1]}")
 			fi
-			local INPUT=$(${WORKDIR}/drv.${ITEM})
+			local INPUT=$(${WORKDIR}/drv.${ITEM} "${INPUT[@]}")
 			printf "${INPUT}" | jq --tab .
 		}
 		IFS=$'\n'
 		INPUTS=($(chain "${@}"))
 		case "${INPUTS[0]}" in
-			run) # run
-				run
-			;;
+			#run) # run
+			#	run "${INPUTS[@]:1}"
+			#;;
 			*) # tab
 				printf "%s\n" "${INPUTS[@]}" | uniq
 			;;
@@ -93,6 +141,11 @@ function writeDriver(fileName) {
 		source ${WORKDIR}/drv.nsx.client
 		if [[ $CALLED =~ drv[.](.+)[.][^.]+$ ]]; then
 			ITEM=$(printf "${BASH_REMATCH[1]}" | tr '.' '/')
+			COUNTER=1
+			while [[ $ITEM =~ ([-a-z0-9]+\[\]) ]]; do # replace variables in name
+				ITEM="${ITEM/${BASH_REMATCH[1]}/${!COUNTER}}"
+				COUNTER=$((COUNTER+1))
+			done
 		fi
 		if [[ -n "${NSXHOST}" ]]; then
 			URL=$(buildURL "${ITEM}")
@@ -104,3 +157,52 @@ function writeDriver(fileName) {
         */})
 	fs.writeFileSync('./lib/' + fileName, body);
 }
+
+function writeList(fileName) {
+	let body = hd.strip(function() {/*
+		#!/bin/bash
+		FILEPATH=$0
+		if [[ -L ${FILEPATH} ]]; then
+			FILEPATH=$(readlink $0)
+		fi
+		if [[ $FILEPATH =~ ^(.*)/([^/]+)$ ]]; then
+			WORKDIR="${BASH_REMATCH[1]}"
+			CALLED="${BASH_REMATCH[2]}"
+		fi
+		source ${WORKDIR}/drv.core
+		source ${WORKDIR}/cmd
+		run() {
+			## input driver
+			local ITEM
+			if [[ $CALLED =~ cmd[.](.+)$ ]]; then
+				ITEM=$(printf "${BASH_REMATCH[1]}")
+			fi
+			local INPUT=$(${WORKDIR}/drv.${ITEM})
+			printf "${INPUT}" | jq --tab .
+		}
+		IFS=$'\n'
+		INPUTS=($(chain "${@}"))
+		case "${INPUTS[0]}" in
+			#run) # run
+			#	run
+			#;;
+			*) # tab
+				INPUT=$(run)
+				## build record structure
+				read -r -d '' INPUTSPEC <<-CONFIG
+					.results | map({
+						"id": .id,
+						"name": .display_name,
+						"resource_type": .resource_type
+					})
+				CONFIG
+				PAYLOAD=$(echo "$INPUT" | jq -r "$INPUTSPEC")
+				## output
+				buildTable "${PAYLOAD}"
+			;;
+		esac
+	*/})
+	fs.writeFileSync('./lib/' + fileName, body);
+}
+
+

@@ -1,0 +1,36 @@
+{
+	"fabric": {
+		"nodes": {
+			"get": 1,
+			"status": {
+				"get": 1
+			},
+			"{node-id}": {
+				"get": 1,
+				"capabilities": {
+					"get": 1
+				},
+				"modules": {
+					"get": 1
+				},
+				"network": {
+					"interfaces": {
+						"get": 1,
+						"{interface-id}": {
+							"get": 1,
+							"stats": {
+								"get": 1
+							}
+						}
+					}
+				},
+				"state": {
+					"get": 1
+				},
+				"status": {
+					"get": 1
+				}
+			}
+		}
+	}
+}
