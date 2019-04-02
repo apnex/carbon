@@ -1,0 +1,11 @@
+High-Fidelity
+-- Atomic actions responsible for RESTful primitives
+
+Procedurally-Generated
+-- Dynamically and deterministically constructed through automation
+-- Built from a model of dependencies
+
+Micro-Pipelines
+-- Modular nested pipelines that can be layered up to broad outcomes
+
+

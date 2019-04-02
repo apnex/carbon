@@ -1,9 +1,0 @@
-{
-	"id": "1a102b3b-c73d-49a9-8351-6a1546787c43",
-	"name": "1a102b3b-c73d-49a9-8351-6a1546787c43",
-	"resource_type": "LogicalPort",
-	"logical_switch_id": "e967eac2-1ac2-49d9-bf7d-c53f025118f9",
-	"admin_state": "UP",
-	"attachment_type": "LOGICALROUTER",
-	"attachment_id": "267d528b-86fc-432a-9d9f-809739982cca"
-}
