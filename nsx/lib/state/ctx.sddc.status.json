@@ -1,9 +1,0 @@
-{
-	"type": "nsx",
-	"name": "10.243.10.35",
-	"online": "true",
-	"dnsfwd": "10.243.10.35",
-	"dnsrev": "reached",
-	"ping": "REACHABLE",
-	"thumbprint": "98c865dc2b45c5567a1f3e5952391c2ec1be7f3d59237838ef956fcce7d055f7"
-}

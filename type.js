@@ -9,6 +9,7 @@ const paths = apiSpec.paths;
 // cli switch
 var item = args[2];
 var method = args[3];
+/*
 if(route = paths['/' + item]) {
 	switch(method) {
 		case "get":
@@ -29,9 +30,10 @@ if(route = paths['/' + item]) {
 		break;
 	}
 } else {
+*/
 	filter(item);
 	//nested(item);
-}
+//}
 
 function search(path, method) {
 	if(method == "get") {
@@ -43,7 +45,7 @@ function search(path, method) {
 		}
 	}
 	if(method == "put") {
-		let call = path["put"];
+		let call = path["get"];
 		let params = call.responses["200"];
 		console.log("PUT");
 		if(call.parameters) {
@@ -87,11 +89,11 @@ function filter(value) {
 		'value': value
 	});
 	cell.run().forEach((item) => {
-		console.log('path [' + item.key + ']');
+		//console.log('key [' + item.key + ']');
 	});
 
 	// tree merge
-	//nested(cell.view)
+	nested(cell.view)
 }
 
 function nested(paths) {
@@ -112,6 +114,8 @@ function tree(cache, array) {
 		}
 		if(array.length) {
 			tree(cache[item], array);
+		} else {
+			cache[item]['get'] = 1;
 		}
 	}
 }
