@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+const clientLocal = require('./drv.client.local');
+const xtable = require('./xtable.js'); // view
+
+// read from sddc.parameters
+const client = new clientLocal({
+	username: 'admin',
+	password: 'VMware1!VMware1!',
+	online: 1
+});
+let args = process.argv.slice(2);
+
+run(args);
+
+function run(args) {
+	let chain = '';
+	let action = args.pop();
+	args.forEach((key) => {
+		if(!key.match(/^.+\[\]$/)) {
+			chain += '/' + key;
+		}
+	});
+	console.error('--[ ' + chain + ' ]--');
+	console.error('ACTION: ' + action);
+	let url = 'https://nsxm01.lab/api/v1' + chain;
+	console.error(url);
+	get(chain);
+}
+
+// test 3
+function get(chain) {
+	client.get(chain).then((data) => {
+		display(data);
+		//console.log(JSON.stringify(data, null, "\t"));
+	}).catch((e) => {
+		console.error(e);
+	});
+}
+
+function display(raw) {
+	let data = [];
+	raw.results.forEach((i) => {
+		data.push({
+			'id': i.id,
+			'display_name': i.display_name,
+			'resource_type': i.resource_type
+		});
+	});
+	let table = new xtable({data});
+	table.out([
+		'id',
+		'display_name',
+		'resource_type'
+	]);
+	console.error('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
+}
