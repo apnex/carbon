@@ -26,10 +26,9 @@
 	],
 	"dependencies": {
 		"chalk": "*",
-		"heredoc": "*",
 		"got": "*",
+		"heredoc": "*",
 		"tough-cookie": "*",
-		"tough-cookie-file-store": "*",
-		"cookie": "*"
+		"tough-cookie-file-store": "*"
 	}
 }

@@ -6,7 +6,7 @@ const fs = require('fs');
 - Return payload
 */
 
-/* client
+/* client example
 const client = new clientLocal();
 client.get('fabric/nodes').then((data) => {
 	console.log(JSON.stringify(data, null, "\t"));
@@ -49,7 +49,7 @@ function get(call) {
 			let data = require(path);
 			resolve(data);
 		} else {
-			reject('[ERROR]: file missing');
+			reject('[ERROR]: file [' + path + '] missing!');
 		}
 	});
 }

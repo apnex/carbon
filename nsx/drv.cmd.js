@@ -1,17 +1,20 @@
 #!/usr/bin/env node
-const clientLocal = require('./drv.client.local');
+const core = require('./drv.core');
 const xtable = require('./xtable.js'); // view
 
-// read from sddc.parameters
-const client = new clientLocal({
-	username: 'admin',
-	password: 'VMware1!VMware1!',
-	online: 1
-});
+/* Module Purpose
+-- Takes space delimited shell arguments and converts to path
+-- Calls drv.core with path to retrieve data
+-- Displays data as raw or in tabular form view
+*/
+
+// shell
 let args = process.argv.slice(2);
+if(args.length > 1) {
+	run(args);
+}
 
-run(args);
-
+// display chain + action
 function run(args) {
 	let chain = '';
 	let action = args.pop();
@@ -22,21 +25,27 @@ function run(args) {
 	});
 	console.error('--[ ' + chain + ' ]--');
 	console.error('ACTION: ' + action);
-	let url = 'https://nsxm01.lab/api/v1' + chain;
-	console.error(url);
-	get(chain);
+	get(chain, action);
 }
 
-// test 3
-function get(chain) {
+// retrieve data and select output
+function get(chain, action) {
+	const client = new core();
 	client.get(chain).then((data) => {
-		display(data);
-		//console.log(JSON.stringify(data, null, "\t"));
+		switch(action) {
+			case "raw":
+				console.log(JSON.stringify(data, null, "\t"));
+			break;
+			case "get":
+				display(data);
+			break;
+		}
 	}).catch((e) => {
 		console.error(e);
 	});
 }
 
+// display table
 function display(raw) {
 	let data = [];
 	raw.results.forEach((i) => {

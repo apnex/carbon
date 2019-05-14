@@ -5,26 +5,27 @@ const CookieJar = require('tough-cookie').CookieJar;
 const fs = require('fs');
 
 /* Module Purpose
-- Interface user space with backend local/REST drivers
+- Interface user space with backend REST drivers
 - Provide NSX specific login information
 - Track NSX session state
 - Return payload
 */
 
 // constructor
-function nsxClient(opts) {
+var self = restClient.prototype;
+function restClient(opts) {
 	this.options = Object.assign({}, opts);
-	this.nsxLogin = nsxLogin;
-	this.getClient = getClient;
-	this.get = get;
+	self.login = login;
+	self.get = get;
+	self.getClient = getClient;
+	self.getSession = getSession;
 }
-module.exports = nsxClient;
-var self = nsxClient.prototype;
+module.exports = restClient;
 
 // default client
 let dir = './state/';
-let cookieFile = dir + 'nsx.cookie.json';
-let tokenFile = dir + 'nsx.token.json';
+let cookieFile = dir + 'nsx.cookies.json';
+let tokenFile = dir + 'nsx.token.txt';
 if (!fs.existsSync(dir)){
 	fs.mkdirSync(dir);
 }
@@ -32,52 +33,20 @@ if(!fs.existsSync(cookieFile)) {
 	fs.writeFileSync(cookieFile, '');
 }
 const baseClient = got.extend({
+	rejectUnauthorized: false,
 	cookieJar: new CookieJar(new CookieStore(cookieFile))
 });
 
-let creds = {
-	'username': 'admin',
-	'password': 'VMware1!VMware1!'
-};
-
-/*
-nsxLogin(creds).then((client) => {
-	console.log('success');
-}).catch((error) => {
-	console.log(error);
-});
-*/
-
-var url = '/api/v1/logical-switches';
-var url = '/api/v1/logical-routers';
-//get(url)
-
-function nsxLogin(opts) { // creds in, client return
-	let url = '/api/session/create';
-	console.log('Synching delicious cookies from [' + url + ']');
-	let options = {
-		rejectUnauthorized: false,
-		headers: {
-			'Content-Type': 'application/x-www-form-urlencoded',
-		},
-		form: true,
-		body: {
-			'j_username': opts.username,
-			'j_password': opts.password
-		}
-	};
-
-	// default nsx client
-	let client = baseClient.extend({
-		baseUrl: 'https://nsxm01.lab',
-		rejectUnauthorized: false,
-		json: true
-	});
-	return new Promise(function(resolve, reject) {
-		client.post(url, options).then((response) => {
+function login(opts) { // creds in, client return
+	return new Promise((resolve, reject) => {
+		let url = '/api/session/create';
+		console.error('Synching delicious cookies from [' + url + ']');
+		baseClient.post(url, opts).then((response) => {
 			//console.log(JSON.stringify(response.headers, null, "\t"));
 			let token = response.headers['x-xsrf-token'];
-			let nsxClient = client.extend({
+			let nsxClient = baseClient.extend({
+				baseUrl: 'https://nsxm01.lab/api/v1',
+				json: true,
 				headers: {
 					'Content-Type': 'application/json',
 					'X-XSRF-TOKEN': token
@@ -87,38 +56,105 @@ function nsxLogin(opts) { // creds in, client return
 				fs.writeFileSync(tokenFile, token);
 			}
 			resolve(nsxClient);
-		}).catch((error) => {
-			console.log(error);
-			reject(JSON.stringify(error, null, "\t"));
+		}).catch((e) => {
+			reject(e);
 		});
 	});
 }
 
 function getClient(client) {
-	let token = fs.readFileSync(tokenFile);
-	let nsxClient = client.extend({
-		baseUrl: 'https://nsxm01.lab',
-		rejectUnauthorized: false,
-		json: true,
-		headers: {
-			'Content-Type': 'application/json',
-			'X-XSRF-TOKEN': token
-		}
-	});
-	return new Promise(function(resolve, reject) {
-		resolve(nsxClient);
+	return new Promise((resolve, reject) => {
+		let token = fs.readFileSync(tokenFile);
+		let restClient = client.extend({
+			baseUrl: 'https://nsxm01.lab/api/v1',
+			json: true,
+			headers: {
+				'Content-Type': 'application/json',
+				'X-XSRF-TOKEN': token
+			}
+		});
+		resolve(restClient);
 	});
 }
 
 function get(url) {
-	getClient(baseClient).then((client) => {
-		console.error('[INFO]: nsx [' + url + ']');
-		client.get(url).then((response) => {
-			console.log(JSON.stringify(response.body, null, "\t"));
-		}).catch((error) => {
-			console.log(JSON.stringify(error, null, "\t"));
+	let that = this;
+	return new Promise((resolve, reject) => {
+		self.getSession(that).then((client) => {
+			client.get(url).then((response) => {
+				resolve(response.body);
+			}).catch((e) => {
+				reject(e);
+			});
+		}).catch((e) => {
+			reject(e);
 		});
-	}).catch((error) => {
-		console.log(error);
 	});
+}
+
+function getSession(that) {
+	return new Promise((resolve, reject) => {
+		if(session()) {
+			console.error('[INFO]: EXISTING nsx client');
+			self.getClient(baseClient).then((client) => {
+				resolve(client);
+			}).catch((e) => {
+				reject(e);
+			});
+		} else {
+			console.error('[INFO]: NEW nsx client');
+			let opts = { // login opts
+				baseUrl: 'https://nsxm01.lab',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded',
+				},
+				form: true,
+				body: {
+					'j_username': that.options.username,
+					'j_password': that.options.password
+				}
+			};
+			self.login(opts).then((client) => {
+				resolve(client);
+			}).catch((e) => {
+				reject(e);
+			});
+		}
+	});
+}
+
+function session() {
+	let file = tokenFile; // track
+	let sessionFile = file + '.session'; // session
+	let duration = 30;
+	let reset = function() {
+		if(fs.existsSync(sessionFile)) {
+			fs.unlinkSync(sessionFile);
+		}
+		if(fs.existsSync(file)) {
+			fs.unlinkSync(file);
+		}
+		fs.writeFileSync(sessionFile, '1', 'utf8');
+	};
+	if(fs.existsSync(sessionFile)) {
+		let seconds = Math.round((new Date().getTime() - fs.statSync(sessionFile).mtime) / 1000);
+		if(seconds > duration) {
+			console.error('Session file[' + file + '] [' + seconds + '] older than [' + duration + '] seconds...');
+			reset();
+			return 0;
+		} else {
+			if(fs.existsSync(file)) {
+				console.error('Session file[' + file + '] [' + seconds + '] younger than [' + duration + '] seconds...');
+				return 1;
+			} else {
+				console.error('file[' + file + '] does not exist...');
+				reset();
+				return 0;
+			}
+		}
+	} else {
+		console.error('file[' + sessionFile + '] does not exist, writing...');
+		reset();
+		return 0;
+	}
 }
