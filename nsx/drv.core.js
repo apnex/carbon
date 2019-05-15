@@ -2,7 +2,7 @@
 //const clientLocal = require('./drv.client.local');
 //const clientRest = require('./drv.client.rest');
 //const clientRest = require('./drv.vsp.client');
-const clientRest = require('./drv.new.nsx');
+const clientRest = require('./drv.client.nsx');
 
 // called from shell
 if(process.argv[1].match(/drv.core/g)) {
@@ -11,7 +11,7 @@ if(process.argv[1].match(/drv.core/g)) {
 		get(args[0]).then((data) => {
 			console.log(JSON.stringify(data, null, "\t"));
 		}).catch((e) => {
-			console.error(e);
+			//console.error(e);
 		});
 	}
 }

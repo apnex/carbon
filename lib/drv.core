@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 let args = process.argv.slice(2);
 
-## this is the command router / interpreter for the CLI
-## parameters get passed to this, and action / calls are executed
+// this is the command router / interpreter for the CLI
+// parameters get passed to this, and action / calls are executed
 
 run(args);
 

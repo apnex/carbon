@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 let args = process.argv;
 //const apiSpec = require('./spec/nsx-api.json');
-const apiSpec = require('./spec/nsx-api-2-4.json');
-//const apiSpec = require('./spec/vcenter.json');
+//const apiSpec = require('./spec/nsx-api-2-4.json');
+const apiSpec = require('./spec/vcenter.json');
 const paths = apiSpec.paths;
 
 // cli switch
@@ -86,7 +86,7 @@ function filter(value) {
 		'value': value
 	});
 	cell.run().forEach((item) => {
-		console.log(item.key);
+		console.log('path [' + item.key + ']');
 	});
 
 	// tree merge
@@ -96,6 +96,7 @@ function filter(value) {
 function nested(paths) {
 	let cache = {};
 	paths.forEach((path) => {
+		//console.log('TESTING: ' + path.key);
 		let matches = path.key.match(/([^/]+)/g)
 		tree(cache, matches);
 	});
