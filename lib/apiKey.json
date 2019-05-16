@@ -1,0 +1,15 @@
+{
+	"openapi": "3.0.0",
+	"components": {
+		"securitySchemes": {
+			"nsxToken": {
+				"type": "apiKey",
+				"in": "header",
+				"name": "X-XSRF-TOKEN"
+			}
+		}
+	},
+	"security": {
+		"nsxToken": []
+	}
+}

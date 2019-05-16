@@ -1,11 +1,9 @@
 #!/usr/bin/env node
 let args = process.argv;
-const xtable = require('./xtable');
 //const apiSpec = require('./spec/nsx-api.json');
 const apiSpec = require('./spec/nsx-api-2-4.json');
 //const apiSpec = require('./spec/vcenter.json');
 const paths = apiSpec.paths;
-
 
 // cli switch
 var item = args[2];
@@ -24,6 +22,9 @@ if(route = paths['/' + item]) {
 		case "delete":
 			search(route, 'delete');
 		break;
+		case "params":
+			search(route, 'params');
+		break;
 		default:
 			console.log(JSON.stringify(route, null, "\t"));
 			console.log("No method specified");
@@ -40,7 +41,7 @@ function search(path, method) {
 		let params = call.responses["200"];
 		console.log("GET");
 		if(call.parameters) {
-			printParams(call.parameters);
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
 	}
 	if(method == "put") {
@@ -48,8 +49,7 @@ function search(path, method) {
 		let params = call.responses["200"];
 		console.log("PUT");
 		if(call.parameters) {
-			//console.log(JSON.stringify(call.parameters, null, "\t"));
-			printParams(call.parameters);
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
 	}
 	if(method == "post") {
@@ -57,49 +57,17 @@ function search(path, method) {
 		let params = call.responses["201"];
 		console.log("POST");
 		if(call.parameters) {
-			//console.log(JSON.stringify(call.parameters, null, "\t"));
-			printParams(call.parameters);
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
 	}
 	if(method == "delete") {
-		if(call = path["delete"]) {
-			let params = call.responses["201"];
-			console.log("DELETE");
-			if(call.parameters) {
-				printParams(call.parameters);
-			}
+		let call = path["delete"];
+		let params = call.responses["201"];
+		console.log("DELETE");
+		if(call.parameters) {
+			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}
 	}
-}
-
-function printParams(params) {
-	//console.log(JSON.stringify(params, null, "\t"));
-	display(params);
-}
-
-// display table
-function display(raw) {
-	let data = [];
-	raw.forEach((i) => {
-		data.push({
-			'name': i['name'],
-			'type': i['type'],
-			'in': i['in'],
-			'required': i['required'],
-			'default': i['default'],
-			'format': i['format']
-		});
-	});
-	let table = new xtable({data});
-	table.out([
-		'name',
-		'type',
-		'in',
-		'format',
-		'default',
-		'required'
-	]);
-	console.error('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
 }
 
 function filter(value) {

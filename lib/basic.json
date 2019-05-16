@@ -1,0 +1,14 @@
+{
+	"securityDefinitions": {
+		"BasicAuth": {
+			"type": "basic",
+			"description": "HTTP Basic Authentication"
+		}
+	},
+	"host": "nsxmanager.your.domain",
+	"security": [
+		{
+			"BasicAuth": []
+		}
+	],
+}
