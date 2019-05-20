@@ -2,8 +2,8 @@
 let args = process.argv;
 const xtable = require('./xtable');
 //const apiSpec = require('./spec/nsx-api.json');
-const apiSpec = require('./spec/nsx-api-2-4.json');
-//const apiSpec = require('./spec/vcenter.json');
+//const apiSpec = require('./spec/nsx-api-2-4.json');
+const apiSpec = require('./spec/vcenter.json');
 const paths = apiSpec.paths;
 
 
@@ -102,7 +102,7 @@ function display(raw) {
 	console.error('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
 }
 
-function filter(value) {
+function filter(item) {
 	// construct input
 	let data = [];
 	Object.keys(paths).sort().forEach((value) => {
@@ -118,7 +118,7 @@ function filter(value) {
 	});
 	cell.addFilter({
 		'field': 'key',
-		'value': value
+		'value': item
 	});
 	cell.run().forEach((item) => {
 		console.log(item.key);

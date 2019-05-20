@@ -2,9 +2,39 @@
 	"com": {
 		"vmware": {
 			"vcenter": {
-				"inventory": {},
+				"inventory": {
+					"datastore": {
+						"~action?": {
+							"find": {
+								"post": 1
+							}
+						}
+					},
+					"network": {
+						"~action?": {
+							"find": {
+								"post": 1
+							}
+						}
+					}
+				},
 				"iso": {
-					"image": {}
+					"image": {
+						"id:{library_item}": {
+							"~action?": {
+								"mount": {
+									"post": 1
+								}
+							}
+						},
+						"id:{vm}": {
+							"~action?": {
+								"unmount": {
+									"post": 1
+								}
+							}
+						}
+					}
 				},
 				"ovf": {
 					"export-flag": {
@@ -14,7 +44,17 @@
 						"get": 1
 					},
 					"library-item": {
-						"post": 1
+						"post": 1,
+						"id:{ovf_library_item_id}": {
+							"~action?": {
+								"deploy": {
+									"post": 1
+								},
+								"filter": {
+									"post": 1
+								}
+							}
+						}
 					}
 				}
 			}
@@ -23,21 +63,21 @@
 	"vcenter": {
 		"cluster": {
 			"get": 1,
-			"{cluster}": {
+			"cluster[]": {
 				"get": 1
 			}
 		},
 		"datacenter": {
 			"get": 1,
 			"post": 1,
-			"{datacenter}": {
+			"datacenter[]": {
 				"delete": 1,
 				"get": 1
 			}
 		},
 		"datastore": {
 			"get": 1,
-			"{datastore}": {
+			"datastore[]": {
 				"get": 1
 			}
 		},
@@ -47,7 +87,7 @@
 		"host": {
 			"get": 1,
 			"post": 1,
-			"{host}": {
+			"host[]": {
 				"delete": 1,
 				"connect": {
 					"post": 1
@@ -62,14 +102,14 @@
 		},
 		"resource-pool": {
 			"get": 1,
-			"{resource_pool}": {
+			"resource_pool[]": {
 				"get": 1
 			}
 		},
 		"vm": {
 			"get": 1,
 			"post": 1,
-			"{vm}": {
+			"vm[]": {
 				"delete": 1,
 				"get": 1,
 				"hardware": {
@@ -84,7 +124,7 @@
 						"sata": {
 							"get": 1,
 							"post": 1,
-							"{adapter}": {
+							"adapter[]": {
 								"delete": 1,
 								"get": 1
 							}
@@ -92,7 +132,7 @@
 						"scsi": {
 							"get": 1,
 							"post": 1,
-							"{adapter}": {
+							"adapter[]": {
 								"delete": 1,
 								"get": 1,
 								"patch": 1
@@ -110,7 +150,7 @@
 					"cdrom": {
 						"get": 1,
 						"post": 1,
-						"{cdrom}": {
+						"cdrom[]": {
 							"delete": 1,
 							"get": 1,
 							"patch": 1,
@@ -129,7 +169,7 @@
 					"disk": {
 						"get": 1,
 						"post": 1,
-						"{disk}": {
+						"disk[]": {
 							"delete": 1,
 							"get": 1,
 							"patch": 1
@@ -138,7 +178,7 @@
 					"ethernet": {
 						"get": 1,
 						"post": 1,
-						"{nic}": {
+						"nic[]": {
 							"delete": 1,
 							"get": 1,
 							"patch": 1,
@@ -153,7 +193,7 @@
 					"floppy": {
 						"get": 1,
 						"post": 1,
-						"{floppy}": {
+						"floppy[]": {
 							"delete": 1,
 							"get": 1,
 							"patch": 1,
@@ -172,7 +212,7 @@
 					"parallel": {
 						"get": 1,
 						"post": 1,
-						"{port}": {
+						"port[]": {
 							"delete": 1,
 							"get": 1,
 							"patch": 1,
@@ -187,7 +227,7 @@
 					"serial": {
 						"get": 1,
 						"post": 1,
-						"{port}": {
+						"port[]": {
 							"delete": 1,
 							"get": 1,
 							"patch": 1,

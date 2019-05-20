@@ -2,7 +2,7 @@
 	"aaa": {
 		"registration-token": {
 			"post": 1,
-			"{token}": {
+			"token[]": {
 				"delete": 1,
 				"get": 1
 			}
@@ -10,15 +10,20 @@
 		"role-bindings": {
 			"get": 1,
 			"post": 1,
-			"{binding-id}": {
+			"binding-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
+			},
+			"action?": {
+				"delete_stale_bindings": {
+					"post": 1
+				}
 			}
 		},
 		"roles": {
 			"get": 1,
-			"{role}": {
+			"role[]": {
 				"get": 1
 			}
 		},
@@ -40,13 +45,23 @@
 	"administration": {
 		"audit-logs": {
 			"post": 1
+		},
+		"support-bundles": {
+			"action?": {
+				"collect": {
+					"post": 1
+				},
+				"delete_async_response": {
+					"post": 1
+				}
+			}
 		}
 	},
 	"app-discovery": {
 		"app-profiles": {
 			"get": 1,
 			"post": 1,
-			"{app-profile-id}": {
+			"app-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -55,7 +70,7 @@
 		"sessions": {
 			"get": 1,
 			"post": 1,
-			"{session-id}": {
+			"session-id[]": {
 				"delete": 1,
 				"get": 1,
 				"app-profiles": {
@@ -66,7 +81,7 @@
 				},
 				"ns-groups": {
 					"get": 1,
-					"{ns-group-id}": {
+					"ns-group-id[]": {
 						"members": {
 							"get": 1
 						}
@@ -75,7 +90,22 @@
 				"re-classify": {
 					"post": 1
 				},
-				"report": {},
+				"report": {
+					"app-info-and-vm": {
+						"format?": {
+							"csv": {
+								"post": 1
+							}
+						}
+					},
+					"app-profile-and-app-info": {
+						"format?": {
+							"csv": {
+								"get": 1
+							}
+						}
+					}
+				},
 				"summary": {
 					"get": 1
 				}
@@ -91,12 +121,12 @@
 	"bridge-clusters": {
 		"get": 1,
 		"post": 1,
-		"{bridgecluster-id}": {
+		"bridgecluster-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
 		},
-		"{cluster-id}": {
+		"cluster-id[]": {
 			"status": {
 				"get": 1
 			}
@@ -105,7 +135,7 @@
 	"bridge-endpoint-profiles": {
 		"get": 1,
 		"post": 1,
-		"{bridgeendpointprofile-id}": {
+		"bridgeendpointprofile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -114,12 +144,12 @@
 	"bridge-endpoints": {
 		"get": 1,
 		"post": 1,
-		"{bridgeendpoint-id}": {
+		"bridgeendpoint-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
 		},
-		"{endpoint-id}": {
+		"endpoint-id[]": {
 			"statistics": {
 				"get": 1
 			},
@@ -140,14 +170,30 @@
 	"cluster": {
 		"get": 1,
 		"api-certificate": {
-			"get": 1
+			"get": 1,
+			"action?": {
+				"clear_cluster_certificate": {
+					"post": 1
+				},
+				"set_cluster_certificate": {
+					"post": 1
+				}
+			}
 		},
 		"api-service": {
 			"get": 1,
 			"put": 1
 		},
 		"api-virtual-ip": {
-			"get": 1
+			"get": 1,
+			"action?": {
+				"clear_virtual_ip": {
+					"post": 1
+				},
+				"set_virtual_ip": {
+					"post": 1
+				}
+			}
 		},
 		"backups": {
 			"config": {
@@ -159,6 +205,18 @@
 			},
 			"status": {
 				"get": 1
+			},
+			"action?": {
+				"retrieve_ssh_fingerprint": {
+					"post": 1
+				}
+			}
+		},
+		"node": {
+			"action?": {
+				"repo_sync": {
+					"post": 1
+				}
 			}
 		},
 		"nodes": {
@@ -167,23 +225,28 @@
 			"deployments": {
 				"get": 1,
 				"post": 1,
-				"{node-id}": {
+				"node-id[]": {
 					"get": 1,
 					"status": {
 						"get": 1
+					},
+					"action?": {
+						"delete": {
+							"post": 1
+						}
 					}
 				}
 			},
 			"status": {
 				"get": 1
 			},
-			"{node-id}": {
+			"node-id[]": {
 				"delete": 1,
 				"get": 1,
 				"network": {
 					"interfaces": {
 						"get": 1,
-						"{interface-id}": {
+						"interface-id[]": {
 							"get": 1,
 							"stats": {
 								"get": 1
@@ -214,27 +277,60 @@
 			},
 			"status": {
 				"get": 1
+			},
+			"action?": {
+				"advance": {
+					"post": 1
+				},
+				"cancel": {
+					"post": 1
+				},
+				"retry": {
+					"post": 1
+				},
+				"start": {
+					"post": 1
+				},
+				"suspend": {
+					"post": 1
+				}
 			}
 		},
 		"status": {
 			"get": 1
 		},
-		"{node-id}": {
-			"get": 1
+		"node-id[]": {
+			"get": 1,
+			"action?": {
+				"remove_node": {
+					"post": 1
+				}
+			}
 		},
-		"{target-node-id}": {
-			"{target-uri}": {
+		"target-node-id[]": {
+			"target-uri[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1,
 				"put": 1
+			}
+		},
+		"action?": {
+			"backup_to_remote": {
+				"post": 1
+			},
+			"join_cluster": {
+				"post": 1
+			},
+			"summarize_inventory_to_remote": {
+				"post": 1
 			}
 		}
 	},
 	"cluster-profiles": {
 		"get": 1,
 		"post": 1,
-		"{cluster-profile-id}": {
+		"cluster-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -243,7 +339,7 @@
 	"compute-collection-transport-node-templates": {
 		"get": 1,
 		"post": 1,
-		"{template-id}": {
+		"template-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -265,7 +361,7 @@
 		"relay-profiles": {
 			"get": 1,
 			"post": 1,
-			"{relay-profile-id}": {
+			"relay-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -274,7 +370,7 @@
 		"relays": {
 			"get": 1,
 			"post": 1,
-			"{relay-id}": {
+			"relay-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -283,7 +379,7 @@
 		"server-profiles": {
 			"get": 1,
 			"post": 1,
-			"{profile-id}": {
+			"profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -292,14 +388,14 @@
 		"servers": {
 			"get": 1,
 			"post": 1,
-			"{server-id}": {
+			"server-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
 				"ip-pools": {
 					"get": 1,
 					"post": 1,
-					"{pool-id}": {
+					"pool-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1
@@ -312,7 +408,7 @@
 				"static-bindings": {
 					"get": 1,
 					"post": 1,
-					"{binding-id}": {
+					"binding-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1
@@ -331,14 +427,14 @@
 		"domains": {
 			"get": 1,
 			"post": 1,
-			"{domain-id}": {
+			"domain-id[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1,
 				"put": 1,
 				"groups": {
 					"get": 1,
-					"{group-id}": {
+					"group-id[]": {
 						"member-groups": {
 							"get": 1
 						}
@@ -347,7 +443,7 @@
 				"ldap-servers": {
 					"get": 1,
 					"post": 1,
-					"{server-id}": {
+					"server-id[]": {
 						"delete": 1,
 						"get": 1,
 						"post": 1,
@@ -367,7 +463,7 @@
 		"forwarders": {
 			"get": 1,
 			"post": 1,
-			"{forwarder-id}": {
+			"forwarder-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
@@ -379,6 +475,17 @@
 				},
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"clear_cache": {
+						"post": 1
+					},
+					"disable": {
+						"post": 1
+					},
+					"enable": {
+						"post": 1
+					}
 				}
 			}
 		}
@@ -386,7 +493,7 @@
 	"edge-clusters": {
 		"get": 1,
 		"post": 1,
-		"{edge-cluster-id}": {
+		"edge-cluster-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -395,13 +502,23 @@
 			},
 			"status": {
 				"get": 1
+			},
+			"action?": {
+				"replace_transport_node": {
+					"post": 1
+				}
 			}
 		}
 	},
 	"error-resolver": {
 		"get": 1,
-		"{error_id}": {
+		"error_id[]": {
 			"get": 1
+		},
+		"action?": {
+			"resolve_error": {
+				"post": 1
+			}
 		}
 	},
 	"eula": {
@@ -419,7 +536,7 @@
 		"compute-collection-fabric-templates": {
 			"get": 1,
 			"post": 1,
-			"{fabric-template-id}": {
+			"fabric-template-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -427,7 +544,7 @@
 		},
 		"compute-collections": {
 			"get": 1,
-			"{cc-ext-id}": {
+			"cc-ext-id[]": {
 				"get": 1,
 				"post": 1,
 				"network": {
@@ -440,7 +557,7 @@
 		"compute-managers": {
 			"get": 1,
 			"post": 1,
-			"{compute-manager-id}": {
+			"compute-manager-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
@@ -454,8 +571,16 @@
 		},
 		"discovered-nodes": {
 			"get": 1,
-			"{node-ext-id}": {
-				"get": 1
+			"node-ext-id[]": {
+				"get": 1,
+				"action?": {
+					"create_transport_node": {
+						"post": 1
+					},
+					"hostprep": {
+						"post": 1
+					}
+				}
 			}
 		},
 		"nodes": {
@@ -464,7 +589,7 @@
 			"status": {
 				"get": 1
 			},
-			"{node-id}": {
+			"node-id[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1,
@@ -478,7 +603,7 @@
 				"network": {
 					"interfaces": {
 						"get": 1,
-						"{interface-id}": {
+						"interface-id[]": {
 							"get": 1,
 							"stats": {
 								"get": 1
@@ -491,10 +616,18 @@
 				},
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart_inventory_sync": {
+						"post": 1
+					},
+					"upgrade_infra": {
+						"post": 1
+					}
 				}
 			},
-			"{target-node-id}": {
-				"{target-uri}": {
+			"target-node-id[]": {
+				"target-uri[]": {
 					"delete": 1,
 					"get": 1,
 					"post": 1,
@@ -512,25 +645,41 @@
 			"get": 1,
 			"tools-info": {
 				"get": 1
+			},
+			"action?": {
+				"update_tags": {
+					"post": 1
+				}
 			}
 		}
 	},
 	"firewall": {
 		"excludelist": {
 			"get": 1,
-			"put": 1
+			"put": 1,
+			"action?": {
+				"add_member": {
+					"post": 1
+				},
+				"check_if_exists": {
+					"post": 1
+				},
+				"remove_member": {
+					"post": 1
+				}
+			}
 		},
 		"profiles": {
 			"get": 1,
 			"post": 1,
-			"{profile-id}": {
+			"profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
 			}
 		},
 		"rules": {
-			"{rule-id}": {
+			"rule-id[]": {
 				"get": 1,
 				"state": {
 					"get": 1
@@ -543,7 +692,7 @@
 			"summary": {
 				"get": 1
 			},
-			"{section-id}": {
+			"section-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
@@ -553,42 +702,97 @@
 					"stats": {
 						"get": 1
 					},
-					"{rule-id}": {
+					"rule-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1,
 						"stats": {
 							"get": 1
+						},
+						"action?": {
+							"revise": {
+								"post": 1
+							}
+						}
+					},
+					"action?": {
+						"create_multiple": {
+							"post": 1
 						}
 					}
 				},
 				"state": {
 					"get": 1
+				},
+				"action?": {
+					"list_with_rules": {
+						"post": 1
+					},
+					"lock": {
+						"post": 1
+					},
+					"revise": {
+						"post": 1
+					},
+					"revise_with_rules": {
+						"post": 1
+					},
+					"unlock": {
+						"post": 1
+					},
+					"update_with_rules": {
+						"post": 1
+					}
+				}
+			},
+			"action?": {
+				"create_with_rules": {
+					"post": 1
+				}
+			}
+		},
+		"stats": {
+			"action?": {
+				"reset": {
+					"post": 1
 				}
 			}
 		},
 		"status": {
 			"get": 1,
-			"{context-type}": {
+			"context-type[]": {
 				"get": 1,
 				"put": 1,
-				"{id}": {
-					"get": 1
+				"id[]": {
+					"get": 1,
+					"action?": {
+						"disable_firewall": {
+							"post": 1
+						},
+						"enable_firewall": {
+							"post": 1
+						}
+					}
 				}
 			}
 		}
 	},
 	"global-configs": {
 		"get": 1,
-		"{config-type}": {
+		"config-type[]": {
 			"get": 1,
-			"put": 1
+			"put": 1,
+			"action?": {
+				"resync_config": {
+					"put": 1
+				}
+			}
 		}
 	},
 	"host-switch-profiles": {
 		"get": 1,
 		"post": 1,
-		"{host-switch-profile-id}": {
+		"host-switch-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -600,9 +804,14 @@
 		},
 		"features": {
 			"get": 1,
-			"{feature-stack-name}": {
+			"feature-stack-name[]": {
 				"get": 1,
-				"put": 1
+				"put": 1,
+				"action?": {
+					"reset_collection_frequency": {
+						"post": 1
+					}
+				}
 			}
 		},
 		"global-config": {
@@ -615,14 +824,14 @@
 			"status": {
 				"get": 1
 			},
-			"{cc-ext-id}": {
+			"cc-ext-id[]": {
 				"transport-nodes": {
 					"status": {
 						"get": 1
 					}
 				}
 			},
-			"{compute-collection-ext-id}": {
+			"compute-collection-ext-id[]": {
 				"status": {
 					"get": 1
 				}
@@ -630,7 +839,7 @@
 		},
 		"idfw-compute-collections": {
 			"get": 1,
-			"{cc-ext-id}": {
+			"cc-ext-id[]": {
 				"get": 1,
 				"put": 1
 			}
@@ -640,7 +849,7 @@
 			"put": 1
 		},
 		"nsgroup-vm-details": {
-			"{group-id}": {
+			"group-id[]": {
 				"get": 1
 			}
 		},
@@ -652,7 +861,7 @@
 			"get": 1
 		},
 		"transport-nodes": {
-			"{transport-node-id}": {
+			"transport-node-id[]": {
 				"vms": {
 					"status": {
 						"get": 1
@@ -664,12 +873,12 @@
 			"get": 1
 		},
 		"user-stats": {
-			"{user-id}": {
+			"user-id[]": {
 				"get": 1
 			}
 		},
 		"vm-stats": {
-			"{vm-ext-id}": {
+			"vm-ext-id[]": {
 				"get": 1
 			}
 		}
@@ -677,7 +886,7 @@
 	"ip-sets": {
 		"get": 1,
 		"post": 1,
-		"{ip-set-id}": {
+		"ip-set-id[]": {
 			"delete": 1,
 			"get": 1,
 			"post": 1,
@@ -690,7 +899,7 @@
 	"ipfix-collector-profiles": {
 		"get": 1,
 		"post": 1,
-		"{ipfix-collector-profile-id}": {
+		"ipfix-collector-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -706,7 +915,7 @@
 	"ipfix-profiles": {
 		"get": 1,
 		"post": 1,
-		"{ipfix-profile-id}": {
+		"ipfix-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -716,7 +925,7 @@
 		"collectorconfigs": {
 			"get": 1,
 			"post": 1,
-			"{collector-config-id}": {
+			"collector-config-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -725,7 +934,7 @@
 		"configs": {
 			"get": 1,
 			"post": 1,
-			"{config-id}": {
+			"config-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -740,29 +949,39 @@
 		"get": 1,
 		"post": 1,
 		"licenses-usage": {
-			"get": 1
+			"get": 1,
+			"format?": {
+				"csv": {
+					"get": 1
+				}
+			}
 		},
-		"{license-key}": {
+		"license-key[]": {
 			"delete": 1,
 			"get": 1
+		},
+		"action?": {
+			"delete": {
+				"post": 1
+			}
 		}
 	},
 	"lldp": {
 		"fabric-nodes": {
-			"{fabric-node-id}": {
+			"fabric-node-id[]": {
 				"interfaces": {
 					"get": 1,
-					"{interface-name}": {
+					"interface-name[]": {
 						"get": 1
 					}
 				}
 			}
 		},
 		"transport-nodes": {
-			"{node-id}": {
+			"node-id[]": {
 				"interfaces": {
 					"get": 1,
-					"{interface-name}": {
+					"interface-name[]": {
 						"get": 1
 					}
 				}
@@ -773,7 +992,7 @@
 		"application-profiles": {
 			"get": 1,
 			"post": 1,
-			"{application-profile-id}": {
+			"application-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -782,7 +1001,7 @@
 		"client-ssl-profiles": {
 			"get": 1,
 			"post": 1,
-			"{client-ssl-profile-id}": {
+			"client-ssl-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -791,7 +1010,7 @@
 		"monitors": {
 			"get": 1,
 			"post": 1,
-			"{monitor-id}": {
+			"monitor-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -800,7 +1019,7 @@
 		"persistence-profiles": {
 			"get": 1,
 			"post": 1,
-			"{persistence-profile-id}": {
+			"persistence-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -809,7 +1028,7 @@
 		"pools": {
 			"get": 1,
 			"post": 1,
-			"{pool-id}": {
+			"pool-id[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1,
@@ -819,7 +1038,7 @@
 		"rules": {
 			"get": 1,
 			"post": 1,
-			"{rule-id}": {
+			"rule-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -828,7 +1047,7 @@
 		"server-ssl-profiles": {
 			"get": 1,
 			"post": 1,
-			"{server-ssl-profile-id}": {
+			"server-ssl-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -837,7 +1056,7 @@
 		"services": {
 			"get": 1,
 			"post": 1,
-			"{service-id}": {
+			"service-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
@@ -851,7 +1070,7 @@
 					"status": {
 						"get": 1
 					},
-					"{pool-id}": {
+					"pool-id[]": {
 						"statistics": {
 							"get": 1
 						},
@@ -876,7 +1095,7 @@
 					"status": {
 						"get": 1
 					},
-					"{virtual-server-id}": {
+					"virtual-server-id[]": {
 						"statistics": {
 							"get": 1
 						},
@@ -895,7 +1114,7 @@
 		"tcp-profiles": {
 			"get": 1,
 			"post": 1,
-			"{tcp-profile-id}": {
+			"tcp-profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -904,10 +1123,20 @@
 		"virtual-servers": {
 			"get": 1,
 			"post": 1,
-			"{virtual-server-id}": {
+			"virtual-server-id[]": {
 				"delete": 1,
 				"get": 1,
-				"put": 1
+				"put": 1,
+				"action?": {
+					"update_with_rules": {
+						"put": 1
+					}
+				}
+			},
+			"action?": {
+				"create_with_rules": {
+					"post": 1
+				}
 			}
 		}
 	},
@@ -917,7 +1146,7 @@
 		"status": {
 			"get": 1
 		},
-		"{lport-id}": {
+		"lport-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -925,7 +1154,12 @@
 				"get": 1
 			},
 			"mac-table": {
-				"get": 1
+				"get": 1,
+				"format?": {
+					"csv": {
+						"get": 1
+					}
+				}
 			},
 			"state": {
 				"get": 1
@@ -941,12 +1175,17 @@
 	"logical-router-ports": {
 		"get": 1,
 		"post": 1,
-		"{logical-router-port-id}": {
+		"logical-router-port-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
 			"arp-table": {
-				"get": 1
+				"get": 1,
+				"format?": {
+					"csv": {
+						"get": 1
+					}
+				}
 			},
 			"state": {
 				"get": 1
@@ -962,10 +1201,17 @@
 	"logical-routers": {
 		"get": 1,
 		"post": 1,
-		"{logical-router-id}": {
+		"logical-router-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
+			"debug-info": {
+				"format?": {
+					"text": {
+						"get": 1
+					}
+				}
+			},
 			"nat": {
 				"rules": {
 					"get": 1,
@@ -973,7 +1219,7 @@
 					"statistics": {
 						"get": 1
 					},
-					"{rule-id}": {
+					"rule-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1,
@@ -1004,14 +1250,14 @@
 					"community-lists": {
 						"get": 1,
 						"post": 1,
-						"{community-list-id}": {
+						"community-list-id[]": {
 							"delete": 1,
 							"get": 1,
 							"put": 1
 						}
 					},
 					"communty-lists": {
-						"{community-list-id}": {
+						"community-list-id[]": {
 							"put": 1
 						}
 					},
@@ -1021,21 +1267,31 @@
 						"status": {
 							"get": 1
 						},
-						"{id}": {
+						"id[]": {
 							"delete": 1,
 							"get": 1,
 							"post": 1,
-							"put": 1
+							"put": 1,
+							"action?": {
+								"show-sensitive-data": {
+									"get": 1
+								}
+							}
 						}
 					}
 				},
 				"forwarding-table": {
-					"get": 1
+					"get": 1,
+					"format?": {
+						"csv": {
+							"get": 1
+						}
+					}
 				},
 				"ip-prefix-lists": {
 					"get": 1,
 					"post": 1,
-					"{id}": {
+					"id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1
@@ -1052,17 +1308,27 @@
 				"route-maps": {
 					"get": 1,
 					"post": 1,
-					"{id}": {
+					"id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1
 					}
 				},
 				"route-table": {
-					"get": 1
+					"get": 1,
+					"format?": {
+						"csv": {
+							"get": 1
+						}
+					}
 				},
 				"routing-table": {
-					"get": 1
+					"get": 1,
+					"format?": {
+						"csv": {
+							"get": 1
+						}
+					}
 				},
 				"static-routes": {
 					"get": 1,
@@ -1070,13 +1336,13 @@
 					"bfd-peers": {
 						"get": 1,
 						"post": 1,
-						"{bfd-peer-id}": {
+						"bfd-peer-id[]": {
 							"delete": 1,
 							"get": 1,
 							"put": 1
 						}
 					},
-					"{id}": {
+					"id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1
@@ -1093,6 +1359,14 @@
 			},
 			"status": {
 				"get": 1
+			},
+			"action?": {
+				"reallocate": {
+					"post": 1
+				},
+				"reprocess": {
+					"post": 1
+				}
 			}
 		}
 	},
@@ -1105,12 +1379,17 @@
 		"status": {
 			"get": 1
 		},
-		"{lswitch-id}": {
+		"lswitch-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
 			"mac-table": {
-				"get": 1
+				"get": 1,
+				"format?": {
+					"csv": {
+						"get": 1
+					}
+				}
 			},
 			"state": {
 				"get": 1
@@ -1122,21 +1401,26 @@
 				"get": 1
 			},
 			"vtep-table": {
-				"get": 1
+				"get": 1,
+				"format?": {
+					"csv": {
+						"get": 1
+					}
+				}
 			}
 		}
 	},
 	"mac-sets": {
 		"get": 1,
 		"post": 1,
-		"{mac-set-id}": {
+		"mac-set-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
 			"members": {
 				"get": 1,
 				"post": 1,
-				"{mac-address}": {
+				"mac-address[]": {
 					"delete": 1
 				}
 			}
@@ -1145,14 +1429,14 @@
 	"md-proxies": {
 		"get": 1,
 		"post": 1,
-		"{proxy-id}": {
+		"proxy-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
 			"statistics": {
 				"get": 1
 			},
-			"{logical-switch-id}": {
+			"logical-switch-id[]": {
 				"status": {
 					"get": 1
 				}
@@ -1167,7 +1451,12 @@
 			"get": 1
 		},
 		"feedback-response": {
-			"put": 1
+			"put": 1,
+			"action?": {
+				"accept-recommended": {
+					"post": 1
+				}
+			}
 		},
 		"feedback-summary": {
 			"get": 1
@@ -1186,13 +1475,29 @@
 			"aggregate-info": {
 				"get": 1
 			},
-			"{group-id}": {
+			"group-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
-				"migration-unit": {},
+				"migration-unit": {
+					"migration-unit-id[]": {
+						"action?": {
+							"reorder": {
+								"post": 1
+							}
+						}
+					}
+				},
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"add_migration_units": {
+						"post": 1
+					},
+					"reorder": {
+						"post": 1
+					}
 				}
 			}
 		},
@@ -1204,7 +1509,7 @@
 			"aggregate-info": {
 				"get": 1
 			},
-			"{migration-unit-id}": {
+			"migration-unit-id[]": {
 				"get": 1
 			}
 		},
@@ -1218,10 +1523,33 @@
 			"get": 1
 		},
 		"plan": {
-			"{component_type}": {
+			"component_type[]": {
 				"settings": {
 					"get": 1,
 					"put": 1
+				}
+			},
+			"action?": {
+				"abort": {
+					"post": 1
+				},
+				"continue": {
+					"post": 1
+				},
+				"finish": {
+					"post": 1
+				},
+				"pause": {
+					"post": 1
+				},
+				"reset": {
+					"post": 1
+				},
+				"rollback": {
+					"post": 1
+				},
+				"start": {
+					"post": 1
 				}
 			}
 		},
@@ -1243,16 +1571,21 @@
 	"mirror-sessions": {
 		"get": 1,
 		"post": 1,
-		"{mirror-session-id}": {
+		"mirror-session-id[]": {
 			"delete": 1,
 			"get": 1,
-			"put": 1
+			"put": 1,
+			"action?": {
+				"verify": {
+					"post": 1
+				}
+			}
 		}
 	},
 	"network-migration-specs": {
 		"get": 1,
 		"post": 1,
-		"{template-id}": {
+		"template-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1278,7 +1611,7 @@
 		},
 		"file-store": {
 			"get": 1,
-			"{file-name}": {
+			"file-name[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1,
@@ -1288,6 +1621,19 @@
 				},
 				"thumbprint": {
 					"get": 1
+				},
+				"action?": {
+					"copy_from_remote_file": {
+						"post": 1
+					},
+					"copy_to_remote_file": {
+						"post": 1
+					}
+				}
+			},
+			"action?": {
+				"create_remote_directory": {
+					"post": 1
 				}
 			}
 		},
@@ -1302,7 +1648,7 @@
 		},
 		"logs": {
 			"get": 1,
-			"{log-name}": {
+			"log-name[]": {
 				"get": 1,
 				"data": {
 					"get": 1
@@ -1316,7 +1662,7 @@
 			"get": 1,
 			"interfaces": {
 				"get": 1,
-				"{interface-id}": {
+				"interface-id[]": {
 					"get": 1,
 					"put": 1,
 					"stats": {
@@ -1331,7 +1677,7 @@
 			"routes": {
 				"get": 1,
 				"post": 1,
-				"{route-id}": {
+				"route-id[]": {
 					"delete": 1,
 					"get": 1
 				}
@@ -1343,7 +1689,7 @@
 		},
 		"processes": {
 			"get": 1,
-			"{process-id}": {
+			"process-id[]": {
 				"get": 1
 			}
 		},
@@ -1358,12 +1704,34 @@
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"cm-inventory": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"http": {
@@ -1371,6 +1739,20 @@
 				"put": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"apply_certificate": {
+						"post": 1
+					},
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"install-upgrade": {
@@ -1381,12 +1763,34 @@
 				},
 				"uc-state": {
 					"put": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"liagent": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"manager": {
@@ -1394,36 +1798,99 @@
 				"put": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"reset-manager-logging-levels": {
+						"post": 1
+					},
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"mgmt-plane-bus": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"migration-coordinator": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"node-mgmt": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					}
 				}
 			},
 			"nsx-message-bus": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"nsx-upgrade-agent": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"ntp": {
@@ -1431,12 +1898,34 @@
 				"put": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"search": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"snmp": {
@@ -1444,6 +1933,17 @@
 				"put": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"ssh": {
@@ -1451,6 +1951,20 @@
 				"put": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"remove_host_fingerprint": {
+						"post": 1
+					},
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"syslog": {
@@ -1458,56 +1972,120 @@
 				"exporters": {
 					"get": 1,
 					"post": 1,
-					"{exporter-name}": {
+					"exporter-name[]": {
 						"delete": 1,
 						"get": 1
+					},
+					"action?": {
+						"verify": {
+							"post": 1
+						}
 					}
 				},
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"telemetry": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			},
 			"ui-service": {
 				"get": 1,
 				"status": {
 					"get": 1
+				},
+				"action?": {
+					"restart": {
+						"post": 1
+					},
+					"start": {
+						"post": 1
+					},
+					"stop": {
+						"post": 1
+					}
 				}
 			}
 		},
 		"status": {
-			"get": 1
+			"get": 1,
+			"action?": {
+				"clear_bootup_error": {
+					"post": 1
+				}
+			}
 		},
 		"support-bundle": {
 			"get": 1
 		},
 		"tasks": {
 			"get": 1,
-			"{task-id}": {
+			"task-id[]": {
 				"delete": 1,
 				"get": 1,
 				"response": {
 					"get": 1
+				},
+				"action?": {
+					"cancel": {
+						"post": 1
+					}
 				}
 			}
 		},
 		"users": {
 			"get": 1,
-			"{userid}": {
+			"userid[]": {
 				"get": 1,
 				"put": 1,
 				"ssh-keys": {
-					"get": 1
+					"get": 1,
+					"action?": {
+						"add_ssh_key": {
+							"post": 1
+						},
+						"remove_ssh_key": {
+							"post": 1
+						}
+					}
 				}
 			}
 		},
 		"version": {
 			"get": 1
+		},
+		"action?": {
+			"restart": {
+				"post": 1
+			},
+			"shutdown": {
+				"post": 1
+			}
 		}
 	},
 	"normalizations": {
@@ -1516,13 +2094,21 @@
 	"notification-watchers": {
 		"get": 1,
 		"post": 1,
-		"{watcher-id}": {
+		"watcher-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
 			"notifications": {
 				"get": 1,
-				"put": 1
+				"put": 1,
+				"action?": {
+					"add_uri_filters": {
+						"post": 1
+					},
+					"delete_uri_filters": {
+						"post": 1
+					}
+				}
 			}
 		}
 	},
@@ -1532,7 +2118,7 @@
 		"unassociated-virtual-machines": {
 			"get": 1
 		},
-		"{ns-group-id}": {
+		"ns-group-id[]": {
 			"delete": 1,
 			"get": 1,
 			"post": 1,
@@ -1565,7 +2151,7 @@
 				"get": 1
 			}
 		},
-		"{nsgroup-id}": {
+		"nsgroup-id[]": {
 			"service-associations": {
 				"get": 1
 			}
@@ -1580,7 +2166,7 @@
 		"attributes": {
 			"get": 1
 		},
-		"{ns-profile-id}": {
+		"ns-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1589,7 +2175,7 @@
 	"ns-service-groups": {
 		"get": 1,
 		"post": 1,
-		"{ns-service-group-id}": {
+		"ns-service-group-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1598,7 +2184,7 @@
 	"ns-services": {
 		"get": 1,
 		"post": 1,
-		"{ns-service-id}": {
+		"ns-service-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1608,7 +2194,7 @@
 		"sections": {
 			"get": 1,
 			"post": 1,
-			"{section-id}": {
+			"section-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
@@ -1618,14 +2204,43 @@
 					"stats": {
 						"get": 1
 					},
-					"{rule-id}": {
+					"rule-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1,
 						"stats": {
 							"get": 1
+						},
+						"action?": {
+							"revise": {
+								"post": 1
+							}
+						}
+					},
+					"action?": {
+						"create_multiple": {
+							"post": 1
 						}
 					}
+				},
+				"action?": {
+					"list_with_rules": {
+						"post": 1
+					},
+					"revise": {
+						"post": 1
+					},
+					"revise_with_rules": {
+						"post": 1
+					},
+					"update_with_rules": {
+						"post": 1
+					}
+				}
+			},
+			"action?": {
+				"create_with_rules": {
+					"post": 1
 				}
 			}
 		}
@@ -1633,19 +2248,32 @@
 	"pktcap": {
 		"session": {
 			"post": 1,
-			"{session-id}": {
-				"get": 1
+			"session-id[]": {
+				"get": 1,
+				"action?": {
+					"delete": {
+						"post": 1
+					},
+					"terminate": {
+						"post": 1
+					}
+				}
 			}
 		},
 		"sessions": {
-			"get": 1
+			"get": 1,
+			"action?": {
+				"delete": {
+					"post": 1
+				}
+			}
 		}
 	},
 	"pools": {
 		"ip-blocks": {
 			"get": 1,
 			"post": 1,
-			"{block-id}": {
+			"block-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -1654,7 +2282,7 @@
 		"ip-pools": {
 			"get": 1,
 			"post": 1,
-			"{pool-id}": {
+			"pool-id[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1,
@@ -1667,7 +2295,7 @@
 		"ip-subnets": {
 			"get": 1,
 			"post": 1,
-			"{subnet-id}": {
+			"subnet-id[]": {
 				"delete": 1,
 				"get": 1,
 				"post": 1
@@ -1675,20 +2303,20 @@
 		},
 		"mac-pools": {
 			"get": 1,
-			"{pool-id}": {
+			"pool-id[]": {
 				"get": 1
 			}
 		},
 		"vni-pools": {
 			"get": 1,
-			"{pool-id}": {
+			"pool-id[]": {
 				"get": 1,
 				"put": 1
 			}
 		},
 		"vtep-label-pools": {
 			"get": 1,
-			"{pool-id}": {
+			"pool-id[]": {
 				"get": 1
 			}
 		}
@@ -1699,7 +2327,12 @@
 			"put": 1
 		},
 		"current": {
-			"get": 1
+			"get": 1,
+			"action?": {
+				"increment": {
+					"post": 1
+				}
+			}
 		}
 	},
 	"service-configs": {
@@ -1708,7 +2341,7 @@
 		"effective-profiles": {
 			"get": 1
 		},
-		"{config-set-id}": {
+		"config-set-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1717,7 +2350,7 @@
 	"service-profiles": {
 		"get": 1,
 		"post": 1,
-		"{service-profile-id}": {
+		"service-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1727,25 +2360,54 @@
 		"sections": {
 			"get": 1,
 			"post": 1,
-			"{section-id}": {
+			"section-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
 				"rules": {
 					"get": 1,
 					"post": 1,
-					"{rule-id}": {
+					"rule-id[]": {
 						"delete": 1,
 						"get": 1,
-						"put": 1
+						"put": 1,
+						"action?": {
+							"revise": {
+								"post": 1
+							}
+						}
+					},
+					"action?": {
+						"create_multiple": {
+							"post": 1
+						}
 					}
+				},
+				"action?": {
+					"list_with_rules": {
+						"post": 1
+					},
+					"revise": {
+						"post": 1
+					},
+					"revise_with_rules": {
+						"post": 1
+					},
+					"update_with_rules": {
+						"post": 1
+					}
+				}
+			},
+			"action?": {
+				"create_with_rules": {
+					"post": 1
 				}
 			}
 		},
 		"service-attachments": {
 			"get": 1,
 			"post": 1,
-			"{service-attachment-id}": {
+			"service-attachment-id[]": {
 				"delete": 1,
 				"get": 1
 			}
@@ -1753,7 +2415,7 @@
 		"service-chains": {
 			"get": 1,
 			"post": 1,
-			"{service-chain-id}": {
+			"service-chain-id[]": {
 				"delete": 1,
 				"get": 1
 			}
@@ -1764,7 +2426,7 @@
 		"service-managers": {
 			"get": 1,
 			"post": 1,
-			"{service-manager-id}": {
+			"service-manager-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -1773,14 +2435,14 @@
 		"services": {
 			"get": 1,
 			"post": 1,
-			"{service-id}": {
+			"service-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
 				"service-deployments": {
 					"get": 1,
 					"post": 1,
-					"{service-deployment-id}": {
+					"service-deployment-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1,
@@ -1789,30 +2451,35 @@
 						},
 						"status": {
 							"get": 1
+						},
+						"action?": {
+							"upgrade": {
+								"post": 1
+							}
 						}
 					}
 				},
 				"service-instances": {
 					"get": 1,
 					"post": 1,
-					"{service-instance-id}": {
+					"service-instance-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1,
 						"instance-endpoints": {
 							"get": 1,
 							"post": 1,
-							"{instance-endpoint-id}": {
+							"instance-endpoint-id[]": {
 								"delete": 1,
 								"get": 1
 							}
 						},
 						"instance-runtimes": {
 							"get": 1,
-							"{instance-runtime-id}": {
+							"instance-runtime-id[]": {
 								"post": 1,
 								"interfaces": {
-									"{interface_index}": {
+									"interface_index[]": {
 										"statistics": {
 											"get": 1
 										},
@@ -1820,6 +2487,17 @@
 											"get": 1
 										}
 									}
+								}
+							},
+							"action?": {
+								"delete": {
+									"post": 1
+								},
+								"deploy": {
+									"post": 1
+								},
+								"upgrade": {
+									"post": 1
 								}
 							}
 						},
@@ -1834,7 +2512,7 @@
 				"service-profiles": {
 					"get": 1,
 					"post": 1,
-					"{service-profile-id}": {
+					"service-profile-id[]": {
 						"delete": 1,
 						"get": 1,
 						"nsgroups": {
@@ -1848,7 +2526,7 @@
 				"solution-configs": {
 					"get": 1,
 					"post": 1,
-					"{solution-config-id}": {
+					"solution-config-id[]": {
 						"delete": 1,
 						"get": 1,
 						"put": 1
@@ -1857,7 +2535,7 @@
 				"vendor-templates": {
 					"get": 1,
 					"post": 1,
-					"{vendor-template-id}": {
+					"vendor-template-id[]": {
 						"delete": 1,
 						"get": 1
 					}
@@ -1868,7 +2546,7 @@
 	"services": {
 		"get": 1,
 		"post": 1,
-		"{service-id}": {
+		"service-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1877,7 +2555,7 @@
 	"switching-profiles": {
 		"get": 1,
 		"post": 1,
-		"{switching-profile-id}": {
+		"switching-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -1888,7 +2566,7 @@
 	},
 	"tasks": {
 		"get": 1,
-		"{task-id}": {
+		"task-id[]": {
 			"get": 1,
 			"response": {
 				"get": 1
@@ -1908,7 +2586,7 @@
 	"traceflows": {
 		"get": 1,
 		"post": 1,
-		"{traceflow-id}": {
+		"traceflow-id[]": {
 			"delete": 1,
 			"get": 1,
 			"observations": {
@@ -1919,7 +2597,7 @@
 	"transport-node-collections": {
 		"get": 1,
 		"post": 1,
-		"{transport-node-collection-id}": {
+		"transport-node-collection-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -1931,7 +2609,7 @@
 	"transport-node-profiles": {
 		"get": 1,
 		"post": 1,
-		"{transport-node-profile-id}": {
+		"transport-node-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -1946,7 +2624,7 @@
 		"status": {
 			"get": 1
 		},
-		"{node-id}": {
+		"node-id[]": {
 			"pnic-bond-status": {
 				"get": 1
 			},
@@ -1963,12 +2641,12 @@
 			},
 			"tunnels": {
 				"get": 1,
-				"{tunnel-name}": {
+				"tunnel-name[]": {
 					"get": 1
 				}
 			}
 		},
-		"{transport-node-id}": {
+		"transport-node-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -1978,7 +2656,7 @@
 			"network": {
 				"interfaces": {
 					"get": 1,
-					"{interface-id}": {
+					"interface-id[]": {
 						"get": 1,
 						"stats": {
 							"get": 1
@@ -1988,10 +2666,23 @@
 			},
 			"state": {
 				"get": 1
+			},
+			"action?": {
+				"restart_inventory_sync": {
+					"post": 1
+				},
+				"restore_cluster_config": {
+					"post": 1
+				}
 			}
 		},
-		"{transportnode-id}": {
-			"post": 1
+		"transportnode-id[]": {
+			"post": 1,
+			"action?": {
+				"resync_host_config": {
+					"post": 1
+				}
+			}
 		}
 	},
 	"transport-zones": {
@@ -2006,7 +2697,7 @@
 		"transport-node-status-report": {
 			"get": 1
 		},
-		"{zone-id}": {
+		"zone-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
@@ -2027,7 +2718,7 @@
 	"transportzone-profiles": {
 		"get": 1,
 		"post": 1,
-		"{transportzone-profile-id}": {
+		"transportzone-profile-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1
@@ -2037,9 +2728,14 @@
 		"get": 1,
 		"certificates": {
 			"get": 1,
-			"{cert-id}": {
+			"cert-id[]": {
 				"delete": 1,
 				"get": 1
+			},
+			"action?": {
+				"import": {
+					"post": 1
+				}
 			}
 		},
 		"crl-distribution-points": {
@@ -2048,7 +2744,7 @@
 			"pem-file": {
 				"post": 1
 			},
-			"{crl-distribution-point-id}": {
+			"crl-distribution-point-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
@@ -2059,20 +2755,33 @@
 		},
 		"crls": {
 			"get": 1,
-			"{crl-id}": {
+			"crl-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
+			},
+			"action?": {
+				"import": {
+					"post": 1
+				}
 			}
 		},
 		"csrs": {
 			"get": 1,
 			"post": 1,
-			"{csr-id}": {
+			"csr-id[]": {
 				"delete": 1,
 				"get": 1,
 				"pem-file": {
 					"get": 1
+				},
+				"action?": {
+					"import": {
+						"post": 1
+					},
+					"self_sign": {
+						"post": 1
+					}
 				}
 			}
 		},
@@ -2082,23 +2791,28 @@
 			"with-certificate": {
 				"post": 1
 			},
-			"{principal-identity-id}": {
+			"principal-identity-id[]": {
 				"delete": 1,
 				"get": 1
+			},
+			"action?": {
+				"update_certificate": {
+					"post": 1
+				}
 			}
 		}
 	},
 	"ui-views": {
 		"get": 1,
 		"post": 1,
-		"{view-id}": {
+		"view-id[]": {
 			"delete": 1,
 			"get": 1,
 			"put": 1,
 			"widgetconfigurations": {
 				"get": 1,
 				"post": 1,
-				"{widgetconfiguration-id}": {
+				"widgetconfiguration-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2109,10 +2823,20 @@
 	"upgrade": {
 		"bundles": {
 			"post": 1,
-			"{bundle-id}": {
+			"bundle-id[]": {
 				"get": 1,
 				"upload-status": {
 					"get": 1
+				},
+				"action?": {
+					"cancel_upload": {
+						"post": 1
+					}
+				}
+			},
+			"action?": {
+				"upload": {
+					"post": 1
 				}
 			}
 		},
@@ -2140,10 +2864,34 @@
 			"get": 1
 		},
 		"plan": {
-			"{component_type}": {
+			"component_type[]": {
 				"settings": {
 					"get": 1,
 					"put": 1
+				}
+			},
+			"action?": {
+				"continue": {
+					"post": 1
+				},
+				"pause": {
+					"post": 1
+				},
+				"reset": {
+					"post": 1
+				},
+				"start": {
+					"post": 1
+				},
+				"upgrade_selected_units": {
+					"post": 1
+				}
+			}
+		},
+		"pre-upgrade-checks": {
+			"format?": {
+				"csv": {
+					"get": 1
 				}
 			}
 		},
@@ -2165,14 +2913,30 @@
 			"aggregate-info": {
 				"get": 1
 			},
-			"{group-id}": {
+			"group-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1,
 				"status": {
 					"get": 1
 				},
-				"upgrade-unit": {}
+				"upgrade-unit": {
+					"upgrade-unit-id[]": {
+						"action?": {
+							"reorder": {
+								"post": 1
+							}
+						}
+					}
+				},
+				"action?": {
+					"add_upgrade_units": {
+						"post": 1
+					},
+					"reorder": {
+						"post": 1
+					}
+				}
 			}
 		},
 		"upgrade-unit-groups-status": {
@@ -2183,7 +2947,7 @@
 			"aggregate-info": {
 				"get": 1
 			},
-			"{upgrade-unit-id}": {
+			"upgrade-unit-id[]": {
 				"get": 1
 			}
 		},
@@ -2192,9 +2956,24 @@
 		},
 		"version-whitelist": {
 			"get": 1,
-			"{component_type}": {
+			"component_type[]": {
 				"get": 1,
 				"put": 1
+			}
+		},
+		"component-type[]": {
+			"action?": {
+				"execute_post_upgrade_checks": {
+					"post": 1
+				}
+			}
+		},
+		"action?": {
+			"execute_pre_upgrade_checks": {
+				"post": 1
+			},
+			"upgrade_uc": {
+				"post": 1
 			}
 		}
 	},
@@ -2203,7 +2982,7 @@
 			"dpd-profiles": {
 				"get": 1,
 				"post": 1,
-				"{ipsec-vpn-dpd-profile-id}": {
+				"ipsec-vpn-dpd-profile-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2212,7 +2991,7 @@
 			"ike-profiles": {
 				"get": 1,
 				"post": 1,
-				"{ipsec-vpn-ike-profile-id}": {
+				"ipsec-vpn-ike-profile-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2221,7 +3000,7 @@
 			"local-endpoints": {
 				"get": 1,
 				"post": 1,
-				"{ipsec-vpn-local-endpoint-id}": {
+				"ipsec-vpn-local-endpoint-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2230,16 +3009,21 @@
 			"peer-endpoints": {
 				"get": 1,
 				"post": 1,
-				"{ipsec-vpn-peer-endpoint-id}": {
+				"ipsec-vpn-peer-endpoint-id[]": {
 					"delete": 1,
 					"get": 1,
-					"put": 1
+					"put": 1,
+					"action?": {
+						"show-sensitive-data": {
+							"get": 1
+						}
+					}
 				}
 			},
 			"services": {
 				"get": 1,
 				"post": 1,
-				"{ipsec-vpn-service-id}": {
+				"ipsec-vpn-service-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2251,7 +3035,7 @@
 				"summary": {
 					"get": 1
 				},
-				"{ipsec-vpn-session-id}": {
+				"ipsec-vpn-session-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1,
@@ -2262,9 +3046,14 @@
 						"get": 1
 					}
 				},
-				"{session-id}": {
+				"session-id[]": {
 					"statistics": {
-						"get": 1
+						"get": 1,
+						"action?": {
+							"reset": {
+								"post": 1
+							}
+						}
 					},
 					"status": {
 						"get": 1
@@ -2274,7 +3063,7 @@
 			"tunnel-profiles": {
 				"get": 1,
 				"post": 1,
-				"{ipsec-vpn-tunnel-profile-id}": {
+				"ipsec-vpn-tunnel-profile-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2285,7 +3074,7 @@
 			"services": {
 				"get": 1,
 				"post": 1,
-				"{l2vpn-service-id}": {
+				"l2vpn-service-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1
@@ -2297,7 +3086,7 @@
 				"summary": {
 					"get": 1
 				},
-				"{l2vpn-session-id}": {
+				"l2vpn-session-id[]": {
 					"delete": 1,
 					"get": 1,
 					"put": 1,
@@ -2305,7 +3094,7 @@
 						"get": 1
 					}
 				},
-				"{session-id}": {
+				"session-id[]": {
 					"remote-mac": {
 						"get": 1
 					},
@@ -2319,7 +3108,7 @@
 			}
 		},
 		"services": {
-			"{service-id}": {
+			"service-id[]": {
 				"summary": {
 					"get": 1
 				}
@@ -2329,7 +3118,7 @@
 	"waf": {
 		"categories": {
 			"get": 1,
-			"{category-id}": {
+			"category-id[]": {
 				"get": 1,
 				"aggregate-info": {
 					"get": 1
@@ -2338,7 +3127,7 @@
 		},
 		"crses": {
 			"get": 1,
-			"{crs-id}": {
+			"crs-id[]": {
 				"delete": 1,
 				"get": 1,
 				"aggregate-info": {
@@ -2352,6 +3141,11 @@
 				},
 				"status": {
 					"get": 1
+				}
+			},
+			"action?": {
+				"upload": {
+					"post": 1
 				}
 			}
 		},
@@ -2379,7 +3173,7 @@
 		"profiles": {
 			"get": 1,
 			"post": 1,
-			"{profile-id}": {
+			"profile-id[]": {
 				"delete": 1,
 				"get": 1,
 				"put": 1
@@ -2387,12 +3181,12 @@
 		},
 		"rule-statistics": {
 			"categories": {
-				"{category-name}": {
+				"category-name[]": {
 					"loadbalancer": {
 						"services": {
-							"{service-id}": {
+							"service-id[]": {
 								"virtual-servers": {
-									"{virtual-server-id}": {
+									"virtual-server-id[]": {
 										"get": 1
 									}
 								}
@@ -2404,16 +3198,16 @@
 		},
 		"rules": {
 			"get": 1,
-			"{rule-id}": {
+			"rule-id[]": {
 				"get": 1
 			}
 		},
 		"statistics": {
 			"loadbalancer": {
 				"services": {
-					"{service-id}": {
+					"service-id[]": {
 						"virtual-servers": {
-							"{virtual-server-id}": {
+							"virtual-server-id[]": {
 								"get": 1
 							}
 						}
