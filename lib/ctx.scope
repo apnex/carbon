@@ -1,0 +1,5 @@
+{
+	"action": "get",
+	"path": "/pools/ip-pools",
+	"query": {}
+}

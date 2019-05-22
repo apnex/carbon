@@ -1,0 +1,10 @@
+{
+	"cursor": 1,
+	"included_fields": 1,
+	"page_size": 1,
+	"sort_ascending": {
+		"true": 1,
+		"false": 1
+	},
+	"sort_by": 1
+}
