@@ -1,0 +1,7 @@
+{
+	"spec": "./new-spec.json",
+	"action": "",
+	"path": "/com/vmware",
+	"query": {},
+	"cmds": "./ctx.full-spec.json"
+}

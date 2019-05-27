@@ -1,0 +1,52 @@
+{
+	"get": 1,
+	"post": 1,
+	"status": {
+		"get": 1
+	},
+	"node-id[]": {
+		"delete": 1,
+		"get": 1,
+		"post": 1,
+		"put": 1,
+		"capabilities": {
+			"get": 1
+		},
+		"modules": {
+			"get": 1
+		},
+		"network": {
+			"interfaces": {
+				"get": 1,
+				"interface-id[]": {
+					"get": 1,
+					"stats": {
+						"get": 1
+					}
+				}
+			}
+		},
+		"state": {
+			"get": 1
+		},
+		"status": {
+			"get": 1
+		},
+		"action?": {
+			"restart_inventory_sync": {
+				"post": 1
+			},
+			"upgrade_infra": {
+				"post": 1
+			}
+		}
+	},
+	"target-node-id[]": {
+		"target-uri[]": {
+			"delete": 1,
+			"get": 1,
+			"post": 1,
+			"put": 1
+		}
+	}
+}

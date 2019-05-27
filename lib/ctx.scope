@@ -1,5 +1,6 @@
 {
 	"action": "get",
-	"path": "/pools/ip-pools",
-	"query": {}
+	"path": "/logical-routers",
+	"query": {},
+	"cmds": "../spec/24-full-spec.json"
 }

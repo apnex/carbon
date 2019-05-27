@@ -1,0 +1,7 @@
+{
+	"spec": "./new-spec.json",
+	"action": "get",
+	"path": "/transport-nodes",
+	"query": {},
+	"cmds": "./ctx.full-spec.json"
+}

@@ -1,0 +1,18 @@
+{
+	"cursor": 1,
+	"in_maintenance_mode": {
+		"true": 1,
+		"false": 1
+	},
+	"included_fields": 1,
+	"node_id": 1,
+	"node_ip": 1,
+	"node_types": 1,
+	"page_size": 1,
+	"sort_ascending": {
+		"true": 1,
+		"false": 1
+	},
+	"sort_by": 1,
+	"transport_zone_id": 1
+}
