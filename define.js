@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const args = process.argv;
-//const apiSpec = require('./spec/nsx-api-2-4.json');
-const apiSpec = require('./spec/vcenter.json');
+const apiSpec = require('./apispec.json');
 var paths = apiSpec.definitions;
 
 // cli switch
@@ -57,10 +56,20 @@ function defTree(spec, opts) {
 	let data = {};
 	if(typeof spec.allOf !== 'undefined') {
 		spec.allOf.forEach((body) => { // merge all
-			data = Object.assign(data, selectType(body, opts));
+			let node = selectType(body, opts);
+			if(typeof(node) == 'Object') {
+				data = Object.assign(data, node);
+			} else {
+				data = node;
+			}
 		});
 	} else {
-		data = Object.assign(data, selectType(spec, opts));
+		let node = selectType(spec, opts);
+		if(typeof(node) == 'Object') {
+			data = Object.assign(data, node);
+		} else {
+			data = node;
+		}
 	}
 	return data;
 }
@@ -158,7 +167,7 @@ function isArray(body, opts) {
 }
 
 function isString(body, opts) {
-	let node = "<string>";
+	let node = '<string>';
 	if(typeof body.enum !== 'undefined') {
 		node = body.enum;
 	}

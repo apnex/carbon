@@ -1,6 +1,0 @@
-{
-	"action": "get",
-	"path": "/logical-routers",
-	"query": {},
-	"cmds": "../spec/24-full-spec.json"
-}

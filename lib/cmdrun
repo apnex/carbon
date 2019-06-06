@@ -1,3 +1,0 @@
-#!/bin/bash
-
-/home/apnex/vmware/lab/nuc/carbon/lib/cmdrun.js "${@}"

@@ -1,0 +1,64 @@
+"host": "https://field-demo.vrni.cmbu.local",
+"baseUrl": "https://field-demo.vrni.cmbu.local/api/ni",
+"authUrl": "/auth/token",
+"method": "post",
+"parameters": {
+	"token": "NetworkInsight {$response.body#/token}"
+}
+"securityDefinitions": {
+	"token": {
+		"description": "Authorization: NetworkInsight {token}",
+		"in": "header",
+		"name": "Authorization",
+		"type": "apiKey"
+	}
+}
+"security":
+	"token": []
+}
+//operationRef: '#/paths/~1users~1{userId}/get'
+
+
+
+          links:
+            GetUserByUserId:   # <---- arbitrary name for the link
+              operationId: getUser
+              # or
+              # operationRef: '#/paths/~1users~1{userId}/get'
+              parameters:
+                userId: '$response.body#/id'
+              description: >
+                The `id` value returned in the response can be used as
+                the `userId` parameter in `GET /users/{userId}`.
+
+          links:
+            # GET /users/{userId}
+            GetUserByUserId:
+              operationId: getUser
+              parameters:
+                userId: '$response.body#/id'
+            # POST /users/{userId}/manager with the manager ID in the request body
+            SetManagerId:
+              operationId: setUserManager
+              requestBody: '$response.body#/id'
+
+
+// set /users
+          links:
+            GetUserByUserId:
+              $ref: '#/components/links/GetUserByUserId' 
+
+// get /user/{userId}
+          links:
+            GetUserByUserId:
+              $ref: '#/components/links/GetUserByUserId'   
+
+components:
+  links:
+    GetUserByUserId:   # <----- The $ref's above point here
+      description: >
+        The `id` value returned in the response can be used as
+        the `userId` parameter in `GET /users/{userId}`.
+      operationId: getUser
+      parameters:
+        userId: '$response.body#/id'
