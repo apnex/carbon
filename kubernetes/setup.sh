@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p state
-./define.js > ./state/ctx.define
+#./define.js > ./state/ctx.define
 ./type.js > ./state/ctx.path
 
 function makeTemplate {

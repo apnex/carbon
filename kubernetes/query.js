@@ -47,24 +47,21 @@ if(process.argv[1].match(/query/g)) {
 }
 
 function run(scope) {
-	let paths = loadJSON(scope.spec).paths;
-	if(def(paths)) {
-		if(item = getOperation(scope.path, paths)) {
-			if(body = def(item[scope.action]).parameters) {
-				display(body);
-			}
-		} else {
-			console.log(JSON.stringify(scope, null, "\t"));
-		}
+	if(body = raw(scope)) {
+		display(body);
+	} else {
+		console.log(JSON.stringify(scope, null, "\t"));
 	}
 }
 
 function raw(scope) {
-	let params = [];
 	let paths = loadJSON(scope.spec).paths;
-	if(item = getOperation(scope.path, paths)) {
-		if(body = def(item[scope.action]).parameters) {
-			return body;
+	if(def(paths)) {
+		if(item = getOperation(scope.path, paths)) {
+			if(body = def(item[scope.action]).parameters) {
+				// no params?
+				return body;
+			}
 		}
 	}
 }
@@ -77,7 +74,6 @@ function getOperation(string, paths) {
 	if(item = def(paths[string + '/'])) {
 		body = item;
 	}
-	//console.log(JSON.stringify(body, null, "\t"));
 	return body;
 }
 

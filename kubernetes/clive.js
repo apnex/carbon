@@ -3,6 +3,8 @@ const xtable = require('./xtable.js');
 const fs = require('fs');
 const qc = require('./query.js');
 const q = new qc();
+const dc = require('./define.js');
+const define = new dc();
 
 // colours
 const chalk = require('chalk');
@@ -30,20 +32,29 @@ if(process.argv[1].match(/clive/g)) {
 		fs.unlinkSync('./state/ctx.query');
 	}
 	if(typeof(params) !== 'undefined') {
+		//console.log(JSON.stringify(params, null, "\t"));
 		let pcomp = {};
 		params.forEach((p) => {
 			pcomp[p.name] = nested(p);
 		});
 		fs.writeFileSync('./state/ctx.query', JSON.stringify(pcomp, null, "\t"));
 	}
-	q.run(scope);
+
+	// set define
+	let schemas = def(define.run());
+	if(fs.existsSync('./state/ctx.define')) {
+		fs.unlinkSync('./state/ctx.define');
+	}
+	if(typeof(schemas) !== 'undefined') {
+		//console.log(JSON.stringify(schemas, null, "\t"));
+		fs.writeFileSync('./state/ctx.define', JSON.stringify(schemas, null, "\t"));
+	}
+	//q.run(scope);
 }
 
 function def(item) {
 	if(typeof(item) !== 'undefined') {
 		return item;
-	} else {
-		return 0;
 	}
 }
 

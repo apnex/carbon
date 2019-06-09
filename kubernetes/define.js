@@ -1,7 +1,26 @@
 #!/usr/bin/env node
 const args = process.argv;
+const fs = require('fs');
+const qc = require('./query.js');
+const q = new qc();
 const apiSpec = require('./apispec.json');
 var paths = apiSpec.definitions;
+
+// colours
+const chalk = require('chalk');
+const red = chalk.bold.red;
+const orange = chalk.keyword('orange');
+const green = chalk.green;
+const blue = chalk.blueBright;
+const file = './state/ctx.scope';
+
+// constructor
+var self = define.prototype;
+function define(opts) {
+	this.options = Object.assign({}, opts);
+	self.run = run;
+}
+module.exports = define;
 
 // cli switch
 var item = args[2];
@@ -12,59 +31,179 @@ const defaults = {
 	required: 0,
 	hidden: 0
 }
-if(route = paths[item]) {
-	switch(method) {
-		case "read":
-			result = defTree(route, {
-				writeOnly: 0,
-				required: 0
-			});
-			console.log(JSON.stringify(result, null, "\t"));
-		break;
-		case "readHidden":
-			result = defTree(route, {
-				writeOnly: 0,
-				required: 0,
-				hidden: 1,
-				deprecated: 1
-			});
-			console.log(JSON.stringify(result, null, "\t"));
-		break;
-		case "write":
-			result = defTree(route, {
-				writeOnly: 1,
-				required: 0
-			});
-			console.log(JSON.stringify(result, null, "\t"));
-		break;
-		case "writeMin":
-			result = defTree(route, {
-				writeOnly: 1,
-				required: 1
-			});
-			console.log(JSON.stringify(result, null, "\t"));
-		break;
-		default:
-			console.log(JSON.stringify(route, null, "\t"));
-		break;
+// called from shell
+if(process.argv[1].match(/define/g)) {
+	if(route = paths[item]) {
+		switch(method) {
+			case "read":
+				result = defTree(route, {
+					writeOnly: 0,
+					required: 0
+				});
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			case "readHidden":
+				result = defTree(route, {
+					writeOnly: 0,
+					required: 0,
+					hidden: 1,
+					deprecated: 1
+				});
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			case "write":
+				result = defTree(route, {
+					writeOnly: 1,
+					required: 0
+				});
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			case "writeMin":
+				result = defTree(route, {
+					writeOnly: 1,
+					required: 1
+				});
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			default:
+				console.log(JSON.stringify(route, null, "\t"));
+			break;
+		}
+	} else {
+		run();
 	}
-} else {
-	toCmd(item);
-	//filter(item);
 }
 
-function toCmd(string) {
+function run() {
+	let scope = {
+		'path': '/'
+	};
+	if(fs.existsSync(file)) {
+		scope = loadJSON(file);
+	}
+	let cmds = scope.path.split('/');
+	cmds.shift();
+	let string = q.toChain(cmds, 0, 0);
+	//console.error('--[ ' + blue(string) + ' ]--');
+
+	let list = loadJSON(scope.spec).paths;
+	let results = filterList(string, Object.keys(list));
+	let cache = {};
+	results.forEach((value) => {
+		getSchemas(list[value], cache);
+	});
+
+	return toCmd(Object.keys(cache).sort());
+}
+
+function getSchemas(body, cache) {
+	getParameters(body).forEach((item) => {
+		cache[item] = 1;
+	});
+	Object.entries(body).forEach((value) => {
+		if(isOperation(value[0])) {
+			getResponses(value[1]).forEach((item) => {
+				cache[item] = 1;
+			});
+			getParameters(value[1]).forEach((item) => {
+				cache[item] = 1;
+			});
+		}
+	});
+}
+
+function getResponses(body) {
+	let responses, schema, ref, matches;
+	let list = [];
+	if(responses = def(body.responses)) {
+		Object.entries(responses).forEach((response) => {
+			if(value = getSchema(response[1])) {
+				//console.log(value);
+				list.push(value);
+			}
+		});
+	}
+	return list;
+}
+
+function getSchema(body) {
+	if(schema = def(body.schema)) {
+		if(ref = def(schema['$ref'])) {
+			if(matches = ref.match(/#[\/]definitions[\/](.+)/)) {
+				return matches[1];
+			}
+		}
+	}
+}
+
+function getParameters(body) {
+	let list = [];
+	if(params = def(body.parameters)) {
+		params.forEach((p) => {
+			if(value = getSchema(p)) {
+				//console.log(value);
+				list.push(value);
+			}
+		});
+	}
+	return list;
+}
+
+function def(item) {
+	if(typeof(item) !== 'undefined') {
+		return item;
+	} else {
+		return 0;
+	}
+}
+
+// validate string against schema for operation
+function isOperation(string) {
+	let isTrue = 0;
+	[
+		'get',
+		'put',
+		'post',
+		'delete',
+		'options',
+		'head',
+		'patch',
+		'trace'
+	].forEach((op) => {
+		if(op == string) {
+			isTrue = 1;
+		}
+	});
+	return isTrue;
+}
+
+function filterList(string, list) {
+	let rgx = new RegExp('^' + string, 'g');
+	return list.sort().filter((value) => {
+		return rgx.exec(value);
+	});
+}
+
+function loadJSON(file) {
+	if(fs.existsSync(file)) {
+		return JSON.parse(fs.readFileSync(file));
+	} else {
+		return {};
+	}
+}
+
+function toCmd(list) {
+	let cmdTree = {};
 	let actions = {
 		'read': 1,
 		'readHidden': 1,
 		'write': 1,
 		'writeMin': 1
 	};
-	let cmdTree = {};
-	Object.keys(paths).sort().forEach((value) => {
+	list.sort().forEach((value) => {
 		cmdTree[value] = actions;
 	});
-	console.log(JSON.stringify(cmdTree, null, "\t"));
+	return cmdTree;
 }
 
 function defTree(spec, opts) {

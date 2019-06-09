@@ -49,7 +49,22 @@ if(route = paths[item]) {
 		break;
 	}
 } else {
-	filter(item);
+	toCmd(item);
+	//filter(item);
+}
+
+function toCmd(string) {
+	let actions = {
+		'read': 1,
+		'readHidden': 1,
+		'write': 1,
+		'writeMin': 1
+	};
+	let cmdTree = {};
+	Object.keys(paths).sort().forEach((value) => {
+		cmdTree[value] = actions;
+	});
+	console.log(JSON.stringify(cmdTree, null, "\t"));
 }
 
 function defTree(spec, opts) {
