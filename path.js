@@ -2,8 +2,8 @@
 let args = process.argv;
 const xtable = require('./xtable');
 //const apiSpec = require('./spec/nsx-api.json');
-//const apiSpec = require('./spec/nsx-api-2-4.json');
-const apiSpec = require('./spec/vcenter.json');
+const apiSpec = require('./spec/nsx-api-2-4.json');
+//const apiSpec = require('./spec/vcenter.json');
 const paths = apiSpec.paths;
 
 

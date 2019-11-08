@@ -63,7 +63,7 @@ _temp_base_complete() {
 	BBC='\\u001B[39m' # close
 
 	_temp_bind
-	local IFS=$'\n'
+	local IFS=$'\\n'
 	if [[ ${#COMP_WORDS[@]} -ge 1 ]]; then
 		ARRAY=($(./complete.js "${CMDFILE}" "${COMP_WORDS[@]:1:${#COMP_WORDS[@]}-2}" 2>/dev/null | tr -d '\\r')) # handle CRLF in tty
 	else

@@ -35,6 +35,9 @@ function search(path, method) {
 		let call = path["get"];
 		let params = call.responses["200"];
 		console.log("GET");
+		if(typeof(params) !== 'undefined') {
+			console.log(JSON.stringify(params, null, "\t"));
+		}
 		if(call.parameters) {
 			console.log(JSON.stringify(call.parameters, null, "\t"));
 		}

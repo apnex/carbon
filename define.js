@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const args = process.argv;
-const apiSpec = require('./apispec.json');
+const apiSpec = require('./spec/vcenter.json');
+//const apiSpec = require('./spec/nsx-api-2-4.json');
 var paths = apiSpec.definitions;
 
 // cli switch
@@ -49,8 +50,8 @@ if(route = paths[item]) {
 		break;
 	}
 } else {
-	toCmd(item);
-	//filter(item);
+	//toCmd(item);
+	filter(item);
 }
 
 function toCmd(string) {
@@ -216,6 +217,6 @@ function filter(value) {
 		'value': value
 	});
 	cell.run().forEach((item) => {
-		console.log('object [' + item.key + ']');
+		console.log(item.key);
 	});
 }
