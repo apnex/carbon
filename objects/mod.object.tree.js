@@ -1,62 +1,70 @@
 #!/usr/bin/env node
 const args = process.argv;
-const core = require('./drv.core');
-const scope = core.scope();
-const apiSpec = core.loadJSON(scope.spec);
-const definitions = apiSpec.definitions;
-
-// cli switch
-var item = args[2];
-var method = args[3];
-var depth = args[4];
-if(typeof(depth) === 'undefined') {
-	depth = -1; // no restriction
-}
-var result;
-var defaults = {
-	writeOnly: 0,
-	required: 0,
-	hidden: 0,
-	deprecated: 0,
-	override: 0,
-	chain: {},
-	tree: {},
-	depth
-}
+const core = require('./mod.core');
 
 // constructor
 module.exports = {
 	run
 };
+var cache = {};
 
-// called from shell
-if(process.argv[1].match(/object.tree/g)) {
+// entry
+function run(item, opts = {}) {
+	let defaults = Object.assign({
+		spec: './apispec.json',
+		writeOnly: 0,
+		required: 0,
+		hidden: 0,
+		deprecated: 0,
+		override: 0,
+		chain: {},
+		depth: -1 // no restriction
+	}, core.cleanObject(opts));
+	let definitions = getSpec(defaults.spec);
 	if(route = definitions[item]) {
-		switch(method) {
-			case "tree":
-				result = isRef({
-					"$ref": "#/definitions/" + item
-				}, defaults);
-				console.log(JSON.stringify(result, null, "\t"));
-			break;
-			default:
-				console.log(JSON.stringify(route, null, "\t"));
-			break;
-		}
-	} else {
-		console.log('Object: ' + item + ' does not exist!');
-	}
-}
-
-function run(item, opts) {
-	if(route = definitions[item]) {
-		let result = isRef({
+		return isRef({
 			"$ref": "#/definitions/" + item
-		}, Object.assign(defaults, opts));
-		return result;
+		}, defaults);
 	} else {
 		console.error('Object: [' + item + '] does not exist!');
 	}
+}
+
+function getSpec(name) {
+	if(typeof(cache[name]) === 'undefined') {
+		cache[name] = core.loadJSON(name).definitions;
+	}
+	return cache[name];
+}
+
+function isRef(body, ops) {
+	let opts = JSON.parse(JSON.stringify(ops));
+	let node = {};
+	let flag = '';
+	let matches;
+	let string = body['$ref']; // why do I need whole body?
+	if(matches = string.match(/#[\/]definitions[\/](.+)/)) {
+		if(typeof(opts.parent) !== 'undefined') {
+			opts.chain[opts.parent] = 1;
+		}
+		let definitions = getSpec(opts.spec);
+		if(value = definitions[matches[1]]) {
+			opts.parent = matches[1];
+			if(opts.chain[matches[1]]) {
+				opts.depth = 0;
+				flag = ':circular';
+			}
+			if(opts.depth == 0) {
+				node[opts.parent] = '$ref' + flag;
+			} else {
+				if(opts.depth > 0) {
+					opts.depth--;
+				}
+				node[opts.parent] = defTree(value, opts); // recurse
+			}
+		}
+	}
+	return node;
 }
 
 function defTree(spec, opts) {
@@ -137,35 +145,6 @@ function isArray(body, opts) {
 	let node = {};
 	if(typeof(body['items']) !== 'undefined') {
 		node = selectType(body['items'], opts);
-	}
-	return node;
-}
-
-function isRef(body, ops) {
-	let opts = JSON.parse(JSON.stringify(ops));
-	let node = {};
-	let flag = '';
-	let matches;
-	let string = body['$ref']; // why do I need whole body?
-	if(matches = string.match(/#[\/]definitions[\/](.+)/)) {
-		if(typeof(opts.parent) !== 'undefined') {
-			opts.chain[opts.parent] = 1;
-		}
-		if(value = definitions[matches[1]]) {
-			opts.parent = matches[1];
-			if(opts.chain[matches[1]]) {
-				opts.depth = 0;
-				flag = ':circular';
-			}
-			if(opts.depth == 0) {
-				node[opts.parent] = '$ref' + flag;
-			} else {
-				if(opts.depth > 0) {
-					opts.depth--;
-				}
-				node[opts.parent] = defTree(value, opts); // recurse
-			}
-		}
 	}
 	return node;
 }

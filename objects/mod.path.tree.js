@@ -1,24 +1,19 @@
 #!/usr/bin/env node
-let args = process.argv.slice(2);
+const args = process.argv;
+const core = require('./mod.core');
+const paths = core.loadJSON('./apispec.json').paths;
 
-// called from shell
-var paths = {};
-if(process.argv[1].match(/object/g)) {
-	let specFile = args[0];
-	if(specFile) {
-		//console.error(specFile);
-		const apiSpec = require(specFile);
-		paths = apiSpec.paths;
-		build(paths);
-	} else {
-		const apiSpec = require('./apispec.json');
-		paths = apiSpec.paths;
-		build(paths);
-		//console.log('[' + orange('ERROR') + ']: command usage: ' + green('cmdrun') + ' ' + blue('<apispec.json>'));
-	}
-}
+// constructor
+module.exports = {
+	run
+};
 
-function build(paths) {
+// entry
+function run(opts = {}) {
+	let defaults = Object.assign({
+		spec: './apispec.json'
+	}, core.cleanObject(opts));
+	//let paths = core.loadJSON(defaults.spec).paths;
 	let cache = {};
 	Object.keys(paths).sort().forEach((path) => {
 		tree(cache, toCmd(path), path);
@@ -28,7 +23,7 @@ function build(paths) {
 
 function tree(cache, array, path) {
 	let item = array.shift();
-	if(typeof cache[item] === 'undefined') {
+	if(typeof(cache[item]) === 'undefined') {
 		cache[item] = {};
 	}
 	if(array.length) {
@@ -71,7 +66,7 @@ function toCmd(path) {
 		if(cmd.match(/^\{.+\}$/)) { // variable - convert {var} to var[]
 			cmd = cmd.replace(/^\{/, "").replace(/\}$/, "[]");
 		}
-		if(cmd.match(/^\?/)) { // query - convery ?action to action?
+		if(cmd.match(/^\?/)) { // query - convert ?action to action?
 			cmd = cmd.replace(/^\?/, "").replace(/$/, "?");
 		}
 		return cmd;

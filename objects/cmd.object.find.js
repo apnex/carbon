@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 const args = process.argv;
 const fs = require('fs');
-const tree = require('./object.tree');
-const core = require('./drv.core');
+const tree = require('./mod.object.tree');
+const core = require('./mod.core');
 
 // called from shell
-//console.error('args[0]: [' + args[0] + ']');
-//console.error('args[1]: [' + args[1] + ']');
-//console.error('filename: [' + __filename + ']');
 if(process.argv[1].match(/object.find/g)) {
 	if(result = tree.run(args[2])) {
 		fs.writeFileSync('./state/ctx.tree', JSON.stringify(result, null, '\t'));
@@ -17,7 +14,7 @@ if(process.argv[1].match(/object.find/g)) {
 			object: args[2]
 		});
 	} else {
-		console.error('failed, object does not exist');
+		console.error('failed, object [' + args[2] + '] does not exist');
 	}
 }
 

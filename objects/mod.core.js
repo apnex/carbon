@@ -5,7 +5,8 @@ const fs = require('fs');
 module.exports = {
 	scope,
 	def,
-	loadJSON
+	loadJSON,
+	cleanObject
 };
 
 function scope() {
@@ -18,6 +19,16 @@ function def(item) {
         } else {
                 return 0;
         }
+}
+
+function cleanObject(obj) {
+	return Object.entries(obj).reduce((a, [k, v]) => {
+		if(v == null || (typeof(v) == 'number' && Number.isNaN(v))) { // strip null, undefined, and NaN values
+			return a;
+		} else {
+			return {...a, [k]:v};
+		}
+	}, {});
 }
 
 function isObject(obj) {

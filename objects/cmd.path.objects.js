@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const args = process.argv;
-const schemas = require('./drv.schemas');
-const core = require('./drv.core');
+const schemas = require('./mod.path.objects');
+const core = require('./mod.core');
 const scope = core.scope();
 const apiSpec = core.loadJSON(scope.spec);
 const paths = apiSpec.paths;

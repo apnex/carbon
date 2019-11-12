@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 const args = process.argv;
-const core = require('./drv.core');
+const core = require('./mod.core');
 const scope = core.scope();
-const apiSpec = core.loadJSON(scope.spec);
-const schema = apiSpec.paths;
+const schema = core.loadJSON(scope.spec).definitions;
 
 // called from shell
-if(process.argv[1].match(/path.list/g)) {
+if(process.argv[1].match(/object.list/g)) {
+	console.log('-- [ / ] --');
 	filter(args[2]).forEach((value) => {
 		console.log(value);
 	});

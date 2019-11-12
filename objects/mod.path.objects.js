@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const core = require('./drv.core.js');
+const core = require('./mod.core');
 
 // constructor
 module.exports = {

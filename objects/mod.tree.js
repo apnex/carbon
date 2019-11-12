@@ -1,7 +1,12 @@
 #!/usr/bin/env node
-const core = require('./drv.core');
-const scope = core.scope();
-const treeSpec = core.loadJSON(scope.tree);
+const args = process.argv;
+const core = require('./mod.core');
+
+// constructor
+module.exports = {
+	run
+};
+var cache = {};
 
 // colours
 const chalk = require('chalk');
@@ -10,10 +15,6 @@ const orange = chalk.keyword('orange');
 const green = chalk.green;
 const blue = chalk.blueBright;
 const cyan = chalk.cyan;
-
-//console.log(chalk.blueBright('blueBright').toString());
-//console.log(chalk.blue('blue'));
-//console.log('\u001B[94mTEST\u001B[39m');
 
 // define shapes
 const t = '\u251c';
@@ -36,19 +37,14 @@ const level = {
 	s: shapes.s + shapes.s.repeat(width) + ' '
 };
 
-// called from shell
-if(process.argv[1].match(/tree.show/g)) {
-	let arg = process.argv[2];
-	let depth = 99;
-	if(arg) {
-		depth = arg;
-	}
-	run(depth);
-}
-
-function run(depth) {
-	let body = treeSpec;
-	tree(body, [], depth, 0);
+// entry
+function run(opts = {}) {
+	let defaults = Object.assign({
+		tree: './state/ctx.tree',
+		depth: 20
+	}, core.cleanObject(opts));
+	let body = core.loadJSON(defaults.tree);
+	tree(body, [], defaults.depth, 0);
 }
 
 function tree(body, array, depth, index = 0) {
@@ -71,7 +67,6 @@ function tree(body, array, depth, index = 0) {
 				}
 				tree(item[1], newarr, depth, index);
 			} else {
-				//console.log(getString(item[0], array) + orange('+'));
 				console.log(getString(item[0], array, '+'));
 			}
 		} else { // leaf

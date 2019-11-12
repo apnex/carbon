@@ -1,15 +1,14 @@
 #!/usr/bin/env node
 const args = process.argv;
-const fs = require('fs');
-const core = require('./drv.core');
+const core = require('./mod.core');
 const scope = core.scope();
-const apiSpec = core.loadJSON(scope.spec);
-const definitions = apiSpec.definitions;
+const definitions = core.loadJSON(scope.spec).definitions;
 
 // cli switch
-var item = args[2];
-var method = args[3];
-var depth = args[4];
+//var item = args[2];
+var item = scope.object;
+var method = args[2];
+var depth = args[3];
 if(typeof(depth) === 'undefined') {
 	depth = -1; // no restriction
 }

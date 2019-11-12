@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const args = process.argv;
 const fs = require('fs');
-const core = require('./drv.core');
+const core = require('./mod.core');
 
 // colours
 const chalk = require('chalk');
