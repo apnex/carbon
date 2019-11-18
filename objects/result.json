@@ -1,0 +1,7898 @@
+[
+	{
+		"name": "ServiceProfileNSGroups",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-profiles/{service-profile-id}/nsgroups"
+	},
+	{
+		"name": "FeatureStackCollectionConfiguration",
+		"type": "request",
+		"action": "put",
+		"route": "/hpm/features/{feature-stack-name}"
+	},
+	{
+		"name": "FeatureStackCollectionConfiguration",
+		"type": "response",
+		"action": "put",
+		"route": "/hpm/features/{feature-stack-name}"
+	},
+	{
+		"name": "FeatureStackCollectionConfiguration",
+		"type": "response",
+		"action": "get",
+		"route": "/hpm/features/{feature-stack-name}"
+	},
+	{
+		"name": "VtepListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/vtep-table"
+	},
+	{
+		"name": "IdfwMasterSwitchSetting",
+		"type": "request",
+		"action": "put",
+		"route": "/idfw/master-switch-setting"
+	},
+	{
+		"name": "IdfwMasterSwitchSetting",
+		"type": "response",
+		"action": "put",
+		"route": "/idfw/master-switch-setting"
+	},
+	{
+		"name": "IdfwMasterSwitchSetting",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/master-switch-setting"
+	},
+	{
+		"name": "IpfixObsPointConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/ipfix-obs-points/switch-global"
+	},
+	{
+		"name": "IpfixObsPointConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/ipfix-obs-points/switch-global"
+	},
+	{
+		"name": "IpfixObsPointConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix-obs-points/switch-global"
+	},
+	{
+		"name": "DnsForwarderStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/dns/forwarders/{forwarder-id}/status"
+	},
+	{
+		"name": "PBRSection",
+		"type": "request",
+		"action": "put",
+		"route": "/pbr/sections/{section-id}"
+	},
+	{
+		"name": "PBRSection",
+		"type": "response",
+		"action": "put",
+		"route": "/pbr/sections/{section-id}"
+	},
+	{
+		"name": "PBRSection",
+		"type": "response",
+		"action": "get",
+		"route": "/pbr/sections/{section-id}"
+	},
+	{
+		"name": "StaticRoute",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes"
+	},
+	{
+		"name": "StaticRoute",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes"
+	},
+	{
+		"name": "StaticRouteListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes"
+	},
+	{
+		"name": "NodeInterfacePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/{node-id}/network/interfaces"
+	},
+	{
+		"name": "NodeSyslogExporterProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/services/syslog/exporters"
+	},
+	{
+		"name": "NodeSyslogExporterProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/syslog/exporters"
+	},
+	{
+		"name": "NodeSyslogExporterPropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/syslog/exporters"
+	},
+	{
+		"name": "NodeSummaryList",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/nodes-summary"
+	},
+	{
+		"name": "Traceflow",
+		"type": "response",
+		"action": "get",
+		"route": "/traceflows/{traceflow-id}"
+	},
+	{
+		"name": "L2VPNSessionSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions/summary"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/cm-inventory?action=stop"
+	},
+	{
+		"name": "LogicalRouter",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers"
+	},
+	{
+		"name": "LogicalRouter",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers"
+	},
+	{
+		"name": "LogicalRouterListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers"
+	},
+	{
+		"name": "LogicalRouterRouteTable",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/forwarding-table"
+	},
+	{
+		"name": "RouteMap",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/route-maps"
+	},
+	{
+		"name": "RouteMap",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/route-maps"
+	},
+	{
+		"name": "RouteMapListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/route-maps"
+	},
+	{
+		"name": "ClusterCertificateId",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/api-certificate?action=set_cluster_certificate"
+	},
+	{
+		"name": "NodeNetworkProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network"
+	},
+	{
+		"name": "DhcpIpPool",
+		"type": "request",
+		"action": "post",
+		"route": "/dhcp/servers/{server-id}/ip-pools"
+	},
+	{
+		"name": "DhcpIpPool",
+		"type": "response",
+		"action": "post",
+		"route": "/dhcp/servers/{server-id}/ip-pools"
+	},
+	{
+		"name": "DhcpIpPoolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/ip-pools"
+	},
+	{
+		"name": "ClusterNodeStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/{node-id}/status"
+	},
+	{
+		"name": "NodeStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/status"
+	},
+	{
+		"name": "DnsForwarder",
+		"type": "request",
+		"action": "put",
+		"route": "/dns/forwarders/{forwarder-id}"
+	},
+	{
+		"name": "DnsForwarder",
+		"type": "response",
+		"action": "put",
+		"route": "/dns/forwarders/{forwarder-id}"
+	},
+	{
+		"name": "DnsForwarder",
+		"type": "response",
+		"action": "get",
+		"route": "/dns/forwarders/{forwarder-id}"
+	},
+	{
+		"name": "SessionReclassificationParameter",
+		"type": "request",
+		"action": "post",
+		"route": "/app-discovery/sessions/{session-id}/re-classify"
+	},
+	{
+		"name": "AppDiscoverySessionResultSummary",
+		"type": "response",
+		"action": "post",
+		"route": "/app-discovery/sessions/{session-id}/re-classify"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/rules/{rule-id}"
+	},
+	{
+		"name": "NatStatisticsPerRule",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/nat/rules/{rule-id}/statistics"
+	},
+	{
+		"name": "DhcpProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/dhcp/server-profiles"
+	},
+	{
+		"name": "DhcpProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/dhcp/server-profiles"
+	},
+	{
+		"name": "DhcpProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/server-profiles"
+	},
+	{
+		"name": "NormalizedResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/normalizations"
+	},
+	{
+		"name": "LogicalConstructMigrationStatsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/logical-constructs/stats"
+	},
+	{
+		"name": "IdfwEnabledComputeCollection",
+		"type": "request",
+		"action": "put",
+		"route": "/idfw/idfw-compute-collections/{cc-ext-id}"
+	},
+	{
+		"name": "IdfwEnabledComputeCollection",
+		"type": "response",
+		"action": "put",
+		"route": "/idfw/idfw-compute-collections/{cc-ext-id}"
+	},
+	{
+		"name": "IdfwEnabledComputeCollection",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/idfw-compute-collections/{cc-ext-id}"
+	},
+	{
+		"name": "LogicalRouterRouteTableInCsvFormat",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/route-table?format=csv"
+	},
+	{
+		"name": "NodeNameServersProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/network/name-servers"
+	},
+	{
+		"name": "NodeNameServersProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/network/name-servers"
+	},
+	{
+		"name": "NodeNameServersProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/name-servers"
+	},
+	{
+		"name": "NSService",
+		"type": "request",
+		"action": "put",
+		"route": "/ns-services/{ns-service-id}"
+	},
+	{
+		"name": "NSService",
+		"type": "response",
+		"action": "put",
+		"route": "/ns-services/{ns-service-id}"
+	},
+	{
+		"name": "NSService",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-services/{ns-service-id}"
+	},
+	{
+		"name": "RoleWithFeatures",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/roles/{role}"
+	},
+	{
+		"name": "AddClusterNodeSpec",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster/nodes"
+	},
+	{
+		"name": "ClusterNodeConfig",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/nodes"
+	},
+	{
+		"name": "ClusterNodeConfigListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes"
+	},
+	{
+		"name": "WidgetConfiguration",
+		"type": "request",
+		"action": "post",
+		"route": "/ui-views/{view-id}/widgetconfigurations"
+	},
+	{
+		"name": "WidgetConfiguration",
+		"type": "response",
+		"action": "post",
+		"route": "/ui-views/{view-id}/widgetconfigurations"
+	},
+	{
+		"name": "WidgetConfigurationList",
+		"type": "response",
+		"action": "get",
+		"route": "/ui-views/{view-id}/widgetconfigurations"
+	},
+	{
+		"name": "CopyToRemoteFileProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/file-store/{file-name}?action=copy_to_remote_file"
+	},
+	{
+		"name": "DnsForwarderStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/dns/forwarders/{forwarder-id}/statistics"
+	},
+	{
+		"name": "ServiceManager",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/service-managers/{service-manager-id}"
+	},
+	{
+		"name": "ServiceManager",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/service-managers/{service-manager-id}"
+	},
+	{
+		"name": "ServiceManager",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-managers/{service-manager-id}"
+	},
+	{
+		"name": "TransportZone",
+		"type": "request",
+		"action": "put",
+		"route": "/transport-zones/{zone-id}"
+	},
+	{
+		"name": "TransportZone",
+		"type": "response",
+		"action": "put",
+		"route": "/transport-zones/{zone-id}"
+	},
+	{
+		"name": "TransportZone",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones/{zone-id}"
+	},
+	{
+		"name": "MigrationFeedbackResponseList",
+		"type": "request",
+		"action": "put",
+		"route": "/migration/feedback-response"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=list_with_rules"
+	},
+	{
+		"name": "UpgradeBundleInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/bundles/{bundle-id}"
+	},
+	{
+		"name": "VniPoolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/vni-pools"
+	},
+	{
+		"name": "FileProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/file-store/{file-name}/data"
+	},
+	{
+		"name": "ClusterCertificateId",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/api-certificate?action=clear_cluster_certificate"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/nsx-upgrade-agent/status"
+	},
+	{
+		"name": "UpgradeUnitGroup",
+		"type": "request",
+		"action": "post",
+		"route": "/upgrade/upgrade-unit-groups"
+	},
+	{
+		"name": "UpgradeUnitGroup",
+		"type": "response",
+		"action": "post",
+		"route": "/upgrade/upgrade-unit-groups"
+	},
+	{
+		"name": "UpgradeUnitGroupListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-unit-groups"
+	},
+	{
+		"name": "TransportNodeStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones/{zone-id}/transport-node-status"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/nsx-upgrade-agent?action=restart"
+	},
+	{
+		"name": "L2VPNSessionStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions/{session-id}/status"
+	},
+	{
+		"name": "LbAppProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/application-profiles/{application-profile-id}"
+	},
+	{
+		"name": "LbAppProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/application-profiles/{application-profile-id}"
+	},
+	{
+		"name": "LbAppProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/application-profiles/{application-profile-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ntp?action=restart"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/manager?action=restart"
+	},
+	{
+		"name": "NodeSnmpServiceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/snmp"
+	},
+	{
+		"name": "NodeSnmpServiceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/services/snmp"
+	},
+	{
+		"name": "NodeSnmpServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/snmp"
+	},
+	{
+		"name": "MacPoolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/mac-pools"
+	},
+	{
+		"name": "NodeProtonServiceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/manager"
+	},
+	{
+		"name": "NodeProtonServiceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/services/manager"
+	},
+	{
+		"name": "NodeProtonServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/manager"
+	},
+	{
+		"name": "ServiceInstanceStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/status"
+	},
+	{
+		"name": "MACAddressElement",
+		"type": "request",
+		"action": "post",
+		"route": "/mac-sets/{mac-set-id}/members"
+	},
+	{
+		"name": "MACAddressElement",
+		"type": "response",
+		"action": "post",
+		"route": "/mac-sets/{mac-set-id}/members"
+	},
+	{
+		"name": "MACAddressElementListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/mac-sets/{mac-set-id}/members"
+	},
+	{
+		"name": "LogicalRouterStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/status"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/restore/status"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/restore/status"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/restore/status"
+	},
+	{
+		"name": "BaseServiceProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-profiles"
+	},
+	{
+		"name": "BaseServiceProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-profiles"
+	},
+	{
+		"name": "SIServiceProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-profiles"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors/{id}?action=show-sensitive-data"
+	},
+	{
+		"name": "BaseServiceInstance",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}"
+	},
+	{
+		"name": "BaseServiceInstance",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}"
+	},
+	{
+		"name": "BaseServiceInstance",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}"
+	},
+	{
+		"name": "LbServerSslProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/server-ssl-profiles"
+	},
+	{
+		"name": "LbServerSslProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/server-ssl-profiles"
+	},
+	{
+		"name": "LbServerSslProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/server-ssl-profiles"
+	},
+	{
+		"name": "IPSecVPNPeerEndpoint",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/peer-endpoints/{ipsec-vpn-peer-endpoint-id}"
+	},
+	{
+		"name": "IPSecVPNPeerEndpoint",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/peer-endpoints/{ipsec-vpn-peer-endpoint-id}"
+	},
+	{
+		"name": "IPSecVPNPeerEndpoint",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/peer-endpoints/{ipsec-vpn-peer-endpoint-id}"
+	},
+	{
+		"name": "WafProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/waf/profiles/{profile-id}"
+	},
+	{
+		"name": "WafProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/waf/profiles/{profile-id}"
+	},
+	{
+		"name": "WafProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/profiles/{profile-id}"
+	},
+	{
+		"name": "DirectoryDomain",
+		"type": "request",
+		"action": "put",
+		"route": "/directory/domains/{domain-id}"
+	},
+	{
+		"name": "DirectoryDomain",
+		"type": "response",
+		"action": "put",
+		"route": "/directory/domains/{domain-id}"
+	},
+	{
+		"name": "DirectoryDomain",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains/{domain-id}"
+	},
+	{
+		"name": "FeatureStackCollectionConfiguration",
+		"type": "response",
+		"action": "post",
+		"route": "/hpm/features/{feature-stack-name}?action=reset_collection_frequency"
+	},
+	{
+		"name": "SoftwareModuleResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/modules"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/cluster_manager/status"
+	},
+	{
+		"name": "PBRRule",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}/rules"
+	},
+	{
+		"name": "PBRRule",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}/rules"
+	},
+	{
+		"name": "PBRRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pbr/sections/{section-id}/rules"
+	},
+	{
+		"name": "VirtualMachineTagUpdate",
+		"type": "request",
+		"action": "post",
+		"route": "/fabric/virtual-machines?action=update_tags"
+	},
+	{
+		"name": "WafGlobalConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/waf/global-config"
+	},
+	{
+		"name": "WafGlobalConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/waf/global-config"
+	},
+	{
+		"name": "WafGlobalConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/global-config"
+	},
+	{
+		"name": "TargetResourceStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/status/{context-type}/{id}"
+	},
+	{
+		"name": "IpfixConfig",
+		"type": "request",
+		"action": "post",
+		"route": "/ipfix/configs"
+	},
+	{
+		"name": "IpfixConfig",
+		"type": "response",
+		"action": "post",
+		"route": "/ipfix/configs"
+	},
+	{
+		"name": "IpfixConfigListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix/configs"
+	},
+	{
+		"name": "EULAContent",
+		"type": "response",
+		"action": "get",
+		"route": "/eula/content"
+	},
+	{
+		"name": "AcceptableComponentVersionList",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/version-whitelist"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/liagent?action=stop"
+	},
+	{
+		"name": "NodeNtpServiceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/ntp"
+	},
+	{
+		"name": "NodeNtpServiceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/services/ntp"
+	},
+	{
+		"name": "NodeNtpServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/ntp"
+	},
+	{
+		"name": "NotificationsList",
+		"type": "request",
+		"action": "put",
+		"route": "/notification-watchers/{watcher-id}/notifications"
+	},
+	{
+		"name": "NotificationsList",
+		"type": "response",
+		"action": "put",
+		"route": "/notification-watchers/{watcher-id}/notifications"
+	},
+	{
+		"name": "NotificationsList",
+		"type": "response",
+		"action": "get",
+		"route": "/notification-watchers/{watcher-id}/notifications"
+	},
+	{
+		"name": "LbService",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/services/{service-id}"
+	},
+	{
+		"name": "LbService",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/services/{service-id}"
+	},
+	{
+		"name": "LbService",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}"
+	},
+	{
+		"name": "ClusterNodeVMDeploymentStatusReport",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/deployments/{node-id}/status"
+	},
+	{
+		"name": "Csr",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/csrs/{csr-id}"
+	},
+	{
+		"name": "WidgetConfiguration",
+		"type": "request",
+		"action": "put",
+		"route": "/ui-views/{view-id}/widgetconfigurations/{widgetconfiguration-id}"
+	},
+	{
+		"name": "WidgetConfiguration",
+		"type": "response",
+		"action": "put",
+		"route": "/ui-views/{view-id}/widgetconfigurations/{widgetconfiguration-id}"
+	},
+	{
+		"name": "WidgetConfiguration",
+		"type": "response",
+		"action": "get",
+		"route": "/ui-views/{view-id}/widgetconfigurations/{widgetconfiguration-id}"
+	},
+	{
+		"name": "ServiceDeploymentStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments/{service-deployment-id}/status"
+	},
+	{
+		"name": "EULAAcceptance",
+		"type": "response",
+		"action": "get",
+		"route": "/eula/acceptance"
+	},
+	{
+		"name": "WafRuleStatisticsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/rule-statistics/categories/{category-name}/loadbalancer/services/{service-id}/virtual-servers/{virtual-server-id}"
+	},
+	{
+		"name": "LbRule",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/rules/{rule-id}"
+	},
+	{
+		"name": "LbRule",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/rules/{rule-id}"
+	},
+	{
+		"name": "LbRule",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/rules/{rule-id}"
+	},
+	{
+		"name": "DhcpServerStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/status"
+	},
+	{
+		"name": "UpgradeBundleFetchRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/upgrade/bundles"
+	},
+	{
+		"name": "UpgradeBundleId",
+		"type": "response",
+		"action": "post",
+		"route": "/upgrade/bundles"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/nsx-upgrade-agent?action=start"
+	},
+	{
+		"name": "InterfaceNeighborPropertyListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/lldp/fabric-nodes/{fabric-node-id}/interfaces"
+	},
+	{
+		"name": "UpgradeUnitTypeStatsList",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-units-stats"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ssh?action=start"
+	},
+	{
+		"name": "IPAddressElementListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ip-sets/{ip-set-id}/members"
+	},
+	{
+		"name": "UpgradeUnitAggregateInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-units/aggregate-info"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/liagent"
+	},
+	{
+		"name": "TrustManagementData",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management"
+	},
+	{
+		"name": "LogicalDhcpServer",
+		"type": "request",
+		"action": "post",
+		"route": "/dhcp/servers"
+	},
+	{
+		"name": "LogicalDhcpServer",
+		"type": "response",
+		"action": "post",
+		"route": "/dhcp/servers"
+	},
+	{
+		"name": "LogicalDhcpServerListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers"
+	},
+	{
+		"name": "CrlObjectData",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/crls?action=import"
+	},
+	{
+		"name": "CrlList",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/crls?action=import"
+	},
+	{
+		"name": "DhcpIpPool",
+		"type": "request",
+		"action": "put",
+		"route": "/dhcp/servers/{server-id}/ip-pools/{pool-id}"
+	},
+	{
+		"name": "DhcpIpPool",
+		"type": "response",
+		"action": "put",
+		"route": "/dhcp/servers/{server-id}/ip-pools/{pool-id}"
+	},
+	{
+		"name": "DhcpIpPool",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/ip-pools/{pool-id}"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=revise_with_rules"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=revise_with_rules"
+	},
+	{
+		"name": "ComputeManagerStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-managers/{compute-manager-id}/status"
+	},
+	{
+		"name": "RedistributionConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/redistribution"
+	},
+	{
+		"name": "RedistributionConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/redistribution"
+	},
+	{
+		"name": "RedistributionConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/redistribution"
+	},
+	{
+		"name": "WafErsStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/ers/status"
+	},
+	{
+		"name": "ComputeCollectionTransportNodeTemplate",
+		"type": "request",
+		"action": "post",
+		"route": "/compute-collection-transport-node-templates"
+	},
+	{
+		"name": "ComputeCollectionTransportNodeTemplate",
+		"type": "response",
+		"action": "post",
+		"route": "/compute-collection-transport-node-templates"
+	},
+	{
+		"name": "TransportNodeTemplateListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/compute-collection-transport-node-templates"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/community-lists/{community-list-id}"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/community-lists/{community-list-id}"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/community-lists/{community-list-id}"
+	},
+	{
+		"name": "TransportNodeCollectionState",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-node-collections/{transport-node-collection-id}/state"
+	},
+	{
+		"name": "InstanceEndpoint",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-endpoints"
+	},
+	{
+		"name": "InstanceEndpoint",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-endpoints"
+	},
+	{
+		"name": "InstanceEndpointListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-endpoints"
+	},
+	{
+		"name": "FirewallSectionsSummaryList",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/summary"
+	},
+	{
+		"name": "DhcpStaticBinding",
+		"type": "request",
+		"action": "post",
+		"route": "/dhcp/servers/{server-id}/static-bindings"
+	},
+	{
+		"name": "DhcpStaticBinding",
+		"type": "response",
+		"action": "post",
+		"route": "/dhcp/servers/{server-id}/static-bindings"
+	},
+	{
+		"name": "DhcpStaticBindingListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/static-bindings"
+	},
+	{
+		"name": "ClusterBackupInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/restore/backuptimestamps"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/mgmt-plane-bus?action=stop"
+	},
+	{
+		"name": "JoinClusterParameters",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster?action=join_cluster"
+	},
+	{
+		"name": "ClusterConfiguration",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster?action=join_cluster"
+	},
+	{
+		"name": "SupportBundleRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/administration/support-bundles?action=collect"
+	},
+	{
+		"name": "SupportBundleResult",
+		"type": "response",
+		"action": "post",
+		"route": "/administration/support-bundles?action=collect"
+	},
+	{
+		"name": "SwitchingProfileStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/switching-profiles/{switching-profile-id}/summary"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections?action=create_with_rules"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections?action=create_with_rules"
+	},
+	{
+		"name": "IPSecVPNTunnelProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/tunnel-profiles/{ipsec-vpn-tunnel-profile-id}"
+	},
+	{
+		"name": "IPSecVPNTunnelProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/tunnel-profiles/{ipsec-vpn-tunnel-profile-id}"
+	},
+	{
+		"name": "IPSecVPNTunnelProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/tunnel-profiles/{ipsec-vpn-tunnel-profile-id}"
+	},
+	{
+		"name": "PBRRule",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}/rules/{rule-id}?action=revise"
+	},
+	{
+		"name": "PBRRule",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}/rules/{rule-id}?action=revise"
+	},
+	{
+		"name": "TransportNodeCollection",
+		"type": "request",
+		"action": "put",
+		"route": "/transport-node-collections/{transport-node-collection-id}"
+	},
+	{
+		"name": "TransportNodeCollection",
+		"type": "response",
+		"action": "put",
+		"route": "/transport-node-collections/{transport-node-collection-id}"
+	},
+	{
+		"name": "TransportNodeCollection",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-node-collections/{transport-node-collection-id}"
+	},
+	{
+		"name": "L2VPNSessionRemoteMacs",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions/{session-id}/remote-mac"
+	},
+	{
+		"name": "TelemetryConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/telemetry/config"
+	},
+	{
+		"name": "TelemetryConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/telemetry/config"
+	},
+	{
+		"name": "TelemetryConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/telemetry/config"
+	},
+	{
+		"name": "TraceflowRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/traceflows"
+	},
+	{
+		"name": "Traceflow",
+		"type": "response",
+		"action": "post",
+		"route": "/traceflows"
+	},
+	{
+		"name": "TraceflowListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/traceflows"
+	},
+	{
+		"name": "FirewallStatus",
+		"type": "request",
+		"action": "put",
+		"route": "/firewall/status/{context-type}"
+	},
+	{
+		"name": "FirewallStatus",
+		"type": "response",
+		"action": "put",
+		"route": "/firewall/status/{context-type}"
+	},
+	{
+		"name": "FirewallStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/status/{context-type}"
+	},
+	{
+		"name": "IPSecVPNIKEServiceSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/services/{service-id}/summary"
+	},
+	{
+		"name": "TargetResourceStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/status/{context-type}/{id}?action=enable_firewall"
+	},
+	{
+		"name": "DirectoryGroupMemberListResults",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains/{domain-id}/groups/{group-id}/member-groups"
+	},
+	{
+		"name": "TransportNodeProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/transport-node-profiles/{transport-node-profile-id}"
+	},
+	{
+		"name": "TransportNodeProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/transport-node-profiles/{transport-node-profile-id}"
+	},
+	{
+		"name": "TransportNodeProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-node-profiles/{transport-node-profile-id}"
+	},
+	{
+		"name": "BridgeEndpoint",
+		"type": "request",
+		"action": "post",
+		"route": "/bridge-endpoints"
+	},
+	{
+		"name": "BridgeEndpoint",
+		"type": "response",
+		"action": "post",
+		"route": "/bridge-endpoints"
+	},
+	{
+		"name": "BridgeEndpointListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-endpoints"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/migration-coordinator"
+	},
+	{
+		"name": "TransportZoneStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones/{zone-id}/summary"
+	},
+	{
+		"name": "IPSecVPNLocalEndpoint",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/local-endpoints"
+	},
+	{
+		"name": "IPSecVPNLocalEndpoint",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/local-endpoints"
+	},
+	{
+		"name": "IPSecVPNLocalEndpointListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/local-endpoints"
+	},
+	{
+		"name": "NotificationWatcher",
+		"type": "request",
+		"action": "put",
+		"route": "/notification-watchers/{watcher-id}"
+	},
+	{
+		"name": "NotificationWatcher",
+		"type": "response",
+		"action": "put",
+		"route": "/notification-watchers/{watcher-id}"
+	},
+	{
+		"name": "NotificationWatcher",
+		"type": "response",
+		"action": "get",
+		"route": "/notification-watchers/{watcher-id}"
+	},
+	{
+		"name": "EdgeCluster",
+		"type": "request",
+		"action": "put",
+		"route": "/edge-clusters/{edge-cluster-id}"
+	},
+	{
+		"name": "EdgeCluster",
+		"type": "response",
+		"action": "put",
+		"route": "/edge-clusters/{edge-cluster-id}"
+	},
+	{
+		"name": "EdgeCluster",
+		"type": "response",
+		"action": "get",
+		"route": "/edge-clusters/{edge-cluster-id}"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=retry"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=retry"
+	},
+	{
+		"name": "WafRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/rules"
+	},
+	{
+		"name": "LogicalSwitch",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-switches"
+	},
+	{
+		"name": "LogicalSwitch",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-switches"
+	},
+	{
+		"name": "LogicalSwitchListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches"
+	},
+	{
+		"name": "GlobalCollectionConfiguration",
+		"type": "request",
+		"action": "put",
+		"route": "/hpm/global-config"
+	},
+	{
+		"name": "GlobalCollectionConfiguration",
+		"type": "response",
+		"action": "put",
+		"route": "/hpm/global-config"
+	},
+	{
+		"name": "GlobalCollectionConfiguration",
+		"type": "response",
+		"action": "get",
+		"route": "/hpm/global-config"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/migration-coordinator?action=start"
+	},
+	{
+		"name": "BaseHostSwitchProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/host-switch-profiles/{host-switch-profile-id}"
+	},
+	{
+		"name": "BaseHostSwitchProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/host-switch-profiles/{host-switch-profile-id}"
+	},
+	{
+		"name": "BaseHostSwitchProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/host-switch-profiles/{host-switch-profile-id}"
+	},
+	{
+		"name": "ComputeCollectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-collections"
+	},
+	{
+		"name": "Node",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/discovered-nodes/{node-ext-id}?action=hostprep"
+	},
+	{
+		"name": "ReportAppResultsForVmsRequestParameters",
+		"type": "request",
+		"action": "post",
+		"route": "/app-discovery/sessions/{session-id}/report/app-info-and-vm?format=csv"
+	},
+	{
+		"name": "AppInfoHostVmListInCsvFormat",
+		"type": "response",
+		"action": "post",
+		"route": "/app-discovery/sessions/{session-id}/report/app-info-and-vm?format=csv"
+	},
+	{
+		"name": "DhcpRelayService",
+		"type": "request",
+		"action": "put",
+		"route": "/dhcp/relays/{relay-id}"
+	},
+	{
+		"name": "DhcpRelayService",
+		"type": "response",
+		"action": "put",
+		"route": "/dhcp/relays/{relay-id}"
+	},
+	{
+		"name": "DhcpRelayService",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/relays/{relay-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/http?action=start"
+	},
+	{
+		"name": "L2VpnSession",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/l2vpn/sessions/{l2vpn-session-id}"
+	},
+	{
+		"name": "L2VpnSession",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/l2vpn/sessions/{l2vpn-session-id}"
+	},
+	{
+		"name": "L2VpnSession",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions/{l2vpn-session-id}"
+	},
+	{
+		"name": "MigrationFeedbackSummaryListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/feedback-summary"
+	},
+	{
+		"name": "NodeNetworkInterfaceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/network/interfaces/{interface-id}"
+	},
+	{
+		"name": "NodeNetworkInterfaceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/network/interfaces/{interface-id}"
+	},
+	{
+		"name": "NodeNetworkInterfaceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/interfaces/{interface-id}"
+	},
+	{
+		"name": "NodeSshServiceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/ssh"
+	},
+	{
+		"name": "NodeSshServiceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/services/ssh"
+	},
+	{
+		"name": "NodeSshServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/ssh"
+	},
+	{
+		"name": "BridgeEndpointStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-endpoints/{endpoint-id}/status"
+	},
+	{
+		"name": "LbPool",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/pools/{pool-id}"
+	},
+	{
+		"name": "LbPool",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/pools/{pool-id}"
+	},
+	{
+		"name": "PoolMemberSettingList",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/pools/{pool-id}"
+	},
+	{
+		"name": "LbPool",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/pools/{pool-id}"
+	},
+	{
+		"name": "LbPool",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/pools/{pool-id}"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=update_with_rules"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=update_with_rules"
+	},
+	{
+		"name": "PortStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/node/rabbitmq-management-port"
+	},
+	{
+		"name": "ApplianceManagementTaskProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/tasks/{task-id}"
+	},
+	{
+		"name": "ApplianceManagementTaskProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/tasks/{task-id}"
+	},
+	{
+		"name": "License",
+		"type": "response",
+		"action": "get",
+		"route": "/licenses/{license-key}"
+	},
+	{
+		"name": "FeatureUsageList",
+		"type": "response",
+		"action": "get",
+		"route": "/licenses/licenses-usage"
+	},
+	{
+		"name": "VidmInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/vidm/groups"
+	},
+	{
+		"name": "LogicalPort",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-ports"
+	},
+	{
+		"name": "LogicalPort",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-ports"
+	},
+	{
+		"name": "LogicalPortListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports"
+	},
+	{
+		"name": "LogicalRouterPortState",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports/{logical-router-port-id}/state"
+	},
+	{
+		"name": "StaticRoute",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/{id}"
+	},
+	{
+		"name": "StaticRoute",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/{id}"
+	},
+	{
+		"name": "StaticRoute",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/{id}"
+	},
+	{
+		"name": "LogicalPortState",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}/state"
+	},
+	{
+		"name": "WafCategory",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/categories/{category-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/cluster_manager?action=stop"
+	},
+	{
+		"name": "BackupOperationHistory",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/backups/history"
+	},
+	{
+		"name": "BridgeEndpoint",
+		"type": "request",
+		"action": "put",
+		"route": "/bridge-endpoints/{bridgeendpoint-id}"
+	},
+	{
+		"name": "BridgeEndpoint",
+		"type": "response",
+		"action": "put",
+		"route": "/bridge-endpoints/{bridgeendpoint-id}"
+	},
+	{
+		"name": "BridgeEndpoint",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-endpoints/{bridgeendpoint-id}"
+	},
+	{
+		"name": "CurrentBackupOperationStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/backups/status"
+	},
+	{
+		"name": "MigrationStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/status-summary"
+	},
+	{
+		"name": "VersionList",
+		"type": "request",
+		"action": "put",
+		"route": "/upgrade/version-whitelist/{component_type}"
+	},
+	{
+		"name": "AcceptableComponentVersion",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/version-whitelist/{component_type}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/telemetry?action=stop"
+	},
+	{
+		"name": "NodeCapabilitiesResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{transport-node-id}/capabilities"
+	},
+	{
+		"name": "NodeLogProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/logs/{log-name}"
+	},
+	{
+		"name": "NodeLogProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/logs/{log-name}"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=revise_with_rules"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=revise_with_rules"
+	},
+	{
+		"name": "TransportNodeCollection",
+		"type": "request",
+		"action": "post",
+		"route": "/transport-node-collections"
+	},
+	{
+		"name": "TransportNodeCollection",
+		"type": "response",
+		"action": "post",
+		"route": "/transport-node-collections"
+	},
+	{
+		"name": "TransportNodeCollectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-node-collections"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/sections/{section-id}"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/sections/{section-id}"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/sections/{section-id}"
+	},
+	{
+		"name": "IpfixConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/ipfix/configs/{config-id}"
+	},
+	{
+		"name": "IpfixConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/ipfix/configs/{config-id}"
+	},
+	{
+		"name": "IpfixConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix/configs/{config-id}"
+	},
+	{
+		"name": "IPSecVPNPeerEndpoint",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/peer-endpoints/{ipsec-vpn-peer-endpoint-id}?action=show-sensitive-data"
+	},
+	{
+		"name": "NSServiceGroup",
+		"type": "request",
+		"action": "post",
+		"route": "/ns-service-groups"
+	},
+	{
+		"name": "NSServiceGroup",
+		"type": "response",
+		"action": "post",
+		"route": "/ns-service-groups"
+	},
+	{
+		"name": "NSServiceGroupListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-service-groups"
+	},
+	{
+		"name": "LogicalDhcpServer",
+		"type": "request",
+		"action": "put",
+		"route": "/dhcp/servers/{server-id}"
+	},
+	{
+		"name": "LogicalDhcpServer",
+		"type": "response",
+		"action": "put",
+		"route": "/dhcp/servers/{server-id}"
+	},
+	{
+		"name": "LogicalDhcpServer",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}"
+	},
+	{
+		"name": "EffectiveProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/service-configs/effective-profiles"
+	},
+	{
+		"name": "L2VpnSession",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/l2vpn/sessions"
+	},
+	{
+		"name": "L2VpnSession",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/l2vpn/sessions"
+	},
+	{
+		"name": "L2VpnSessionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions"
+	},
+	{
+		"name": "LbTcpProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/tcp-profiles/{tcp-profile-id}"
+	},
+	{
+		"name": "LbTcpProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/tcp-profiles/{tcp-profile-id}"
+	},
+	{
+		"name": "LbTcpProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/tcp-profiles/{tcp-profile-id}"
+	},
+	{
+		"name": "FileThumbprint",
+		"type": "response",
+		"action": "get",
+		"route": "/node/file-store/{file-name}/thumbprint"
+	},
+	{
+		"name": "ServiceInstanceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-instances"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/telemetry/status"
+	},
+	{
+		"name": "NodeMode",
+		"type": "response",
+		"action": "get",
+		"route": "/node/mode"
+	},
+	{
+		"name": "EdgeCluster",
+		"type": "request",
+		"action": "post",
+		"route": "/edge-clusters"
+	},
+	{
+		"name": "EdgeCluster",
+		"type": "response",
+		"action": "post",
+		"route": "/edge-clusters"
+	},
+	{
+		"name": "EdgeClusterListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/edge-clusters"
+	},
+	{
+		"name": "WafCategoryListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/categories"
+	},
+	{
+		"name": "TrustObjectData",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/csrs/{csr-id}?action=import"
+	},
+	{
+		"name": "CertificateList",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/csrs/{csr-id}?action=import"
+	},
+	{
+		"name": "PacketCaptureSession",
+		"type": "response",
+		"action": "post",
+		"route": "/pktcap/session/{session-id}?action=terminate"
+	},
+	{
+		"name": "ClusterStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/status"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/community-lists"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/community-lists"
+	},
+	{
+		"name": "BGPCommunityListListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/community-lists"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/cm-inventory/status"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/telemetry"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/ui-service/status"
+	},
+	{
+		"name": "IPSecVPNIKEProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/ike-profiles/{ipsec-vpn-ike-profile-id}"
+	},
+	{
+		"name": "IPSecVPNIKEProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/ike-profiles/{ipsec-vpn-ike-profile-id}"
+	},
+	{
+		"name": "IPSecVPNIKEProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/ike-profiles/{ipsec-vpn-ike-profile-id}"
+	},
+	{
+		"name": "WafCategoryListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/crses/{crs-id}/categories"
+	},
+	{
+		"name": "VirtualNetworkInterfaceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-vif-members"
+	},
+	{
+		"name": "LbRule",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/rules"
+	},
+	{
+		"name": "LbRule",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/rules"
+	},
+	{
+		"name": "LbRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/rules"
+	},
+	{
+		"name": "IpfixCollectorUpmProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/ipfix-collector-profiles/{ipfix-collector-profile-id}"
+	},
+	{
+		"name": "IpfixCollectorUpmProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/ipfix-collector-profiles/{ipfix-collector-profile-id}"
+	},
+	{
+		"name": "IpfixCollectorUpmProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix-collector-profiles/{ipfix-collector-profile-id}"
+	},
+	{
+		"name": "ReorderRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}/upgrade-unit/{upgrade-unit-id}?action=reorder"
+	},
+	{
+		"name": "InventoryConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/configs/inventory"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}/rules"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}/rules"
+	},
+	{
+		"name": "FirewallRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/{section-id}/rules"
+	},
+	{
+		"name": "MigrationUnitTypeStatsList",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-units-stats"
+	},
+	{
+		"name": "License",
+		"type": "request",
+		"action": "put",
+		"route": "/license"
+	},
+	{
+		"name": "License",
+		"type": "response",
+		"action": "put",
+		"route": "/license"
+	},
+	{
+		"name": "License",
+		"type": "response",
+		"action": "get",
+		"route": "/license"
+	},
+	{
+		"name": "DhcpStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/statistics"
+	},
+	{
+		"name": "DhcpRelayProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/dhcp/relay-profiles/{relay-profile-id}"
+	},
+	{
+		"name": "DhcpRelayProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/dhcp/relay-profiles/{relay-profile-id}"
+	},
+	{
+		"name": "DhcpRelayProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/relay-profiles/{relay-profile-id}"
+	},
+	{
+		"name": "AuditLogRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/administration/audit-logs"
+	},
+	{
+		"name": "AuditLogListResult",
+		"type": "response",
+		"action": "post",
+		"route": "/administration/audit-logs"
+	},
+	{
+		"name": "LbPool",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/pools"
+	},
+	{
+		"name": "LbPool",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/pools"
+	},
+	{
+		"name": "LbPoolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/pools"
+	},
+	{
+		"name": "StaticHopBfdPeer",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/bfd-peers/{bfd-peer-id}"
+	},
+	{
+		"name": "StaticHopBfdPeer",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/bfd-peers/{bfd-peer-id}"
+	},
+	{
+		"name": "StaticHopBfdPeer",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/bfd-peers/{bfd-peer-id}"
+	},
+	{
+		"name": "MacAddressCsvListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/mac-table?format=csv"
+	},
+	{
+		"name": "MigrationUnitGroup",
+		"type": "request",
+		"action": "put",
+		"route": "/migration/migration-unit-groups/{group-id}"
+	},
+	{
+		"name": "MigrationUnitGroup",
+		"type": "response",
+		"action": "put",
+		"route": "/migration/migration-unit-groups/{group-id}"
+	},
+	{
+		"name": "MigrationUnitGroup",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-unit-groups/{group-id}"
+	},
+	{
+		"name": "LogicalServiceRouterClusterState",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/service-cluster/state"
+	},
+	{
+		"name": "CrlDistributionPoint",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/crl-distribution-points"
+	},
+	{
+		"name": "CrlDistributionPoint",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/crl-distribution-points"
+	},
+	{
+		"name": "CrlDistributionPointList",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/crl-distribution-points"
+	},
+	{
+		"name": "EffectiveMemberResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-transport-node-members"
+	},
+	{
+		"name": "IPSecVPNSessionStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/sessions/{session-id}/statistics"
+	},
+	{
+		"name": "AlarmListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/hpm/alarms"
+	},
+	{
+		"name": "BridgeCluster",
+		"type": "request",
+		"action": "post",
+		"route": "/bridge-clusters"
+	},
+	{
+		"name": "BridgeCluster",
+		"type": "response",
+		"action": "post",
+		"route": "/bridge-clusters"
+	},
+	{
+		"name": "BridgeClusterListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-clusters"
+	},
+	{
+		"name": "UcUpgradeStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/uc-upgrade-status"
+	},
+	{
+		"name": "PBRRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}/rules?action=create_multiple"
+	},
+	{
+		"name": "PBRRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}/rules?action=create_multiple"
+	},
+	{
+		"name": "NSGroupMetaInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}/ns-groups"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/nsx-message-bus?action=start"
+	},
+	{
+		"name": "CurrentRealizationStateBarrier",
+		"type": "response",
+		"action": "get",
+		"route": "/realization-state-barrier/current"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/nsx-upgrade-agent"
+	},
+	{
+		"name": "NodeInterfaceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/network/interfaces/{interface-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/search?action=start"
+	},
+	{
+		"name": "BgpNeighborsStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors/status"
+	},
+	{
+		"name": "TunnelList",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{node-id}/tunnels"
+	},
+	{
+		"name": "LogicalSwitchStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/summary"
+	},
+	{
+		"name": "UpgradeUnitGroupAggregateInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-unit-groups/aggregate-info"
+	},
+	{
+		"name": "IpBlockSubnet",
+		"type": "request",
+		"action": "post",
+		"route": "/pools/ip-subnets"
+	},
+	{
+		"name": "IpBlockSubnet",
+		"type": "response",
+		"action": "post",
+		"route": "/pools/ip-subnets"
+	},
+	{
+		"name": "IpBlockSubnetListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-subnets"
+	},
+	{
+		"name": "WafErsWithCategoriesAndRules",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/ers/aggregate-info"
+	},
+	{
+		"name": "NodeInterfaceStatisticsProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/{node-id}/network/interfaces/{interface-id}/stats"
+	},
+	{
+		"name": "ResourceReference",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/excludelist?action=remove_member"
+	},
+	{
+		"name": "ManagementConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/configs/management"
+	},
+	{
+		"name": "ManagementConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/configs/management"
+	},
+	{
+		"name": "ManagementConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/configs/management"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/ntp/status"
+	},
+	{
+		"name": "LogicalSwitchState",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/state"
+	},
+	{
+		"name": "DirectoryGroupListResults",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains/{domain-id}/groups"
+	},
+	{
+		"name": "L2VpnService",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/l2vpn/services"
+	},
+	{
+		"name": "L2VpnService",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/l2vpn/services"
+	},
+	{
+		"name": "L2VpnServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/services"
+	},
+	{
+		"name": "EffectiveIPAddressMemberListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-ip-address-members"
+	},
+	{
+		"name": "DiscoveredNode",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/discovered-nodes/{node-ext-id}"
+	},
+	{
+		"name": "LogicalService",
+		"type": "request",
+		"action": "post",
+		"route": "/services"
+	},
+	{
+		"name": "LogicalService",
+		"type": "response",
+		"action": "post",
+		"route": "/services"
+	},
+	{
+		"name": "LogicalServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/services"
+	},
+	{
+		"name": "DhcpRelayProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/dhcp/relay-profiles"
+	},
+	{
+		"name": "DhcpRelayProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/dhcp/relay-profiles"
+	},
+	{
+		"name": "DhcpRelayProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/relay-profiles"
+	},
+	{
+		"name": "UpgradeUnit",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-units/{upgrade-unit-id}"
+	},
+	{
+		"name": "ReorderRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}?action=reorder"
+	},
+	{
+		"name": "NodeInterfaceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{transport-node-id}/network/interfaces/{interface-id}"
+	},
+	{
+		"name": "InterfaceNeighborProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/lldp/transport-nodes/{node-id}/interfaces/{interface-name}"
+	},
+	{
+		"name": "LbVirtualServerWithRule",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/virtual-servers/{virtual-server-id}?action=update_with_rules"
+	},
+	{
+		"name": "LbVirtualServerWithRule",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/virtual-servers/{virtual-server-id}?action=update_with_rules"
+	},
+	{
+		"name": "LbPersistenceProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/persistence-profiles"
+	},
+	{
+		"name": "LbPersistenceProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/persistence-profiles"
+	},
+	{
+		"name": "LbPersistenceProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/persistence-profiles"
+	},
+	{
+		"name": "DirectoryLdapServer",
+		"type": "request",
+		"action": "post",
+		"route": "/directory/ldap-server"
+	},
+	{
+		"name": "DirectoryLdapServerStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/directory/ldap-server"
+	},
+	{
+		"name": "ActionableResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/restore/instruction-resources"
+	},
+	{
+		"name": "L2VpnSessionPeerCodes",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions/{l2vpn-session-id}/peer-codes"
+	},
+	{
+		"name": "PnicBondStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{node-id}/pnic-bond-status"
+	},
+	{
+		"name": "LbServerSslProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/server-ssl-profiles/{server-ssl-profile-id}"
+	},
+	{
+		"name": "LbServerSslProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/server-ssl-profiles/{server-ssl-profile-id}"
+	},
+	{
+		"name": "LbServerSslProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/server-ssl-profiles/{server-ssl-profile-id}"
+	},
+	{
+		"name": "DnsForwarder",
+		"type": "request",
+		"action": "post",
+		"route": "/dns/forwarders"
+	},
+	{
+		"name": "DnsForwarder",
+		"type": "response",
+		"action": "post",
+		"route": "/dns/forwarders"
+	},
+	{
+		"name": "DnsForwarderListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dns/forwarders"
+	},
+	{
+		"name": "ReorderMigrationRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/migration/migration-unit-groups/{group-id}?action=reorder"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}/rules"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}/rules"
+	},
+	{
+		"name": "ServiceInsertionRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/sections/{section-id}/rules"
+	},
+	{
+		"name": "LogicalSwitchStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/statistics"
+	},
+	{
+		"name": "EdgeClusterMemberTransportNode",
+		"type": "request",
+		"action": "post",
+		"route": "/edge-clusters/{edge-cluster-id}?action=replace_transport_node"
+	},
+	{
+		"name": "EdgeCluster",
+		"type": "response",
+		"action": "post",
+		"route": "/edge-clusters/{edge-cluster-id}?action=replace_transport_node"
+	},
+	{
+		"name": "AssociationListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/associations"
+	},
+	{
+		"name": "UpgradeBundleUploadStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/bundles/{bundle-id}/upload-status"
+	},
+	{
+		"name": "BridgeClusterStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-clusters/{cluster-id}/status"
+	},
+	{
+		"name": "IPSecVPNSessionSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/sessions/summary"
+	},
+	{
+		"name": "LogicalSwitchStatusSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/status"
+	},
+	{
+		"name": "TransportNodeState",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{transport-node-id}/state"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/cluster_manager?action=start"
+	},
+	{
+		"name": "TargetResourceStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/status/{context-type}/{id}?action=disable_firewall"
+	},
+	{
+		"name": "ExcludeList",
+		"type": "request",
+		"action": "put",
+		"route": "/firewall/excludelist"
+	},
+	{
+		"name": "ExcludeList",
+		"type": "response",
+		"action": "put",
+		"route": "/firewall/excludelist"
+	},
+	{
+		"name": "ExcludeList",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/excludelist"
+	},
+	{
+		"name": "WafRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/ers/rules"
+	},
+	{
+		"name": "AppDiscoverySessionResultSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}/summary"
+	},
+	{
+		"name": "ReorderMigrationRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/migration/migration-unit-groups/{group-id}/migration-unit/{migration-unit-id}?action=reorder"
+	},
+	{
+		"name": "InterfaceNeighborProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/lldp/fabric-nodes/{fabric-node-id}/interfaces/{interface-name}"
+	},
+	{
+		"name": "LogicalRouterRouteTable",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/route-table"
+	},
+	{
+		"name": "ComputeCollection",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-collections/{cc-ext-id}"
+	},
+	{
+		"name": "WafCrsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/crses"
+	},
+	{
+		"name": "IPPrefixList",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/ip-prefix-lists"
+	},
+	{
+		"name": "IPPrefixList",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/ip-prefix-lists"
+	},
+	{
+		"name": "IPPrefixListListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/ip-prefix-lists"
+	},
+	{
+		"name": "IPSecVPNSessionState",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/sessions/{ipsec-vpn-session-id}/state"
+	},
+	{
+		"name": "SupportedHostOSListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/ostypes"
+	},
+	{
+		"name": "IPSet",
+		"type": "request",
+		"action": "post",
+		"route": "/ip-sets"
+	},
+	{
+		"name": "IPSet",
+		"type": "response",
+		"action": "post",
+		"route": "/ip-sets"
+	},
+	{
+		"name": "IPSetListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ip-sets"
+	},
+	{
+		"name": "BridgeEndpointProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/bridge-endpoint-profiles/{bridgeendpointprofile-id}"
+	},
+	{
+		"name": "BridgeEndpointProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/bridge-endpoint-profiles/{bridgeendpointprofile-id}"
+	},
+	{
+		"name": "BridgeEndpointProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-endpoint-profiles/{bridgeendpointprofile-id}"
+	},
+	{
+		"name": "Certificate",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/certificates/{cert-id}"
+	},
+	{
+		"name": "ApiServiceConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/cluster/api-service"
+	},
+	{
+		"name": "ApiServiceConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/cluster/api-service"
+	},
+	{
+		"name": "ApiServiceConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/api-service"
+	},
+	{
+		"name": "AppProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/app-discovery/app-profiles"
+	},
+	{
+		"name": "AppProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/app-discovery/app-profiles"
+	},
+	{
+		"name": "AppProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/app-profiles"
+	},
+	{
+		"name": "NodeLogPropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/logs"
+	},
+	{
+		"name": "SolutionConfig",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/solution-configs"
+	},
+	{
+		"name": "SolutionConfig",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/solution-configs"
+	},
+	{
+		"name": "SolutionConfigListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/solution-configs"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/mgmt-plane-bus/status"
+	},
+	{
+		"name": "L2VpnService",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/l2vpn/services/{l2vpn-service-id}"
+	},
+	{
+		"name": "L2VpnService",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/l2vpn/services/{l2vpn-service-id}"
+	},
+	{
+		"name": "L2VpnService",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/services/{l2vpn-service-id}"
+	},
+	{
+		"name": "TunnelProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{node-id}/tunnels/{tunnel-name}"
+	},
+	{
+		"name": "FirewallSectionLock",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=unlock"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=unlock"
+	},
+	{
+		"name": "VtepLabelPoolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/vtep-label-pools"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ui-service?action=start"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections?action=create_with_rules"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections?action=create_with_rules"
+	},
+	{
+		"name": "NodeSearchDomainsProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/network/search-domains"
+	},
+	{
+		"name": "NodeSearchDomainsProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/network/search-domains"
+	},
+	{
+		"name": "NodeSearchDomainsProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/search-domains"
+	},
+	{
+		"name": "CurrentRealizationStateBarrier",
+		"type": "response",
+		"action": "post",
+		"route": "/realization-state-barrier/current?action=increment"
+	},
+	{
+		"name": "HeatMapTransportZoneStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/status"
+	},
+	{
+		"name": "EffectiveMemberResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-logical-switch-members"
+	},
+	{
+		"name": "MigrationUnitGroupStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-unit-groups-status"
+	},
+	{
+		"name": "NetworkMigrationSpec",
+		"type": "request",
+		"action": "put",
+		"route": "/network-migration-specs/{template-id}"
+	},
+	{
+		"name": "NetworkMigrationSpec",
+		"type": "response",
+		"action": "put",
+		"route": "/network-migration-specs/{template-id}"
+	},
+	{
+		"name": "NetworkMigrationSpec",
+		"type": "response",
+		"action": "get",
+		"route": "/network-migration-specs/{template-id}"
+	},
+	{
+		"name": "ServiceDeployment",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments/{service-deployment-id}"
+	},
+	{
+		"name": "ServiceDeployment",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments/{service-deployment-id}"
+	},
+	{
+		"name": "ServiceDeployment",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments/{service-deployment-id}"
+	},
+	{
+		"name": "PBRRule",
+		"type": "request",
+		"action": "put",
+		"route": "/pbr/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "PBRRule",
+		"type": "response",
+		"action": "put",
+		"route": "/pbr/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "PBRRule",
+		"type": "response",
+		"action": "get",
+		"route": "/pbr/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors"
+	},
+	{
+		"name": "BgpNeighborListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors"
+	},
+	{
+		"name": "TransportNodeStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{node-id}/remote-transport-node-status"
+	},
+	{
+		"name": "TransportNodeProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/transport-node-profiles"
+	},
+	{
+		"name": "TransportNodeProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/transport-node-profiles"
+	},
+	{
+		"name": "TransportNodeProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-node-profiles"
+	},
+	{
+		"name": "PacketCaptureSession",
+		"type": "response",
+		"action": "post",
+		"route": "/pktcap/session/{session-id}?action=delete"
+	},
+	{
+		"name": "ErrorResolverInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/error-resolver/{error_id}"
+	},
+	{
+		"name": "LogicalRouterState",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/state"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ui-service?action=restart"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ssh?action=restart"
+	},
+	{
+		"name": "NodeSyslogExporterProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/syslog/exporters/{exporter-name}"
+	},
+	{
+		"name": "GlobalConfigs",
+		"type": "request",
+		"action": "put",
+		"route": "/global-configs/{config-type}?action=resync_config"
+	},
+	{
+		"name": "GlobalConfigs",
+		"type": "response",
+		"action": "put",
+		"route": "/global-configs/{config-type}?action=resync_config"
+	},
+	{
+		"name": "DirectoryDomainSyncStats",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains/{domain-id}/sync-stats"
+	},
+	{
+		"name": "VirtualMachineListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/virtual-machines"
+	},
+	{
+		"name": "AppProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/app-discovery/app-profiles/{app-profile-id}"
+	},
+	{
+		"name": "AppProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/app-discovery/app-profiles/{app-profile-id}"
+	},
+	{
+		"name": "AppProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/app-profiles/{app-profile-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/search/status"
+	},
+	{
+		"name": "LogicalRouterRouteTableInCsvFormat",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/forwarding-table?format=csv"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}/rules/{rule-id}?action=revise"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}/rules/{rule-id}?action=revise"
+	},
+	{
+		"name": "MetadataProxy",
+		"type": "request",
+		"action": "put",
+		"route": "/md-proxies/{proxy-id}"
+	},
+	{
+		"name": "MetadataProxy",
+		"type": "response",
+		"action": "put",
+		"route": "/md-proxies/{proxy-id}"
+	},
+	{
+		"name": "MetadataProxy",
+		"type": "response",
+		"action": "get",
+		"route": "/md-proxies/{proxy-id}"
+	},
+	{
+		"name": "NodeInterfacePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/network/interfaces"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=list_with_rules"
+	},
+	{
+		"name": "WafProfileTemplateAggregateInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/default-profile-template"
+	},
+	{
+		"name": "EdgeClusterStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/edge-clusters/{edge-cluster-id}/status"
+	},
+	{
+		"name": "Node",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/nodes/{node-id}?action=upgrade_infra"
+	},
+	{
+		"name": "LogicalPort",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-ports/{lport-id}"
+	},
+	{
+		"name": "LogicalPort",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-ports/{lport-id}"
+	},
+	{
+		"name": "LogicalPort",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}"
+	},
+	{
+		"name": "DhcpStaticBinding",
+		"type": "request",
+		"action": "put",
+		"route": "/dhcp/servers/{server-id}/static-bindings/{binding-id}"
+	},
+	{
+		"name": "DhcpStaticBinding",
+		"type": "response",
+		"action": "put",
+		"route": "/dhcp/servers/{server-id}/static-bindings/{binding-id}"
+	},
+	{
+		"name": "DhcpStaticBinding",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/static-bindings/{binding-id}"
+	},
+	{
+		"name": "VendorTemplate",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/vendor-templates"
+	},
+	{
+		"name": "VendorTemplate",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/vendor-templates"
+	},
+	{
+		"name": "VendorTemplateListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/vendor-templates"
+	},
+	{
+		"name": "LogicalRouterRouteTable",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/routing-table"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/snmp?action=start"
+	},
+	{
+		"name": "BaseFirewallProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/firewall/profiles/{profile-id}"
+	},
+	{
+		"name": "BaseFirewallProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/firewall/profiles/{profile-id}"
+	},
+	{
+		"name": "BaseFirewallProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/profiles/{profile-id}"
+	},
+	{
+		"name": "IPSecVPNSessionStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/sessions/{session-id}/status"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/snmp?action=restart"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "ServiceInsertionRule",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "WafCrsStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/crses/{crs-id}/status"
+	},
+	{
+		"name": "KnownHostParameter",
+		"type": "request",
+		"action": "post",
+		"route": "/node/services/ssh?action=remove_host_fingerprint"
+	},
+	{
+		"name": "TransportNodeStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{node-id}/status"
+	},
+	{
+		"name": "IdfwComputeCollectionStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/compute-collections/{compute-collection-ext-id}/status"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ui-service?action=stop"
+	},
+	{
+		"name": "IpBlock",
+		"type": "request",
+		"action": "post",
+		"route": "/pools/ip-blocks"
+	},
+	{
+		"name": "IpBlock",
+		"type": "response",
+		"action": "post",
+		"route": "/pools/ip-blocks"
+	},
+	{
+		"name": "IpBlockListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-blocks"
+	},
+	{
+		"name": "UserInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/user-info"
+	},
+	{
+		"name": "LbVirtualServerStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/virtual-servers/status"
+	},
+	{
+		"name": "CapacityThresholdList",
+		"type": "request",
+		"action": "put",
+		"route": "/capacity/threshold"
+	},
+	{
+		"name": "CapacityThresholdList",
+		"type": "response",
+		"action": "put",
+		"route": "/capacity/threshold"
+	},
+	{
+		"name": "CapacityThresholdList",
+		"type": "response",
+		"action": "get",
+		"route": "/capacity/threshold"
+	},
+	{
+		"name": "DhcpProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/dhcp/server-profiles/{profile-id}"
+	},
+	{
+		"name": "DhcpProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/dhcp/server-profiles/{profile-id}"
+	},
+	{
+		"name": "DhcpProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/server-profiles/{profile-id}"
+	},
+	{
+		"name": "NetworkMigrationSpec",
+		"type": "request",
+		"action": "post",
+		"route": "/network-migration-specs"
+	},
+	{
+		"name": "NetworkMigrationSpec",
+		"type": "response",
+		"action": "post",
+		"route": "/network-migration-specs"
+	},
+	{
+		"name": "NetworkMigrationSpecListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/network-migration-specs"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/liagent/status"
+	},
+	{
+		"name": "UpgradeUnitList",
+		"type": "request",
+		"action": "post",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}?action=add_upgrade_units"
+	},
+	{
+		"name": "UpgradeUnitList",
+		"type": "response",
+		"action": "post",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}?action=add_upgrade_units"
+	},
+	{
+		"name": "IPSecVPNSession",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/sessions/{ipsec-vpn-session-id}"
+	},
+	{
+		"name": "IPSecVPNSession",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/sessions/{ipsec-vpn-session-id}"
+	},
+	{
+		"name": "IPSecVPNSession",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/sessions/{ipsec-vpn-session-id}"
+	},
+	{
+		"name": "InitiateClusterRestoreRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster/restore?action=start"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=start"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=start"
+	},
+	{
+		"name": "ComputeManager",
+		"type": "request",
+		"action": "post",
+		"route": "/fabric/compute-managers"
+	},
+	{
+		"name": "ComputeManager",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/compute-managers"
+	},
+	{
+		"name": "ComputeManagerListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-managers"
+	},
+	{
+		"name": "LbSslCipherAndProtocolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/ssl/ciphers-and-protocols"
+	},
+	{
+		"name": "LbServiceDebugInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/debug-info"
+	},
+	{
+		"name": "MigrationUnitStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-unit-groups/{group-id}/status"
+	},
+	{
+		"name": "ComputeCollectionTransportNodeTemplateStateList",
+		"type": "response",
+		"action": "get",
+		"route": "/compute-collection-transport-node-templates/{template-id}/state"
+	},
+	{
+		"name": "VidmInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/vidm/users"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/liagent?action=restart"
+	},
+	{
+		"name": "BaseHostSwitchProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/host-switch-profiles"
+	},
+	{
+		"name": "BaseHostSwitchProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/host-switch-profiles"
+	},
+	{
+		"name": "HostSwitchProfilesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/host-switch-profiles"
+	},
+	{
+		"name": "LogicalRouterPortArpTable",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports/{logical-router-port-id}/arp-table"
+	},
+	{
+		"name": "NodeInterfaceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/{node-id}/network/interfaces/{interface-id}"
+	},
+	{
+		"name": "LogicalRouterPortStatisticsSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports/{logical-router-port-id}/statistics/summary"
+	},
+	{
+		"name": "ServiceProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/service-profiles"
+	},
+	{
+		"name": "ServiceProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/service-profiles"
+	},
+	{
+		"name": "ServiceProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/service-profiles"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/cluster_manager?action=restart"
+	},
+	{
+		"name": "RemoteServerFingerprintRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster/backups?action=retrieve_ssh_fingerprint"
+	},
+	{
+		"name": "RemoteServerFingerprint",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/backups?action=retrieve_ssh_fingerprint"
+	},
+	{
+		"name": "LogicalRouterPort",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-router-ports"
+	},
+	{
+		"name": "LogicalRouterPort",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-router-ports"
+	},
+	{
+		"name": "LogicalRouterPortListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports"
+	},
+	{
+		"name": "PBRStatsList",
+		"type": "response",
+		"action": "get",
+		"route": "/pbr/sections/{section-id}/rules/stats"
+	},
+	{
+		"name": "RealizationStateBarrierConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/realization-state-barrier/config"
+	},
+	{
+		"name": "RealizationStateBarrierConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/realization-state-barrier/config"
+	},
+	{
+		"name": "RealizationStateBarrierConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/realization-state-barrier/config"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/nsx-message-bus?action=stop"
+	},
+	{
+		"name": "DirectoryLdapServer",
+		"type": "request",
+		"action": "post",
+		"route": "/directory/domains/{domain-id}/ldap-servers"
+	},
+	{
+		"name": "DirectoryLdapServer",
+		"type": "response",
+		"action": "post",
+		"route": "/directory/domains/{domain-id}/ldap-servers"
+	},
+	{
+		"name": "DirectoryLdapServerListResults",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains/{domain-id}/ldap-servers"
+	},
+	{
+		"name": "NodeStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/status?action=clear_bootup_error"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/snmp/status"
+	},
+	{
+		"name": "PBRSection",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections"
+	},
+	{
+		"name": "PBRSection",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections"
+	},
+	{
+		"name": "PBRSectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pbr/sections"
+	},
+	{
+		"name": "PortMirroringSession",
+		"type": "request",
+		"action": "post",
+		"route": "/mirror-sessions"
+	},
+	{
+		"name": "PortMirroringSession",
+		"type": "response",
+		"action": "post",
+		"route": "/mirror-sessions"
+	},
+	{
+		"name": "PortMirroringSessionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/mirror-sessions"
+	},
+	{
+		"name": "ClusterNodeVMDeploymentRequest",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/deployments/{node-id}"
+	},
+	{
+		"name": "VirtualNetworkInterfaceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/vifs"
+	},
+	{
+		"name": "ResourceReference",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/excludelist?action=add_member"
+	},
+	{
+		"name": "ResourceReference",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/excludelist?action=add_member"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ntp?action=start"
+	},
+	{
+		"name": "DnsAnswer",
+		"type": "response",
+		"action": "get",
+		"route": "/dns/forwarders/{forwarder-id}/nslookup"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/telemetry?action=restart"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/search"
+	},
+	{
+		"name": "TransportZone",
+		"type": "request",
+		"action": "post",
+		"route": "/transport-zones"
+	},
+	{
+		"name": "TransportZone",
+		"type": "response",
+		"action": "post",
+		"route": "/transport-zones"
+	},
+	{
+		"name": "TransportZoneListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones"
+	},
+	{
+		"name": "IPSecVPNDPDProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/dpd-profiles/{ipsec-vpn-dpd-profile-id}"
+	},
+	{
+		"name": "IPSecVPNDPDProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/dpd-profiles/{ipsec-vpn-dpd-profile-id}"
+	},
+	{
+		"name": "IPSecVPNDPDProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/dpd-profiles/{ipsec-vpn-dpd-profile-id}"
+	},
+	{
+		"name": "FeatureUsageListInCsvFormat",
+		"type": "response",
+		"action": "get",
+		"route": "/licenses/licenses-usage?format=csv"
+	},
+	{
+		"name": "View",
+		"type": "request",
+		"action": "put",
+		"route": "/ui-views/{view-id}"
+	},
+	{
+		"name": "View",
+		"type": "response",
+		"action": "put",
+		"route": "/ui-views/{view-id}"
+	},
+	{
+		"name": "View",
+		"type": "response",
+		"action": "get",
+		"route": "/ui-views/{view-id}"
+	},
+	{
+		"name": "IpBlock",
+		"type": "request",
+		"action": "put",
+		"route": "/pools/ip-blocks/{block-id}"
+	},
+	{
+		"name": "IpBlock",
+		"type": "response",
+		"action": "put",
+		"route": "/pools/ip-blocks/{block-id}"
+	},
+	{
+		"name": "IpBlock",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-blocks/{block-id}"
+	},
+	{
+		"name": "IpfixCollectorConfig",
+		"type": "request",
+		"action": "post",
+		"route": "/ipfix/collectorconfigs"
+	},
+	{
+		"name": "IpfixCollectorConfig",
+		"type": "response",
+		"action": "post",
+		"route": "/ipfix/collectorconfigs"
+	},
+	{
+		"name": "IpfixCollectorConfigListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix/collectorconfigs"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=cancel"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=cancel"
+	},
+	{
+		"name": "FirewallStatsList",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/{section-id}/rules/stats"
+	},
+	{
+		"name": "NatStatisticsPerLogicalRouter",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/nat/rules/statistics"
+	},
+	{
+		"name": "AdvanceClusterRestoreRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster/restore?action=advance"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=advance"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=advance"
+	},
+	{
+		"name": "WafStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/statistics/loadbalancer/services/{service-id}/virtual-servers/{virtual-server-id}"
+	},
+	{
+		"name": "RedistributionRuleList",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/redistribution/rules"
+	},
+	{
+		"name": "RedistributionRuleList",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/redistribution/rules"
+	},
+	{
+		"name": "RedistributionRuleList",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/redistribution/rules"
+	},
+	{
+		"name": "LbAppProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/application-profiles"
+	},
+	{
+		"name": "LbAppProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/application-profiles"
+	},
+	{
+		"name": "LbAppProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/application-profiles"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/ssh/status"
+	},
+	{
+		"name": "MigrationUnitGroup",
+		"type": "request",
+		"action": "post",
+		"route": "/migration/migration-unit-groups"
+	},
+	{
+		"name": "MigrationUnitGroup",
+		"type": "response",
+		"action": "post",
+		"route": "/migration/migration-unit-groups"
+	},
+	{
+		"name": "MigrationUnitGroupListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-unit-groups"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=revise"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=revise"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/snmp?action=stop"
+	},
+	{
+		"name": "MacPool",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/mac-pools/{pool-id}"
+	},
+	{
+		"name": "AuthenticationPolicyProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/aaa/auth-policy"
+	},
+	{
+		"name": "AuthenticationPolicyProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/aaa/auth-policy"
+	},
+	{
+		"name": "AuthenticationPolicyProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/aaa/auth-policy"
+	},
+	{
+		"name": "AuthenticationPolicyProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/aaa/auth-policy"
+	},
+	{
+		"name": "TransportNode",
+		"type": "request",
+		"action": "post",
+		"route": "/fabric/discovered-nodes/{node-ext-id}?action=create_transport_node"
+	},
+	{
+		"name": "TransportNode",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/discovered-nodes/{node-ext-id}?action=create_transport_node"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/nsx-message-bus?action=restart"
+	},
+	{
+		"name": "IPSecVPNPeerEndpoint",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/peer-endpoints"
+	},
+	{
+		"name": "IPSecVPNPeerEndpoint",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/peer-endpoints"
+	},
+	{
+		"name": "IPSecVPNPeerEndpointListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/peer-endpoints"
+	},
+	{
+		"name": "BaseSwitchingProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/switching-profiles/{switching-profile-id}"
+	},
+	{
+		"name": "BaseSwitchingProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/switching-profiles/{switching-profile-id}"
+	},
+	{
+		"name": "BaseSwitchingProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/switching-profiles/{switching-profile-id}"
+	},
+	{
+		"name": "NodeInterfaceStatisticsProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/network/interfaces/{interface-id}/stats"
+	},
+	{
+		"name": "IpfixUpmProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/ipfix-profiles"
+	},
+	{
+		"name": "IpfixUpmProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/ipfix-profiles"
+	},
+	{
+		"name": "IpfixUpmProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix-profiles"
+	},
+	{
+		"name": "LbMonitor",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/monitors/{monitor-id}"
+	},
+	{
+		"name": "LbMonitor",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/monitors/{monitor-id}"
+	},
+	{
+		"name": "LbMonitor",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/monitors/{monitor-id}"
+	},
+	{
+		"name": "UpgradeUnitListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-units"
+	},
+	{
+		"name": "MigrationUnitAggregateInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-units/aggregate-info"
+	},
+	{
+		"name": "RestoreConfiguration",
+		"type": "request",
+		"action": "put",
+		"route": "/cluster/restore/config"
+	},
+	{
+		"name": "RestoreConfiguration",
+		"type": "response",
+		"action": "put",
+		"route": "/cluster/restore/config"
+	},
+	{
+		"name": "RestoreConfiguration",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/restore/config"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/cm-inventory"
+	},
+	{
+		"name": "ClusterVirtualIpProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/api-virtual-ip?action=clear_virtual_ip"
+	},
+	{
+		"name": "BaseSwitchingProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/switching-profiles"
+	},
+	{
+		"name": "BaseSwitchingProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/switching-profiles"
+	},
+	{
+		"name": "SwitchingProfilesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/switching-profiles"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=suspend"
+	},
+	{
+		"name": "ClusterRestoreStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/restore?action=suspend"
+	},
+	{
+		"name": "IpfixUpmProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/ipfix-profiles/{ipfix-profile-id}"
+	},
+	{
+		"name": "IpfixUpmProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/ipfix-profiles/{ipfix-profile-id}"
+	},
+	{
+		"name": "IpfixUpmProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix-profiles/{ipfix-profile-id}"
+	},
+	{
+		"name": "LbClientSslProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/client-ssl-profiles/{client-ssl-profile-id}"
+	},
+	{
+		"name": "LbClientSslProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/client-ssl-profiles/{client-ssl-profile-id}"
+	},
+	{
+		"name": "LbClientSslProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/client-ssl-profiles/{client-ssl-profile-id}"
+	},
+	{
+		"name": "NSGroup",
+		"type": "request",
+		"action": "put",
+		"route": "/ns-groups/{ns-group-id}"
+	},
+	{
+		"name": "NSGroup",
+		"type": "response",
+		"action": "put",
+		"route": "/ns-groups/{ns-group-id}"
+	},
+	{
+		"name": "NSGroupExpressionList",
+		"type": "request",
+		"action": "post",
+		"route": "/ns-groups/{ns-group-id}"
+	},
+	{
+		"name": "NSGroup",
+		"type": "response",
+		"action": "post",
+		"route": "/ns-groups/{ns-group-id}"
+	},
+	{
+		"name": "NSGroup",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}"
+	},
+	{
+		"name": "NatStatisticsPerTransportNode",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{node-id}/statistics/nat-rules"
+	},
+	{
+		"name": "EULAContent",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/eula/content"
+	},
+	{
+		"name": "LbPoolStatisticsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/pools/statistics"
+	},
+	{
+		"name": "RepoSyncStatusReport",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/{node-id}/repo_sync/status"
+	},
+	{
+		"name": "WafRule",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/rules/{rule-id}"
+	},
+	{
+		"name": "ClusterVirtualIpProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/api-virtual-ip?action=set_virtual_ip"
+	},
+	{
+		"name": "LbVirtualServerStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/virtual-servers/{virtual-server-id}/status"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=revise"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=revise"
+	},
+	{
+		"name": "LbVirtualServerStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/virtual-servers/{virtual-server-id}/statistics"
+	},
+	{
+		"name": "VirtualMachineListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-virtual-machine-members"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}/rules/{rule-id}?action=revise"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}/rules/{rule-id}?action=revise"
+	},
+	{
+		"name": "AppProfileMemberAppsListInCsvFormat",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}/report/app-profile-and-app-info?format=csv"
+	},
+	{
+		"name": "ComputeCollectionNetworkInterfacesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-collections/{cc-ext-id}/network/physical-interfaces"
+	},
+	{
+		"name": "ServiceChain",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-chains/{service-chain-id}"
+	},
+	{
+		"name": "PrincipalIdentity",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/principal-identities/{principal-identity-id}"
+	},
+	{
+		"name": "FileProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/file-store/{file-name}"
+	},
+	{
+		"name": "FileProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/file-store/{file-name}"
+	},
+	{
+		"name": "ServiceDeployment",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments"
+	},
+	{
+		"name": "ServiceDeployment",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments"
+	},
+	{
+		"name": "ServiceDeploymentListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments"
+	},
+	{
+		"name": "NodeUserProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/users/{userid}"
+	},
+	{
+		"name": "NodeUserProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/users/{userid}"
+	},
+	{
+		"name": "NodeUserProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/users/{userid}"
+	},
+	{
+		"name": "InstanceRuntimeListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-runtimes"
+	},
+	{
+		"name": "IPSecVPNDPDProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/dpd-profiles"
+	},
+	{
+		"name": "IPSecVPNDPDProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/dpd-profiles"
+	},
+	{
+		"name": "IPSecVPNDPDProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/dpd-profiles"
+	},
+	{
+		"name": "ServiceManager",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/service-managers"
+	},
+	{
+		"name": "ServiceManager",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/service-managers"
+	},
+	{
+		"name": "ServiceManagerListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-managers"
+	},
+	{
+		"name": "NSSupportedAttributeTypesResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-profiles/attribute-types"
+	},
+	{
+		"name": "CrlDistributionPointStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/crl-distribution-points/{crl-distribution-point-id}/status"
+	},
+	{
+		"name": "NodeSummaryList",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/nodes-summary"
+	},
+	{
+		"name": "LbPoolStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/pools/{pool-id}/status"
+	},
+	{
+		"name": "TaskProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/tasks/{task-id}"
+	},
+	{
+		"name": "TaskProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/tasks/{task-id}"
+	},
+	{
+		"name": "PortMirroringSession",
+		"type": "request",
+		"action": "put",
+		"route": "/mirror-sessions/{mirror-session-id}"
+	},
+	{
+		"name": "PortMirroringSession",
+		"type": "response",
+		"action": "put",
+		"route": "/mirror-sessions/{mirror-session-id}"
+	},
+	{
+		"name": "PortMirroringSession",
+		"type": "response",
+		"action": "get",
+		"route": "/mirror-sessions/{mirror-session-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/cm-inventory?action=restart"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/migration-coordinator/status"
+	},
+	{
+		"name": "CapacityUsageResponse",
+		"type": "response",
+		"action": "get",
+		"route": "/capacity/usage"
+	},
+	{
+		"name": "StaticHopBfdPeer",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/bfd-peers"
+	},
+	{
+		"name": "StaticHopBfdPeer",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/bfd-peers"
+	},
+	{
+		"name": "StaticHopBfdPeerListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/static-routes/bfd-peers"
+	},
+	{
+		"name": "MetadataProxy",
+		"type": "request",
+		"action": "post",
+		"route": "/md-proxies"
+	},
+	{
+		"name": "MetadataProxy",
+		"type": "response",
+		"action": "post",
+		"route": "/md-proxies"
+	},
+	{
+		"name": "MetadataProxyListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/md-proxies"
+	},
+	{
+		"name": "ServiceChainMappingListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-profiles/{service-profile-id}/service-chain-mappings"
+	},
+	{
+		"name": "View",
+		"type": "request",
+		"action": "post",
+		"route": "/ui-views"
+	},
+	{
+		"name": "View",
+		"type": "response",
+		"action": "post",
+		"route": "/ui-views"
+	},
+	{
+		"name": "ViewList",
+		"type": "response",
+		"action": "get",
+		"route": "/ui-views"
+	},
+	{
+		"name": "VendorTemplate",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/vendor-templates/{vendor-template-id}"
+	},
+	{
+		"name": "NSServiceGroup",
+		"type": "request",
+		"action": "put",
+		"route": "/ns-service-groups/{ns-service-group-id}"
+	},
+	{
+		"name": "NSServiceGroup",
+		"type": "response",
+		"action": "put",
+		"route": "/ns-service-groups/{ns-service-group-id}"
+	},
+	{
+		"name": "NSServiceGroup",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-service-groups/{ns-service-group-id}"
+	},
+	{
+		"name": "IdfwSystemStats",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/system-stats"
+	},
+	{
+		"name": "WafCrs",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/crses/{crs-id}"
+	},
+	{
+		"name": "ClustersAggregateInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/status"
+	},
+	{
+		"name": "ComponentUpgradeChecksInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-checks-info"
+	},
+	{
+		"name": "IPSecVPNSession",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/sessions"
+	},
+	{
+		"name": "IPSecVPNSession",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/sessions"
+	},
+	{
+		"name": "IPSecVPNSessionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/sessions"
+	},
+	{
+		"name": "LogicalPortOperationalStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}/status"
+	},
+	{
+		"name": "License",
+		"type": "request",
+		"action": "post",
+		"route": "/licenses?action=delete"
+	},
+	{
+		"name": "ResourceReference",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/excludelist?action=check_if_exists"
+	},
+	{
+		"name": "UpgradeStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/status-summary"
+	},
+	{
+		"name": "LogicalPortMacAddressCsvListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}/mac-table?format=csv"
+	},
+	{
+		"name": "LbVirtualServerStatisticsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/virtual-servers/statistics"
+	},
+	{
+		"name": "NodeInterfacePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{transport-node-id}/network/interfaces"
+	},
+	{
+		"name": "SshKeyProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/users/{userid}/ssh-keys?action=add_ssh_key"
+	},
+	{
+		"name": "SshKeyBaseProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/users/{userid}/ssh-keys?action=remove_ssh_key"
+	},
+	{
+		"name": "UpgradeUnitStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}/status"
+	},
+	{
+		"name": "GroupedMigrationFeedbackRequestListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/grouped-feedback-requests"
+	},
+	{
+		"name": "ApplianceManagementTaskListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/tasks"
+	},
+	{
+		"name": "ConfigurationState",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-managers/{compute-manager-id}/state"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=revise_with_rules"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=revise_with_rules"
+	},
+	{
+		"name": "RoleBinding",
+		"type": "request",
+		"action": "put",
+		"route": "/aaa/role-bindings/{binding-id}"
+	},
+	{
+		"name": "RoleBinding",
+		"type": "response",
+		"action": "put",
+		"route": "/aaa/role-bindings/{binding-id}"
+	},
+	{
+		"name": "RoleBinding",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/role-bindings/{binding-id}"
+	},
+	{
+		"name": "Notification",
+		"type": "request",
+		"action": "post",
+		"route": "/notification-watchers/{watcher-id}/notifications?action=delete_uri_filters"
+	},
+	{
+		"name": "NotificationsList",
+		"type": "response",
+		"action": "post",
+		"route": "/notification-watchers/{watcher-id}/notifications?action=delete_uri_filters"
+	},
+	{
+		"name": "ServiceConfig",
+		"type": "request",
+		"action": "post",
+		"route": "/service-configs"
+	},
+	{
+		"name": "ServiceConfig",
+		"type": "response",
+		"action": "post",
+		"route": "/service-configs"
+	},
+	{
+		"name": "ServiceConfigListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/service-configs"
+	},
+	{
+		"name": "UpgradeCheckCsvListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/pre-upgrade-checks?format=csv"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/migration-coordinator?action=restart"
+	},
+	{
+		"name": "WafRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/crses/{crs-id}/rules"
+	},
+	{
+		"name": "LogicalRouter",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}"
+	},
+	{
+		"name": "LogicalRouter",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}"
+	},
+	{
+		"name": "LogicalRouter",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/mgmt-plane-bus?action=start"
+	},
+	{
+		"name": "TransportNode",
+		"type": "request",
+		"action": "put",
+		"route": "/transport-nodes/{transport-node-id}"
+	},
+	{
+		"name": "TransportNode",
+		"type": "response",
+		"action": "put",
+		"route": "/transport-nodes/{transport-node-id}"
+	},
+	{
+		"name": "TransportNode",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{transport-node-id}"
+	},
+	{
+		"name": "WafCrsStatus",
+		"type": "response",
+		"action": "post",
+		"route": "/waf/crses?action=upload"
+	},
+	{
+		"name": "FirewallSectionLock",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=lock"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=lock"
+	},
+	{
+		"name": "IPSecVPNLocalEndpoint",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/local-endpoints/{ipsec-vpn-local-endpoint-id}"
+	},
+	{
+		"name": "IPSecVPNLocalEndpoint",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/local-endpoints/{ipsec-vpn-local-endpoint-id}"
+	},
+	{
+		"name": "IPSecVPNLocalEndpoint",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/local-endpoints/{ipsec-vpn-local-endpoint-id}"
+	},
+	{
+		"name": "IPSet",
+		"type": "request",
+		"action": "put",
+		"route": "/ip-sets/{ip-set-id}"
+	},
+	{
+		"name": "IPSet",
+		"type": "response",
+		"action": "put",
+		"route": "/ip-sets/{ip-set-id}"
+	},
+	{
+		"name": "IPAddressElement",
+		"type": "request",
+		"action": "post",
+		"route": "/ip-sets/{ip-set-id}"
+	},
+	{
+		"name": "IPAddressElement",
+		"type": "response",
+		"action": "post",
+		"route": "/ip-sets/{ip-set-id}"
+	},
+	{
+		"name": "IPSet",
+		"type": "response",
+		"action": "get",
+		"route": "/ip-sets/{ip-set-id}"
+	},
+	{
+		"name": "TaskListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/tasks"
+	},
+	{
+		"name": "PrincipalIdentityWithCertificate",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/principal-identities/with-certificate"
+	},
+	{
+		"name": "PrincipalIdentity",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/principal-identities/with-certificate"
+	},
+	{
+		"name": "LogicalPortMacAddressListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}/mac-table"
+	},
+	{
+		"name": "AdvertiseRuleList",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/advertisement/rules"
+	},
+	{
+		"name": "AdvertiseRuleList",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/advertisement/rules"
+	},
+	{
+		"name": "AdvertiseRuleList",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/advertisement/rules"
+	},
+	{
+		"name": "LogicalRouterRouteTableInCsvFormat",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/routing-table?format=csv"
+	},
+	{
+		"name": "CrlDistributionPoint",
+		"type": "request",
+		"action": "put",
+		"route": "/trust-management/crl-distribution-points/{crl-distribution-point-id}"
+	},
+	{
+		"name": "CrlDistributionPoint",
+		"type": "response",
+		"action": "put",
+		"route": "/trust-management/crl-distribution-points/{crl-distribution-point-id}"
+	},
+	{
+		"name": "CrlDistributionPoint",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/crl-distribution-points/{crl-distribution-point-id}"
+	},
+	{
+		"name": "TransportNode",
+		"type": "request",
+		"action": "post",
+		"route": "/transport-nodes"
+	},
+	{
+		"name": "TransportNode",
+		"type": "response",
+		"action": "post",
+		"route": "/transport-nodes"
+	},
+	{
+		"name": "TransportNodeListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes"
+	},
+	{
+		"name": "NodeInterfaceStatisticsProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/{transport-node-id}/network/interfaces/{interface-id}/stats"
+	},
+	{
+		"name": "NodeInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/nodes"
+	},
+	{
+		"name": "RuntimeInterfaceStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-runtimes/{instance-runtime-id}/interfaces/{interface_index}/statistics"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/communty-lists/{community-list-id}"
+	},
+	{
+		"name": "BGPCommunityList",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/communty-lists/{community-list-id}"
+	},
+	{
+		"name": "UpgradeUnitList",
+		"type": "request",
+		"action": "post",
+		"route": "/upgrade/plan?action=upgrade_selected_units"
+	},
+	{
+		"name": "DhcpRelayService",
+		"type": "request",
+		"action": "post",
+		"route": "/dhcp/relays"
+	},
+	{
+		"name": "DhcpRelayService",
+		"type": "response",
+		"action": "post",
+		"route": "/dhcp/relays"
+	},
+	{
+		"name": "DhcpRelayServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/relays"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/node-mgmt/status"
+	},
+	{
+		"name": "IPSecVPNService",
+		"type": "request",
+		"action": "put",
+		"route": "/vpn/ipsec/services/{ipsec-vpn-service-id}"
+	},
+	{
+		"name": "IPSecVPNService",
+		"type": "response",
+		"action": "put",
+		"route": "/vpn/ipsec/services/{ipsec-vpn-service-id}"
+	},
+	{
+		"name": "IPSecVPNService",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/services/{ipsec-vpn-service-id}"
+	},
+	{
+		"name": "ClusterNodeConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/{node-id}"
+	},
+	{
+		"name": "MigrationSetupInfo",
+		"type": "request",
+		"action": "put",
+		"route": "/migration/setup"
+	},
+	{
+		"name": "MigrationSetupInfo",
+		"type": "response",
+		"action": "put",
+		"route": "/migration/setup"
+	},
+	{
+		"name": "MigrationSetupInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/setup"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ntp?action=stop"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/syslog?action=restart"
+	},
+	{
+		"name": "ComputeCollectionFabricTemplate",
+		"type": "request",
+		"action": "post",
+		"route": "/fabric/compute-collection-fabric-templates"
+	},
+	{
+		"name": "ComputeCollectionFabricTemplate",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/compute-collection-fabric-templates"
+	},
+	{
+		"name": "ComputeCollectionFabricTemplateListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-collection-fabric-templates"
+	},
+	{
+		"name": "IdfwNsgroupVmDetailListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/nsgroup-vm-details/{group-id}"
+	},
+	{
+		"name": "UpgradeUnitGroupStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-unit-groups-status"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections"
+	},
+	{
+		"name": "FirewallSectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "request",
+		"action": "put",
+		"route": "/firewall/sections/{section-id}"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "response",
+		"action": "put",
+		"route": "/firewall/sections/{section-id}"
+	},
+	{
+		"name": "FirewallSection",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/{section-id}"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "request",
+		"action": "put",
+		"route": "/firewall/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "response",
+		"action": "put",
+		"route": "/firewall/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "FirewallRule",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/{section-id}/rules/{rule-id}"
+	},
+	{
+		"name": "EdgeClusterState",
+		"type": "response",
+		"action": "get",
+		"route": "/edge-clusters/{edge-cluster-id}/state"
+	},
+	{
+		"name": "VtepCsvListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/vtep-table?format=csv"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/http/status"
+	},
+	{
+		"name": "NodeCapabilitiesResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/capabilities"
+	},
+	{
+		"name": "EffectiveMemberResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-ipset-members"
+	},
+	{
+		"name": "IPSecVPNService",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/services"
+	},
+	{
+		"name": "IPSecVPNService",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/services"
+	},
+	{
+		"name": "IPSecVPNServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/services"
+	},
+	{
+		"name": "PBRStats",
+		"type": "response",
+		"action": "get",
+		"route": "/pbr/sections/{section-id}/rules/{rule-id}/stats"
+	},
+	{
+		"name": "MacAddressListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}/mac-table"
+	},
+	{
+		"name": "VniPool",
+		"type": "request",
+		"action": "put",
+		"route": "/pools/vni-pools/{pool-id}"
+	},
+	{
+		"name": "VniPool",
+		"type": "response",
+		"action": "put",
+		"route": "/pools/vni-pools/{pool-id}"
+	},
+	{
+		"name": "VniPool",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/vni-pools/{pool-id}"
+	},
+	{
+		"name": "License",
+		"type": "request",
+		"action": "post",
+		"route": "/licenses"
+	},
+	{
+		"name": "License",
+		"type": "response",
+		"action": "post",
+		"route": "/licenses"
+	},
+	{
+		"name": "LicensesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/licenses"
+	},
+	{
+		"name": "DirectoryDomain",
+		"type": "request",
+		"action": "post",
+		"route": "/directory/domains"
+	},
+	{
+		"name": "DirectoryDomain",
+		"type": "response",
+		"action": "post",
+		"route": "/directory/domains"
+	},
+	{
+		"name": "DirectoryDomainListResults",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/telemetry?action=start"
+	},
+	{
+		"name": "WafCrsWithCategoriesAndRules",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/crses/{crs-id}/aggregate-info"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/cm-inventory?action=start"
+	},
+	{
+		"name": "IPPrefixList",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/ip-prefix-lists/{id}"
+	},
+	{
+		"name": "IPPrefixList",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/ip-prefix-lists/{id}"
+	},
+	{
+		"name": "IPPrefixList",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/ip-prefix-lists/{id}"
+	},
+	{
+		"name": "MACSet",
+		"type": "request",
+		"action": "put",
+		"route": "/mac-sets/{mac-set-id}"
+	},
+	{
+		"name": "MACSet",
+		"type": "response",
+		"action": "put",
+		"route": "/mac-sets/{mac-set-id}"
+	},
+	{
+		"name": "MACSet",
+		"type": "response",
+		"action": "get",
+		"route": "/mac-sets/{mac-set-id}"
+	},
+	{
+		"name": "IdfwEnabledComputeCollectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/idfw-compute-collections"
+	},
+	{
+		"name": "LogicalPortStatusSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/status"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/nsx-message-bus/status"
+	},
+	{
+		"name": "FirewallSectionState",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/{section-id}/state"
+	},
+	{
+		"name": "NodeVersion",
+		"type": "response",
+		"action": "get",
+		"route": "/node/version"
+	},
+	{
+		"name": "NSService",
+		"type": "request",
+		"action": "post",
+		"route": "/ns-services"
+	},
+	{
+		"name": "NSService",
+		"type": "response",
+		"action": "post",
+		"route": "/ns-services"
+	},
+	{
+		"name": "NSServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-services"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/install-upgrade?action=start"
+	},
+	{
+		"name": "DirectoryLdapServer",
+		"type": "request",
+		"action": "put",
+		"route": "/directory/domains/{domain-id}/ldap-servers/{server-id}"
+	},
+	{
+		"name": "DirectoryLdapServer",
+		"type": "response",
+		"action": "put",
+		"route": "/directory/domains/{domain-id}/ldap-servers/{server-id}"
+	},
+	{
+		"name": "DirectoryLdapServer",
+		"type": "response",
+		"action": "get",
+		"route": "/directory/domains/{domain-id}/ldap-servers/{server-id}"
+	},
+	{
+		"name": "BatchRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/batch"
+	},
+	{
+		"name": "BatchResponse",
+		"type": "response",
+		"action": "post",
+		"route": "/batch"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/manager?action=start"
+	},
+	{
+		"name": "ClusterProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster-profiles"
+	},
+	{
+		"name": "ClusterProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster-profiles"
+	},
+	{
+		"name": "ClusterProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster-profiles"
+	},
+	{
+		"name": "LogicalRouterPortStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports/{logical-router-port-id}/statistics"
+	},
+	{
+		"name": "AllocationIpAddress",
+		"type": "request",
+		"action": "post",
+		"route": "/pools/ip-subnets/{subnet-id}"
+	},
+	{
+		"name": "AllocationIpAddress",
+		"type": "response",
+		"action": "post",
+		"route": "/pools/ip-subnets/{subnet-id}"
+	},
+	{
+		"name": "IpBlockSubnet",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-subnets/{subnet-id}"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/cluster_manager"
+	},
+	{
+		"name": "MigrationSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/summary"
+	},
+	{
+		"name": "MetadataProxyStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/md-proxies/{proxy-id}/statistics"
+	},
+	{
+		"name": "CopyFromRemoteFileProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/file-store/{file-name}?action=copy_from_remote_file"
+	},
+	{
+		"name": "FileProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/file-store/{file-name}?action=copy_from_remote_file"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/node-mgmt"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=update_with_rules"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}?action=update_with_rules"
+	},
+	{
+		"name": "IpPool",
+		"type": "request",
+		"action": "post",
+		"route": "/pools/ip-pools"
+	},
+	{
+		"name": "IpPool",
+		"type": "response",
+		"action": "post",
+		"route": "/pools/ip-pools"
+	},
+	{
+		"name": "IpPoolListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-pools"
+	},
+	{
+		"name": "NodeProcessPropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/processes"
+	},
+	{
+		"name": "WafCategoryListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/ers/categories"
+	},
+	{
+		"name": "ServiceAssociationListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{nsgroup-id}/service-associations"
+	},
+	{
+		"name": "NodeRouteProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/routes/{route-id}"
+	},
+	{
+		"name": "InstanceEndpoint",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-endpoints/{instance-endpoint-id}"
+	},
+	{
+		"name": "LbServiceStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/statistics"
+	},
+	{
+		"name": "MigrationPlanSettings",
+		"type": "request",
+		"action": "put",
+		"route": "/migration/plan/{component_type}/settings"
+	},
+	{
+		"name": "MigrationPlanSettings",
+		"type": "response",
+		"action": "put",
+		"route": "/migration/plan/{component_type}/settings"
+	},
+	{
+		"name": "MigrationPlanSettings",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/plan/{component_type}/settings"
+	},
+	{
+		"name": "InterfaceNeighborPropertyListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/lldp/transport-nodes/{node-id}/interfaces"
+	},
+	{
+		"name": "IdfwVirtualMachineStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/transport-nodes/{transport-node-id}/vms/status"
+	},
+	{
+		"name": "PortConnectionEntities",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}/forwarding-path"
+	},
+	{
+		"name": "ErrorResolverInfoList",
+		"type": "response",
+		"action": "get",
+		"route": "/error-resolver"
+	},
+	{
+		"name": "CreateRemoteDirectoryProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/file-store?action=create_remote_directory"
+	},
+	{
+		"name": "Csr",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/csrs"
+	},
+	{
+		"name": "Csr",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/csrs"
+	},
+	{
+		"name": "CsrList",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/csrs"
+	},
+	{
+		"name": "ClusterProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/cluster-profiles/{cluster-profile-id}"
+	},
+	{
+		"name": "ClusterProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/cluster-profiles/{cluster-profile-id}"
+	},
+	{
+		"name": "ClusterProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster-profiles/{cluster-profile-id}"
+	},
+	{
+		"name": "ClusterNodeInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/{node-id}"
+	},
+	{
+		"name": "RouteMap",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/route-maps/{id}"
+	},
+	{
+		"name": "RouteMap",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/route-maps/{id}"
+	},
+	{
+		"name": "RouteMap",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/route-maps/{id}"
+	},
+	{
+		"name": "LbPoolStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/pools/status"
+	},
+	{
+		"name": "LogicalPortStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-ports/{lport-id}/statistics"
+	},
+	{
+		"name": "VidmInfoListResult",
+		"type": "response",
+		"action": "post",
+		"route": "/aaa/vidm/search"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/install-upgrade/status"
+	},
+	{
+		"name": "FirewallStats",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/sections/{section-id}/rules/{rule-id}/stats"
+	},
+	{
+		"name": "RuleState",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/rules/{rule-id}/state"
+	},
+	{
+		"name": "LbServiceUsage",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/usage"
+	},
+	{
+		"name": "IpfixCollectorConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/ipfix/collectorconfigs/{collector-config-id}"
+	},
+	{
+		"name": "IpfixCollectorConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/ipfix/collectorconfigs/{collector-config-id}"
+	},
+	{
+		"name": "IpfixCollectorConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix/collectorconfigs/{collector-config-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/ssh?action=stop"
+	},
+	{
+		"name": "AddClusterNodeVMInfo",
+		"type": "request",
+		"action": "post",
+		"route": "/cluster/nodes/deployments"
+	},
+	{
+		"name": "ClusterNodeVMDeploymentRequestList",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/nodes/deployments"
+	},
+	{
+		"name": "ClusterNodeVMDeploymentRequestList",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/nodes/deployments"
+	},
+	{
+		"name": "ClusterConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster"
+	},
+	{
+		"name": "LogicalSwitch",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-switches/{lswitch-id}"
+	},
+	{
+		"name": "LogicalSwitch",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-switches/{lswitch-id}"
+	},
+	{
+		"name": "LogicalSwitch",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/{lswitch-id}"
+	},
+	{
+		"name": "IpfixCollectorUpmProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/ipfix-collector-profiles"
+	},
+	{
+		"name": "IpfixCollectorUpmProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/ipfix-collector-profiles"
+	},
+	{
+		"name": "IpfixCollectorUpmProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix-collector-profiles"
+	},
+	{
+		"name": "UpgradeSummary",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/summary"
+	},
+	{
+		"name": "AppDiscoverySession",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/syslog?action=start"
+	},
+	{
+		"name": "EffectiveMemberTypeListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/member-types"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/syslog"
+	},
+	{
+		"name": "IpPool",
+		"type": "request",
+		"action": "put",
+		"route": "/pools/ip-pools/{pool-id}"
+	},
+	{
+		"name": "IpPool",
+		"type": "response",
+		"action": "put",
+		"route": "/pools/ip-pools/{pool-id}"
+	},
+	{
+		"name": "AllocationIpAddress",
+		"type": "request",
+		"action": "post",
+		"route": "/pools/ip-pools/{pool-id}"
+	},
+	{
+		"name": "AllocationIpAddress",
+		"type": "response",
+		"action": "post",
+		"route": "/pools/ip-pools/{pool-id}"
+	},
+	{
+		"name": "IpPool",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-pools/{pool-id}"
+	},
+	{
+		"name": "BackupConfiguration",
+		"type": "request",
+		"action": "put",
+		"route": "/cluster/backups/config"
+	},
+	{
+		"name": "BackupConfiguration",
+		"type": "response",
+		"action": "put",
+		"route": "/cluster/backups/config"
+	},
+	{
+		"name": "BackupConfiguration",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/backups/config"
+	},
+	{
+		"name": "TraceflowObservationListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/traceflows/{traceflow-id}/observations"
+	},
+	{
+		"name": "Crl",
+		"type": "request",
+		"action": "put",
+		"route": "/trust-management/crls/{crl-id}"
+	},
+	{
+		"name": "Crl",
+		"type": "response",
+		"action": "put",
+		"route": "/trust-management/crls/{crl-id}"
+	},
+	{
+		"name": "Crl",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/crls/{crl-id}"
+	},
+	{
+		"name": "Certificate",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/csrs/{csr-id}?action=self_sign"
+	},
+	{
+		"name": "RegistrationToken",
+		"type": "response",
+		"action": "post",
+		"route": "/aaa/registration-token"
+	},
+	{
+		"name": "BaseFirewallProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/profiles"
+	},
+	{
+		"name": "BaseFirewallProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/profiles"
+	},
+	{
+		"name": "FirewallProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/profiles"
+	},
+	{
+		"name": "Node",
+		"type": "request",
+		"action": "post",
+		"route": "/fabric/nodes"
+	},
+	{
+		"name": "Node",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/nodes"
+	},
+	{
+		"name": "NodeListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes"
+	},
+	{
+		"name": "NodeInterfaceStatisticsProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/interfaces/{interface-id}/stats"
+	},
+	{
+		"name": "NodeStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/status"
+	},
+	{
+		"name": "LbClientSslProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/client-ssl-profiles"
+	},
+	{
+		"name": "LbClientSslProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/client-ssl-profiles"
+	},
+	{
+		"name": "LbClientSslProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/client-ssl-profiles"
+	},
+	{
+		"name": "WafCategoryWithRules",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/categories/{category-id}/aggregate-info"
+	},
+	{
+		"name": "TelemetryAgreement",
+		"type": "request",
+		"action": "put",
+		"route": "/telemetry/agreement"
+	},
+	{
+		"name": "TelemetryAgreement",
+		"type": "response",
+		"action": "put",
+		"route": "/telemetry/agreement"
+	},
+	{
+		"name": "TelemetryAgreement",
+		"type": "response",
+		"action": "get",
+		"route": "/telemetry/agreement"
+	},
+	{
+		"name": "HeatMapTransportNodesAggregateStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones/status"
+	},
+	{
+		"name": "ComputeCollectionFabricTemplate",
+		"type": "request",
+		"action": "put",
+		"route": "/fabric/compute-collection-fabric-templates/{fabric-template-id}"
+	},
+	{
+		"name": "ComputeCollectionFabricTemplate",
+		"type": "response",
+		"action": "put",
+		"route": "/fabric/compute-collection-fabric-templates/{fabric-template-id}"
+	},
+	{
+		"name": "ComputeCollectionFabricTemplate",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-collection-fabric-templates/{fabric-template-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/syslog/status"
+	},
+	{
+		"name": "UpdatePrincipalIdentityCertificateRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/principal-identities?action=update_certificate"
+	},
+	{
+		"name": "PrincipalIdentity",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/principal-identities?action=update_certificate"
+	},
+	{
+		"name": "TrustObjectData",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/certificates?action=import"
+	},
+	{
+		"name": "CertificateList",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/certificates?action=import"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/migration-coordinator?action=stop"
+	},
+	{
+		"name": "ErrorResolverMetadataList",
+		"type": "request",
+		"action": "post",
+		"route": "/error-resolver?action=resolve_error"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/syslog?action=stop"
+	},
+	{
+		"name": "ServiceDefinition",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}"
+	},
+	{
+		"name": "ServiceDefinition",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}"
+	},
+	{
+		"name": "ServiceDefinition",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}"
+	},
+	{
+		"name": "IpfixObsPointsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ipfix-obs-points"
+	},
+	{
+		"name": "LbServiceStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/status"
+	},
+	{
+		"name": "BridgeCluster",
+		"type": "request",
+		"action": "put",
+		"route": "/bridge-clusters/{bridgecluster-id}"
+	},
+	{
+		"name": "BridgeCluster",
+		"type": "response",
+		"action": "put",
+		"route": "/bridge-clusters/{bridgecluster-id}"
+	},
+	{
+		"name": "BridgeCluster",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-clusters/{bridgecluster-id}"
+	},
+	{
+		"name": "AppProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}/app-profiles"
+	},
+	{
+		"name": "FirewallRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}/rules?action=create_multiple"
+	},
+	{
+		"name": "FirewallRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}/rules?action=create_multiple"
+	},
+	{
+		"name": "ComputeCollectionTransportNodeTemplate",
+		"type": "request",
+		"action": "put",
+		"route": "/compute-collection-transport-node-templates/{template-id}"
+	},
+	{
+		"name": "ComputeCollectionTransportNodeTemplate",
+		"type": "response",
+		"action": "put",
+		"route": "/compute-collection-transport-node-templates/{template-id}"
+	},
+	{
+		"name": "ComputeCollectionTransportNodeTemplate",
+		"type": "response",
+		"action": "get",
+		"route": "/compute-collection-transport-node-templates/{template-id}"
+	},
+	{
+		"name": "PacketCaptureSessionList",
+		"type": "response",
+		"action": "get",
+		"route": "/pktcap/sessions"
+	},
+	{
+		"name": "SolutionConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}/solution-configs/{solution-config-id}"
+	},
+	{
+		"name": "SolutionConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/serviceinsertion/services/{service-id}/solution-configs/{solution-config-id}"
+	},
+	{
+		"name": "SolutionConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/solution-configs/{solution-config-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/manager?action=stop"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/ui-service"
+	},
+	{
+		"name": "NodeUserPropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/users"
+	},
+	{
+		"name": "ClusterConfiguration",
+		"type": "response",
+		"action": "post",
+		"route": "/cluster/{node-id}?action=remove_node"
+	},
+	{
+		"name": "LogicalSwitchStateListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-switches/state"
+	},
+	{
+		"name": "ServiceConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/service-configs/{config-set-id}"
+	},
+	{
+		"name": "ServiceConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/service-configs/{config-set-id}"
+	},
+	{
+		"name": "ServiceConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/service-configs/{config-set-id}"
+	},
+	{
+		"name": "CrlList",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/crls"
+	},
+	{
+		"name": "HeatMapTransportZoneStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones/{zone-id}/status"
+	},
+	{
+		"name": "DhcpLeases",
+		"type": "response",
+		"action": "get",
+		"route": "/dhcp/servers/{server-id}/leases"
+	},
+	{
+		"name": "BridgeEndpointProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/bridge-endpoint-profiles"
+	},
+	{
+		"name": "BridgeEndpointProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/bridge-endpoint-profiles"
+	},
+	{
+		"name": "BridgeEndpointProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-endpoint-profiles"
+	},
+	{
+		"name": "ComputeManager",
+		"type": "request",
+		"action": "put",
+		"route": "/fabric/compute-managers/{compute-manager-id}"
+	},
+	{
+		"name": "ComputeManager",
+		"type": "response",
+		"action": "put",
+		"route": "/fabric/compute-managers/{compute-manager-id}"
+	},
+	{
+		"name": "ComputeManager",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/compute-managers/{compute-manager-id}"
+	},
+	{
+		"name": "NodeAuthProviderVidmProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/aaa/providers/vidm"
+	},
+	{
+		"name": "NodeAuthProviderVidmProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/aaa/providers/vidm"
+	},
+	{
+		"name": "NodeAuthProviderVidmProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/aaa/providers/vidm"
+	},
+	{
+		"name": "UnassociatedVMListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/unassociated-virtual-machines"
+	},
+	{
+		"name": "Node",
+		"type": "request",
+		"action": "put",
+		"route": "/fabric/nodes/{node-id}"
+	},
+	{
+		"name": "Node",
+		"type": "response",
+		"action": "put",
+		"route": "/fabric/nodes/{node-id}"
+	},
+	{
+		"name": "Node",
+		"type": "response",
+		"action": "post",
+		"route": "/fabric/nodes/{node-id}"
+	},
+	{
+		"name": "Node",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}"
+	},
+	{
+		"name": "RoutingConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing"
+	},
+	{
+		"name": "RoutingConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing"
+	},
+	{
+		"name": "RoutingConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing"
+	},
+	{
+		"name": "LbMonitor",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/monitors"
+	},
+	{
+		"name": "LbMonitor",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/monitors"
+	},
+	{
+		"name": "LbMonitorListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/monitors"
+	},
+	{
+		"name": "ConfigurationState",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-deployments/{service-deployment-id}/state"
+	},
+	{
+		"name": "IPSecVPNIKEProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/ike-profiles"
+	},
+	{
+		"name": "IPSecVPNIKEProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/ike-profiles"
+	},
+	{
+		"name": "IPSecVPNIKEProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/ike-profiles"
+	},
+	{
+		"name": "MACSet",
+		"type": "request",
+		"action": "post",
+		"route": "/mac-sets"
+	},
+	{
+		"name": "MACSet",
+		"type": "response",
+		"action": "post",
+		"route": "/mac-sets"
+	},
+	{
+		"name": "MACSetListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/mac-sets"
+	},
+	{
+		"name": "NodeServicePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services"
+	},
+	{
+		"name": "WafProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/waf/profiles"
+	},
+	{
+		"name": "WafProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/waf/profiles"
+	},
+	{
+		"name": "WafProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/waf/profiles"
+	},
+	{
+		"name": "GlobalConfigs",
+		"type": "request",
+		"action": "put",
+		"route": "/global-configs/{config-type}"
+	},
+	{
+		"name": "GlobalConfigs",
+		"type": "response",
+		"action": "put",
+		"route": "/global-configs/{config-type}"
+	},
+	{
+		"name": "GlobalConfigs",
+		"type": "response",
+		"action": "get",
+		"route": "/global-configs/{config-type}"
+	},
+	{
+		"name": "AppInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}/installed-apps"
+	},
+	{
+		"name": "VtepLabelPool",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/vtep-label-pools/{pool-id}"
+	},
+	{
+		"name": "PacketCaptureSession",
+		"type": "response",
+		"action": "get",
+		"route": "/pktcap/session/{session-id}"
+	},
+	{
+		"name": "AdvertisementConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/advertisement"
+	},
+	{
+		"name": "AdvertisementConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/advertisement"
+	},
+	{
+		"name": "AdvertisementConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/advertisement"
+	},
+	{
+		"name": "LogicalService",
+		"type": "request",
+		"action": "put",
+		"route": "/services/{service-id}"
+	},
+	{
+		"name": "LogicalService",
+		"type": "response",
+		"action": "put",
+		"route": "/services/{service-id}"
+	},
+	{
+		"name": "LogicalService",
+		"type": "response",
+		"action": "get",
+		"route": "/services/{service-id}"
+	},
+	{
+		"name": "MigrationFeedbackRequestListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/feedback-requests"
+	},
+	{
+		"name": "NodeInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/nodes"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections"
+	},
+	{
+		"name": "ServiceInsertionSection",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections"
+	},
+	{
+		"name": "ServiceInsertionSectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/sections"
+	},
+	{
+		"name": "FilePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/file-store"
+	},
+	{
+		"name": "NodeNetworkInterfacePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/interfaces"
+	},
+	{
+		"name": "NodeAuthProviderVidmStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/node/aaa/providers/vidm/status"
+	},
+	{
+		"name": "FirewallSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/firewall/sections/{section-id}?action=list_with_rules"
+	},
+	{
+		"name": "ServiceDefinition",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services"
+	},
+	{
+		"name": "ServiceDefinition",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services"
+	},
+	{
+		"name": "ServiceInsertionServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services"
+	},
+	{
+		"name": "RuntimeInterfaceOperationalStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/instance-runtimes/{instance-runtime-id}/interfaces/{interface_index}/status"
+	},
+	{
+		"name": "ClusterVirtualIpProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/api-virtual-ip"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/search?action=stop"
+	},
+	{
+		"name": "Notification",
+		"type": "request",
+		"action": "post",
+		"route": "/notification-watchers/{watcher-id}/notifications?action=add_uri_filters"
+	},
+	{
+		"name": "NotificationsList",
+		"type": "response",
+		"action": "post",
+		"route": "/notification-watchers/{watcher-id}/notifications?action=add_uri_filters"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors/{id}"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors/{id}"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors/{id}"
+	},
+	{
+		"name": "BgpNeighbor",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp/neighbors/{id}"
+	},
+	{
+		"name": "LbService",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/services"
+	},
+	{
+		"name": "LbService",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/services"
+	},
+	{
+		"name": "LbServiceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services"
+	},
+	{
+		"name": "SshKeyPropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/users/{userid}/ssh-keys"
+	},
+	{
+		"name": "IdfwStandaloneHostsSwitchSetting",
+		"type": "request",
+		"action": "put",
+		"route": "/idfw/standalone-host-switch-setting"
+	},
+	{
+		"name": "IdfwStandaloneHostsSwitchSetting",
+		"type": "response",
+		"action": "put",
+		"route": "/idfw/standalone-host-switch-setting"
+	},
+	{
+		"name": "IdfwStandaloneHostsSwitchSetting",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/standalone-host-switch-setting"
+	},
+	{
+		"name": "ServiceInsertionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}/rules?action=create_multiple"
+	},
+	{
+		"name": "ServiceInsertionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections/{section-id}/rules?action=create_multiple"
+	},
+	{
+		"name": "IdfwUserSessionDataAndMappings",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/user-session-data"
+	},
+	{
+		"name": "AppDiscoveryVmInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions/{session-id}/ns-groups/{ns-group-id}/members"
+	},
+	{
+		"name": "UcStateProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/install-upgrade/uc-state"
+	},
+	{
+		"name": "EffectiveMemberResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-logical-port-members"
+	},
+	{
+		"name": "MigrationSwitchListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/discovered-switches"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/search?action=restart"
+	},
+	{
+		"name": "CertificateList",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/certificates"
+	},
+	{
+		"name": "PacketCaptureSessionList",
+		"type": "response",
+		"action": "post",
+		"route": "/pktcap/sessions?action=delete"
+	},
+	{
+		"name": "RoleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/roles"
+	},
+	{
+		"name": "PacketCaptureRequest",
+		"type": "request",
+		"action": "post",
+		"route": "/pktcap/session"
+	},
+	{
+		"name": "PacketCaptureSession",
+		"type": "response",
+		"action": "post",
+		"route": "/pktcap/session"
+	},
+	{
+		"name": "NotificationWatcher",
+		"type": "request",
+		"action": "post",
+		"route": "/notification-watchers"
+	},
+	{
+		"name": "NotificationWatcher",
+		"type": "response",
+		"action": "post",
+		"route": "/notification-watchers"
+	},
+	{
+		"name": "NotificationWatcherListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/notification-watchers"
+	},
+	{
+		"name": "L2VPNSessionStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/l2vpn/sessions/{session-id}/statistics"
+	},
+	{
+		"name": "BfdConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bfd-config"
+	},
+	{
+		"name": "BfdConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bfd-config"
+	},
+	{
+		"name": "BfdConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bfd-config"
+	},
+	{
+		"name": "MigrationUnitList",
+		"type": "request",
+		"action": "post",
+		"route": "/migration/migration-unit-groups/{group-id}?action=add_migration_units"
+	},
+	{
+		"name": "MigrationUnitList",
+		"type": "response",
+		"action": "post",
+		"route": "/migration/migration-unit-groups/{group-id}?action=add_migration_units"
+	},
+	{
+		"name": "IdfwTransportNodeStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/compute-collections/{cc-ext-id}/transport-nodes/status"
+	},
+	{
+		"name": "PrincipalIdentity",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/principal-identities"
+	},
+	{
+		"name": "PrincipalIdentity",
+		"type": "response",
+		"action": "post",
+		"route": "/trust-management/principal-identities"
+	},
+	{
+		"name": "PrincipalIdentityList",
+		"type": "response",
+		"action": "get",
+		"route": "/trust-management/principal-identities"
+	},
+	{
+		"name": "FirewallStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/firewall/status"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/install-upgrade?action=restart"
+	},
+	{
+		"name": "ServiceProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/service-profiles/{service-profile-id}"
+	},
+	{
+		"name": "ServiceProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/service-profiles/{service-profile-id}"
+	},
+	{
+		"name": "ServiceProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/service-profiles/{service-profile-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/manager/status"
+	},
+	{
+		"name": "EffectiveMemberResourceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups/{ns-group-id}/effective-directory-group-members"
+	},
+	{
+		"name": "LbVirtualServer",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/virtual-servers/{virtual-server-id}"
+	},
+	{
+		"name": "LbVirtualServer",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/virtual-servers/{virtual-server-id}"
+	},
+	{
+		"name": "LbVirtualServer",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/virtual-servers/{virtual-server-id}"
+	},
+	{
+		"name": "ServiceAttachment",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/service-attachments"
+	},
+	{
+		"name": "ServiceAttachment",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/service-attachments"
+	},
+	{
+		"name": "ServiceAttachmentListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-attachments"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/nsx-message-bus"
+	},
+	{
+		"name": "LbTcpProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/tcp-profiles"
+	},
+	{
+		"name": "LbTcpProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/tcp-profiles"
+	},
+	{
+		"name": "LbTcpProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/tcp-profiles"
+	},
+	{
+		"name": "IdfwVmStats",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/vm-stats/{vm-ext-id}"
+	},
+	{
+		"name": "ConfigurationState",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances/{service-instance-id}/state"
+	},
+	{
+		"name": "PBRSection",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=revise"
+	},
+	{
+		"name": "PBRSection",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=revise"
+	},
+	{
+		"name": "NSGroup",
+		"type": "request",
+		"action": "post",
+		"route": "/ns-groups"
+	},
+	{
+		"name": "NSGroup",
+		"type": "response",
+		"action": "post",
+		"route": "/ns-groups"
+	},
+	{
+		"name": "NSGroupListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-groups"
+	},
+	{
+		"name": "ServiceAttachment",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-attachments/{service-attachment-id}"
+	},
+	{
+		"name": "TransportNodeStatusListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-zones/transport-node-status"
+	},
+	{
+		"name": "MetadataProxyStatus",
+		"type": "response",
+		"action": "get",
+		"route": "/md-proxies/{proxy-id}/{logical-switch-id}/status"
+	},
+	{
+		"name": "AllocationIpAddressListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/pools/ip-pools/{pool-id}/allocations"
+	},
+	{
+		"name": "BridgeEndpointStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/bridge-endpoints/{endpoint-id}/statistics"
+	},
+	{
+		"name": "BaseServiceProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-profiles/{service-profile-id}"
+	},
+	{
+		"name": "LbPersistenceProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/loadbalancer/persistence-profiles/{persistence-profile-id}"
+	},
+	{
+		"name": "LbPersistenceProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/loadbalancer/persistence-profiles/{persistence-profile-id}"
+	},
+	{
+		"name": "LbPersistenceProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/persistence-profiles/{persistence-profile-id}"
+	},
+	{
+		"name": "BgpConfig",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp"
+	},
+	{
+		"name": "BgpConfig",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp"
+	},
+	{
+		"name": "BgpConfig",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/routing/bgp"
+	},
+	{
+		"name": "GlobalConfigsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/global-configs"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/install-upgrade?action=stop"
+	},
+	{
+		"name": "LbVirtualServer",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/virtual-servers"
+	},
+	{
+		"name": "LbVirtualServer",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/virtual-servers"
+	},
+	{
+		"name": "LbVirtualServerListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/virtual-servers"
+	},
+	{
+		"name": "MigrationUnitListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-units"
+	},
+	{
+		"name": "UcFunctionalState",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/functional-state"
+	},
+	{
+		"name": "LogicalRouterPortArpTableInCsvFormat",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports/{logical-router-port-id}/arp-table?format=csv"
+	},
+	{
+		"name": "MigrationSwitchInfo",
+		"type": "request",
+		"action": "put",
+		"route": "/migration/switch"
+	},
+	{
+		"name": "MigrationSwitchInfo",
+		"type": "response",
+		"action": "put",
+		"route": "/migration/switch"
+	},
+	{
+		"name": "MigrationSwitchInfo",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/switch"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/nsx-upgrade-agent?action=stop"
+	},
+	{
+		"name": "ServiceRouterAllocationConfig",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}?action=reallocate"
+	},
+	{
+		"name": "LogicalRouter",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}?action=reallocate"
+	},
+	{
+		"name": "MigrationUnitGroupAggregateInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-unit-groups/aggregate-info"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/sections?action=create_with_rules"
+	},
+	{
+		"name": "ServiceInsertionSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/sections?action=create_with_rules"
+	},
+	{
+		"name": "ClusterCertificateId",
+		"type": "response",
+		"action": "get",
+		"route": "/cluster/api-certificate"
+	},
+	{
+		"name": "UpgradeHistoryList",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/history"
+	},
+	{
+		"name": "FeatureStackCollectionConfigurationList",
+		"type": "response",
+		"action": "get",
+		"route": "/hpm/features"
+	},
+	{
+		"name": "TransportZoneProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/transportzone-profiles"
+	},
+	{
+		"name": "TransportZoneProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/transportzone-profiles"
+	},
+	{
+		"name": "TransportZoneProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transportzone-profiles"
+	},
+	{
+		"name": "TransportZoneProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/transportzone-profiles/{transportzone-profile-id}"
+	},
+	{
+		"name": "TransportZoneProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/transportzone-profiles/{transportzone-profile-id}"
+	},
+	{
+		"name": "TransportZoneProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/transportzone-profiles/{transportzone-profile-id}"
+	},
+	{
+		"name": "StartAppDiscoverySessionParameters",
+		"type": "request",
+		"action": "post",
+		"route": "/app-discovery/sessions"
+	},
+	{
+		"name": "AppDiscoverySession",
+		"type": "response",
+		"action": "post",
+		"route": "/app-discovery/sessions"
+	},
+	{
+		"name": "AppDiscoverySessionsListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/app-discovery/sessions"
+	},
+	{
+		"name": "ConfigurationState",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/nodes/{node-id}/state"
+	},
+	{
+		"name": "LogicalRouterPort",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-router-ports/{logical-router-port-id}"
+	},
+	{
+		"name": "LogicalRouterPort",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-router-ports/{logical-router-port-id}"
+	},
+	{
+		"name": "LogicalRouterPort",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-router-ports/{logical-router-port-id}"
+	},
+	{
+		"name": "BaseServiceInstance",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-instances"
+	},
+	{
+		"name": "BaseServiceInstance",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/services/{service-id}/service-instances"
+	},
+	{
+		"name": "ServiceInstanceListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/services/{service-id}/service-instances"
+	},
+	{
+		"name": "NatRule",
+		"type": "request",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/nat/rules/{rule-id}"
+	},
+	{
+		"name": "NatRule",
+		"type": "response",
+		"action": "put",
+		"route": "/logical-routers/{logical-router-id}/nat/rules/{rule-id}"
+	},
+	{
+		"name": "NatRule",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/nat/rules/{rule-id}"
+	},
+	{
+		"name": "IdfwUserStats",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/user-stats/{user-id}"
+	},
+	{
+		"name": "NatRule",
+		"type": "request",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/nat/rules"
+	},
+	{
+		"name": "NatRule",
+		"type": "response",
+		"action": "post",
+		"route": "/logical-routers/{logical-router-id}/nat/rules"
+	},
+	{
+		"name": "NatRuleListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/logical-routers/{logical-router-id}/nat/rules"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/mgmt-plane-bus?action=restart"
+	},
+	{
+		"name": "UpgradeBundleId",
+		"type": "response",
+		"action": "post",
+		"route": "/upgrade/bundles?action=upload"
+	},
+	{
+		"name": "MandatoryAccessControlProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/hardening-policy/mandatory-access-control"
+	},
+	{
+		"name": "MandatoryAccessControlProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/hardening-policy/mandatory-access-control"
+	},
+	{
+		"name": "MandatoryAccessControlProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/hardening-policy/mandatory-access-control"
+	},
+	{
+		"name": "NodeInstallUpgradeServiceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/install-upgrade"
+	},
+	{
+		"name": "NodeInstallUpgradeServiceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/services/install-upgrade"
+	},
+	{
+		"name": "NodeInstallUpgradeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/install-upgrade"
+	},
+	{
+		"name": "IdfwComputeCollectionListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/idfw/compute-collections/status"
+	},
+	{
+		"name": "NodeProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node"
+	},
+	{
+		"name": "NodeProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node"
+	},
+	{
+		"name": "NodeProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node"
+	},
+	{
+		"name": "ServiceChain",
+		"type": "request",
+		"action": "post",
+		"route": "/serviceinsertion/service-chains"
+	},
+	{
+		"name": "ServiceChain",
+		"type": "response",
+		"action": "post",
+		"route": "/serviceinsertion/service-chains"
+	},
+	{
+		"name": "ServiceChainListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/serviceinsertion/service-chains"
+	},
+	{
+		"name": "MigrationUnit",
+		"type": "response",
+		"action": "get",
+		"route": "/migration/migration-units/{migration-unit-id}"
+	},
+	{
+		"name": "UpgradePlanSettings",
+		"type": "request",
+		"action": "put",
+		"route": "/upgrade/plan/{component_type}/settings"
+	},
+	{
+		"name": "UpgradePlanSettings",
+		"type": "response",
+		"action": "put",
+		"route": "/upgrade/plan/{component_type}/settings"
+	},
+	{
+		"name": "UpgradePlanSettings",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/plan/{component_type}/settings"
+	},
+	{
+		"name": "LbPoolStatistics",
+		"type": "response",
+		"action": "get",
+		"route": "/loadbalancer/services/{service-id}/pools/{pool-id}/statistics"
+	},
+	{
+		"name": "VmToolsInfoListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/virtual-machines/tools-info"
+	},
+	{
+		"name": "IPSecVPNTunnelProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/vpn/ipsec/tunnel-profiles"
+	},
+	{
+		"name": "IPSecVPNTunnelProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/vpn/ipsec/tunnel-profiles"
+	},
+	{
+		"name": "IPSecVPNTunnelProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/vpn/ipsec/tunnel-profiles"
+	},
+	{
+		"name": "NodeHttpServiceProperties",
+		"type": "request",
+		"action": "put",
+		"route": "/node/services/http"
+	},
+	{
+		"name": "NodeHttpServiceProperties",
+		"type": "response",
+		"action": "put",
+		"route": "/node/services/http"
+	},
+	{
+		"name": "NodeHttpServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/http"
+	},
+	{
+		"name": "EULAAcceptance",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/eula/acceptance"
+	},
+	{
+		"name": "TransportNodeStateListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/transport-nodes/state"
+	},
+	{
+		"name": "NodeProcessProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/processes/{process-id}"
+	},
+	{
+		"name": "NodeServiceStatusProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/services/liagent?action=start"
+	},
+	{
+		"name": "DiscoveredNodeListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/fabric/discovered-nodes"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "request",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=update_with_rules"
+	},
+	{
+		"name": "PBRSectionRuleList",
+		"type": "response",
+		"action": "post",
+		"route": "/pbr/sections/{section-id}?action=update_with_rules"
+	},
+	{
+		"name": "RegistrationToken",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/registration-token/{token}"
+	},
+	{
+		"name": "NSProfile",
+		"type": "request",
+		"action": "post",
+		"route": "/ns-profiles"
+	},
+	{
+		"name": "NSProfile",
+		"type": "response",
+		"action": "post",
+		"route": "/ns-profiles"
+	},
+	{
+		"name": "NSProfileListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-profiles"
+	},
+	{
+		"name": "NodeServiceProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/services/mgmt-plane-bus"
+	},
+	{
+		"name": "NSProfile",
+		"type": "request",
+		"action": "put",
+		"route": "/ns-profiles/{ns-profile-id}"
+	},
+	{
+		"name": "NSProfile",
+		"type": "response",
+		"action": "put",
+		"route": "/ns-profiles/{ns-profile-id}"
+	},
+	{
+		"name": "NSProfile",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-profiles/{ns-profile-id}"
+	},
+	{
+		"name": "UpgradeUnitGroup",
+		"type": "request",
+		"action": "put",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}"
+	},
+	{
+		"name": "UpgradeUnitGroup",
+		"type": "response",
+		"action": "put",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}"
+	},
+	{
+		"name": "UpgradeUnitGroup",
+		"type": "response",
+		"action": "get",
+		"route": "/upgrade/upgrade-unit-groups/{group-id}"
+	},
+	{
+		"name": "NodeStatusProperties",
+		"type": "response",
+		"action": "get",
+		"route": "/node/status"
+	},
+	{
+		"name": "NodeRouteProperties",
+		"type": "request",
+		"action": "post",
+		"route": "/node/network/routes"
+	},
+	{
+		"name": "NodeRouteProperties",
+		"type": "response",
+		"action": "post",
+		"route": "/node/network/routes"
+	},
+	{
+		"name": "NodeRoutePropertiesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/node/network/routes"
+	},
+	{
+		"name": "CrlPemRequestType",
+		"type": "request",
+		"action": "post",
+		"route": "/trust-management/crl-distribution-points/pem-file"
+	},
+	{
+		"name": "NSSupportedAttributesListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/ns-profiles/attributes"
+	},
+	{
+		"name": "LbVirtualServerWithRule",
+		"type": "request",
+		"action": "post",
+		"route": "/loadbalancer/virtual-servers?action=create_with_rules"
+	},
+	{
+		"name": "LbVirtualServerWithRule",
+		"type": "response",
+		"action": "post",
+		"route": "/loadbalancer/virtual-servers?action=create_with_rules"
+	},
+	{
+		"name": "RoleBinding",
+		"type": "request",
+		"action": "post",
+		"route": "/aaa/role-bindings"
+	},
+	{
+		"name": "RoleBinding",
+		"type": "response",
+		"action": "post",
+		"route": "/aaa/role-bindings"
+	},
+	{
+		"name": "RoleBindingListResult",
+		"type": "response",
+		"action": "get",
+		"route": "/aaa/role-bindings"
+	}
+]

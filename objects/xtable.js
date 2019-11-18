@@ -11,6 +11,7 @@ function xtable(opts) { // Object.assign?
 		data: opts.data
 	});
 	this.data = this.cell.data;
+	this.column = opts.column;
 	this.filters = [];
 }
 module.exports = xtable;

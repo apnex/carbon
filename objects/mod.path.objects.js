@@ -33,7 +33,7 @@ function getSchemas(body) {
 	return list;
 }
 
-function isOperation(string) { // valid api operation
+function oldOperation(string) { // valid api operation
 	let isTrue = 0;
 	[
 		'get',
@@ -50,6 +50,21 @@ function isOperation(string) { // valid api operation
 		}
 	});
 	return isTrue;
+}
+
+function isOperation(string) { // valid api operation
+	return [
+		'get',
+		'put',
+		'post',
+		'delete',
+		'options',
+		'head',
+		'patch',
+		'trace'
+	].filter((op) => {
+		return op == string;
+	}).length > 0;
 }
 
 function getResponses(body) {
