@@ -12,7 +12,6 @@ var cache = {};
 function run(item, opts = {}) {
 	let defaults = Object.assign({
 		spec: './apispec.json',
-		raw: 0,
 		writeOnly: 0,
 		required: 0,
 		hidden: 0,
@@ -23,13 +22,9 @@ function run(item, opts = {}) {
 	}, core.cleanObject(opts));
 	let definitions = getSpec(defaults.spec);
 	if(route = definitions[item]) {
-		if(defaults.raw) {
-			return route;
-		} else {
-			return isRef({
-				"$ref": "#/definitions/" + item
-			}, defaults);
-		}
+		return isRef({
+			"$ref": "#/definitions/" + item
+		}, defaults);
 	} else {
 		console.error('Object: [' + item + '] does not exist!');
 	}
@@ -60,12 +55,12 @@ function isRef(body, ops) {
 				flag = ':circular';
 			}
 			if(opts.depth == 0) {
-				node[string] = '$ref' + flag;
+				node[opts.parent] = '$ref' + flag;
 			} else {
 				if(opts.depth > 0) {
 					opts.depth--;
 				}
-				node = defTree(value, opts); // recurse
+				node[opts.parent] = defTree(value, opts); // recurse
 			}
 		}
 	}
@@ -79,17 +74,16 @@ function defTree(spec, opts) {
 			let node = selectType(body, opts);
 			if(typeof(node) == 'object') {
 				data = Object.assign(data, node);
-			} else {
-				data = node;
 			}
 		});
 	} else {
 		let node = selectType(spec, opts);
-		if(node === Object(node) && Object.prototype.toString.call(node) !== '[object Array]') {
+		if(typeof(node) == 'object') {
 			data = Object.assign(data, node);
-		} else {
-			data = node;
 		}
+	}
+	if(Object.keys(data).length == 0) {
+		data = 1;
 	}
 	return data;
 }
@@ -104,21 +98,6 @@ function selectType(body, opts) {
 			case "array":
 				node = isArray(body, opts);
 			break;
-			case "string":
-				node = isString(body, opts);
-			break;
-			case "secret":
-				node = isString(body, opts);
-			break;
-			case "integer":
-				node = '<integer>';
-			break;
-			case "boolean":
-				node = '<boolean>';
-			break;
-			case "discriminator":
-				node = isDiscriminator(body, opts);
-			break;
 		}
 	} else { // noType
 		if(typeof(body['$ref']) !== 'undefined') { // isRef
@@ -130,22 +109,8 @@ function selectType(body, opts) {
 	return node;
 }
 
-function isIncluded(key, body, opts) {
-	let include = 1;
-	if(!opts.hidden && key.match(/^_/)) { // hidden fields
-		include = 0;
-	}
-	if(opts.writeOnly && body['readOnly']) { // isReadOnly
-		include = 0;
-	}
-	if(!opts.deprecated && body['x-deprecated']) { // deprecated
-		include = 0;
-	}
-	return include;
-}
-
 function isObject(body, opts) {
-	let node = {};
+	let data = {};
 	let fields = [];
 	if(opts.required) {
 		if(typeof(body.required) !== 'undefined') {
@@ -161,35 +126,25 @@ function isObject(body, opts) {
 		// currently broken
 		// body.properties[body.discriminator].type = 'discriminator';
 	}
-	fields.forEach((key) => {
-		let value = body.properties[key];
-		if(isIncluded(key, value, opts)) {
-			node[key] = selectType(value, opts);
-		}
-	});
-	return node;
+        fields.forEach((key) => {
+                let value = body.properties[key];
+                let node = selectType(value, opts);
+                if(typeof(node) == 'object') {
+                        data = Object.assign(data, node);
+                } else {
+                        data = 1;
+                }
+        });
+	if(Object.keys(data).length == 0) {
+                data = 1;
+        }
+	return data;
 }
 
 function isArray(body, opts) {
-	let node = [{}];
+	let node = {};
 	if(typeof(body['items']) !== 'undefined') {
-		node = [selectType(body['items'], opts)];
-	}
-	return node;
-}
-
-function isString(body, opts) {
-	let node = '<string>';
-	if(typeof(body.enum) !== 'undefined') {
-		node = body.enum;
-	}
-	return node;
-}
-
-function isDiscriminator(body, opts) {
-	let node = "<string>";
-	if(typeof(body.enum) !== 'undefined') {
-		node = body.enum.map(a => ('$' + a));
+		node = selectType(body['items'], opts);
 	}
 	return node;
 }

@@ -1,0 +1,2882 @@
+[
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/inventory/datastore?~action=find"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/inventory/network?~action=find"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/iso/image/id:{library_item}?~action=mount"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/iso/image/id:{library_item}?~action=mount"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_allowed_in_current_state",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/iso/image/id:{vm}?~action=unmount"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/iso/image/id:{vm}?~action=unmount"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/com/vmware/vcenter/ovf/import-flag"
+	},
+	{
+		"name": "com.vmware.vcenter.ovf.library_item_create",
+		"type": "request",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item"
+	},
+	{
+		"name": "com.vmware.vcenter.ovf.library_item.create_result",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_busy",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item"
+	},
+	{
+		"name": "com.vmware.vcenter.ovf.library_item_deploy",
+		"type": "request",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=deploy"
+	},
+	{
+		"name": "com.vmware.vcenter.ovf.library_item.deployment_result",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=deploy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=deploy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=deploy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=deploy"
+	},
+	{
+		"name": "com.vmware.vcenter.ovf.library_item_filter",
+		"type": "request",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=filter"
+	},
+	{
+		"name": "com.vmware.vcenter.ovf.library_item.ovf_summary",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=filter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=filter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/com/vmware/vcenter/ovf/library-item/id:{ovf_library_item_id}?~action=filter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster"
+	},
+	{
+		"name": "com.vmware.vcenter.cluster.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster/{cluster}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster/{cluster}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster/{cluster}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster/{cluster}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/cluster/{cluster}"
+	},
+	{
+		"name": "com.vmware.vcenter.datacenter_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.invalid_argument",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter"
+	},
+	{
+		"name": "com.vmware.vcenter.datacenter.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.error",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_in_use",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/datacenter/{datacenter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore"
+	},
+	{
+		"name": "com.vmware.vcenter.datastore.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore/{datastore}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore/{datastore}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore/{datastore}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore/{datastore}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/datastore/{datastore}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/folder"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/folder"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/folder"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/folder"
+	},
+	{
+		"name": "com.vmware.vcenter.host_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/host"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_in_use",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/host/{host}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/host/{host}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/host/{host}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/host/{host}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/host/{host}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.error",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.error",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/host/{host}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/network"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/network"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/network"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/network"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool"
+	},
+	{
+		"name": "com.vmware.vcenter.resource_pool.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool/{resource_pool}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool/{resource_pool}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool/{resource_pool}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool/{resource_pool}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/resource-pool/{resource_pool}"
+	},
+	{
+		"name": "com.vmware.vcenter.VM_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unable_to_allocate_resource",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vcenter.VM.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware_upgrade",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/action/upgrade"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/action/upgrade"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/action/upgrade"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/action/upgrade"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/action/upgrade"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/action/upgrade"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.adapter.sata_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.adapter.sata.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/sata/{adapter}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.adapter.scsi_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.adapter.scsi.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.adapter.scsi_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/adapter/scsi/{adapter}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.boot.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.boot_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/boot"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.boot.device_set",
+		"type": "request",
+		"action": "put",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "put",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "put",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "put",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "put",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "put",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/boot/device"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.cdrom_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.cdrom_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.cdrom.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/cdrom/{cdrom}/disconnect"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.cpu.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.cpu_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/cpu"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.disk_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.disk.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.disk_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/disk/{disk}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.ethernet_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unsupported",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.ethernet_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.ethernet.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/ethernet/{nic}/disconnect"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.floppy_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.floppy_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.floppy.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/floppy/{floppy}/disconnect"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.memory_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.memory.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/memory"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.parallel_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.parallel_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.parallel.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/parallel/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.serial_create",
+		"type": "request",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.serial_update",
+		"type": "request",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "patch",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.hardware.serial.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "delete",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/connect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/hardware/serial/{port}/disconnect"
+	},
+	{
+		"name": "com.vmware.vcenter.vm.power.info",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/power"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_inaccessible",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/power"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/power"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/power"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/power"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "get",
+		"route": "/vcenter/vm/{vm}/power"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_busy",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/reset"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/reset"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/reset"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/reset"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/reset"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_busy",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/start"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/start"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/start"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/start"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/start"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_busy",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/stop"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/stop"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/stop"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/stop"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/stop"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.resource_busy",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/suspend"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthenticated",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/suspend"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.unauthorized",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/suspend"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.not_found",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/suspend"
+	},
+	{
+		"name": "com.vmware.vapi.std.errors.service_unavailable",
+		"type": "response",
+		"action": "post",
+		"route": "/vcenter/vm/{vm}/power/suspend"
+	}
+]

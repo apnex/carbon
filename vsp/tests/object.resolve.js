@@ -1,75 +1,71 @@
 #!/usr/bin/env node
 const args = process.argv;
 const core = require('./mod.core');
+const scope = core.scope();
+const definitions = core.loadJSON(scope.spec).definitions;
 
-// constructor
-module.exports = {
-	run
-};
-var cache = {};
+// cli switch
+//var item = args[2];
+var item = scope.object;
+var method = args[2];
+var depth = args[3];
+if(typeof(depth) === 'undefined') {
+	depth = -1; // no restriction
+}
+var result;
+var defaults = {
+	writeOnly: 0,
+	required: 0,
+	hidden: 0,
+	deprecated: 0,
+	override: 0,
+	chain: {},
+	depth
+}
 
-// entry
-function run(item, opts = {}) {
-	let defaults = Object.assign({
-		spec: './apispec.json',
-		raw: 0,
-		writeOnly: 0,
-		required: 0,
-		hidden: 0,
-		deprecated: 0,
-		override: 0,
-		chain: {},
-		depth: -1 // no restriction
-	}, core.cleanObject(opts));
-	let definitions = getSpec(defaults.spec);
+// called from shell
+if(process.argv[1].match(/object.resolve/g)) {
 	if(route = definitions[item]) {
-		if(defaults.raw) {
-			return route;
-		} else {
-			return isRef({
-				"$ref": "#/definitions/" + item
-			}, defaults);
+		switch(method) {
+			case "read":
+				result = isRef({
+					"$ref": "#/definitions/" + item
+				}, defaults);
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			case "readHidden":
+				result = isRef({
+					"$ref": "#/definitions/" + item
+				}, Object.assign(defaults, {
+					hidden: 1,
+					deprecated: 1
+				}));
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			case "write":
+				result = isRef({
+					"$ref": "#/definitions/" + item
+				}, Object.assign(defaults, {
+					writeOnly: 1
+				}));
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			case "writeMin":
+				result = isRef({
+					"$ref": "#/definitions/" + item
+				}, Object.assign(defaults, {
+					writeOnly: 1,
+					required: 1
+				}));
+				console.log(JSON.stringify(result, null, "\t"));
+			break;
+			default:
+				console.log(JSON.stringify(route, null, "\t"));
+			break;
 		}
 	} else {
-		console.error('Object: [' + item + '] does not exist!');
+		console.log('Object: ' + item + ' does not exist!');
 	}
-}
-
-function getSpec(name) {
-	if(typeof(cache[name]) === 'undefined') {
-		cache[name] = core.loadJSON(name).definitions;
-	}
-	return cache[name];
-}
-
-function isRef(body, ops) {
-	let opts = JSON.parse(JSON.stringify(ops));
-	let node = {};
-	let flag = '';
-	let matches;
-	let string = body['$ref']; // why do I need whole body?
-	if(matches = string.match(/#[\/]definitions[\/](.+)/)) {
-		if(typeof(opts.parent) !== 'undefined') {
-			opts.chain[opts.parent] = 1;
-		}
-		let definitions = getSpec(opts.spec);
-		if(value = definitions[matches[1]]) {
-			opts.parent = matches[1];
-			if(opts.chain[matches[1]]) {
-				opts.depth = 0;
-				flag = ':circular';
-			}
-			if(opts.depth == 0) {
-				node[string] = '$ref' + flag;
-			} else {
-				if(opts.depth > 0) {
-					opts.depth--;
-				}
-				node = defTree(value, opts); // recurse
-			}
-		}
-	}
-	return node;
 }
 
 function defTree(spec, opts) {
@@ -105,9 +101,6 @@ function selectType(body, opts) {
 				node = isArray(body, opts);
 			break;
 			case "string":
-				node = isString(body, opts);
-			break;
-			case "secret":
 				node = isString(body, opts);
 			break;
 			case "integer":
@@ -190,6 +183,35 @@ function isDiscriminator(body, opts) {
 	let node = "<string>";
 	if(typeof(body.enum) !== 'undefined') {
 		node = body.enum.map(a => ('$' + a));
+	}
+	return node;
+}
+
+function isRef(body, ops) {
+	let opts = JSON.parse(JSON.stringify(ops));
+	let node = {};
+	let flag = '';
+	let matches;
+	let string = body['$ref']; // why do I need whole body?
+	if(matches = string.match(/#[\/]definitions[\/](.+)/)) {
+		if(typeof(opts.parent) !== 'undefined') {
+			opts.chain[opts.parent] = 1;
+		}
+		if(value = definitions[matches[1]]) {
+			opts.parent = matches[1];
+			if(opts.chain[matches[1]]) {
+				opts.depth = 0;
+				flag = ':circular';
+			}
+			if(opts.depth == 0) {
+				node[string] = '$ref' + flag;
+			} else {
+				if(opts.depth > 0) {
+					opts.depth--;
+				}
+				node = defTree(value, opts); // recurse
+			}
+		}
 	}
 	return node;
 }
