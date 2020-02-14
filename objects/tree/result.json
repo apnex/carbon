@@ -1,0 +1,25 @@
+{
+	"LogicalRouter": {
+		"ManagedResource": {
+			"RevisionedResource": {
+				"Resource": {
+					"SelfResourceLink": {
+						"ResourceLink": 1
+					},
+					"ResourceLink": 1
+				}
+			},
+			"Tag": 1
+		},
+		"IPv6Profiles": 1,
+		"EdgeClusterMemberAllocationProfile": {
+			"EdgeClusterMemberAllocationPool": 1
+		},
+		"ResourceReference": 1,
+		"LogicalRouterConfig": {
+			"HaVipConfig": {
+				"VIPSubnet": 1
+			}
+		}
+	}
+}

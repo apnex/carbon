@@ -212,7 +212,6 @@ function display(array) {
 		'default',
 		'required'
 	]);
-	console.error('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
 }
 
 function getTable(data, string) {

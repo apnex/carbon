@@ -26,7 +26,7 @@ function run(route) {
 	objects.forEach((item) => {
 		result.push({
 			route: route,
-			action: item.action,
+			method: item.action,
 			type: item.type,
 			schema: item.schema
 		});

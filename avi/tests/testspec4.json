@@ -1,0 +1,25 @@
+{
+	"definitions": {
+		"ModularBox": {
+			"allOf": [
+				{
+					"$ref": "#/definitions/BoxParam"
+				},
+				{
+					"$ref": "#/definitions/ModularBox"
+				}
+			]
+		},
+		"BoxParam": {
+			"type": "object",
+			"required": [
+				"box_id"
+			],
+			"properties": {
+				"box_id": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

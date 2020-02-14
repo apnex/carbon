@@ -1,0 +1,2 @@
+#for a given JSON OBJECT
+#find the GET route, that returns one or more of that OBJECT

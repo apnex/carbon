@@ -28,11 +28,11 @@ function find(string) {
 		table.out([
 			'name',
 			'type',
-			'method',
+			'action',
 			'code',
 			'route'
 		]);
-		console.error('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
+		console.log('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
 		//console.log('Terminal size: ' + process.stdout.columns + 'x' + process.stdout.rows);
 	});
 }

@@ -18,7 +18,6 @@ if(args[1].match(/cli/g)) {
 		break;
 		default:
 			console.log('No command specified [list, index, refresh, find, get, json]');
-			// improve help output
 	}
 }
 
@@ -32,8 +31,7 @@ function find(string) {
 			'code',
 			'route'
 		]);
-		console.error('[ ' + table.view.length + '/' + table.data.length + ' ] entries - filter [ ' + table.filterString() + ' ]');
-		//console.log('Terminal size: ' + process.stdout.columns + 'x' + process.stdout.rows);
+		// table.filterText();
 	});
 }
 

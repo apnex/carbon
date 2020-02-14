@@ -27,9 +27,6 @@ function run(
 	tree = './state/ctx.tree',
 	object = './state/ctx.object'
 ) {
-	if(!fs.existsSync('./state')){
-		fs.mkdirSync('./state');
-	}
 	let scope = {
 		spec,
 		tree,

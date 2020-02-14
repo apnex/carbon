@@ -2,14 +2,6 @@
 var xcell = require('./xcell.js');
 var self = xtable.prototype;
 
-// colours
-const chalk = require('chalk');
-const red = chalk.bold.red;
-const orange = chalk.keyword('orange');
-const green = chalk.green;
-const blue = chalk.blueBright;
-const cyan = chalk.cyan;
-
 // constructor
 function xtable(opts) { // Object.assign?
 	this.cache = {};
@@ -37,7 +29,7 @@ self.out = function(cols) {
 		}
 		let col = {};
 		cols.forEach((item) => {
-			col[item] = '<' + item + '>';
+			col[item] = item;
 		});
 		this.runColWidth(col);
 
@@ -59,11 +51,11 @@ self.out = function(cols) {
 				headString += gap;
 				dashString += gap;
 			}
-			headString += '<' + item + '>' + spacer.repeat(this.cache[item] - (item.length + 2));
+			headString += item + spacer.repeat(this.cache[item] - item.length);
 			dashString += '-'.repeat(this.cache[item]);
 		});
-		console.log(blue(headString));
-		//console.log(dashString);
+		console.log(headString);
+		console.log(dashString);
 
 		// build data string
 		this.view.forEach((item) => {
@@ -80,10 +72,6 @@ self.out = function(cols) {
 			});
 			console.log(dataString);
 		});
-
-		// display filter
-		console.error(blue('[ ' + this.view.length + '/' + this.data.length + ' ] entries - filter [ ' + this.filterString() + ' ]'));
-		//console.error(blue('[ ' + green(this.view.length + '/' + this.data.length) + ' ] entries - filter [ ' + green(this.filterString()) + ' ]'));
 	}
 }
 

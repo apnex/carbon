@@ -2,8 +2,7 @@
 const args = process.argv;
 const schemas = require('./mod.path.objects');
 const core = require('./mod.core');
-const scope = core.scope();
-const apiSpec = core.loadJSON(scope.spec);
+const apiSpec = core.loadJSON('./apispec.json');
 const paths = apiSpec.paths;
 const definitions = apiSpec.definitions;
 const fs = require('fs');
@@ -24,7 +23,7 @@ function run(route) {
 		result.push({
 			name: item.schema,
 			type: item.type,
-			action: item.action,
+			method: item.method,
 			code: item.code,
 			route: route
 		});

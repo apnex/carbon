@@ -10,23 +10,25 @@ const fs = require('fs');
 
 // called from shell
 var result = [];
-if(process.argv[1].match(/path.objects.all/g)) {
+if(process.argv[1].match(/blah/g)) {
 	Object.keys(paths).forEach((route) => {
+		//console.log(route);
 		run(route);
 	});
+	//console.log(JSON.stringify(result, null, '\t'));
 	fs.writeFileSync('./result.json', JSON.stringify(result, null, '\t'));
 }
 
 // run
 function run(route) {
 	let objects = schemas.run(paths[route]);
+	//console.log(JSON.stringify(objects, null, '\t'));
 	objects.forEach((item) => {
 		result.push({
-			name: item.schema,
-			type: item.type,
+			route: route,
 			action: item.action,
-			code: item.code,
-			route: route
+			type: item.type,
+			schema: item.schema
 		});
 	});
 }

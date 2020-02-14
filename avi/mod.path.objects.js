@@ -16,14 +16,14 @@ function getSchemas(body) {
 		if(isOperation(value[0])) { //action
 			getParameters(value[1]).forEach((item) => {
 				list.push({
-					method: value[0],
+					action: value[0],
 					type: 'request',
 					schema: item
 				});
 			});
 			getResponses(value[1]).forEach((item) => {
 				list.push({
-					method: value[0],
+					action: value[0],
 					type: 'response',
 					code: item[0],
 					schema: item[1]
