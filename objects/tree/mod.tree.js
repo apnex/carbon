@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const args = process.argv;
 const core = require('./mod.core');
 
 // constructor

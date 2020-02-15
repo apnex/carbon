@@ -1,4 +1,0 @@
-ModularBox
-	BoxParam
-	BoxBody	
-		ModularBox

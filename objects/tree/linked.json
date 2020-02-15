@@ -1,0 +1,2125 @@
+{
+	"ClusterNode": [
+		"ClusterConfiguration"
+	],
+	"ClusterNodeEntity": [],
+	"PoolMemberGroup": [
+		"LbPool"
+	],
+	"ResourceReference": [
+		"DSRule",
+		"DSService",
+		"ServiceInsertionRule"
+	],
+	"PoolMemberSetting": [
+		"PoolMemberSettingList"
+	],
+	"NDRAProfile": [
+		"NDRAProfileListResult"
+	],
+	"ManagedResource": [
+		"ActionableResource"
+	],
+	"RevisionedResource": [
+		"ManagementConfig"
+	],
+	"Resource": [
+		"RevisionedResource"
+	],
+	"SelfResourceLink": [
+		"Resource"
+	],
+	"ResourceLink": [
+		"SelfResourceLink",
+		"Resource"
+	],
+	"Tag": [
+		"ManagedResource"
+	],
+	"RAConfig": [
+		"NDRAProfile"
+	],
+	"RaDNSConfig": [
+		"NDRAProfile"
+	],
+	"RowListField": [
+		"GridConfiguration"
+	],
+	"TrustManagementData": [],
+	"CryptoAlgorithm": [],
+	"BackupSchedule": [
+		"WeeklyBackupSchedule"
+	],
+	"GiServiceProfile": [],
+	"BaseServiceProfile": [],
+	"LbVirtualServer": [
+		"LbServiceDebugInfo"
+	],
+	"ServerSslProfileBinding": [
+		"LbVirtualServer"
+	],
+	"ClientSslProfileBinding": [
+		"LbVirtualServer"
+	],
+	"FirewallSectionsSummary": [
+		"FirewallSectionsSummaryList"
+	],
+	"OperationCollectorGlobalConfig": [],
+	"GlobalConfigs": [
+		"SecurityGlobalConfig"
+	],
+	"OperationCollector": [],
+	"MacPoolListResult": [],
+	"ListResult": [
+		"ActionableResourceListResult"
+	],
+	"MacPool": [],
+	"MacRange": [
+		"MacPool"
+	],
+	"SIDataCounter": [
+		"SIAggregatedDataCounter"
+	],
+	"TransportZoneListResult": [],
+	"TransportZone": [],
+	"TransportZoneProfileTypeIdEntry": [
+		"TransportZoneEndPoint"
+	],
+	"LbHttpProfile": [],
+	"LbAppProfile": [
+		"LbFastUdpProfile"
+	],
+	"InstanceRuntime": [
+		"InstanceRuntimeListResult"
+	],
+	"VmNicInfo": [
+		"InstanceDeploymentConfig"
+	],
+	"NicInfo": [
+		"VmNicInfo"
+	],
+	"NicMetadata": [
+		"NicInfo"
+	],
+	"ServiceInsertionRuleListResult": [],
+	"ServiceInsertionRule": [],
+	"DSRule": [
+		"ServiceInsertionRule"
+	],
+	"EmbeddedResource": [
+		"DSRule"
+	],
+	"OwnerResourceLink": [
+		"EmbeddedResource"
+	],
+	"ServiceInsertionService": [
+		"ServiceInsertionRule"
+	],
+	"DSService": [
+		"ServiceInsertionService"
+	],
+	"NSServiceElement": [
+		"DSService"
+	],
+	"ServiceInsertionSectionRuleList": [],
+	"ServiceInsertionSection": [],
+	"DSSection": [],
+	"TrunkVlanRange": [
+		"VlanTrunkSpec"
+	],
+	"MigrationUnitTypeStatsList": [],
+	"MigrationUnitTypeStats": [],
+	"LbIpHeaderCondition": [],
+	"LbRuleCondition": [
+		"LbHttpRequestHeaderCondition"
+	],
+	"ServiceProfileNSGroups": [],
+	"NSGroupInfo": [],
+	"IpBlock": [
+		"IpBlockListResult"
+	],
+	"IpfixCollectorUpmProfile": [
+		"IpfixCollectorUpmProfileListResult"
+	],
+	"IpfixCollector": [
+		"IpfixCollectorUpmProfile"
+	],
+	"L2VPNTransportTunnelStatus": [
+		"L2VPNSessionStatus"
+	],
+	"LogicalRouterPort": [
+		"LogicalRouterLinkPortOnTIER1"
+	],
+	"ServiceBinding": [
+		"LogicalRouterPort"
+	],
+	"CurrentRealizationStateBarrier": [],
+	"ContainerIngressPolicy": [
+		"ContainerIngressPolicyListResult"
+	],
+	"DiscoveredResource": [
+		"ComputeCollection"
+	],
+	"KeyValuePair": [
+		"UpgradeUnit",
+		"UpgradeUnitGroup"
+	],
+	"MACSetListResult": [],
+	"MACSet": [],
+	"IPv4AddressProperties": [
+		"NodeNetworkInterfaceProperties"
+	],
+	"LbServiceStatistics": [],
+	"LbPoolStatistics": [
+		"LbPoolStatisticsListResult"
+	],
+	"LbStatisticsCounter": [
+		"LbPoolMemberStatistics"
+	],
+	"LbPoolMemberStatistics": [],
+	"LbVirtualServerStatistics": [],
+	"LbServiceStatisticsCounter": [],
+	"TraceflowObservationReplicationLogical": [],
+	"TraceflowObservation": [
+		"TraceflowObservationListResult"
+	],
+	"NodeSshServiceProperties": [],
+	"NodeServiceProperties": [
+		"NodePolicyServiceProperties"
+	],
+	"SshServiceProperties": [],
+	"AttachmentContext": [
+		"VifAttachmentContext"
+	],
+	"NodeProtonServiceProperties": [],
+	"LoggingServiceProperties": [
+		"NodePolicyServiceProperties"
+	],
+	"PackageLoggingLevels": [],
+	"DirectoryDomainSyncStats": [],
+	"IpPool": [
+		"IpPoolListResult"
+	],
+	"IpPoolSubnet": [
+		"IpPool"
+	],
+	"IpPoolRange": [
+		"IpBlockSubnet"
+	],
+	"PoolUsage": [],
+	"IcmpEchoRequestHeader": [
+		"TransportProtocolHeader"
+	],
+	"FirewallRule": [
+		"FirewallSectionRuleList"
+	],
+	"FirewallService": [
+		"FirewallRule"
+	],
+	"ContainerApplicationInstanceListResult": [],
+	"ContainerApplicationInstance": [],
+	"RemoteFileServer": [
+		"BackupConfiguration"
+	],
+	"FileTransferProtocol": [
+		"RemoteFileServer"
+	],
+	"FileTransferAuthenticationScheme": [
+		"FileTransferProtocol"
+	],
+	"HostSwitchSpec": [
+		"TransportNodeProfile"
+	],
+	"UpgradeUnitListResult": [],
+	"UpgradeUnit": [
+		"UpgradeUnitGroup"
+	],
+	"UpgradeUnitGroupInfo": [
+		"UpgradeUnit"
+	],
+	"AppDiscoverySession": [
+		"AppDiscoverySessionResultSummary"
+	],
+	"CrlDistributionPoint": [
+		"CrlDistributionPointList"
+	],
+	"AddManagementNodeSpec": [
+		"AddClusterNodeSpec"
+	],
+	"MsgClientInfo": [
+		"ManagementClusterRoleConfig"
+	],
+	"EdgeHighAvailabilityProfile": [],
+	"ClusterProfile": [],
+	"StandbyRelocationConfig": [],
+	"IdfwNsgroupVmDetailListResult": [],
+	"IdfwVmDetail": [],
+	"IdfwUserSessionData": [
+		"IdfwVmStats"
+	],
+	"RenderConfiguration": [
+		"DonutPart"
+	],
+	"Tooltip": [
+		"Icon"
+	],
+	"Icon": [
+		"Label"
+	],
+	"PortConnectionEntity": [
+		"PortConnectionHypervisor"
+	],
+	"HealthCheckVlanRange": [
+		"HealthCheckSpecVlans",
+		"HealthCheckResultPerUplink"
+	],
+	"PerUpstreamServerStatistics": [
+		"PerForwarderStatistics"
+	],
+	"MigrationUnitStatus": [
+		"MigrationUnitStatusListResult"
+	],
+	"NSGroupExpression": [
+		"NSGroupSimpleExpression"
+	],
+	"RuleState": [],
+	"DSRuleState": [],
+	"ConfigurationState": [
+		"DSRuleState"
+	],
+	"ConfigurationStateElement": [
+		"ConfigurationState"
+	],
+	"PendingChange": [],
+	"BgpNeighborsStatusListResult": [],
+	"BgpNeighborStatus": [],
+	"BgpAddressFamily": [],
+	"DirectoryDomain": [
+		"DirectoryDomainListResults"
+	],
+	"DirectoryLdapServer": [
+		"DirectoryDomain"
+	],
+	"TraceflowObservationReceived": [],
+	"UpgradeStatus": [],
+	"HostUpgradeStatus": [],
+	"ComponentUpgradeStatus": [
+		"CCPUpgradeStatus"
+	],
+	"UpgradeChecksExecutionStatus": [
+		"ComponentUpgradeStatus"
+	],
+	"NodeSummaryList": [
+		"ComponentUpgradeStatus"
+	],
+	"NodeSummary": [
+		"NodeSummaryList"
+	],
+	"CCPUpgradeStatus": [],
+	"EdgeUpgradeStatus": [],
+	"ClusteringConfig": [
+		"AddClusterNodeVMInfo"
+	],
+	"IpfixSwitchUpmProfile": [],
+	"IpfixUpmProfile": [
+		"IpfixUpmProfileListResult"
+	],
+	"AppliedTos": [],
+	"BFDProperties": [
+		"TunnelProperties"
+	],
+	"ControlClusterNodeStatus": [
+		"ClusterNodeStatus"
+	],
+	"MgmtConnStatus": [
+		"ControlClusterNodeStatus"
+	],
+	"DuplicateAddressBindingEntry": [
+		"LogicalPortState"
+	],
+	"AddressBindingEntry": [
+		"DuplicateAddressBindingEntry",
+		"LogicalPortState"
+	],
+	"PacketAddressClassifier": [
+		"LogicalPort"
+	],
+	"LbVirtualServerWithRule": [],
+	"LbRule": [],
+	"LbRuleAction": [],
+	"MetadataProxy": [
+		"MetadataProxyListResult"
+	],
+	"LbVirtualServerStatus": [
+		"LbVirtualServerStatusListResult"
+	],
+	"EffectiveMemberTypeListResult": [],
+	"TransportNodeStatus": [
+		"TransportNodeStatusListResult"
+	],
+	"ThreatStatus": [
+		"TransportNodeStatus"
+	],
+	"AgentStatusCount": [],
+	"AgentStatus": [
+		"AgentStatusCount"
+	],
+	"TunnelStatusCount": [],
+	"StatusCount": [
+		"TunnelStatusCount"
+	],
+	"BFDDiagnosticCount": [],
+	"BFDStatusCount": [],
+	"NodeStatus": [
+		"TransportNodeStatus"
+	],
+	"ControlConnStatus": [],
+	"NodeStatusProperties": [
+		"ClusterNodeStatus"
+	],
+	"NodeFileSystemProperties": [
+		"NodeStatusProperties"
+	],
+	"BGPCommunityListListResult": [],
+	"BGPCommunityList": [],
+	"LbServiceStatus": [],
+	"LbPoolStatus": [],
+	"LbPoolMemberStatus": [],
+	"NamedTeamingPolicy": [
+		"UplinkHostSwitchProfile"
+	],
+	"TeamingPolicy": [],
+	"Uplink": [
+		"TeamingPolicy"
+	],
+	"UcStateProperties": [],
+	"ServiceDeploymentIssue": [
+		"ServiceDeploymentStatus"
+	],
+	"NodeInfoListResult": [],
+	"NodeInfo": [],
+	"ManagementClusterStatus": [
+		"ClusterStatus"
+	],
+	"ManagementPlaneBaseNodeInfo": [],
+	"ClusterInitializationNodeInfo": [],
+	"ServiceConfigListResult": [],
+	"ServiceConfig": [
+		"ServiceConfigList"
+	],
+	"NSXProfileReference": [
+		"EffectiveProfileListResult"
+	],
+	"RuntimeInterfaceStatistics": [],
+	"SIAggregatedDataCounterEx": [],
+	"SIAggregatedDataCounter": [],
+	"SIMacLearningCounters": [],
+	"SIPacketsDroppedBySecurity": [],
+	"SIPacketTypeAndCounter": [],
+	"IdfwStandaloneHostsSwitchSetting": [],
+	"DonutPart": [
+		"DonutSection"
+	],
+	"Label": [
+		"FooterAction"
+	],
+	"LbTcpProfile": [
+		"LbServiceDebugInfo"
+	],
+	"EdgeCluster": [
+		"EdgeClusterListResult"
+	],
+	"ClusterProfileTypeIdEntry": [
+		"BridgeCluster"
+	],
+	"AllocationRule": [
+		"EdgeCluster"
+	],
+	"AllocationRuleAction": [
+		"AllocationRule"
+	],
+	"EdgeClusterMember": [
+		"EdgeCluster"
+	],
+	"CrlDistributionPointStatus": [],
+	"ComputeManagerStatus": [],
+	"ErrorInfo": [],
+	"DnsTtlConfig": [
+		"FirewallDnsProfile"
+	],
+	"DirectoryAdDomain": [],
+	"DirectoryDomainSyncSettings": [],
+	"GlobalConfigsListResult": [],
+	"StatItem": [
+		"StatsConfiguration"
+	],
+	"DiscoveredNodeListResult": [],
+	"DiscoveredNode": [],
+	"BridgeCluster": [
+		"BridgeClusterListResult"
+	],
+	"BridgeClusterNode": [
+		"BridgeCluster"
+	],
+	"CallbackAuthenticationScheme": [
+		"ServiceManager"
+	],
+	"UpgradeCheckCsvListResult": [],
+	"CsvListResult": [],
+	"UpgradeCheckCsvRecord": [],
+	"CsvRecord": [
+		"LogicalRouterPortArpCsvRecord"
+	],
+	"SolutionConfigListResult": [],
+	"SolutionConfig": [],
+	"NSGroup": [
+		"NSGroupListResult"
+	],
+	"NSGroupSimpleExpression": [],
+	"LbAppProfileListResult": [],
+	"OrgInfo": [
+		"SwitchingToVmcModeParameters"
+	],
+	"FirewallRuleList": [],
+	"IPsecVPNIKESessionSummary": [
+		"IPSecVPNSessionSummary"
+	],
+	"PortConnectionLogicalSwitch": [
+		"PortConnectionEntities"
+	],
+	"LogicalPortState": [],
+	"LogicalPort": [
+		"PortConnectionBMEntities"
+	],
+	"SwitchingProfileTypeIdEntry": [],
+	"LogicalPortAttachment": [],
+	"ExtraConfig": [
+		"LogicalPort"
+	],
+	"VirtualNetworkInterface": [],
+	"IpAddressInfo": [
+		"VirtualNetworkInterface"
+	],
+	"FireWallServiceAssociationListResult": [],
+	"ServiceAssociationListResult": [],
+	"LbSslProtocolInfo": [
+		"LbSslCipherAndProtocolListResult"
+	],
+	"IdfwVirtualMachineCondition": [
+		"IdfwVirtualMachineStatus"
+	],
+	"Csr": [
+		"CsrList"
+	],
+	"Principal": [],
+	"KeyValue": [],
+	"ErrorResolverMetadata": [
+		"ErrorResolverMetadataList"
+	],
+	"ErrorResolverSystemMetadata": [
+		"ErrorResolverMetadata"
+	],
+	"ErrorResolverUserMetadata": [
+		"ErrorResolverMetadata"
+	],
+	"ErrorResolverUserInputData": [
+		"ErrorResolverUserMetadata"
+	],
+	"IPSecVPNTransportStatus": [],
+	"IPSecVPNSessionStatus": [],
+	"IPSecVPNTrafficCounters": [
+		"IPSecVPNSessionStatus"
+	],
+	"IPSecVPNIKESessionStatus": [
+		"IPSecVPNSessionStatus"
+	],
+	"ServiceInsertionServiceProfile": [],
+	"Attribute": [
+		"DeploymentTemplate"
+	],
+	"QosSwitchingProfile": [],
+	"BaseSwitchingProfile": [
+		"SwitchingProfilesListResult"
+	],
+	"QosBaseRateShaper": [],
+	"Dscp": [],
+	"ComputeCollectionListResult": [],
+	"ComputeCollection": [],
+	"NormalizedResourceListResult": [],
+	"ClusterNodeVMDeploymentRequestList": [],
+	"ClusterNodeVMDeploymentRequest": [
+		"AddClusterNodeVMInfo"
+	],
+	"ClusterNodeVMDeploymentConfig": [
+		"VsphereClusterNodeVMDeploymentConfig"
+	],
+	"NodeUserSettings": [
+		"IntelligenceClusterNodeVMDeploymentRequest"
+	],
+	"BasicAuthenticationScheme": [
+		"HttpProtocol"
+	],
+	"AuthenticationScheme": [
+		"BasicAuthenticationScheme"
+	],
+	"VtepLabelPool": [
+		"VtepLabelPoolListResult"
+	],
+	"VtepLabelRange": [
+		"VtepLabelPool"
+	],
+	"VtepLabelPoolUsage": [],
+	"SupportBundleRequest": [
+		"SupportBundleResult"
+	],
+	"SupportBundleRemoteFileServer": [
+		"SupportBundleRequest"
+	],
+	"SupportBundleFileTransferProtocol": [
+		"SupportBundleRemoteFileServer"
+	],
+	"SupportBundleFileTransferAuthenticationScheme": [],
+	"UserInfo": [],
+	"NsxRole": [],
+	"ClusterGroupStatus": [
+		"AllClusterGroupStatus"
+	],
+	"ClusterGroupMemberStatus": [
+		"ClusterGroupStatus"
+	],
+	"ClusterGroupServiceLeader": [],
+	"PacketTypeAndCounter": [
+		"PacketsDroppedBySecurity"
+	],
+	"WidgetItem": [
+		"View"
+	],
+	"IPv4DhcpServer": [
+		"LogicalDhcpServer"
+	],
+	"DhcpOptions": [
+		"IpAllocationBase"
+	],
+	"DhcpOption121": [
+		"DhcpOptions"
+	],
+	"ClasslessStaticRoute": [],
+	"GenericDhcpOption": [
+		"DhcpOptions"
+	],
+	"PrincipalIdentityList": [],
+	"PrincipalIdentity": [
+		"PrincipalIdentityWithCertificate"
+	],
+	"SecurityCertificate": [
+		"CertificateKeyPair"
+	],
+	"Notification": [
+		"NotificationsList"
+	],
+	"CpuCoreConfigForEnhancedNetworkingStackSwitch": [
+		"StandardHostSwitch"
+	],
+	"SubPool": [
+		"AllocationPool"
+	],
+	"NSAttributesData": [
+		"NSAttributes"
+	],
+	"NSGroupListResult": [],
+	"AppInfoListResult": [],
+	"AppInfo": [],
+	"VirtualNetworkInterfaceListResult": [],
+	"TraceflowObservationDropped": [
+		"TraceflowObservationDroppedLogical"
+	],
+	"NatRuleList": [],
+	"NatRule": [],
+	"ClusterNodeInfo": [
+		"ClusterConfig"
+	],
+	"NodeMessagingClientInfo": [
+		"ClusterNodeInfo"
+	],
+	"MessagingClientInfo": [
+		"NodeMessagingClientInfo"
+	],
+	"NodeEntityInfo": [
+		"ClusterNodeInfo"
+	],
+	"NodeCertificateInfo": [],
+	"RestoreStep": [
+		"ClusterRestoreStatus"
+	],
+	"PerStepRestoreStatus": [],
+	"DSSectionQueryParameters": [],
+	"CapacityThresholdList": [],
+	"CapacityThreshold": [],
+	"ControllerNodeAggregateInfo": [
+		"ClustersAggregateInfo"
+	],
+	"BaseNodeAggregateInfo": [
+		"ManagementNodeAggregateInfo",
+		"ControllerNodeAggregateInfo"
+	],
+	"NodeInterfaceProperties": [],
+	"NodeInterfaceAlias": [
+		"NodeInterfaceProperties"
+	],
+	"ClusterNodeStatus": [],
+	"ManagementClusterNodeStatus": [
+		"ClusterNodeStatus"
+	],
+	"NodeInterfaceStatisticsProperties": [],
+	"ControllerClusterRoleConfig": [
+		"ClusterNodeConfig"
+	],
+	"ClusterRoleConfig": [
+		"ManagementClusterRoleConfig"
+	],
+	"ServiceEndpoint": [
+		"ManagementClusterRoleConfig"
+	],
+	"HostedEntityInfo": [
+		"ServiceEndpoint"
+	],
+	"ServiceInstanceHealthStatus": [
+		"ServiceInstanceStatus"
+	],
+	"BaseFirewallProfile": [
+		"FirewallCpuMemThresholdsProfile"
+	],
+	"DhcpStatistics": [],
+	"DhcpIpPoolUsage": [],
+	"ClusterCertificateId": [],
+	"AggregatedDataCounterEx": [
+		"LogicalSwitchStatistics"
+	],
+	"AggregatedDataCounter": [
+		"AggregatedDataCounterEx"
+	],
+	"DataCounter": [],
+	"MacLearningCounters": [
+		"AggregatedDataCounterEx"
+	],
+	"PacketsDroppedBySecurity": [
+		"AggregatedDataCounterEx"
+	],
+	"LbSnatTranslation": [
+		"LbSnatAutoMap"
+	],
+	"RestoreConfiguration": [],
+	"EsxGlobalOpaqueConfig": [],
+	"LbVariableAssignmentAction": [],
+	"PortConnectionError": [
+		"PortConnectionEntities"
+	],
+	"LogicalSwitchListResult": [],
+	"LogicalSwitch": [],
+	"VlanTrunkSpec": [
+		"BridgeEndpoint"
+	],
+	"TraceflowObservationForwarded": [],
+	"NodeSearchDomainsProperties": [],
+	"Alarm": [
+		"AlarmListResult"
+	],
+	"HaVipConfig": [
+		"LogicalRouterConfig"
+	],
+	"VIPSubnet": [
+		"HaVipConfig"
+	],
+	"SessionReclassificationParameter": [],
+	"MetadataProxyStatus": [],
+	"AuditLog": [
+		"AuditLogListResult"
+	],
+	"StructuredData": [
+		"AuditLog"
+	],
+	"L2VpnAttachmentContext": [],
+	"PBRStatsList": [],
+	"PBRStats": [],
+	"NatStatisticsPerTransportNode": [
+		"NatStatisticsPerLogicalRouter"
+	],
+	"NatCounters": [
+		"NatStatisticsPerRule"
+	],
+	"StandardHostSwitch": [
+		"StandardHostSwitchSpec"
+	],
+	"Pnic": [],
+	"IpAssignmentSpec": [
+		"StaticIpMacListSpec"
+	],
+	"VmknicNetwork": [
+		"StandardHostSwitch"
+	],
+	"HostSwitchProfileTypeIdEntry": [
+		"HostSwitch"
+	],
+	"ClientTypeCollectionConfiguration": [
+		"FeatureStackCollectionConfiguration"
+	],
+	"DataTypeCollectionConfiguration": [],
+	"IncludedFieldsParameters": [],
+	"GroupedMigrationFeedbackRequest": [
+		"GroupedMigrationFeedbackRequestListResult"
+	],
+	"SummaryMigrationFeedbackRequest": [],
+	"TargetResourceStatus": [
+		"FirewallStatus"
+	],
+	"VersionList": [
+		"AcceptableComponentVersion"
+	],
+	"NeighborProperties": [
+		"InterfaceNeighborProperties"
+	],
+	"LbFastTcpProfile": [],
+	"LogicalPortMacTableEntry": [
+		"LogicalPortMacAddressListResult"
+	],
+	"NodeServiceStatusProperties": [],
+	"UpgradeUnitGroupAggregateInfoListResult": [],
+	"UpgradeUnitGroupAggregateInfo": [],
+	"DeploymentConfig": [
+		"EdgeNodeDeploymentConfig"
+	],
+	"IdfwMasterSwitchSetting": [],
+	"AppProfile": [
+		"AppProfileListResult"
+	],
+	"VirtualMachineTagUpdate": [],
+	"PacketCaptureSession": [
+		"PacketCaptureSessionList"
+	],
+	"PacketCaptureRequest": [
+		"PacketCaptureSession"
+	],
+	"PacketCaptureOptionList": [],
+	"PacketCaptureOption": [],
+	"LbPoolStatusListResult": [],
+	"PortMirroringSwitchingProfile": [],
+	"EdgeNodeSettings": [
+		"EdgeNode"
+	],
+	"MetadataProxyStatistics": [],
+	"MetadataProxyStatisticsPerLogicalSwitch": [],
+	"IPv6DADStatus": [
+		"LogicalRouterPortState"
+	],
+	"IdfwVirtualMachineStatusListResult": [],
+	"IdfwVirtualMachineStatus": [],
+	"BgpConfig": [],
+	"InterSRRoutingConfig": [],
+	"BgpRouteAggregation": [],
+	"GracefulRestartConfig": [],
+	"GracefulRestartTimer": [],
+	"TransportNodeTemplateListResult": [],
+	"ComputeCollectionTransportNodeTemplate": [],
+	"TransportZoneEndPoint": [
+		"TransportNodeProfile"
+	],
+	"NetworkMigrationSpecTypeIdEntry": [
+		"ComputeCollectionTransportNodeTemplate"
+	],
+	"MigrationUnitStatusListResult": [],
+	"DhcpStaticBinding": [
+		"DhcpStaticBindingListResult"
+	],
+	"IpAllocationBase": [
+		"DhcpIpPool"
+	],
+	"LogicalPortMacTableCsvEntry": [
+		"LogicalPortMacAddressCsvListResult"
+	],
+	"X509Certificate": [
+		"Certificate"
+	],
+	"L2VPNSessionRemoteMacs": [],
+	"L2VPNSessionRemoteMacsForLS": [],
+	"UpgradeUnitGroupStatus": [
+		"UpgradeUnitGroupStatusListResult"
+	],
+	"AuthenticationPolicyProperties": [],
+	"IpMacPair": [
+		"StaticIpMacListSpec"
+	],
+	"StaticHopBfdPeer": [
+		"StaticHopBfdPeerListResult"
+	],
+	"BfdConfigParameters": [
+		"BgpNeighbor"
+	],
+	"ServiceInsertionStatusListResult": [],
+	"ServiceInsertionStatus": [],
+	"TunnelProperties": [
+		"TunnelList"
+	],
+	"ControlClusteringConfig": [],
+	"SftpProtocol": [
+		"CreateRemoteDirectoryProperties"
+	],
+	"Protocol": [
+		"CopyToRemoteFileProperties"
+	],
+	"PasswordAuthenticationScheme": [
+		"ScpProtocol"
+	],
+	"ViewList": [],
+	"View": [],
+	"UpgradeHistory": [
+		"UpgradeHistoryList"
+	],
+	"AppDiscoverySessionsListResult": [],
+	"BaseHostSwitchProfile": [
+		"NiocProfile"
+	],
+	"ControllerProfilerProperties": [],
+	"LogicalConstructMigrationStatsListResult": [],
+	"LogicalConstructMigrationStats": [],
+	"L2VpnService": [
+		"L2VpnServiceListResult"
+	],
+	"Crl": [
+		"CrlList"
+	],
+	"X509Crl": [
+		"Crl"
+	],
+	"X509CrlEntry": [],
+	"VidmInfo": [
+		"VidmInfoListResult"
+	],
+	"NodeMode": [
+		"SwitchingToVmcModeParameters"
+	],
+	"IpfixObsPointsListResult": [],
+	"IpfixObsPointConfig": [],
+	"MigrationUnitGroupAggregateInfoListResult": [],
+	"MigrationUnitGroupAggregateInfo": [],
+	"MigrationUnitGroup": [],
+	"MigrationUnit": [
+		"MigrationUnitList"
+	],
+	"PortConnectionEdgeNodeGroup": [
+		"PortConnectionEntities"
+	],
+	"TransportNode": [
+		"TransportNodeListResult"
+	],
+	"Node": [
+		"TransportNode"
+	],
+	"HostSwitch": [
+		"TransportNode"
+	],
+	"LogicalRouterListResult": [],
+	"LogicalRouter": [],
+	"IPv6Profiles": [
+		"LogicalRouter"
+	],
+	"EdgeClusterMemberAllocationProfile": [
+		"LogicalRouter"
+	],
+	"EdgeClusterMemberAllocationPool": [
+		"EdgeClusterMemberAllocationProfile"
+	],
+	"LogicalRouterConfig": [
+		"LogicalRouter"
+	],
+	"RouteMapSequence": [
+		"RouteMap"
+	],
+	"RouteMapSequenceSet": [],
+	"RouteMapSequenceMatch": [
+		"RouteMapSequence"
+	],
+	"CommunityMatchExpression": [
+		"RouteMapSequenceMatch"
+	],
+	"CommunityMatchOperation": [
+		"CommunityMatchExpression"
+	],
+	"MACAddressElementListResult": [],
+	"MACAddressElement": [],
+	"CreateRemoteDirectoryProperties": [],
+	"CopyRemoteFileProperties": [
+		"CopyToRemoteFileProperties"
+	],
+	"CrlPemRequestType": [],
+	"HostNodeStatusListResult": [],
+	"HostNodeStatus": [],
+	"IPSecVPNPolicySubnet": [
+		"IPSecVPNPolicyRule"
+	],
+	"NodeNtpServiceProperties": [],
+	"NtpServiceProperties": [],
+	"LbSslCipherInfo": [
+		"LbSslCipherAndProtocolListResult"
+	],
+	"NodeHttpServiceProperties": [],
+	"HttpServiceProperties": [],
+	"Certificate": [
+		"CertificateList"
+	],
+	"NodeIdServicesMap": [
+		"Certificate"
+	],
+	"ProtocolVersion": [
+		"ApiServiceConfig"
+	],
+	"CipherSuite": [],
+	"WidgetConfiguration": [
+		"WidgetConfigurationList"
+	],
+	"Datasource": [
+		"WidgetConfiguration"
+	],
+	"UrlAlias": [
+		"Datasource"
+	],
+	"Footer": [],
+	"FooterAction": [
+		"Footer"
+	],
+	"Legend": [],
+	"RateLimits": [
+		"SwitchSecuritySwitchingProfile"
+	],
+	"FirewallSessionTimerProfile": [],
+	"CapacityUsageResponse": [],
+	"FirewallSection": [
+		"FirewallSectionRuleList"
+	],
+	"AppProfileListResult": [],
+	"ContainerConfiguration": [],
+	"Layout": [
+		"LabelValueConfiguration"
+	],
+	"LayoutProperties": [
+		"Layout"
+	],
+	"FirewallStats": [
+		"FirewallStatsList"
+	],
+	"UpgradeCheck": [
+		"UpgradeCheckListResult"
+	],
+	"IPSecVPNSessionStatistics": [],
+	"IPSecVPNIKETrafficStatistics": [],
+	"IPSecVPNPolicyTrafficStatistics": [],
+	"IPSecVPNTunnelTrafficStatistics": [
+		"IPSecVPNPolicyTrafficStatistics"
+	],
+	"ReorderMigrationRequest": [],
+	"LldpHostSwitchProfile": [],
+	"ComponentUpgradeChecksInfo": [
+		"ComponentUpgradeChecksInfoListResult"
+	],
+	"UpgradeCheckInfo": [],
+	"NodeAuthProviderVidmStatus": [],
+	"VirtualServiceInstance": [],
+	"BaseServiceInstance": [
+		"ServiceInstance"
+	],
+	"DirectoryGroupMemberListResults": [],
+	"DirectoryGroupMember": [],
+	"ServiceInsertionServiceListResult": [],
+	"ServiceDefinition": [],
+	"ServiceDeploymentSpec": [],
+	"SVMDeploymentSpec": [
+		"ServiceDeploymentSpec"
+	],
+	"DeploymentTemplate": [
+		"ServiceInstance"
+	],
+	"ServiceCapability": [],
+	"PBRService": [
+		"PBRRule"
+	],
+	"LogicalRouterPortStatisticsPerNode": [
+		"LogicalRouterPortStatistics"
+	],
+	"AggregatedLogicalRouterPortCounters": [
+		"LogicalRouterPortStatisticsSummary"
+	],
+	"LogicalRouterPortCounters": [],
+	"NodeSnmpV3EngineID": [],
+	"VtepTableEntry": [
+		"VtepListResult"
+	],
+	"IPSecVPNPeerEndpoint": [
+		"IPSecVPNPeerEndpointListResult"
+	],
+	"IPSecVPNSessionState": [],
+	"InstanceDeploymentConfig": [
+		"ServiceInstance"
+	],
+	"ServiceManager": [
+		"ServiceManagerListResult"
+	],
+	"UpgradeSummary": [],
+	"ComponentTargetVersion": [],
+	"PnicMirrorSource": [],
+	"MirrorSource": [
+		"LogicalPortMirrorSource"
+	],
+	"LbSslProfile": [
+		"LbClientSslProfile"
+	],
+	"DhcpRelayProfileListResult": [],
+	"DhcpRelayProfile": [],
+	"HttpsProtocol": [],
+	"AppProfileMemberAppsCsvRecord": [
+		"AppProfileMemberAppsListInCsvFormat"
+	],
+	"TunnelPortConfig": [
+		"RouteBasedIPSecVPNSession"
+	],
+	"IPSubnet": [
+		"VsphereClusterNodeVMDeploymentConfig"
+	],
+	"TransportNodeState": [
+		"TransportNodeStateListResult"
+	],
+	"TransportNodeDeploymentProgressState": [],
+	"HostSwitchState": [
+		"TransportNodeState"
+	],
+	"Endpoint": [
+		"HostSwitchState"
+	],
+	"LogicalPortListResult": [],
+	"NatRuleListResult": [],
+	"ALGTypeNSService": [],
+	"LbHttpRequestMethodCondition": [],
+	"EthernetHeader": [
+		"FieldsPacketData"
+	],
+	"ActionableResource": [
+		"ActionableResourceListResult"
+	],
+	"TrustObjectData": [],
+	"IpfixServiceAssociationListResult": [],
+	"IpfixConfig": [
+		"IpfixSwitchConfig"
+	],
+	"Dhcpv6Header": [
+		"TransportProtocolHeader"
+	],
+	"GridConfiguration": [],
+	"ColumnItem": [],
+	"PBRRule": [
+		"PBRRuleList"
+	],
+	"ContainerNetworkPolicy": [
+		"ContainerNetworkPolicyListResult"
+	],
+	"VtepLabelPoolListResult": [],
+	"NodeNetworkInterfacePropertiesListResult": [],
+	"NodeNetworkInterfaceProperties": [],
+	"VirtualMachineListResult": [],
+	"VirtualMachine": [],
+	"GuestInfo": [],
+	"PropertyItem": [
+		"LabelValueConfiguration"
+	],
+	"NSServiceListResult": [],
+	"NSService": [],
+	"LbHttpRequestHeader": [
+		"LbHttpMonitor"
+	],
+	"GlobalCollectionConfiguration": [],
+	"FeatureStackCollectionConfigurationList": [],
+	"FeatureStackCollectionConfiguration": [
+		"FeatureStackCollectionConfigurationList"
+	],
+	"IpBlockSubnet": [
+		"IpBlockSubnetListResult"
+	],
+	"TransportZoneProfileListResult": [],
+	"TransportZoneProfile": [],
+	"SoftwareModuleResult": [],
+	"SoftwareModule": [],
+	"NSServiceGroup": [
+		"NSServiceGroupListResult"
+	],
+	"NSGroupComplexExpression": [],
+	"MigrationUnitAggregateInfo": [
+		"MigrationUnitAggregateInfoListResult"
+	],
+	"NodeSnmpServiceProperties": [],
+	"SnmpServiceProperties": [],
+	"ManagementPlaneProperties": [],
+	"ManagementPlaneBrokerProperties": [],
+	"BridgeEndpoint": [
+		"BridgeEndpointListResult"
+	],
+	"ServicePathListResult": [],
+	"ServicePath": [],
+	"UnidirectionalServicePath": [],
+	"ServicePathHop": [],
+	"DailyTelemetrySchedule": [],
+	"TelemetrySchedule": [
+		"MonthlyTelemetrySchedule"
+	],
+	"IPSecVPNSessionListResult": [],
+	"IPSecVPNSession": [
+		"PolicyBasedIPSecVPNSession"
+	],
+	"TcpMssClamping": [
+		"IPSecVPNSession"
+	],
+	"DADProfileListResult": [],
+	"DADProfile": [],
+	"IPAddresses": [
+		"PortMirroringFilter"
+	],
+	"IntelligenceBrokerEndpointInfo": [
+		"IntelligenceHostConfigurationInfo"
+	],
+	"EdgeClusterMemberStatus": [
+		"EdgeClusterStatus"
+	],
+	"MultiWidgetConfiguration": [],
+	"BatchResponseItem": [
+		"BatchResponse"
+	],
+	"MigrationFeedbackRequest": [
+		"MigrationFeedbackRequestListResult"
+	],
+	"ManagementNodeAggregateInfo": [
+		"ClustersAggregateInfo"
+	],
+	"ManagementClusterRoleConfig": [],
+	"ClusterNodeVMDeploymentStatusReport": [],
+	"EtherTypeNSService": [],
+	"VtepCsvListResult": [],
+	"VtepTableCsvRecord": [],
+	"SIServiceProfileListResult": [],
+	"NodeTime": [],
+	"TraceflowObservationRelayedLogical": [],
+	"PortConnectionRouter": [
+		"PortConnectionEntities"
+	],
+	"Traceflow": [
+		"TraceflowListResult"
+	],
+	"TraceflowObservationCounters": [
+		"Traceflow"
+	],
+	"DhcpServerStatus": [],
+	"FeaturePermission": [
+		"RoleWithFeatures"
+	],
+	"SourceNsxApiEndpoint": [
+		"MigrationSetupInfo"
+	],
+	"NodeLogProperties": [
+		"NodeLogPropertiesListResult"
+	],
+	"LogicalRouterDownLinkPort": [],
+	"NetworkMigrationSpec": [
+		"HostProfileNetworkMigrationSpec"
+	],
+	"L2VpnServiceListResult": [],
+	"LbNodeUsage": [
+		"LbNodeUsageSummary"
+	],
+	"StaticRouteListResult": [],
+	"StaticRoute": [],
+	"StaticRouteNextHop": [
+		"StaticRoute"
+	],
+	"LogicalPortMirrorDestination": [],
+	"MirrorDestination": [
+		"PortMirroringSession"
+	],
+	"MigrationSwitchListResult": [],
+	"MigrationSwitchInfo": [],
+	"FirewallSectionsSummaryList": [],
+	"ClusterProfileListResult": [],
+	"UpgradeUnitStatus": [
+		"UpgradeUnitStatusListResult"
+	],
+	"PnicMirrorDestination": [],
+	"EdgeClusterMemberTransportNode": [],
+	"UpgradeCheckListResults": [
+		"UpgradeUnitAggregateInfo"
+	],
+	"UpgradeCheckListResult": [],
+	"DSExcludeList": [
+		"ExcludeList"
+	],
+	"SourceEntityResult": [],
+	"SourceEntity": [],
+	"HostNode": [],
+	"HostNodeLoginCredential": [],
+	"NetworkMigrationSpecListResult": [],
+	"L4PortSetNSService": [],
+	"LbTcpProfileListResult": [],
+	"JoinClusterParameters": [],
+	"L2VPNTapTrafficStatistics": [
+		"L2VPNSessionStatistics"
+	],
+	"NodeUserPropertiesListResult": [],
+	"NodeUserProperties": [],
+	"BgpNeighborAddressFamily": [
+		"BgpNeighbor"
+	],
+	"BridgeEndpointStatus": [],
+	"MigrationFeedbackResponseList": [],
+	"MigrationFeedbackResponse": [],
+	"NSGroupExpressionList": [],
+	"DirectoryGroupListResults": [],
+	"DirectoryGroup": [
+		"DirectoryAdGroup"
+	],
+	"SshKeyBaseProperties": [
+		"SshKeyProperties"
+	],
+	"L2VPNSessionSummary": [],
+	"StaticIpPoolSpec": [],
+	"IpDiscoverySwitchingProfile": [],
+	"DuplicateIPDetection": [],
+	"MacTableEntry": [
+		"MacAddressListResult"
+	],
+	"IdfwComputeCollectionStatus": [
+		"IdfwComputeCollectionListResult"
+	],
+	"IdfwComputeCollectionCondition": [
+		"IdfwComputeCollectionStatus"
+	],
+	"RepoSyncStatusReport": [],
+	"ArpHeader": [
+		"FieldsPacketData"
+	],
+	"LbVirtualServerStatisticsListResult": [],
+	"LbHttpRequestUriArgumentsCondition": [],
+	"Ipv6Header": [
+		"FieldsPacketData"
+	],
+	"NSGroupMetaInfoListResult": [],
+	"NSGroupMetaInfo": [],
+	"ComputeCollectionTransportNodeTemplateStateList": [],
+	"ComputeCollectionTransportNodeTemplateState": [],
+	"TransportNodeTemplateState": [
+		"ComputeCollectionTransportNodeTemplateState"
+	],
+	"NodeLogPropertiesListResult": [],
+	"InterfaceNeighborProperties": [
+		"PortConnectionHypervisor"
+	],
+	"ServiceInsertionSectionListResult": [],
+	"DSSectionListResult": [
+		"FirewallSectionListResult"
+	],
+	"CsrList": [],
+	"ComponentMigrationStatus": [
+		"MigrationStatus"
+	],
+	"LogicalRouterRouteEntry": [
+		"LogicalRouterRouteTable"
+	],
+	"ServiceAttachmentListResult": [],
+	"ServiceAttachment": [],
+	"IPInfo": [
+		"ServiceAttachment"
+	],
+	"ComponentUpgradeChecksInfoListResult": [],
+	"License": [
+		"LicensesListResult"
+	],
+	"LbPersistenceProfileListResult": [],
+	"LbPersistenceProfile": [
+		"LbSourceIpPersistenceProfile"
+	],
+	"LbHttpRequestCookieCondition": [],
+	"IPSecVPNTunnelProfileListResult": [],
+	"IPSecVPNTunnelProfile": [],
+	"NSSupportedAttributesListResult": [],
+	"NSSupportedAttributes": [],
+	"NSAttributes": [
+		"NSSupportedAttributes"
+	],
+	"NodeInterfacePropertiesListResult": [],
+	"RoleBindingListResult": [],
+	"RoleBinding": [],
+	"Role": [
+		"RoleListResult"
+	],
+	"L2VpnTunnelEncapsulation": [
+		"L2VpnSession"
+	],
+	"PBRSectionRuleList": [],
+	"PBRSection": [
+		"PBRSectionListResult"
+	],
+	"SwitchingProfileStatus": [],
+	"LbSnatIpPool": [],
+	"LbSnatIpElement": [],
+	"FirewallStatus": [
+		"FirewallStatusListResult"
+	],
+	"DiscoveredNodeInterfaceProperties": [
+		"DiscoveredNodeNetworkInterfaces"
+	],
+	"EdgeNodeDeploymentConfig": [
+		"EdgeNode"
+	],
+	"MandatoryAccessControlProperties": [],
+	"LbClientCertificateIssuerDnCondition": [
+		"LbHttpSslCondition"
+	],
+	"FileThumbprint": [],
+	"CrlList": [],
+	"RemainingSupportBundleNode": [
+		"SupportBundleResult"
+	],
+	"AdvertisementRuleFilter": [
+		"AdvertiseRule"
+	],
+	"PnicBondStatus": [
+		"PnicBondStatusListResult"
+	],
+	"LogicalSwitchStatusSummary": [],
+	"Filter": [
+		"LogicalPortStatusSummary"
+	],
+	"HealthCheckResult": [
+		"ManualHealthCheck"
+	],
+	"HealthCheckResultPerTransportNode": [
+		"HealthCheckResult"
+	],
+	"HealthCheckResultOnHostSwitch": [
+		"HealthCheckResultPerTransportNode"
+	],
+	"HealthCheckResultPerUplink": [
+		"HealthCheckResultOnHostSwitch"
+	],
+	"LbServerSslProfileListResult": [],
+	"LbServerSslProfile": [
+		"LbServiceDebugInfo"
+	],
+	"FailureDomain": [
+		"FailureDomainListResult"
+	],
+	"UcUpgradeStatus": [],
+	"NatStatisticsPerLogicalRouter": [],
+	"AppDiscoverySessionResultSummary": [],
+	"AppDiscoveryAppProfileResultSummary": [],
+	"AppProfileMetaInfo": [],
+	"DnsForwarderListResult": [],
+	"DnsForwarder": [],
+	"ConditionalForwarderZone": [],
+	"ForwarderZone": [],
+	"RemoteServerFingerprintRequest": [],
+	"NotificationWatcher": [
+		"NotificationWatcherListResult"
+	],
+	"NotificationAuthenticationScheme": [],
+	"ContainerNetworkPolicyListResult": [],
+	"InitiateClusterRestoreRequest": [],
+	"UnassociatedVMListResult": [],
+	"StandardHostSwitchSpec": [],
+	"ReorderRequest": [],
+	"FirewallStatusListResult": [],
+	"UpgradeUnitAggregateInfo": [
+		"UpgradeUnitAggregateInfoListResult"
+	],
+	"ClustersAggregateInfo": [],
+	"AllClusterGroupStatus": [],
+	"IntervalBackupSchedule": [],
+	"LbHttpRejectAction": [],
+	"PreconfiguredEndpoint": [
+		"PreconfiguredHostSwitch"
+	],
+	"FeatureUsageList": [],
+	"FeatureUsage": [],
+	"CapacityUsage": [],
+	"LbVirtualServerListResult": [],
+	"BinaryPacketData": [],
+	"PacketData": [],
+	"DirectoryLdapServerListResults": [],
+	"IPSecVPNIKEProfileListResult": [],
+	"IPSecVPNIKEProfile": [],
+	"LogicalRouterPortListResult": [],
+	"MigrationUnitAggregateInfoListResult": [],
+	"TransportZoneStatus": [],
+	"AppInfoHostVmCsvRecord": [
+		"AppInfoHostVmListInCsvFormat"
+	],
+	"LbCookiePersistenceProfile": [],
+	"LbCookieTime": [
+		"LbPersistenceCookieTime"
+	],
+	"FileProperties": [
+		"FilePropertiesListResult"
+	],
+	"AddClusterNodeSpec": [],
+	"AddControllerNodeSpec": [],
+	"ClusteringInfo": [
+		"AddControllerNodeSpec"
+	],
+	"IpfixCollectorConfig": [
+		"IpfixCollectorConfigListResult"
+	],
+	"TraceflowObservationReceivedLogical": [],
+	"NSServiceGroupListResult": [],
+	"ContainerProjectListResult": [],
+	"ContainerProject": [],
+	"ServiceDeploymentStatus": [
+		"ServiceInstanceStatus"
+	],
+	"InstanceEndpoint": [
+		"InstanceEndpointListResult"
+	],
+	"PublicCloudGatewayNode": [],
+	"EdgeNode": [],
+	"LoginCredential": [
+		"ComputeManager"
+	],
+	"AppProfileMemberAppsListInCsvFormat": [],
+	"LogicalPortStatistics": [],
+	"SIExcludeList": [],
+	"EffectiveIPAddressMemberListResult": [],
+	"SwitchingGlobalConfig": [],
+	"ServiceDeployment": [
+		"ServiceDeploymentListResult"
+	],
+	"ServiceDeploymentConfig": [
+		"ServiceDeployment"
+	],
+	"FieldsPacketData": [],
+	"TransportProtocolHeader": [],
+	"UdpHeader": [],
+	"DhcpHeader": [],
+	"TcpHeader": [
+		"TransportProtocolHeader"
+	],
+	"NdpHeader": [],
+	"DnsHeader": [],
+	"Ipv4Header": [],
+	"LogicalRouterCentralizedServicePort": [],
+	"ServiceChainListResult": [],
+	"ServiceChain": [],
+	"RealizationStateBarrierConfig": [],
+	"PointDefinition": [
+		"GraphDefinition"
+	],
+	"GraphDefinition": [
+		"GraphConfiguration"
+	],
+	"TraceflowObservationDelivered": [],
+	"DnsForwarderStatus": [],
+	"LogicalRouterLoopbackPort": [],
+	"PortConnectionTunnel": [
+		"PortConnectionEntities"
+	],
+	"FirewallSectionState": [],
+	"DSSectionState": [],
+	"PortConnectionContainersEntities": [
+		"PortConnectionEntities"
+	],
+	"DnsForwarderStatistics": [],
+	"PerForwarderStatistics": [],
+	"PerNodeUsedCacheStatistics": [],
+	"FirewallGlobalConfig": [],
+	"BridgeHighAvailabilityClusterProfile": [],
+	"LbPoolStatisticsListResult": [],
+	"FeatureUsageListInCsvFormat": [],
+	"FeatureUsageCsvRecord": [],
+	"IdfwEnabledComputeCollection": [
+		"IdfwEnabledComputeCollectionListResult"
+	],
+	"UplinkHostSwitchProfile": [],
+	"Lag": [],
+	"LogicalSwitchMirrorSource": [],
+	"AddClusterNodeVMInfo": [],
+	"LbSessionCookieTime": [],
+	"L2VpnTunnelPeerCode": [
+		"L2VpnSessionPeerCodes"
+	],
+	"LogicalDhcpServer": [
+		"LogicalDhcpServerListResult"
+	],
+	"MigrationFeedbackCategory": [
+		"MigrationFeedbackSummaryListResult"
+	],
+	"ApplianceManagementTaskListResult": [],
+	"ApplianceManagementTaskProperties": [],
+	"PortConnectionEntities": [],
+	"PortConnectionHypervisor": [],
+	"PortConnectionBMEntities": [],
+	"SelectableResourceReference": [
+		"AdvanceClusterRestoreInput"
+	],
+	"IpfixConfigListResult": [],
+	"AppInfoHostVmListInCsvFormat": [],
+	"BpduFilter": [
+		"SwitchSecuritySwitchingProfile"
+	],
+	"UpgradeUnitTypeStats": [
+		"UpgradeUnitTypeStatsList"
+	],
+	"HostInfraTrafficType": [
+		"ResourceAllocation"
+	],
+	"VerifiableAsymmetricLoginCredential": [],
+	"IPSecVPNDPDProfileListResult": [],
+	"IPSecVPNDPDProfile": [],
+	"InstallUpgradeServiceProperties": [
+		"NodeInstallUpgradeServiceProperties"
+	],
+	"DonutConfiguration": [],
+	"DonutSection": [],
+	"PerNodeDnsFailedQueries": [
+		"DnsFailedQueries"
+	],
+	"DnsFailedQuery": [
+		"PerNodeDnsFailedQueries"
+	],
+	"SupportBundleResult": [],
+	"FailedNodeSupportBundleResult": [],
+	"SuccessNodeSupportBundleResult": [],
+	"ClusterConfiguration": [],
+	"RegistrationToken": [],
+	"VniRange": [
+		"VniPool"
+	],
+	"RoutingConfig": [],
+	"MigrationUnitListResult": [],
+	"UpgradeUnitAggregateInfoListResult": [],
+	"IdfwTransportNodeStatusListResult": [],
+	"IdfwTransportNodeStatus": [],
+	"IdfwTransportNodeCondition": [],
+	"IdfwUserStats": [],
+	"IdfwSystemStats": [],
+	"LogicalRouterPortArpTable": [],
+	"LogicalRouterPortArpEntry": [],
+	"ScpProtocol": [],
+	"DSInsertParameters": [],
+	"LogicalRouterRouteTable": [],
+	"UpgradeBundleInfo": [],
+	"RoutingGlobalConfig": [],
+	"LbClientSslProfileListResult": [],
+	"LbClientSslProfile": [],
+	"LbVariablePersistenceOnAction": [],
+	"BridgeClusterStatus": [],
+	"NodeCapability": [
+		"NodeCapabilitiesResult"
+	],
+	"MigrationSummary": [],
+	"TraceflowRequest": [],
+	"UpgradePlanSettings": [],
+	"UcFunctionalState": [],
+	"VmToolsInfo": [
+		"VmToolsInfoListResult"
+	],
+	"ManualHealthCheck": [
+		"ManualHealthCheckListResult"
+	],
+	"HealthCheckSpecVlans": [
+		"ManualHealthCheck"
+	],
+	"PoolMember": [
+		"LbPool"
+	],
+	"TaskListResult": [],
+	"TaskProperties": [],
+	"ServiceRouterAllocationConfig": [],
+	"DhcpIpPool": [
+		"DhcpIpPoolListResult"
+	],
+	"LogicalRouterStatusPerNode": [
+		"LogicalRouterStatus"
+	],
+	"LogicalRouterPortState": [],
+	"AuditLogRequest": [],
+	"GroupedMigrationFeedbackRequestListResult": [],
+	"FirewallDnsProfile": [],
+	"IPSecVPNPolicyRule": [
+		"PolicyBasedIPSecVPNSession"
+	],
+	"SpoofGuardSwitchingProfile": [],
+	"ServiceManagerListResult": [],
+	"LogicalRouterUpLinkPort": [],
+	"NDRAPrefixConfig": [],
+	"ClusterStatus": [],
+	"ControllerClusterStatus": [],
+	"ErrorResolverInfo": [
+		"ErrorResolverInfoList"
+	],
+	"IPSecVPNPeerEndpointListResult": [],
+	"RemoteServerFingerprint": [],
+	"NodeStatusListResult": [],
+	"GlobalRestoreStatus": [
+		"ClusterRestoreStatus"
+	],
+	"NSProfileListResult": [],
+	"NSProfile": [],
+	"CopyFromRemoteFileProperties": [],
+	"IPProtocolNSService": [],
+	"ApiError": [],
+	"RelatedApiError": [],
+	"LoadBalancerAllocationPool": [],
+	"InstanceRuntimeListResult": [],
+	"IpPoolListResult": [],
+	"ClusterBackupInfoListResult": [],
+	"ClusterBackupInfo": [],
+	"ReportAppResultsForVmsRequestParameters": [],
+	"ComputeCollectionFabricTemplate": [
+		"ComputeCollectionFabricTemplateListResult"
+	],
+	"DhcpRelayServiceListResult": [],
+	"DhcpRelayService": [],
+	"ExcludeList": [],
+	"AppDiscoveryVmInfo": [
+		"AppDiscoveryVmInfoListResult"
+	],
+	"NodeNameServersProperties": [],
+	"ServiceInstanceNSGroups": [],
+	"PBRRuleListResult": [],
+	"LbHttpRequestBodyCondition": [],
+	"VidmInfoListResult": [],
+	"TransportNodeStatusListResult": [],
+	"RedistributionRule": [
+		"RedistributionRuleList"
+	],
+	"LbMonitor": [
+		"LbActiveMonitor"
+	],
+	"ByodServiceInstance": [],
+	"LogicalRouterState": [],
+	"VtepListResult": [],
+	"FirewallProfileListResult": [],
+	"MigrationUnitGroupListResult": [],
+	"AppDiscoveryVmInfoListResult": [],
+	"NotificationWatcherListResult": [],
+	"LogicalRouterPortStatistics": [],
+	"LbRuleListResult": [],
+	"TraceflowListResult": [],
+	"FirewallStatsList": [],
+	"NodeRouteProperties": [
+		"NodeRoutePropertiesListResult"
+	],
+	"SupportedHostOSListResult": [],
+	"NodeRoutePropertiesListResult": [],
+	"EULAContent": [],
+	"MacManagementSwitchingProfile": [],
+	"MacLearningSpec": [],
+	"ContainerApplication": [
+		"ContainerApplicationListResult"
+	],
+	"DhcpProfile": [
+		"DhcpProfileListResult"
+	],
+	"LbPassiveMonitor": [],
+	"EgressRateShaper": [],
+	"GraphConfiguration": [],
+	"Axes": [],
+	"LbHttpResponseHeaderDeleteAction": [],
+	"AssignedByDhcp": [],
+	"IpfixCollectorConfigListResult": [],
+	"DiscoveredNodeNetworkInterfaces": [
+		"ComputeCollectionNetworkInterfacesListResult"
+	],
+	"LbServiceListResult": [],
+	"LbService": [
+		"LbServiceDebugInfo"
+	],
+	"AdvertisementConfig": [],
+	"FipsGlobalConfig": [],
+	"LogicalPortMacAddressListResult": [],
+	"IntelligenceClusterNodeVMDeploymentRequestList": [],
+	"IntelligenceClusterNodeVMDeploymentRequest": [
+		"AddIntelligenceClusterNodeVMInfo"
+	],
+	"IntelligenceClusterNodeVMDeploymentConfig": [],
+	"IPSecVPNIKEServiceSummary": [],
+	"IPSecVPNSessionSummary": [],
+	"IPSecVPNSessionTrafficSummary": [
+		"IPSecVPNSessionSummary"
+	],
+	"LogicalSwitchState": [
+		"LogicalSwitchStateListResult"
+	],
+	"LbPoolListResult": [],
+	"LbPool": [
+		"LbServiceDebugInfo"
+	],
+	"LogicalRouterIPTunnelPort": [],
+	"ResourceAllocation": [
+		"NiocProfile"
+	],
+	"L2VpnSession": [
+		"L2VpnSessionListResult"
+	],
+	"EdgeMemberAllocationStatus": [
+		"EdgeClusterAllocationStatus"
+	],
+	"AllocatedService": [],
+	"AllocationPool": [],
+	"IdfwEnabledComputeCollectionListResult": [],
+	"LbMonitorListResult": [],
+	"IPMirrorDestination": [],
+	"MigrationStatus": [],
+	"EULAAcceptance": [],
+	"PreconfiguredHostSwitchSpec": [],
+	"PreconfiguredHostSwitch": [],
+	"ErrorResolverInfoList": [],
+	"IPSecVPNServiceListResult": [],
+	"IPSecVPNService": [],
+	"PortMirroringSessionListResult": [],
+	"PortMirroringSession": [],
+	"PortMirroringFilter": [
+		"PortMirroringSession"
+	],
+	"TraceflowObservationForwardedLogical": [],
+	"DhcpStaticBindingListResult": [],
+	"NodeInstallUpgradeServiceProperties": [],
+	"IntelligenceVsphereClusterNodeVMDeploymentConfig": [],
+	"L2VPNSessionStatistics": [],
+	"L2VPNPerLSTrafficStatistics": [],
+	"VniPoolListResult": [],
+	"VniPool": [],
+	"CrlDistributionPointList": [],
+	"CrlObjectData": [],
+	"VendorTemplateListResult": [],
+	"VendorTemplate": [],
+	"TunnelList": [],
+	"ServiceConfigList": [],
+	"IngressRateShaper": [],
+	"RouteBasedIPSecVPNSession": [],
+	"LogicalDhcpServerListResult": [],
+	"AdvanceClusterRestoreInput": [
+		"AdvanceClusterRestoreRequest"
+	],
+	"AllocationIpAddress": [
+		"AllocationIpAddressListResult"
+	],
+	"TelemetryAgreement": [],
+	"IdfwUserSessionDataAndMappings": [],
+	"IdfwDirGroupUserSessionMapping": [],
+	"AdvertiseRuleList": [],
+	"AdvertiseRule": [],
+	"TraceflowObservationDroppedLogical": [],
+	"ContainerIngressPolicyListResult": [],
+	"ApiServiceConfig": [],
+	"LogicalRouterStatus": [],
+	"DhcpProfileListResult": [],
+	"LbHttpRequestHeaderDeleteAction": [],
+	"LicensesListResult": [],
+	"NSGroupTagExpression": [],
+	"AcceptableComponentVersion": [
+		"AcceptableComponentVersionList"
+	],
+	"InterfaceNeighborPropertyListResult": [],
+	"LbVariableCondition": [],
+	"DnsFailedQueries": [],
+	"MacAddressListResult": [],
+	"RedistributionConfig": [],
+	"AlarmListResult": [],
+	"InstanceEndpointListResult": [],
+	"ServiceChainMapping": [
+		"ServiceChainMappingListResult"
+	],
+	"KnownHostParameter": [],
+	"TransportNodeStateListResult": [],
+	"LogicalPortMacAddressCsvListResult": [],
+	"LbActiveMonitor": [
+		"LbIcmpMonitor"
+	],
+	"ServiceInstanceListResult": [],
+	"PacketCaptureSessionList": [],
+	"TransportNodeCollectionListResult": [],
+	"TransportNodeCollection": [],
+	"StatsConfiguration": [],
+	"LogicalServiceRouterClusterState": [],
+	"ComputeCollectionNetworkInterfacesListResult": [],
+	"PBRSectionListResult": [],
+	"ServiceDeploymentListResult": [],
+	"IPSetListResult": [],
+	"IPSet": [],
+	"LogicalRouterLinkPortOnTIER0": [],
+	"LogicalRouterLinkPortOnTIER1": [],
+	"NodeServicePropertiesListResult": [],
+	"IGMPTypeNSService": [],
+	"BridgeEndpointProfileListResult": [],
+	"BridgeEndpointProfile": [],
+	"MacAddressCsvListResult": [],
+	"MacTableCsvRecord": [],
+	"BridgeEndpointStatistics": [],
+	"RoutesPerTransportNode": [
+		"BgpNeighborRouteDetails"
+	],
+	"RouteDetails": [
+		"RoutesPerTransportNode"
+	],
+	"SwitchingToVmcModeParameters": [],
+	"Oauth2Credentials": [],
+	"VsphereDeploymentConfig": [],
+	"LogicalRouterRouteCsvRecord": [
+		"LogicalRouterRouteTableInCsvFormat"
+	],
+	"StartAppDiscoverySessionParameters": [],
+	"IpBlockListResult": [],
+	"FirewallSectionListResult": [],
+	"RouteMapListResult": [],
+	"RouteMap": [],
+	"NodeProcessPropertiesListResult": [],
+	"NodeProcessProperties": [],
+	"FailureDomainListResult": [],
+	"NodeNetworkProperties": [],
+	"MigrationFeedbackRequestListResult": [],
+	"LabelValueConfiguration": [],
+	"ErrorResolverMetadataList": [],
+	"HeatMapTransportNodesAggregateStatus": [],
+	"IntelligenceHostConfigurationInfo": [],
+	"IntelligenceFlowPrivateIpPrefixInfo": [],
+	"UpgradeBundleFetchRequest": [],
+	"LbTcpMonitor": [],
+	"ComputeManager": [
+		"ComputeManagerListResult"
+	],
+	"ExtraConfigHostSwitchProfile": [],
+	"BfdConfig": [],
+	"DestinationNsxApiEndpoint": [
+		"MigrationSetupInfo"
+	],
+	"WeeklyTelemetrySchedule": [],
+	"NSSupportedAttributeTypesResult": [],
+	"VmToolsInfoListResult": [],
+	"AcceptableComponentVersionList": [],
+	"ClusterNodeConfigListResult": [],
+	"ClusterNodeConfig": [],
+	"PrincipalIdentityWithCertificate": [],
+	"UpgradeUnitGroupStatusListResult": [],
+	"TransportNodeProfile": [
+		"TransportNodeProfileListResult"
+	],
+	"BgpNeighborRouteDetailsCsvRecord": [
+		"BgpNeighborRouteDetailsInCsvFormat"
+	],
+	"NodeCapabilitiesResult": [],
+	"EdgeClusterStatus": [],
+	"NodeVersion": [],
+	"ContainerClusterNodeListResult": [],
+	"ContainerClusterNode": [],
+	"LogicalRouterPortStatisticsSummary": [],
+	"BfdHealthMonitoringProfile": [],
+	"LbHttpResponseHeaderCondition": [],
+	"LogicalSwitchStateListResult": [],
+	"MigrationUnitGroupStatusListResult": [],
+	"MigrationUnitGroupStatus": [],
+	"AllocationIpAddressListResult": [],
+	"ServiceChainMappingListResult": [],
+	"TelemetryConfig": [],
+	"TelemetryProxy": [],
+	"Proxy": [],
+	"FirewallFloodProtectionProfile": [],
+	"EdgeClusterAllocationStatus": [],
+	"HttpProtocol": [],
+	"EffectiveMemberResourceListResult": [],
+	"MigrationSetupInfo": [],
+	"DhcpIpPoolListResult": [],
+	"IdfwComputeCollectionListResult": [],
+	"RoleListResult": [],
+	"PBRRuleList": [],
+	"ClusterRestoreStatus": [],
+	"InstructionInfo": [],
+	"BatchRequest": [],
+	"BatchRequestItem": [],
+	"BgpNeighbor": [
+		"BgpNeighborListResult"
+	],
+	"IpfixCollectorUpmProfileListResult": [],
+	"LbGenericPersistenceProfile": [],
+	"ServiceInsertionRuleList": [],
+	"NodeSyslogExporterProperties": [
+		"NodeSyslogExporterPropertiesListResult"
+	],
+	"NotificationsList": [],
+	"LbHttpRequestHeaderRewriteAction": [],
+	"FirewallCpuMemThresholdsProfile": [],
+	"NodeListResult": [],
+	"ContainerClusterListResult": [],
+	"ContainerCluster": [],
+	"ContainerInfrastructureInfo": [
+		"ContainerCluster"
+	],
+	"MetadataProxyListResult": [],
+	"StaticHopBfdPeerListResult": [],
+	"PrefixConfig": [
+		"IPPrefixList"
+	],
+	"DirectoryAdGroup": [],
+	"LbHttpsMonitor": [],
+	"AssociationListResult": [],
+	"HostSwitchProfilesListResult": [],
+	"LbServiceUsage": [],
+	"LbHttpRequestUriRewriteAction": [],
+	"LbServiceDebugInfo": [],
+	"UpdatePrincipalIdentityCertificateRequest": [],
+	"FirewallRuleListResult": [],
+	"MigrationPlanSettings": [],
+	"NatStatisticsPerRule": [],
+	"AdvanceClusterRestoreRequest": [],
+	"BgpNeighborRouteDetails": [],
+	"L2VPNSessionStatus": [],
+	"EdgeClusterState": [],
+	"ICMPTypeNSService": [],
+	"CapacityDashboardUsage": [],
+	"LbHttpMonitor": [],
+	"StaticIpListSpec": [],
+	"LogicalSwitchStatus": [],
+	"HeatMapTransportZoneStatus": [],
+	"LbTcpHeaderCondition": [],
+	"BackupOperationStatus": [
+		"BackupOperationHistory"
+	],
+	"LbSourceIpPersistenceProfile": [],
+	"FirewallSectionRuleList": [],
+	"IpfixDfwConfig": [],
+	"IpfixDfwTemplateParameters": [],
+	"LogicalRouterPortArpTableInCsvFormat": [],
+	"LogicalRouterPortArpCsvRecord": [],
+	"NiocProfile": [],
+	"LbHttpRequestUriCondition": [],
+	"StaticIpMacListSpec": [],
+	"VlanMirrorSource": [],
+	"HostProfileNetworkMigrationSpec": [],
+	"VmkToLogicalSwitchMapping": [],
+	"UpgradeBundleUploadStatus": [],
+	"L2VpnSessionPeerCodes": [],
+	"ListResultQueryParameters": [],
+	"SshKeyPropertiesListResult": [],
+	"SshKeyProperties": [],
+	"LogicalRouterRouteTableInCsvFormat": [],
+	"LbHttpResponseHeaderRewriteAction": [],
+	"CopyToRemoteFileProperties": [],
+	"LbSelectPoolAction": [],
+	"NodePolicyServiceProperties": [],
+	"IPSecVPNLocalEndpointListResult": [],
+	"IPSecVPNLocalEndpoint": [],
+	"LbPersistenceCookieTime": [],
+	"FilePropertiesListResult": [],
+	"ContainerApplicationListResult": [],
+	"IngressBroadcastRateShaper": [],
+	"UpgradeUnitTypeStatsList": [],
+	"WidgetConfigurationList": [],
+	"LbVirtualServerStatusListResult": [],
+	"DnsAnswer": [],
+	"DnsQueryAnswer": [],
+	"PnicBondStatusListResult": [],
+	"AllocationBasedOnFailureDomain": [],
+	"CapacityUsageMetaInfo": [],
+	"FirewallSectionLock": [],
+	"IntelligenceClusterNodeVMDeploymentStatusReport": [],
+	"UpgradeTaskProperties": [],
+	"CurrentBackupOperationStatus": [],
+	"LogicalPortOperationalStatus": [],
+	"DirectoryLdapServerStatus": [],
+	"RuntimeInterfaceOperationalStatus": [],
+	"DhcpLeasePerIP": [
+		"DhcpLeases"
+	],
+	"UsernamePasswordLoginCredential": [],
+	"LbEdgeNodeUsage": [],
+	"ComputeCollectionFabricTemplateListResult": [],
+	"ClusterVirtualIpProperties": [],
+	"SwitchSecuritySwitchingProfile": [],
+	"DhcpFilter": [],
+	"SwitchingProfilesListResult": [],
+	"CertificateKeyPair": [],
+	"LogicalSwitchStatistics": [],
+	"LbUdpMonitor": [],
+	"BgpNeighborRouteDetailsInCsvFormat": [],
+	"MonthlyTelemetrySchedule": [],
+	"VsphereClusterNodeVMDeploymentConfig": [],
+	"IpfixUpmProfileListResult": [],
+	"EffectiveProfileListResult": [],
+	"LbVariablePersistenceLearnAction": [],
+	"AuditLogListResult": [],
+	"ManualHealthCheckListResult": [],
+	"LbSnatAutoMap": [],
+	"NodeProperties": [],
+	"LbHttpRedirectAction": [],
+	"LbNodeUsageSummary": [],
+	"LbNodeCountPerSeverity": [],
+	"BrokerProperties": [],
+	"InventoryConfig": [],
+	"IpBlockSubnetListResult": [],
+	"ClusterConfig": [],
+	"TransportNodeListResult": [],
+	"ServiceInstanceStatus": [],
+	"SVMConfigureIssue": [],
+	"SIErrorClass": [],
+	"DhcpLeases": [],
+	"TransportNodeCollectionState": [],
+	"L2VpnSessionListResult": [],
+	"UpgradeUnitList": [],
+	"IPPrefixList": [
+		"IPPrefixListListResult"
+	],
+	"IPAddressElement": [
+		"IPAddressElementListResult"
+	],
+	"BgpNeighborListResult": [],
+	"UpgradeBundleId": [],
+	"BridgeEndpointListResult": [],
+	"LbSslCipherAndProtocolListResult": [],
+	"AddIntelligenceClusterNodeVMInfo": [],
+	"VifAttachmentContext": [],
+	"LogicalPortStatusSummary": [],
+	"PolicyBasedIPSecVPNSession": [],
+	"PoolMemberSettingList": [],
+	"UpgradeHistoryList": [],
+	"LbHttpSslCondition": [],
+	"LbClientCertificateSubjectDnCondition": [],
+	"RedistributionRuleList": [],
+	"ComputeManagerListResult": [],
+	"EdgeClusterListResult": [],
+	"NodeSyslogExporterPropertiesListResult": [],
+	"UpgradeUnitStatusListResult": [],
+	"PortStatus": [],
+	"BackupConfiguration": [],
+	"BridgeClusterListResult": [],
+	"LbHttpRequestVersionCondition": [],
+	"ServiceInstance": [],
+	"NDRAProfileListResult": [],
+	"MigrationUnitList": [],
+	"TraceflowObservationListResult": [],
+	"SecurityGlobalConfig": [],
+	"UpgradeUnitGroup": [
+		"UpgradeUnitGroupListResult"
+	],
+	"IPPrefixListListResult": [],
+	"IPAddressElementListResult": [],
+	"RoleWithFeatures": [],
+	"UpgradeUnitGroupListResult": [],
+	"MPAConfigProperties": [],
+	"LbHttpRequestHeaderCondition": [],
+	"BackupOperationHistory": [],
+	"BatchResponse": [],
+	"AlarmSource": [],
+	"DirectoryDomainListResults": [],
+	"MigrationFeedbackSummaryListResult": [],
+	"IpfixSwitchConfig": [],
+	"LbIcmpMonitor": [],
+	"CertificateList": [],
+	"IdfwVmStats": [],
+	"LbFastUdpProfile": [],
+	"TransportNodeProfileListResult": [],
+	"ActionableResourceListResult": [],
+	"LogicalPortMirrorSource": [],
+	"ManagementConfig": [],
+	"WeeklyBackupSchedule": [],
+	"NodeAuthProviderVidmProperties": []
+}

@@ -9,9 +9,9 @@ module.exports = {
 var cache = {};
 
 // entry
-function run(item, opts = {}) {
+function run(entity, opts = {}) {
 	let defaults = Object.assign({
-		spec: './apispec.json',
+		spec: '../apispec.json',
 		writeOnly: 0,
 		required: 0,
 		hidden: 0,
@@ -21,9 +21,9 @@ function run(item, opts = {}) {
 		depth: -1 // no restriction
 	}, core.cleanObject(opts));
 	let definitions = getSpec(defaults.spec);
-	if(route = definitions[item]) {
+	if(route = definitions[entity]) {
 		return isRef({
-			"$ref": "#/definitions/" + item
+			"$ref": "#/definitions/" + entity
 		}, defaults);
 	} else {
 		//console.error('Object: [' + item + '] does not exist!');
