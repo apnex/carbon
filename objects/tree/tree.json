@@ -1,24 +1,63 @@
 {
-	"LogicalRouter": {
-		"ManagedResource": {
-			"RevisionedResource": {
-				"Resource": {
-					"SelfResourceLink": {
-						"ResourceLink": 1
-					},
-					"ResourceLink": 1
-				}
+	"com.vmware.vcenter.VM.create_spec": {
+		"com.vmware.vcenter.vm.hardware.cdrom.create_spec": {
+			"com.vmware.vcenter.vm.hardware.cdrom.backing_spec": {
+				"com.vmware.vcenter.vm.hardware.cdrom.backing_type": 1,
+				"com.vmware.vcenter.vm.hardware.cdrom.device_access_type": 1
 			},
-			"Tag": 1
+			"com.vmware.vcenter.vm.hardware.sata_address_spec": 1,
+			"com.vmware.vcenter.vm.hardware.ide_address_spec": 1,
+			"com.vmware.vcenter.vm.hardware.cdrom.host_bus_adapter_type": 1
 		},
-		"IPv6Profiles": 1,
-		"EdgeClusterMemberAllocationProfile": {
-			"EdgeClusterMemberAllocationPool": 1
+		"com.vmware.vcenter.VM.placement_spec": 1,
+		"com.vmware.vcenter.vm.hardware.floppy.create_spec": {
+			"com.vmware.vcenter.vm.hardware.floppy.backing_spec": {
+				"com.vmware.vcenter.vm.hardware.floppy.backing_type": 1
+			}
 		},
-		"ResourceReference": 1,
-		"LogicalRouterConfig": {
-			"HaVipConfig": {
-				"VIPSubnet": 1
+		"com.vmware.vcenter.vm.hardware.boot.create_spec": {
+			"com.vmware.vcenter.vm.hardware.boot.network_protocol": 1,
+			"com.vmware.vcenter.vm.hardware.boot.type": 1
+		},
+		"com.vmware.vcenter.vm.hardware.disk.create_spec": {
+			"com.vmware.vcenter.vm.hardware.disk.vmdk_create_spec": 1,
+			"com.vmware.vcenter.vm.hardware.disk.backing_spec": {
+				"com.vmware.vcenter.vm.hardware.disk.backing_type": 1
+			},
+			"com.vmware.vcenter.vm.hardware.sata_address_spec": 1,
+			"com.vmware.vcenter.vm.hardware.scsi_address_spec": 1,
+			"com.vmware.vcenter.vm.hardware.ide_address_spec": 1,
+			"com.vmware.vcenter.vm.hardware.disk.host_bus_adapter_type": 1
+		},
+		"com.vmware.vcenter.vm.hardware.boot.device.entry_create_spec": {
+			"com.vmware.vcenter.vm.hardware.boot.device.type": 1
+		},
+		"com.vmware.vcenter.vm.hardware.version": 1,
+		"com.vmware.vcenter.vm.guest_OS": 1,
+		"com.vmware.vcenter.vm.hardware.ethernet.create_spec": {
+			"com.vmware.vcenter.vm.hardware.ethernet.backing_spec": {
+				"com.vmware.vcenter.vm.hardware.ethernet.backing_type": 1
+			},
+			"com.vmware.vcenter.vm.hardware.ethernet.mac_address_type": 1,
+			"com.vmware.vcenter.vm.hardware.ethernet.emulation_type": 1
+		},
+		"com.vmware.vcenter.vm.hardware.parallel.create_spec": {
+			"com.vmware.vcenter.vm.hardware.parallel.backing_spec": {
+				"com.vmware.vcenter.vm.hardware.parallel.backing_type": 1
+			}
+		},
+		"com.vmware.vcenter.vm.hardware.memory.update_spec": 1,
+		"com.vmware.vcenter.vm.hardware.adapter.scsi.create_spec": {
+			"com.vmware.vcenter.vm.hardware.adapter.scsi.sharing": 1,
+			"com.vmware.vcenter.vm.hardware.adapter.scsi.type": 1
+		},
+		"com.vmware.vcenter.vm.hardware.adapter.sata.create_spec": {
+			"com.vmware.vcenter.vm.hardware.adapter.sata.type": 1
+		},
+		"com.vmware.vcenter.vm.hardware.cpu.update_spec": 1,
+		"com.vmware.vcenter.vm.hardware.serial.create_spec": {
+			"com.vmware.vcenter.vm.hardware.serial.backing_spec": {
+				"com.vmware.vcenter.vm.hardware.serial.backing_type": 1
 			}
 		}
 	}

@@ -6,14 +6,14 @@ module.exports = {
 	run
 };
 
-function run(route) {
-	return getSchemas(route);
+function run(body) {
+	return getSchemas(body);
 }
 
 function getSchemas(body) {
 	let list = [];
 	Object.entries(body).forEach((value) => {
-		if(isOperation(value[0])) { //action
+		if(isOperation(value[0])) { // action
 			getParameters(value[1]).forEach((item) => {
 				list.push({
 					method: value[0],
@@ -32,25 +32,6 @@ function getSchemas(body) {
 		}
 	});
 	return list;
-}
-
-function oldOperation(string) { // valid api operation
-	let isTrue = 0;
-	[
-		'get',
-		'put',
-		'post',
-		'delete',
-		'options',
-		'head',
-		'patch',
-		'trace'
-	].forEach((op) => {
-		if(op == string) {
-			isTrue = 1;
-		}
-	});
-	return isTrue;
 }
 
 function isOperation(string) { // valid api operation
@@ -95,12 +76,20 @@ function getParameters(body) {
 }
 
 function getSchema(body) {
-	let schema, ref, matches;
+	let schema, ref;
 	if(schema = core.def(body.schema)) {
-		if(ref = core.def(schema['$ref'])) {
-			if(matches = ref.match(/#[\/]definitions[\/](.+)/)) {
-				return matches[1];
-			}
+		if((ref = core.def(schema['items'])) && schema.type == "array") {
+			return isRef(ref);
+		} else {
+			return isRef(schema);
+		}
+	}
+}
+
+function isRef(body) {
+	if(ref = core.def(body['$ref'])) {
+		if(matches = ref.match(/#[\/]definitions[\/](.+)/)) {
+			return matches[1];
 		}
 	}
 }

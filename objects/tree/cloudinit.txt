@@ -1,2 +1,0 @@
-Use cloud init to prepare the VM
-

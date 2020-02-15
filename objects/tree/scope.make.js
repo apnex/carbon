@@ -23,7 +23,7 @@ if(process.argv[1].match(/scope.make/g)) {
 }
 
 function run(
-	spec = './apispec.json',
+	spec = '../apispec.json',
 	tree = './state/ctx.tree',
 	object = './state/ctx.object'
 ) {
